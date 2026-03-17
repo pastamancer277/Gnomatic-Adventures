@@ -6,4 +6,4 @@ extends quest
 func tryComplete():
 	if($/root/Main/Systems/Inventory.tryRemove({fish: 3})):
 		complete=true
-	get_parent().get_parent().questComplete()
+		get_parent().get_parent().questComplete()
