@@ -163,7 +163,7 @@ func gainXP(val: int):
 		level+=1
 		levelPoints+=1
 func getXP():
-	return socialCredit
+	return xp
 
 func changeCredit(val: int):
 	socialCredit+=val

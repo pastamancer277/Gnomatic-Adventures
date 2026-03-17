@@ -13,10 +13,9 @@ func _ready():
 	inventory.inventory_updated.connect(update_ui)
 	create_slots()
 	update_ui()
-	xp.max_value = 20
-	social_credit.max_value = 50
+	xp.max_value = 100
 	xp.value = player.getXP()
-	social_credit.value = player.getSocialCredit()
+	social_credit.text = str(player.getSocialCredit())
 
 
 
@@ -32,7 +31,7 @@ func update_ui():
 		else:
 			slots[i].clear_item()
 		xp.value = player.getXP()
-		social_credit.value = player.getSocialCredit()
+		social_credit.text = str(player.getSocialCredit())
 
 func _input(event: InputEvent) -> void:
 	if(event.is_action_pressed("Inventory")):

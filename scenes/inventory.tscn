@@ -36,6 +36,7 @@ metadata/_edit_lock_ = true
 [node name="GridContainer" type="GridContainer" parent="PanelContainer/Panel/VBoxContainer" unique_id=884358431]
 layout_mode = 2
 size_flags_vertical = 3
+columns = 5
 metadata/_edit_lock_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/Panel/VBoxContainer" unique_id=509762361]
@@ -56,10 +57,10 @@ text = "XP"
 layout_mode = 2
 metadata/_edit_lock_ = true
 
-[node name="SocialCredit" type="ProgressBar" parent="PanelContainer/Panel/VBoxContainer/HBoxContainer2" unique_id=4804563]
+[node name="SocialCredit" type="Label" parent="PanelContainer/Panel/VBoxContainer/HBoxContainer2" unique_id=1728082070]
 layout_mode = 2
 size_flags_horizontal = 3
-show_percentage = false
+theme_override_font_sizes/font_size = 7
 
 [node name="Label" type="Label" parent="PanelContainer/Panel/VBoxContainer/HBoxContainer2" unique_id=1235199049]
 layout_mode = 2
