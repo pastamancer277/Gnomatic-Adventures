@@ -150,6 +150,11 @@ func _on_regen_timer_timeout() -> void:
 func getPos():
 	return global_position
 
+func setAllyPos():
+	for ally in get_parent().get_children():
+		if(ally != self):
+			ally.global_position=global_position
+
 func gainXP(val: int):
 	xp+=val
 	print(str(xp))
@@ -162,6 +167,7 @@ func getXP():
 
 func changeCredit(val: int):
 	socialCredit+=val
+
 func getSocialCredit():
 	return socialCredit
 

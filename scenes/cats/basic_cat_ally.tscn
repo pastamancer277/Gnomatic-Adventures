@@ -2,9 +2,6 @@
 
 [ext_resource type="Script" uid="uid://8lbvu3rk7mf1" path="res://scripts/cats/basic_cat_ally.gd" id="1_m8dvg"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_m8dvg"]
-radius = 15.0
-
 [node name="BasicCatAlly" type="CharacterBody2D" unique_id=72348834 groups=["damagable", "entity", "player"]]
 collision_layer = 3
 script = ExtResource("1_m8dvg")
@@ -22,7 +19,6 @@ z_index = 1
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox" unique_id=775376062]
-shape = SubResource("CircleShape2D_m8dvg")
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=1479018735]
 wait_time = 0.5

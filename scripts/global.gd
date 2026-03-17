@@ -2,6 +2,7 @@ extends Node
 
 var player_alive=true
 var pause = true
+@onready var player = $/root/Main/Sort/PlayerEntities/Player
 
 var cur_area := ""
 var scene_transit=false
@@ -39,14 +40,15 @@ func change_area(area_name: String) -> void:
 
 func setPlayerPos(name: String):
 	if(name=="Forest1"):
-		$/root/Main/Sort/PlayerEntities/Player.position.x=player_enter_f1_x
-		$/root/Main/Sort/PlayerEntities/Player.position.y=player_enter_f1_y
+		player.position.x=player_enter_f1_x
+		player.position.y=player_enter_f1_y
 	if(name=="Forest2"&&cur_area=="Forest1"):
-		$/root/Main/Sort/PlayerEntities/Player.position.x=player_exit_f1_x
-		$/root/Main/Sort/PlayerEntities/Player.position.y=player_exit_f1_y
+		player.position.x=player_exit_f1_x
+		player.position.y=player_exit_f1_y
 	if(name=="City1"&&cur_area=="Forest2"):
-		$/root/Main/Sort/PlayerEntities/Player.position.x=player_exit_f1_x
-		$/root/Main/Sort/PlayerEntities/Player.position.y=player_exit_f1_y
+		player.position.x=player_exit_f1_x
+		player.position.y=player_exit_f1_y
+	player.setAllyPos()
 
 func getPaused():
 	return pause
