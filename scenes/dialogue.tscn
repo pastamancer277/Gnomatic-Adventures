@@ -25,6 +25,7 @@ size_flags_vertical = 4
 layout_mode = 0
 offset_right = 1000.0
 offset_bottom = 20.0
+theme_override_font_sizes/normal_font_size = 7
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1917417057]
 layout_mode = 2

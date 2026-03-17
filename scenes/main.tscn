@@ -4,8 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ctqcvkt7je1qr" path="res://scenes/player.tscn" id="2_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://dxwohl5i6bba8" path="res://scenes/areas/forest1.tscn" id="2_tipki"]
 [ext_resource type="PackedScene" uid="uid://uk85sldfb4ug" path="res://scenes/systems.tscn" id="3_sugp2"]
-[ext_resource type="Script" uid="uid://b434nmc2e0gua" path="res://scripts/inventory.gd" id="4_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://c3pg5pi87ia3p" path="res://scenes/item_slot.tscn" id="5_tipki"]
+[ext_resource type="PackedScene" uid="uid://xrlastlxggku" path="res://scenes/inventory.tscn" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bt205s22y2kmk" path="res://scenes/dialogue.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://cprvocsaem7dq" path="res://scenes/screens/screen.tscn" id="9_85g3d"]
 
@@ -21,7 +20,6 @@ y_sort_enabled = true
 
 [node name="Forest1" parent="Sort/Areas" unique_id=76430044 instance=ExtResource("2_tipki")]
 
-
 [node name="PlayerEntities" type="Node2D" parent="Sort" unique_id=488688547]
 y_sort_enabled = true
 
@@ -31,28 +29,14 @@ y_sort_enabled = true
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=648745836]
 
-[node name="InventoryUI" type="Control" parent="UI" unique_id=1968374526]
-layout_mode = 3
+[node name="Inventory" parent="UI" unique_id=1340913624 instance=ExtResource("5_o6xl0")]
 anchors_preset = 0
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 4.0
-offset_bottom = 4.0
-script = ExtResource("4_o6xl0")
-item_slot_scene = ExtResource("5_tipki")
-
-[node name="Panel" type="Panel" parent="UI/InventoryUI" unique_id=295277668]
-layout_mode = 0
-offset_right = 30.0
-offset_bottom = 40.0
-
-[node name="GridContainer" type="GridContainer" parent="UI/InventoryUI" unique_id=494755373]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 67.0
-offset_bottom = 67.0
-columns = 5
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 3.0
+offset_bottom = 3.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Dialogue" parent="UI" unique_id=2067749993 instance=ExtResource("7_tipki")]
 
