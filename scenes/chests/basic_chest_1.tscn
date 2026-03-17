@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b02bhbqdbog8w"]
+
+[ext_resource type="PackedScene" uid="uid://bfnabbipkrrh" path="res://scenes/chests/basic_chest.tscn" id="1_up6aw"]
+[ext_resource type="Script" uid="uid://crj7kfc8yi8wg" path="res://scripts/chests/chest_interact_1.gd" id="2_p662v"]
+
+[node name="Chest" instance=ExtResource("1_up6aw")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+animation = &"open"
+
+[node name="Interact" parent="." index="3"]
+script = ExtResource("2_p662v")

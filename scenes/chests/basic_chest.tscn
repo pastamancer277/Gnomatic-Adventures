@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bfnabbipkrrh"]
+
+[ext_resource type="Script" uid="uid://bqt1ef778ugir" path="res://scripts/chests/chest.gd" id="1_sy5e1"]
+[ext_resource type="Texture2D" uid="uid://bdcn8iwd1bvi8" path="res://assets/sprites/objects/chest_02.png" id="2_gqd3d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yue2o"]
+atlas = ExtResource("2_gqd3d")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhylo"]
+atlas = ExtResource("2_gqd3d")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w02o5"]
+atlas = ExtResource("2_gqd3d")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilhio"]
+atlas = ExtResource("2_gqd3d")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kg5gm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yue2o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhylo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w02o5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilhio")
+}],
+"loop": false,
+"name": &"open",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8me8i"]
+size = Vector2(16, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sy5e1"]
+radius = 14.0
+
+[node name="Chest" type="CharacterBody2D" unique_id=1071843645 groups=["entity"]]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_sy5e1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=117843915]
+sprite_frames = SubResource("SpriteFrames_kg5gm")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1544982247]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_8me8i")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1489746464]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1591160901]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_sy5e1")
+
+[node name="Interact" type="Node" parent="." unique_id=239515821]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://nw1fpdornhg2"]
+
+[ext_resource type="Script" uid="uid://byj7fami8rgju" path="res://scripts/map_item.gd" id="1_d0l23"]
+
+[node name="MapItem" type="Node2D" unique_id=69362494 groups=["item"]]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_d0l23")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=871541635]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=367051063]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=907687880]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

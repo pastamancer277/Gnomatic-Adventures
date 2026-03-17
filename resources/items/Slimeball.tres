@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://djlnxnoquusbg"]
+
+[ext_resource type="Texture2D" uid="uid://n2au48o60ksg" path="res://assets/icons/sprite/item34.png" id="1_3hriw"]
+[ext_resource type="Script" path="res://scripts/itemResource.gd" id="2_3hriw"]
+
+[resource]
+script = ExtResource("2_3hriw")
+name = "Slimeball"
+icon = ExtResource("1_3hriw")
+positionY = -1
+metadata/_custom_type_script = "uid://cc4te3g41ua7s"

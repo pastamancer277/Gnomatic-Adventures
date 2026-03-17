@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cu2y60tbyoefo"]
+
+[ext_resource type="Script" uid="uid://8lbvu3rk7mf1" path="res://scripts/cats/basic_cat_ally.gd" id="1_m8dvg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m8dvg"]
+radius = 15.0
+
+[node name="BasicCatAlly" type="CharacterBody2D" unique_id=72348834 groups=["damagable", "entity", "player"]]
+collision_layer = 3
+script = ExtResource("1_m8dvg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=653963757]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=733226745]
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=770416748]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=938400520]
+
+[node name="AttackBox" type="Area2D" parent="." unique_id=1311997761]
+z_index = 1
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox" unique_id=775376062]
+shape = SubResource("CircleShape2D_m8dvg")
+
+[node name="AttackCooldown" type="Timer" parent="." unique_id=1479018735]
+wait_time = 0.5
+one_shot = true
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1053111102]
+modulate = Color(2.695322e-06, 0.67550105, 0.12943915, 1)
+offset_left = -8.999999
+offset_top = 3.9999995
+offset_right = 170.99998
+offset_bottom = 34.0
+scale = Vector2(0.1, 0.1)
+show_percentage = false
+
+[node name="RegenTimer" type="Timer" parent="." unique_id=1081065502]
+wait_time = 1.5
+autostart = true
+
+[node name="RespawnTimer" type="Timer" parent="." unique_id=1008183093]
+one_shot = true
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="AttackBox" to="." method="_on_attackbox_body_entered"]
+[connection signal="body_exited" from="AttackBox" to="." method="_on_attackbox_body_exited"]
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="RegenTimer" to="." method="_on_regen_timer_timeout"]
+[connection signal="timeout" from="RespawnTimer" to="." method="_on_respawn_timer_timeout"]

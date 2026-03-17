@@ -1,0 +1,152 @@
+[gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://cl6lnrvkk43ug"]
+
+[ext_resource type="Texture2D" uid="uid://dt07svru6sv2k" path="res://assets/sprites/characters/slime.png" id="1_wcmes"]
+[ext_resource type="Script" uid="uid://bivhtsi4pg5j2" path="res://scripts/enemies/item_drop.gd" id="2_k071p"]
+[ext_resource type="Script" uid="uid://b28ajlgdgglkr" path="res://scripts/enemies/enemy_resource.gd" id="2_pssbi"]
+[ext_resource type="Resource" uid="uid://djlnxnoquusbg" path="res://resources/items/Slimeball.tres" id="3_lb0tw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn75u"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(0, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgw8c"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(32, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju5ae"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(64, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbgqv"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(96, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8cg6"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(128, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yp3pl"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_652kp"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxrjo"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdnic"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmv80"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jg452"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i85c0"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggpfd"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wrrj"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_feyme"]
+atlas = ExtResource("1_wcmes")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_slapw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn75u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgw8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ju5ae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbgqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8cg6")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yp3pl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_652kp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxrjo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdnic")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmv80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jg452")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i85c0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggpfd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wrrj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feyme")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_k071p"]
+script = ExtResource("2_k071p")
+file = ExtResource("3_lb0tw")
+amount = 1
+metadata/_custom_type_script = "uid://bivhtsi4pg5j2"
+
+[resource]
+script = ExtResource("2_pssbi")
+maxHealth = 100
+speed = 40
+attackValue = 10
+xpValue = 100
+sightRadius = 82
+attackRadius = 14.0
+regenSpeed = 1.0
+regenAmount = 10
+attackCooldown = 0.7
+respawnTime = 10.0
+collisionRadius = 7.0
+animations = SubResource("SpriteFrames_slapw")
+items = Array[ExtResource("2_k071p")]([SubResource("Resource_k071p")])
+metadata/_custom_type_script = "uid://b28ajlgdgglkr"

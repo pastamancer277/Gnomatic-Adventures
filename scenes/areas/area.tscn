@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://544q7gcm2ury"]
+
+[node name="Area" type="Node2D" unique_id=1349325032 groups=["area"]]
+y_sort_enabled = true
+
+[node name="TileMap" type="Node2D" parent="." unique_id=41032152]
+y_sort_enabled = true
+
+[node name="Entities" type="Node2D" parent="." unique_id=1929926728]
+y_sort_enabled = true
+
+[node name="Collisions" type="StaticBody2D" parent="." unique_id=1033313260]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dqyakadp7w8ew"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_eotf0"]
+[ext_resource type="Texture2D" uid="uid://dqydtvbwchypu" path="res://assets/icons/sprite/item88.png" id="2_fnt7o"]
+[ext_resource type="Script" uid="uid://cltgxpx3qrau1" path="res://scripts/NPCs/forest2Dialogue.gd" id="3_8cktr"]
+
+[node name="ForestNPC2" unique_id=1834193905 instance=ExtResource("1_eotf0")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+texture = ExtResource("2_fnt7o")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("3_8cktr")
