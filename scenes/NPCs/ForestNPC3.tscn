@@ -1,5 +1,9 @@
-[gd_scene format=3 uid="uid://cuqox7w1ayuab"]
+[gd_scene format=3 uid="uid://boglafagubgjc"]
 
 [ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_yvjvm"]
+[ext_resource type="Texture2D" uid="uid://dmdshcbpdkn6x" path="res://assets/sprites/characters/LumberJack.png" id="2_rj0qc"]
 
 [node name="BasicNPC" unique_id=1834193905 instance=ExtResource("1_yvjvm")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+texture = ExtResource("2_rj0qc")
