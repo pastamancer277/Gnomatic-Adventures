@@ -17,7 +17,9 @@ func _ready():
 	xp.value = player.getXP()
 	social_credit.text = str(player.getSocialCredit())
 
-
+func _process(delta: float) -> void:
+	xp.value = player.getXP()
+	social_credit.text = str(player.getSocialCredit())
 
 func update_ui():
 	var slots = $PanelContainer/Panel/VBoxContainer/GridContainer.get_children()
@@ -30,8 +32,6 @@ func update_ui():
 			slots[i].set_item(item, amount)
 		else:
 			slots[i].clear_item()
-		xp.value = player.getXP()
-		social_credit.text = str(player.getSocialCredit())
 
 func _input(event: InputEvent) -> void:
 	if(event.is_action_pressed("Inventory")):
