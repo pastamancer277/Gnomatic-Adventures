@@ -1,11 +1,14 @@
-extends Node
+extends quest
 
+@onready var wood_item: Item = preload("res://resources/items/Wood.tres")
+@onready var key_item: Item = preload("res://resources/items/BasicKey.tres")
+@onready var player = $/root/Main/Sort/PlayerEntities/Player
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _ready():
 	pass
+
+func tryComplete():
+	if($/root/Main/Systems/Inventory.tryRemove({wood_item: 3})):
+		complete=true
+		player.gainXP(100)
+		player.changeCredit(1)

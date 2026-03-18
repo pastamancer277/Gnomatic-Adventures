@@ -1,9 +1,17 @@
-[gd_scene format=3 uid="uid://boglafagubgjc"]
+[gd_scene format=3 uid="uid://cuqox7w1ayuab"]
 
 [ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_yvjvm"]
 [ext_resource type="Texture2D" uid="uid://dmdshcbpdkn6x" path="res://assets/sprites/characters/LumberJack.png" id="2_rj0qc"]
+[ext_resource type="Script" uid="uid://bejg7mt5mg1qu" path="res://scripts/NPCs/forest3Dialogue.gd" id="3_reor6"]
+[ext_resource type="Script" uid="uid://fp3eao17ufcr" path="res://scripts/quests/WoodQuest.gd" id="4_3d8u2"]
 
-[node name="BasicNPC" unique_id=1834193905 instance=ExtResource("1_yvjvm")]
+[node name="ForestNPC3" unique_id=1834193905 instance=ExtResource("1_yvjvm")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
 texture = ExtResource("2_rj0qc")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("3_reor6")
+
+[node name="WoodQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(879326239) index="0" unique_id=918030758]
+script = ExtResource("4_3d8u2")
