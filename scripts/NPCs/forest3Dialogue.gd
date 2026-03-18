@@ -10,12 +10,12 @@ func _ready() -> void:
 
 func interact():
 	if(run==1):
-		dialogueBox.dialogue("I need wood Go fetch some wood sprites.", self)
+		dialogueBox.dialogue("I need wood. Go fetch me some wood sprites.", self)
 		dialogueBox.setDialogueOption("Ok!", 0)
 		dialogueBox.setDialogueOption("I have your wood right here sir", 1)
 	else: if(run==2):
-		dialogueBox.dialogue("Okay awesome.",self)
-		dialogueBox.setDialogueOption("What do you plan to do with the wood?", 0)
+		dialogueBox.dialogue("I think I'll need a little more...",self)
+		dialogueBox.setDialogueOption("Ah, okay", 0)
 	else: if(run==3):
 		dialogueBox.dialogue("I will begin a house for myself, I think.",self)
 		dialogueBox.setDialogueOption("Can't wait to see it!", 0)
@@ -29,7 +29,8 @@ func playerResponse(key: int):
 		if(key==0):
 			pass
 		else: if(key==1):
-			if(player.hasKeyword("wood")):
+			get_node("../Quests/WoodQuest").tryComplete()
+			if(get_node("../Quests/WoodQuest").isComplete()):
 				run=3
 				interact()
 			else:
@@ -39,6 +40,5 @@ func playerResponse(key: int):
 		run=1
 	else: if(run==3):
 		run=4
-		player.addKeyword("forest_clear")
 	else: if(run==4):
 		pass

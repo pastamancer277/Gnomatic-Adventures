@@ -4,6 +4,7 @@ var run=1
 
 var dialogueBox
 var slimeQuest
+@onready var player = $/root/Main/Sort/PlayerEntities/Player
 
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
@@ -11,9 +12,13 @@ func _ready() -> void:
 
 func interact():
 	if(run==1):
-		dialogueBox.dialogue("Hello there", self)
-		dialogueBox.setDialogueOption("Hi", 0)
-		dialogueBox.setDialogueOption("Ugh, people", 1)
+		if(player.getSocialCredit()>50):
+			dialogueBox.dialogue("Hello there", self)
+			dialogueBox.setDialogueOption("Hi", 0)
+			dialogueBox.setDialogueOption("Ugh, people", 1)
+		else:
+			dialogueBox.dialogue("I don't know you! Go away!", self)
+			dialogueBox.setDialogueOption("'...'", 2)
 	else: if(run==2):
 		dialogueBox.dialogue("Can you kill those three slimes, and bring me the slime?",self)
 		dialogueBox.setDialogueOption("Sure!", 0)
@@ -29,10 +34,13 @@ func interact():
 
 func playerResponse(key: int):
 	if(run == 1):
-		if(key==0):
-			run+=1
-			interact()
-		else: if(key==1):
+		if(player.getSocialCredit()>50):
+			if(key==0):
+				run+=1
+				interact()
+			else: if(key==1):
+				pass
+		else:
 			pass
 	else: if(run==2):
 		if(key==0 or key==1):

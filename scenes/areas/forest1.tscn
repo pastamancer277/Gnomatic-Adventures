@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://vt2aqaqauasb" path="res://assets/sprites/tilesets/grass.png" id="3_dgf10"]
 [ext_resource type="Texture2D" uid="uid://csrusfcx7xp8g" path="res://assets/sprites/objects/objects.png" id="4_eyc41"]
 [ext_resource type="PackedScene" uid="uid://b02bhbqdbog8w" path="res://scenes/chests/basic_chest_1.tscn" id="5_pqpu3"]
+[ext_resource type="PackedScene" uid="uid://cuqox7w1ayuab" path="res://scenes/NPCs/ForestNPC3.tscn" id="7_mt2jm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhdnn"]
 texture = ExtResource("2_y6wjh")
@@ -137,6 +138,9 @@ polygon = PackedVector2Array(212, 60, 323, 61, 324, 106, 341, 123, 412, 126, 416
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cliffside->World" index="0" unique_id=887349228]
 position = Vector2(398.5, 176.5)
 shape = SubResource("RectangleShape2D_d50ij")
+
+[node name="ForestNPC3" parent="." index="4" unique_id=1834193905 instance=ExtResource("7_mt2jm")]
+position = Vector2(199, 100)
 
 [connection signal="body_entered" from="Cliffside->World" to="." method="_on_cliffside_world_body_entered"]
 [connection signal="body_exited" from="Cliffside->World" to="." method="_on_cliffside_world_body_exited"]

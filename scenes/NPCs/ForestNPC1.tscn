@@ -7,12 +7,10 @@
 
 [node name="ForestNPC1" unique_id=1704687357 instance=ExtResource("1_mh6k8")]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0" unique_id=418013863]
-
-[node name="Sprite2D" parent="." index="2" unique_id=1430291876]
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
 texture = ExtResource("2_kchg7")
 
-[node name="Dialogue" parent="." index="4" unique_id=517973683]
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
 script = ExtResource("3_q5t66")
 
 [node name="SlimeQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(879326239) index="0" unique_id=2050254876]

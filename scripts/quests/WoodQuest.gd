@@ -8,7 +8,7 @@ func _ready():
 	pass
 
 func tryComplete():
-	if($/root/Main/Systems/Inventory.tryRemove({wood_item: 3})):
+	if($/root/Main/Systems/Inventory.tryRemove({wood_item: 1})):
 		complete=true
 		player.gainXP(100)
 		player.changeCredit(1)
