@@ -18,7 +18,7 @@ func interact():
 			dialogueBox.setDialogueOption("Ugh, people", 1)
 		else:
 			dialogueBox.dialogue("I don't know you! Go away!", self)
-			dialogueBox.setDialogueOption("'...'", 2)
+			dialogueBox.setDialogueOption("...", 2)
 	else: if(run==2):
 		dialogueBox.dialogue("Can you kill those three slimes, and bring me the slime?",self)
 		dialogueBox.setDialogueOption("Sure!", 0)
