@@ -41,22 +41,44 @@ func _physics_process(delta: float) -> void:
 		$AnimationPlayer.play("death")
 
 func player_movement(delta):
-	if(Input.is_action_pressed("ui_right")):
-		currnet_dir="right"
-		play_anim(1)
-		velocity.x=SPEED
-		velocity.y=0
-	elif(Input.is_action_pressed("ui_left")):
-		currnet_dir="left"
-		play_anim(1)
-		velocity.x=-SPEED
-		velocity.y=0
-	elif(Input.is_action_pressed("ui_down")):
+	if(Input.is_action_pressed("ui_right")&&not Input.is_action_pressed("ui_left")):
+		if(Input.is_action_pressed("ui_up")&& not Input.is_action_pressed("ui_down")):
+			currnet_dir="right"
+			play_anim(1)
+			velocity.x=SPEED*sin(deg_to_rad(45))
+			velocity.y=-SPEED*sin(deg_to_rad(45))
+		elif(Input.is_action_pressed("ui_down")&& not Input.is_action_pressed("ui_up")):
+			currnet_dir="right"
+			play_anim(1)
+			velocity.x=SPEED*sin(deg_to_rad(45))
+			velocity.y=SPEED*sin(deg_to_rad(45))
+		else:
+			currnet_dir="right"
+			play_anim(1)
+			velocity.x=SPEED
+			velocity.y=0
+	elif(Input.is_action_pressed("ui_left")&&not Input.is_action_pressed("ui_right")):
+		if(Input.is_action_pressed("ui_up")&& not Input.is_action_pressed("ui_down")):
+			currnet_dir="left"
+			play_anim(1)
+			velocity.x=-SPEED*sin(deg_to_rad(45))
+			velocity.y=-SPEED*sin(deg_to_rad(45))
+		elif(Input.is_action_pressed("ui_down")&& not Input.is_action_pressed("ui_up")):
+			currnet_dir="left"
+			play_anim(1)
+			velocity.x=-SPEED*sin(deg_to_rad(45))
+			velocity.y=SPEED*sin(deg_to_rad(45))
+		else:
+			currnet_dir="left"
+			play_anim(1)
+			velocity.x=-SPEED
+			velocity.y=0
+	elif(Input.is_action_pressed("ui_down")&& not Input.is_action_pressed("ui_up")):
 		currnet_dir="down"
 		play_anim(1)
 		velocity.y=SPEED
 		velocity.x=0
-	elif(Input.is_action_pressed("ui_up")):
+	elif(Input.is_action_pressed("ui_up")&& not Input.is_action_pressed("ui_down")):
 		currnet_dir="up"
 		play_anim(1)
 		velocity.y=-SPEED
