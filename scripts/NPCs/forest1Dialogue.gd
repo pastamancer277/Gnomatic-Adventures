@@ -34,12 +34,11 @@ func interact():
 
 func playerResponse(key: int):
 	if(run == 1):
-		if(player.getSocialCredit()>50):
-			if(key==0):
-				run+=1
-				interact()
-			else: if(key==1):
-				pass
+		if(key==0):
+			run+=1
+			interact()
+		else: if(key==1):
+			pass
 		else:
 			pass
 	else: if(run==2):

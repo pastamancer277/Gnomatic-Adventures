@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cfpo8n3wlgfhf" path="res://scripts/dialogue.gd" id="1_3n4vj"]
 [ext_resource type="Script" uid="uid://b7g1sf5jhsh6c" path="res://scripts/text_options.gd" id="2_bfpow"]
+[ext_resource type="PackedScene" uid="uid://7i0uxbaa047g" path="res://scenes/dialogue_button.tscn" id="3_bfpow"]
 
 [node name="Dialogue" type="CanvasLayer" unique_id=2067749993]
 script = ExtResource("1_3n4vj")
@@ -30,3 +31,4 @@ theme_override_font_sizes/normal_font_size = 7
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1917417057]
 layout_mode = 2
 script = ExtResource("2_bfpow")
+button = ExtResource("3_bfpow")
