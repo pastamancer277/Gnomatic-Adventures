@@ -1,8 +1,9 @@
 extends CanvasLayer
 
-var currentNPCDialogue
+var currentNPCDialogue: Node
 
 func dialogue(text: String, npc: Node):
+	$VBoxContainer/HBoxContainer.clearButtons()
 	currentNPCDialogue=npc
 	show_text(text)
 
@@ -18,7 +19,8 @@ func playerResponse(key: int):
 	$VBoxContainer/Panel.visible=false
 	currentNPCDialogue.playerResponse(key)
 
-func clearDialogue():
-	currentNPCDialogue=null
-	$VBoxContainer/Panel.visible=false
-	$VBoxContainer/HBoxContainer.clearButtons()
+func clearDialogue(npc: Node):
+	if(npc==currentNPCDialogue):
+		currentNPCDialogue=null
+		$VBoxContainer/Panel.visible=false
+		$VBoxContainer/HBoxContainer.clearButtons()

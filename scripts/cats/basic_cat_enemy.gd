@@ -25,7 +25,7 @@ func playerEntered(body: Node2D):
 
 func playerExited(body: Node2D):
 	if(body.name=="Player" and !combat):
-		$/root/Main/UI/Dialogue.clearDialogue()
+		$/root/Main/UI/Dialogue.clearDialogue($Dialogue)
 		player=null
 
 func setCombat(c: bool):

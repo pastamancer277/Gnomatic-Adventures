@@ -52,3 +52,6 @@ func setPlayerPos(name: String):
 
 func getPaused():
 	return pause
+
+func getCurArea():
+	return cur_area
