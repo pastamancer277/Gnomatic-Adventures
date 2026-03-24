@@ -46,6 +46,7 @@ _data = {
 [node name="BasicEnemy" type="CharacterBody2D" unique_id=1614433100 groups=["damagable", "enemy", "entity"]]
 z_index = 1
 y_sort_enabled = true
+motion_mode = 1
 script = ExtResource("1_7jpia")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1348801702]
