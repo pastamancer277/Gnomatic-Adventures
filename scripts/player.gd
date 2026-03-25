@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+signal resetGame
+signal respawn
+
 const SPEED = 100
 var currnet_dir ="none"
 var mHealth=100
@@ -22,6 +25,9 @@ func _ready() -> void:
 	$HealthBar.max_value=mHealth
 
 func _physics_process(delta: float) -> void:
+	if(Input.is_action_just_pressed("Reset")):
+		reset()
+	
 	if(alive&& !$/root/Global.getPaused()):
 		player_movement(delta)
 		update_health()
@@ -215,3 +221,24 @@ func addKeyword(key: String):
 
 func hasKeyword(key: String):
 	return keywords.has(key)
+
+func reset():
+	resetGame.emit()
+	$/root/Global.resetGame()
+	$/root/Main/UI/Dialogue.reset()
+	
+	currnet_dir ="down"
+	$AnimatedSprite2D.play("idle")
+	mHealth=100
+	health=100
+	attack_value=20
+	shield=0
+	alive=true
+	attack_cooldown=true
+	attacking=false
+
+	level=1
+	levelPoints=0
+	xp=0
+	socialCredit=50
+	keywords=[]

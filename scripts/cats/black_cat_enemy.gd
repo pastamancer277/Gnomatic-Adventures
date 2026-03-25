@@ -3,6 +3,8 @@ extends catEnemy
 @onready var blackAlly = preload("res://resources/allyCats/blackCatAlly.tres")
 
 func _ready():
+	super._ready()
+	
 	mHealth=150
 	health=mHealth
 	attack_value=12
@@ -18,10 +20,9 @@ func questComplete():
 	$/root/Main/Sort/PlayerEntities.add_child(ally)
 	$/root/Main/Sort/PlayerEntities/Player.addKeyword("black_cat")
 	ally.setup(blackAlly, global_position)
-	queue_free()
+	disappear()
 
 func onDeath():
-	print("drop")
 	$/root/Main/Sort/PlayerEntities/Player.addKeyword("black_cat")
 	super.onDeath()
 

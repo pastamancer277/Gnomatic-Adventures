@@ -24,6 +24,8 @@ var xpValue
 var pos
 
 func _ready() -> void:
+	playerNode.resetGame.connect(reset)
+	
 	pos=global_position
 	
 	attack_speed=enemyResource.attackCooldown
@@ -161,3 +163,6 @@ func _on_respawn_timer_timeout():
 
 func isDead():
 	return dead
+
+func reset():
+	_on_respawn_timer_timeout()

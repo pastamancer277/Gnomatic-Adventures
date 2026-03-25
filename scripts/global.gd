@@ -2,7 +2,7 @@ extends Node
 
 var player_alive=true
 var pause = true
-@onready var player = $/root/Main/Sort/PlayerEntities/Player
+@onready var player = get_node("/root/Main/Sort/PlayerEntities/Player")
 
 var cur_area := ""
 var scene_transit=false
@@ -55,3 +55,9 @@ func getPaused():
 
 func getCurArea():
 	return cur_area
+
+func resetGame():
+	game_first_load = true
+	change_area("Forest2")
+	player.global_position.x=player_start_x
+	player.global_position.y=player_start_y

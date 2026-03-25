@@ -5,6 +5,11 @@ signal inventory_updated
 var items: Dictionary = {}
 var max_slots := 20
 
+@onready var player = get_node("/root/Main/Sort/PlayerEntities/Player")
+
+func _ready():
+	player.resetGame.connect(func(): removeAllItems(items))
+
 func add_item(item: Dictionary) -> bool:
 	for item_name in item.keys():
 		if(items.has(item_name)):

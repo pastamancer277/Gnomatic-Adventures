@@ -24,3 +24,8 @@ func clearDialogue(npc: Node):
 		currentNPCDialogue=null
 		$VBoxContainer/Panel.visible=false
 		$VBoxContainer/HBoxContainer.clearButtons()
+
+func reset():
+	currentNPCDialogue=null
+	$VBoxContainer/Panel.visible=false
+	$VBoxContainer/HBoxContainer.clearButtons()

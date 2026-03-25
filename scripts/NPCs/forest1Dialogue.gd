@@ -1,8 +1,5 @@
-extends Node
+extends dialogue
 
-var run=1
-
-var dialogueBox
 var slimeQuest
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
 

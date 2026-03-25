@@ -1,12 +1,6 @@
-extends Node
+extends dialogue
 
-var run=1
-
-var dialogueBox
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
-
-func _ready() -> void:
-	dialogueBox=$/root/Main/UI/Dialogue
 
 func interact():
 	if(run==1):

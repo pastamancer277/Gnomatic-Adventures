@@ -14,3 +14,7 @@ func isComplete() -> bool:
 
 func activate():
 	active=true
+
+func reset():
+	active=false
+	complete=false

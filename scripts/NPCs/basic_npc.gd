@@ -5,7 +5,10 @@ class_name npc
 var player_near = false
 var loc
 
+@onready var player = $/root/Main/Sort/PlayerEntities/Player
+
 func _ready() -> void:
+	player.resetGame.connect(reset)
 	loc=get_parent().get_parent().name
 
 func _process(delta):
@@ -27,3 +30,6 @@ func _on_area_2d_body_exited(body):
 func interact():
 	if(loc==$/root/Global.getCurArea()):
 		$Dialogue.interact()
+
+func reset():
+	$Dialogue.reset()

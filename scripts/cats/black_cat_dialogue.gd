@@ -1,7 +1,5 @@
-extends Node
+extends dialogue
 
-var run=1
-var dialogueBox
 var tamingQuest
 
 func _ready() -> void:
