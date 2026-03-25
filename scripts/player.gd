@@ -12,6 +12,8 @@ var shield=0
 var alive=true
 var attack_cooldown=true
 
+var killRating=0
+
 var attacking=false
 
 var level=1
@@ -222,6 +224,9 @@ func addKeyword(key: String):
 func hasKeyword(key: String):
 	return keywords.has(key)
 
+func changeRating(val: int):
+	killRating+=val
+
 func reset():
 	resetGame.emit()
 	$/root/Global.resetGame()
@@ -236,6 +241,7 @@ func reset():
 	alive=true
 	attack_cooldown=true
 	attacking=false
+	killRating=0
 
 	level=1
 	levelPoints=0

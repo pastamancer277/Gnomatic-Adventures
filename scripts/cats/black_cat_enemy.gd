@@ -20,10 +20,12 @@ func questComplete():
 	$/root/Main/Sort/PlayerEntities.add_child(ally)
 	$/root/Main/Sort/PlayerEntities/Player.addKeyword("black_cat")
 	ally.setup(blackAlly, global_position)
+	playerNode.changeCredit(-8)
 	disappear()
 
 func onDeath():
 	$/root/Main/Sort/PlayerEntities/Player.addKeyword("black_cat")
+	playerNode.changeCredit(6)
 	super.onDeath()
 
 func dropItems():

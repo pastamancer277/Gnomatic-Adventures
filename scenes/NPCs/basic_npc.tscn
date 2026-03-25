@@ -8,7 +8,7 @@ radius = 6.3245554
 [sub_resource type="CircleShape2D" id="CircleShape2D_6mn8q"]
 radius = 61.03278
 
-[node name="BasicNPC" type="CharacterBody2D" unique_id=1834193905 groups=["entity"]]
+[node name="BasicNPC" type="CharacterBody2D" unique_id=1834193905 groups=["damagable", "entity"]]
 z_index = 1
 y_sort_enabled = true
 script = ExtResource("1_6wgny")
@@ -26,6 +26,15 @@ shape = SubResource("CircleShape2D_6mn8q")
 [node name="Dialogue" type="Node" parent="." unique_id=517973683]
 
 [node name="Quests" type="Node" parent="." unique_id=879326239]
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1369844062]
+offset_left = -9.0
+offset_top = 8.0
+offset_right = 9.0
+offset_bottom = 12.0
+show_percentage = false
+
+[node name="RegenTimer" type="Timer" parent="." unique_id=1440074978]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
