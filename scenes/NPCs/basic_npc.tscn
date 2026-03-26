@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://e8xg4uf6sjd1"]
 
 [ext_resource type="Script" uid="uid://bf0d0ki64bvdx" path="res://scripts/NPCs/basic_npc.gd" id="1_6wgny"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_oa26b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6wgny"]
 radius = 6.3245554
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e22pr"]
+resource_local_to_scene = true
+shader = ExtResource("2_oa26b")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.8)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6mn8q"]
 radius = 61.03278
@@ -17,6 +24,7 @@ script = ExtResource("1_6wgny")
 shape = SubResource("CircleShape2D_6wgny")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1430291876]
+material = SubResource("ShaderMaterial_e22pr")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1457364912]
 

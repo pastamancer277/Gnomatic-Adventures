@@ -41,6 +41,16 @@ func _on_area_2d_body_entered(body):
 			player_near = true
 
 func damage(d: int, pos, knock):
+	var material = $Sprite2D.material
+	if material is ShaderMaterial:
+		material.set_shader_parameter("active", true)
+		
+		var tween = create_tween()
+		tween.tween_interval(0.1)
+		tween.finished.connect(func(): 
+			material.set_shader_parameter("active", false)
+		)
+	
 	health-=d
 	if(health<=0):
 		onDeath()
