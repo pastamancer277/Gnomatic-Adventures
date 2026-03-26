@@ -357,7 +357,8 @@ texture = ExtResource("6_1ftgr")
 3:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_tybu4"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_c2ni6")
 sources/1 = SubResource("TileSetAtlasSource_su8pu")
 sources/2 = SubResource("TileSetAtlasSource_akxmk")
@@ -475,6 +476,8 @@ position = Vector2(-27, 73)
 
 [node name="BlackCatEnemy" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=72348834 instance=ExtResource("8_ryw4r")]
 position = Vector2(475, -65)
+collision_layer = 1
+collision_mask = 1
 
 [node name="Slime" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=1614433100 instance=ExtResource("9_x3itf")]
 position = Vector2(132, 145)

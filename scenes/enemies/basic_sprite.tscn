@@ -1,32 +1,19 @@
 [gd_scene format=3 uid="uid://bm6wgggxoplqg"]
 
 [ext_resource type="Script" uid="uid://dulee37pgldrw" path="res://scripts/enemies/sprite.gd" id="1_7lyuy"]
-
-[sub_resource type="Shader" id="Shader_7lyuy"]
-code = "shader_type canvas_item;
-
-uniform bool active = true;
-uniform vec4 flash_color : source_color = vec4(1.0, 0.2, 0.2, 0.8);
-
-void fragment() {
-    vec4 texture_color = texture(TEXTURE, UV);
-    if (active) {
-        COLOR = vec4(flash_color.rgb, texture_color.a);
-    } else {
-        COLOR = texture_color;
-    }
-}
-"
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_1w85l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nv1uk"]
 resource_local_to_scene = true
-shader = SubResource("Shader_7lyuy")
+shader = ExtResource("2_1w85l")
 shader_parameter/active = false
-shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.8)
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 
 [node name="BasicSprite" type="CharacterBody2D" unique_id=1614433100 groups=["damagable", "enemy", "entity"]]
 z_index = 1
 y_sort_enabled = true
+collision_layer = 2
+collision_mask = 15
 motion_mode = 1
 script = ExtResource("1_7lyuy")
 
@@ -41,7 +28,6 @@ offset = Vector2(0, -6)
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=1616957441]
 collision_layer = 2
-collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1815784260]
 

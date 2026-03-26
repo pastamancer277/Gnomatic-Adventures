@@ -91,7 +91,6 @@ func move():
 		knockback_velocity = lerp(knockback_velocity, Vector2.ZERO, 0.1)
 	else:
 		velocity = Vector2.ZERO
-
 		if(!player_chase.is_empty() and health>0):
 			var p=player_chase.get(0)
 			$AnimatedSprite2D.play("walk")

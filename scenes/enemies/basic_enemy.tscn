@@ -7,7 +7,7 @@
 resource_local_to_scene = true
 shader = ExtResource("2_8xi43")
 shader_parameter/active = false
-shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.8)
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 
 [sub_resource type="Animation" id="Animation_7jpia"]
 length = 0.001
@@ -53,6 +53,8 @@ _data = {
 [node name="BasicEnemy" type="CharacterBody2D" unique_id=1614433100 groups=["damagable", "enemy", "entity"]]
 z_index = 1
 y_sort_enabled = true
+collision_layer = 2
+collision_mask = 15
 motion_mode = 1
 script = ExtResource("1_7jpia")
 
@@ -67,13 +69,11 @@ offset = Vector2(0, -6)
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=1616957441]
 collision_layer = 2
-collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1815784260]
 
 [node name="AttackBox" type="Area2D" parent="." unique_id=726213343]
 collision_layer = 2
-collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox" unique_id=1837656842]
 position = Vector2(0, -3)

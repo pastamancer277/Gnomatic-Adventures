@@ -3,8 +3,11 @@ extends CharacterBody2D
 signal resetGame
 signal respawn
 
+@export var basicRanged: PackedScene
+
 const SPEED = 100
-var currnet_dir ="none"
+var currnet_dir ="down"
+var secDir = "none"
 var mHealth=100
 var health=100
 var attack_value=20
@@ -37,8 +40,10 @@ func _physics_process(delta: float) -> void:
 		player_movement(delta)
 		update_health()
 		
-		if(Input.is_action_just_pressed("ui_accept")&&attack_cooldown):
+		if(Input.is_action_just_pressed("MeleeAttack")&&attack_cooldown):
 			attack()
+		if(Input.is_action_just_pressed("RangedAttack")&&attack_cooldown):
+			rangedAttack()
 		if(Input.is_action_just_pressed("LevelAttack")):
 			levelAttack()
 		if(Input.is_action_just_pressed("LevelHealth")):
@@ -58,45 +63,53 @@ func player_movement(delta):
 	else:
 		velocity = Vector2.ZERO
 	
-		if(Input.is_action_pressed("ui_right")&&not Input.is_action_pressed("ui_left")):
-			if(Input.is_action_pressed("ui_up")&& not Input.is_action_pressed("ui_down")):
+		if(Input.is_action_pressed("MoveRight")&&not Input.is_action_pressed("MoveLeft")):
+			if(Input.is_action_pressed("MoveUp")&& not Input.is_action_pressed("MoveDown")):
 				currnet_dir="right"
+				secDir="up"
 				play_anim(1)
 				velocity.x=SPEED*sin(deg_to_rad(45))
 				velocity.y=-SPEED*sin(deg_to_rad(45))
-			elif(Input.is_action_pressed("ui_down")&& not Input.is_action_pressed("ui_up")):
+			elif(Input.is_action_pressed("MoveDown")&& not Input.is_action_pressed("MoveUp")):
 				currnet_dir="right"
+				secDir="down"
 				play_anim(1)
 				velocity.x=SPEED*sin(deg_to_rad(45))
 				velocity.y=SPEED*sin(deg_to_rad(45))
 			else:
 				currnet_dir="right"
+				secDir="none"
 				play_anim(1)
 				velocity.x=SPEED
 				velocity.y=0
-		elif(Input.is_action_pressed("ui_left")&&not Input.is_action_pressed("ui_right")):
-			if(Input.is_action_pressed("ui_up")&& not Input.is_action_pressed("ui_down")):
+		elif(Input.is_action_pressed("MoveLeft")&&not Input.is_action_pressed("MoveRight")):
+			if(Input.is_action_pressed("MoveUp")&& not Input.is_action_pressed("MoveDown")):
 				currnet_dir="left"
+				secDir="up"
 				play_anim(1)
 				velocity.x=-SPEED*sin(deg_to_rad(45))
 				velocity.y=-SPEED*sin(deg_to_rad(45))
-			elif(Input.is_action_pressed("ui_down")&& not Input.is_action_pressed("ui_up")):
+			elif(Input.is_action_pressed("MoveDown")&& not Input.is_action_pressed("MoveUp")):
 				currnet_dir="left"
+				secDir="down"
 				play_anim(1)
 				velocity.x=-SPEED*sin(deg_to_rad(45))
 				velocity.y=SPEED*sin(deg_to_rad(45))
 			else:
 				currnet_dir="left"
+				secDir="none"
 				play_anim(1)
 				velocity.x=-SPEED
 				velocity.y=0
-		elif(Input.is_action_pressed("ui_down")&& not Input.is_action_pressed("ui_up")):
+		elif(Input.is_action_pressed("MoveDown")&& not Input.is_action_pressed("MoveUp")):
 			currnet_dir="down"
+			secDir="none"
 			play_anim(1)
 			velocity.y=SPEED
 			velocity.x=0
-		elif(Input.is_action_pressed("ui_up")&& not Input.is_action_pressed("ui_down")):
+		elif(Input.is_action_pressed("MoveUp")&& not Input.is_action_pressed("MoveDown")):
 			currnet_dir="up"
+			secDir="none"
 			play_anim(1)
 			velocity.y=-SPEED
 			velocity.x=0
@@ -170,6 +183,51 @@ func attack():
 	
 	attack_cooldown=false
 	$AttackCooldown.start()
+	$AnimationPlayer.play("attack")
+
+func rangedAttack():
+	attacking=true
+	$AttackAnim.start()
+	
+	attack_cooldown=false
+	$AttackCooldown.start()
+	
+	var shot=basicRanged.instantiate()
+	var speed=180
+	if(secDir!="none"):
+		if(currnet_dir=="right"):
+			if(secDir=="up"):
+				shot.setup(speed*sin(PI/4),-speed*sin(PI/4),100,5)
+			elif(secDir=="down"):
+				shot.setup(speed*sin(PI/4),speed*sin(PI/4),100,5)
+		if(currnet_dir=="left"):
+			if(secDir=="up"):
+				shot.setup(-speed*sin(PI/4),-speed*sin(PI/4),100,5)
+			elif(secDir=="down"):
+				shot.setup(-speed*sin(PI/4),speed*sin(PI/4),100,5)
+		if(currnet_dir=="up"):
+			if(secDir=="right"):
+				shot.setup(speed*sin(PI/4),-speed*sin(PI/4),100,5)
+			elif(secDir=="left"):
+				shot.setup(-speed*sin(PI/4),-speed*sin(PI/4),100,5)
+		if(currnet_dir=="down"):
+			if(secDir=="right"):
+				shot.setup(speed*sin(PI/4),speed*sin(PI/4),100,5)
+			elif(secDir=="left"):
+				shot.setup(-speed*sin(PI/4),speed*sin(PI/4),100,5)
+	else:
+		if(currnet_dir=="right"):
+			shot.setup(100,0,100,5)
+		if(currnet_dir=="left"):
+			shot.setup(-100,0,100,5)
+		if(currnet_dir=="up"):
+			shot.setup(0,-100,100,5)
+		if(currnet_dir=="down"):
+			shot.setup(0,100,100,5)
+	get_parent().add_child(shot)
+	shot.setPos(global_position)
+
+func hit():
 	if(currnet_dir=="up"):
 		$AttackUp.attack(attack_value, global_position, knockback)
 	if(currnet_dir=="down"):
@@ -210,7 +268,6 @@ func setAllyPos():
 
 func gainXP(val: int):
 	xp+=val
-	print(str(xp))
 	if(xp>= 100):
 		xp-=100
 		level+=1

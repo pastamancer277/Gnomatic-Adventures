@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://sot6guxb4x56"]
+
+[ext_resource type="Script" uid="uid://cjtq4j2r7756p" path="res://scripts/rangedWeapons/basic_ranged.gd" id="1_7dhjq"]
+[ext_resource type="Texture2D" uid="uid://da3nby8djgnhn" path="res://assets/sprites/objects/rock_in_water_02.png" id="2_drgav"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yu0n"]
+size = Vector2(16, 16)
+
+[node name="BasicRanged" type="RigidBody2D" unique_id=1579132551 groups=["rangedPlayer"]]
+z_index = 1
+y_sort_enabled = true
+collision_layer = 8
+collision_mask = 6
+mass = 100.0
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 3
+script = ExtResource("1_7dhjq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=653986862]
+scale = Vector2(0.25, 0.25)
+shape = SubResource("RectangleShape2D_7yu0n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1752478997]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_drgav")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -7,10 +7,13 @@
 resource_local_to_scene = true
 shader = ExtResource("2_e5rux")
 shader_parameter/active = false
-shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.8)
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 
 [sub_resource type="Animation" id="Animation_7jpia"]
 length = 0.001
+
+[sub_resource type="Animation" id="Animation_e5rux"]
+resource_name = "attack"
 
 [sub_resource type="Animation" id="Animation_tgb66"]
 resource_name = "death"
@@ -47,10 +50,13 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_136sq"]
 _data = {
 &"RESET": SubResource("Animation_7jpia"),
+&"attack": SubResource("Animation_e5rux"),
 &"death": SubResource("Animation_tgb66")
 }
 
 [node name="BasicCatEnemy" type="CharacterBody2D" unique_id=72348834 groups=["damagable", "enemy", "entity"]]
+collision_layer = 2
+collision_mask = 15
 script = ExtResource("1_136sq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=653963757]
@@ -59,12 +65,12 @@ material = SubResource("ShaderMaterial_oi6qi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=733226745]
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=770416748]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=938400520]
 
 [node name="AttackBox" type="Area2D" parent="." unique_id=1213018617]
 collision_layer = 2
-collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox" unique_id=606064724]
 position = Vector2(0, -3)

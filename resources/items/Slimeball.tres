@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://djlnxnoquusbg"]
 
-[ext_resource type="Texture2D" uid="uid://n2au48o60ksg" path="res://assets/icons/sprite/item34.png" id="1_3hriw"]
-[ext_resource type="Script" path="res://scripts/itemResource.gd" id="2_3hriw"]
+[ext_resource type="Script" uid="uid://cc4te3g41ua7s" path="res://scripts/itemResource.gd" id="2_3hriw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3em1v"]
+load_path = "res://.godot/imported/item34.png-560933dc87443a9b57959324538c1de1.ctex"
 
 [resource]
 script = ExtResource("2_3hriw")
 name = "Slimeball"
-icon = ExtResource("1_3hriw")
+icon = SubResource("CompressedTexture2D_3em1v")
 positionY = -1
 metadata/_custom_type_script = "uid://cc4te3g41ua7s"

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://vt2aqaqauasb" path="res://assets/sprites/tilesets/grass.png" id="3_dgf10"]
 [ext_resource type="Texture2D" uid="uid://csrusfcx7xp8g" path="res://assets/sprites/objects/objects.png" id="4_eyc41"]
 [ext_resource type="PackedScene" uid="uid://b02bhbqdbog8w" path="res://scenes/chests/basic_chest_1.tscn" id="5_pqpu3"]
-[ext_resource type="PackedScene" uid="uid://boglafagubgjc" path="res://scenes/NPCs/ForestNPC3.tscn" id="7_mt2jm"]
+[ext_resource type="PackedScene" uid="uid://cuqox7w1ayuab" path="res://scenes/NPCs/ForestNPC3.tscn" id="7_mt2jm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhdnn"]
 texture = ExtResource("2_y6wjh")
@@ -92,7 +92,8 @@ texture = ExtResource("4_eyc41")
 10:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_lk7sa"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_nhdnn")
 sources/1 = SubResource("TileSetAtlasSource_3gtsj")
 sources/2 = SubResource("TileSetAtlasSource_g2dgg")
