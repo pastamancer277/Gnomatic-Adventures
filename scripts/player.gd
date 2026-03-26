@@ -8,6 +8,7 @@ var currnet_dir ="none"
 var mHealth=100
 var health=100
 var attack_value=20
+var knockback = 100
 var shield=0
 var alive=true
 var attack_cooldown=true
@@ -21,6 +22,8 @@ var levelPoints=0
 var xp=0
 var socialCredit=50
 var keywords=[]
+
+var knockback_velocity = Vector2.ZERO
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("front_idle")
@@ -49,52 +52,58 @@ func _physics_process(delta: float) -> void:
 		$AnimationPlayer.play("death")
 
 func player_movement(delta):
-	if(Input.is_action_pressed("ui_right")&&not Input.is_action_pressed("ui_left")):
-		if(Input.is_action_pressed("ui_up")&& not Input.is_action_pressed("ui_down")):
-			currnet_dir="right"
-			play_anim(1)
-			velocity.x=SPEED*sin(deg_to_rad(45))
-			velocity.y=-SPEED*sin(deg_to_rad(45))
-		elif(Input.is_action_pressed("ui_down")&& not Input.is_action_pressed("ui_up")):
-			currnet_dir="right"
-			play_anim(1)
-			velocity.x=SPEED*sin(deg_to_rad(45))
-			velocity.y=SPEED*sin(deg_to_rad(45))
-		else:
-			currnet_dir="right"
-			play_anim(1)
-			velocity.x=SPEED
-			velocity.y=0
-	elif(Input.is_action_pressed("ui_left")&&not Input.is_action_pressed("ui_right")):
-		if(Input.is_action_pressed("ui_up")&& not Input.is_action_pressed("ui_down")):
-			currnet_dir="left"
-			play_anim(1)
-			velocity.x=-SPEED*sin(deg_to_rad(45))
-			velocity.y=-SPEED*sin(deg_to_rad(45))
-		elif(Input.is_action_pressed("ui_down")&& not Input.is_action_pressed("ui_up")):
-			currnet_dir="left"
-			play_anim(1)
-			velocity.x=-SPEED*sin(deg_to_rad(45))
-			velocity.y=SPEED*sin(deg_to_rad(45))
-		else:
-			currnet_dir="left"
-			play_anim(1)
-			velocity.x=-SPEED
-			velocity.y=0
-	elif(Input.is_action_pressed("ui_down")&& not Input.is_action_pressed("ui_up")):
-		currnet_dir="down"
-		play_anim(1)
-		velocity.y=SPEED
-		velocity.x=0
-	elif(Input.is_action_pressed("ui_up")&& not Input.is_action_pressed("ui_down")):
-		currnet_dir="up"
-		play_anim(1)
-		velocity.y=-SPEED
-		velocity.x=0
+	if knockback_velocity.length() > 10:
+		velocity = knockback_velocity
+		knockback_velocity = lerp(knockback_velocity, Vector2.ZERO, 0.1)
 	else:
-		play_anim(0)
-		velocity.x=0
-		velocity.y=0
+		velocity = Vector2.ZERO
+	
+		if(Input.is_action_pressed("ui_right")&&not Input.is_action_pressed("ui_left")):
+			if(Input.is_action_pressed("ui_up")&& not Input.is_action_pressed("ui_down")):
+				currnet_dir="right"
+				play_anim(1)
+				velocity.x=SPEED*sin(deg_to_rad(45))
+				velocity.y=-SPEED*sin(deg_to_rad(45))
+			elif(Input.is_action_pressed("ui_down")&& not Input.is_action_pressed("ui_up")):
+				currnet_dir="right"
+				play_anim(1)
+				velocity.x=SPEED*sin(deg_to_rad(45))
+				velocity.y=SPEED*sin(deg_to_rad(45))
+			else:
+				currnet_dir="right"
+				play_anim(1)
+				velocity.x=SPEED
+				velocity.y=0
+		elif(Input.is_action_pressed("ui_left")&&not Input.is_action_pressed("ui_right")):
+			if(Input.is_action_pressed("ui_up")&& not Input.is_action_pressed("ui_down")):
+				currnet_dir="left"
+				play_anim(1)
+				velocity.x=-SPEED*sin(deg_to_rad(45))
+				velocity.y=-SPEED*sin(deg_to_rad(45))
+			elif(Input.is_action_pressed("ui_down")&& not Input.is_action_pressed("ui_up")):
+				currnet_dir="left"
+				play_anim(1)
+				velocity.x=-SPEED*sin(deg_to_rad(45))
+				velocity.y=SPEED*sin(deg_to_rad(45))
+			else:
+				currnet_dir="left"
+				play_anim(1)
+				velocity.x=-SPEED
+				velocity.y=0
+		elif(Input.is_action_pressed("ui_down")&& not Input.is_action_pressed("ui_up")):
+			currnet_dir="down"
+			play_anim(1)
+			velocity.y=SPEED
+			velocity.x=0
+		elif(Input.is_action_pressed("ui_up")&& not Input.is_action_pressed("ui_down")):
+			currnet_dir="up"
+			play_anim(1)
+			velocity.y=-SPEED
+			velocity.x=0
+		else:
+			play_anim(0)
+			velocity.x=0
+			velocity.y=0
 	
 	move_and_slide()
 
@@ -135,7 +144,21 @@ func play_anim(move):
 		elif(move==0):
 			anim.play("back_idle")
 
-func damage(damage:int):
+func damage(damage:int, pos, knock):
+	var material = $AnimatedSprite2D.material
+	if material is ShaderMaterial:
+		material.set_shader_parameter("active", true)
+		
+		var tween = create_tween()
+		tween.tween_interval(0.1)
+		tween.finished.connect(func(): 
+			material.set_shader_parameter("active", false)
+		)
+	
+	var dir = global_position.direction_to(pos)
+	var push_dir = (global_position - pos).normalized()
+	knockback_velocity = push_dir * knock
+	
 	damage-=shield
 	if(damage>0):
 		health-=damage
@@ -148,13 +171,13 @@ func attack():
 	attack_cooldown=false
 	$AttackCooldown.start()
 	if(currnet_dir=="up"):
-		$AttackUp.attack(attack_value)
+		$AttackUp.attack(attack_value, global_position, knockback)
 	if(currnet_dir=="down"):
-		$AttackDown.attack(attack_value)
+		$AttackDown.attack(attack_value, global_position, knockback)
 	if(currnet_dir=="left"):
-		$AttackLeft.attack(attack_value)
+		$AttackLeft.attack(attack_value, global_position, knockback)
 	if(currnet_dir=="right"):
-		$AttackRight.attack(attack_value)
+		$AttackRight.attack(attack_value, global_position, knockback)
 
 func update_health():
 	var hBar= $HealthBar

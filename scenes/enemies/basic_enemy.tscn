@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://bmw1xq14alg87"]
 
 [ext_resource type="Script" uid="uid://brh3byb1ak2bb" path="res://scripts/enemies/basic_enemy.gd" id="1_7jpia"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_8xi43"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ibjif"]
+resource_local_to_scene = true
+shader = ExtResource("2_8xi43")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.8)
 
 [sub_resource type="Animation" id="Animation_7jpia"]
 length = 0.001
@@ -53,6 +60,7 @@ script = ExtResource("1_7jpia")
 position = Vector2(0, -4)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=292355404]
+material = SubResource("ShaderMaterial_ibjif")
 animation = &""
 autoplay = "idle"
 offset = Vector2(0, -6)

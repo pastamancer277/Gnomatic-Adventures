@@ -15,6 +15,8 @@ var speed
 
 var pos
 
+var knockback_velocity = Vector2.ZERO
+
 func _ready() -> void:
 	pos=global_position
 	
@@ -53,25 +55,31 @@ func update_health():
 		hBar.visible=true
 
 func move():
-	if player_chase and health>0:
-		$AnimatedSprite2D.play("walk")
-		if(player.position.x-position.x<0):
-			velocity.x=speed
-			$AnimatedSprite2D.flip_h=true
-		else:
-			velocity.x=-speed
-			$AnimatedSprite2D.flip_h=false
-		if(player.position.y-position.y<0):
-			velocity.y=speed
-		else:
-			velocity.y=-speed
-	else: if(health>0):
-		velocity.x=0
-		velocity.y=0
-		$AnimatedSprite2D.play("idle")
-	else: if(health<=0):
-		velocity.x=0
-		velocity.y=0
+	if knockback_velocity.length() > 10:
+		velocity = knockback_velocity
+		knockback_velocity = lerp(knockback_velocity, Vector2.ZERO, 0.1)
+	else:
+		velocity = Vector2.ZERO
+		
+		if player_chase and health>0:
+			$AnimatedSprite2D.play("walk")
+			if(player.position.x-position.x<0):
+				velocity.x=speed
+				$AnimatedSprite2D.flip_h=true
+			else:
+				velocity.x=-speed
+				$AnimatedSprite2D.flip_h=false
+			if(player.position.y-position.y<0):
+				velocity.y=speed
+			else:
+				velocity.y=-speed
+		else: if(health>0):
+			velocity.x=0
+			velocity.y=0
+			$AnimatedSprite2D.play("idle")
+		else: if(health<=0):
+			velocity.x=0
+			velocity.y=0
 	move_and_slide()
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
@@ -82,10 +90,24 @@ func _on_detection_area_body_exited(body: Node2D) -> void:
 	player_chase=false
 	player=null
 
-func damage(d: int):
+func damage(d: int, pos, knock):
+	var material = $AnimatedSprite2D.material
+	if material is ShaderMaterial:
+		material.set_shader_parameter("active", true)
+		
+		var tween = create_tween()
+		tween.tween_interval(0.1)
+		tween.finished.connect(func(): 
+			material.set_shader_parameter("active", false)
+		)
+	
+	var dir = global_position.direction_to(pos)
+	var push_dir = (global_position - pos).normalized()
+	knockback_velocity = push_dir * knock
+	
 	health-=d
 	if(health<=0):
-		$AnimationPlayer.play("death")
+		onDeath()
 	else:
 		$RegenTimer.start(resource.regenSpeed)
 

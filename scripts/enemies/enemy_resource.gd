@@ -4,6 +4,7 @@ class_name enemy_res
 @export var maxHealth: int
 @export var speed: int
 @export var attackValue: int
+@export var knockback: float
 @export var xpValue: int
 
 @export var sightRadius: int

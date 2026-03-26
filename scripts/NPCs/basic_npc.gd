@@ -40,7 +40,7 @@ func _on_area_2d_body_entered(body):
 		if body.name == "Player":
 			player_near = true
 
-func damage(d: int):
+func damage(d: int, pos, knock):
 	health-=d
 	if(health<=0):
 		onDeath()

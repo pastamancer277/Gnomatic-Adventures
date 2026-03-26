@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://6mmv4jq4gjd3"]
 
 [ext_resource type="Script" uid="uid://chcy1d01230tm" path="res://scripts/cats/basic_cat_enemy.gd" id="1_136sq"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_e5rux"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oi6qi"]
+resource_local_to_scene = true
+shader = ExtResource("2_e5rux")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.8)
 
 [sub_resource type="Animation" id="Animation_7jpia"]
 length = 0.001
@@ -47,6 +54,7 @@ _data = {
 script = ExtResource("1_136sq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=653963757]
+material = SubResource("ShaderMaterial_oi6qi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=733226745]
 

@@ -8,6 +8,7 @@ func _ready():
 	mHealth=150
 	health=mHealth
 	attack_value=12
+	knockback = 120.0
 	speed=50
 	attack_speed=.6
 	regen_speed=1.3

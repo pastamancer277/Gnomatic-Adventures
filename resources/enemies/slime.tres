@@ -139,6 +139,7 @@ script = ExtResource("2_pssbi")
 maxHealth = 100
 speed = 40
 attackValue = 10
+knockback = 50.0
 xpValue = 15
 sightRadius = 82
 attackRadius = 14.0

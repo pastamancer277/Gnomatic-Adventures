@@ -43,9 +43,9 @@ func runDialogue():
 func questComplete():
 	pass
 
-func damage(d: int):
+func damage(d: int, pos, knock):
 	if(combat):
-		super.damage(d)
+		super.damage(d, pos, knock)
 
 func onDeath():
 	playerNode.gainXP(xpValue)
