@@ -2,11 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cc4te3g41ua7s" path="res://scripts/itemResource.gd" id="1_fio3v"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fio3v"]
-load_path = "res://.godot/imported/item86.png-183f74f1b85f88a987ce57795b803b03.ctex"
-
 [resource]
 script = ExtResource("1_fio3v")
 name = "Wood"
-icon = SubResource("CompressedTexture2D_fio3v")
 metadata/_custom_type_script = "uid://cc4te3g41ua7s"

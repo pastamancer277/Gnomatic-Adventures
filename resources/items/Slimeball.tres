@@ -2,12 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cc4te3g41ua7s" path="res://scripts/itemResource.gd" id="2_3hriw"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3em1v"]
-load_path = "res://.godot/imported/item34.png-560933dc87443a9b57959324538c1de1.ctex"
-
 [resource]
 script = ExtResource("2_3hriw")
 name = "Slimeball"
-icon = SubResource("CompressedTexture2D_3em1v")
 positionY = -1
 metadata/_custom_type_script = "uid://cc4te3g41ua7s"

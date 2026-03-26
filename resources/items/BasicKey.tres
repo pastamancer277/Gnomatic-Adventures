@@ -2,11 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cc4te3g41ua7s" path="res://scripts/itemResource.gd" id="2_ggd7e"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2mu24"]
-load_path = "res://.godot/imported/item74.png-ac41a73b931d542182ba3a386752952c.ctex"
-
 [resource]
 script = ExtResource("2_ggd7e")
 name = "Basic Key"
-icon = SubResource("CompressedTexture2D_2mu24")
 metadata/_custom_type_script = "uid://cc4te3g41ua7s"
