@@ -20,8 +20,8 @@ func setPos(pos):
 func getDamage():
 	return damage
 
-
 func _on_body_entered(body: Node) -> void:
 	if(body.is_in_group("enemy")):
 		body.damage(damage, global_position, 0)
+		body.hitBy($/root/Main/Sort/PlayerEntities/Player)
 		queue_free()

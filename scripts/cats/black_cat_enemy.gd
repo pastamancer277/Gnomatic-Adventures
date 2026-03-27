@@ -17,11 +17,21 @@ func _ready():
 	xpValue=50
 
 func questComplete():
+	super.questComplete()
+	
 	var ally = allyScene.instantiate()
 	$/root/Main/Sort/PlayerEntities.add_child(ally)
 	$/root/Main/Sort/PlayerEntities/Player.addKeyword("black_cat")
-	ally.setup(blackAlly, global_position)
+	ally.setup(blackAlly, playerNode.global_position)
 	playerNode.changeCredit(-8)
+	disappear()
+
+func loadTamed():
+	super.loadTamed()
+	
+	var ally = allyScene.instantiate()
+	$/root/Main/Sort/PlayerEntities.add_child(ally)
+	ally.setup(blackAlly, playerNode.global_position)
 	disappear()
 
 func onDeath():

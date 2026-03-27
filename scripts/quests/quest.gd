@@ -18,3 +18,11 @@ func activate():
 func reset():
 	active=false
 	complete=false
+
+func saveData():
+	$/root/SaveManager.addSaveData("Quests", name, {"active" = active, "complete" = complete})
+
+func loadData():
+	var data = $/root/SaveManager.getData("Quests", name)
+	active = data.get("active", false)
+	complete = data.get("complete", false)

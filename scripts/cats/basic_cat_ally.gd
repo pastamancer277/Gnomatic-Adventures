@@ -12,6 +12,9 @@ var mHealth
 var health
 var attack_value
 var speed
+var knockback
+
+var knockback_velocity = Vector2.ZERO
 
 func setup(res: allyResource, pos: Vector2) -> void:
 	if not is_node_ready():
@@ -21,6 +24,7 @@ func setup(res: allyResource, pos: Vector2) -> void:
 	resource=res
 	mHealth=resource.maxHealth
 	health=mHealth
+	knockback=resource.knockback
 	$HealthBar.max_value = mHealth
 	attack_value=resource.attackValue
 	speed=resource.speed
@@ -63,7 +67,7 @@ func update_health():
 func attack():
 	if(!target.is_empty() and attack_cooldown and not health<=0):
 		for enemy in target:
-			enemy.damage(attack_value)
+			enemy.damage(attack_value, global_position, knockback)
 		attack_cooldown=false
 		$AttackCooldown.start(resource.attackCooldown)
 	#else:
@@ -72,38 +76,43 @@ func attack():
 		#print(health)
 
 func move():
-	if(!target_chase.is_empty() and health>0):
-		var moveTar=target_chase.get(0)
-		$AnimatedSprite2D.play("walk")
-		if(moveTar.position.x-position.x<0):
-			velocity.x=-speed
-			$AnimatedSprite2D.flip_h=true
-		else:
-			velocity.x=speed
-			$AnimatedSprite2D.flip_h=false
-		if(moveTar.position.y-position.y<0):
-			velocity.y=-speed
-		else:
-			velocity.y=speed
-	else: if(health<=0):
-		velocity.x=0
-		velocity.y=0
-	else: if(global_position.distance_to(player.global_position)>50):
-		$AnimatedSprite2D.play("walk")
-		if(player.position.x-position.x<0):
-			velocity.x=-speed
-			$AnimatedSprite2D.flip_h=true
-		else:
-			velocity.x=speed
-			$AnimatedSprite2D.flip_h=false
-		if(player.position.y-position.y<0):
-			velocity.y=-speed
-		else:
-			velocity.y=speed
-	else: if(health>0):
-		velocity.x=0
-		velocity.y=0
-		$AnimatedSprite2D.play("idle")
+	if knockback_velocity.length() > 10:
+		velocity = knockback_velocity
+		knockback_velocity = lerp(knockback_velocity, Vector2.ZERO, 0.1)
+	else:
+		velocity = Vector2.ZERO
+		if(!target_chase.is_empty() and health>0):
+			var moveTar=target_chase.get(0)
+			$AnimatedSprite2D.play("walk")
+			if(moveTar.position.x-position.x<0):
+				velocity.x=-speed
+				$AnimatedSprite2D.flip_h=true
+			else:
+				velocity.x=speed
+				$AnimatedSprite2D.flip_h=false
+			if(moveTar.position.y-position.y<0):
+				velocity.y=-speed
+			else:
+				velocity.y=speed
+		else: if(health<=0):
+			velocity.x=0
+			velocity.y=0
+		else: if(global_position.distance_to(player.global_position)>50):
+			$AnimatedSprite2D.play("walk")
+			if(player.position.x-position.x<0):
+				velocity.x=-speed
+				$AnimatedSprite2D.flip_h=true
+			else:
+				velocity.x=speed
+				$AnimatedSprite2D.flip_h=false
+			if(player.position.y-position.y<0):
+				velocity.y=-speed
+			else:
+				velocity.y=speed
+		else: if(health>0):
+			velocity.x=0
+			velocity.y=0
+			$AnimatedSprite2D.play("idle")
 	move_and_slide()
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
@@ -125,8 +134,22 @@ func _on_attackbox_body_exited(body: Node2D) -> void:
 func _on_attack_cooldown_timeout() -> void:
 	attack_cooldown=true
 
-func damage(d: int):
-	health-=d
+func damage(damage:int, pos, knock):
+	var material = $AnimatedSprite2D.material
+	if material is ShaderMaterial:
+		material.set_shader_parameter("active", true)
+		
+		var tween = create_tween()
+		tween.tween_interval(0.1)
+		tween.finished.connect(func(): 
+			material.set_shader_parameter("active", false)
+		)
+	
+	var dir = global_position.direction_to(pos)
+	var push_dir = (global_position - pos).normalized()
+	knockback_velocity = push_dir * knock
+	
+	health-=damage
 	if(health>0):
 		$RegenTimer.start(resource.regenSpeed)
 	else:

@@ -18,9 +18,12 @@ radius = 61.03278
 [node name="BasicNPC" type="CharacterBody2D" unique_id=1834193905 groups=["damagable", "entity"]]
 z_index = 1
 y_sort_enabled = true
+collision_layer = 6
+collision_mask = 15
 script = ExtResource("1_6wgny")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1495028966]
+position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_6wgny")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1430291876]

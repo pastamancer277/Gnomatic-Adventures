@@ -114,7 +114,7 @@ func move():
 	move_and_slide()
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
-	if(body.is_in_group("player")):
+	if(body.is_in_group("player")&&not player_chase.has(body)):
 		player_chase.append(body)
 
 func _on_detection_area_body_exited(body: Node2D) -> void:
@@ -153,6 +153,10 @@ func damage(d: int, attackPos, knockback):
 	else:
 		$RegenTimer.start(regen_speed)
 
+func hitBy(node: Node):
+	if(node.is_in_group("player")):
+		player_chase.append(node)
+
 func dropItems():
 	for term in enemyResource.items:
 		var am: int = term.amount
@@ -189,3 +193,16 @@ func isDead():
 
 func reset():
 	_on_respawn_timer_timeout()
+
+func loadData():
+	global_position=pos
+	health=mHealth
+	dead=false
+	if(get_parent().get_parent().getActive()):
+		visible=true
+		$CollisionShape2D.disabled=false
+		process_mode=Node.PROCESS_MODE_INHERIT
+	else:
+		visible=false
+		$CollisionShape2D.disabled=true
+		process_mode=Node.PROCESS_MODE_DISABLED

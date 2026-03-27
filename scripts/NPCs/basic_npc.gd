@@ -6,7 +6,7 @@ var player_near = false
 var loc
 var health = 100
 var mHealth = 100
-var dead
+var dead = false
 var killValue = 1
 
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
@@ -64,16 +64,19 @@ func onDeath():
 	dead=true
 	player_near=false
 	player.changeRating(killValue)
+	saveData()
 
 func _on_area_2d_body_exited(body):
 	if(loc==$/root/Global.getCurArea()):
 		if body.name == "Player":
 			player_near = false
 			$/root/Main/UI/Dialogue.clearDialogue($Dialogue)
+	saveData()
 
 func interact():
 	if(loc==$/root/Global.getCurArea()):
 		$Dialogue.interact()
+	saveData()
 
 func reset():
 	$Dialogue.reset()
@@ -82,3 +85,26 @@ func reset():
 	$Area2D/CollisionShape2D.disabled=false
 	dead=false
 	health=mHealth
+
+func saveData():
+	$/root/SaveManager.addSaveData("NPCs", name, {"dead" = dead})
+
+func loadData():
+	var data = $/root/SaveManager.getData("NPCs", name)
+	if data["dead"] == true:
+		visible=false
+		$CollisionShape2D.disabled=true
+		$Area2D/CollisionShape2D.disabled=true
+		dead=true
+		health=0
+	else:
+		if(get_parent().get_parent().getActive()):
+			visible=true
+			$CollisionShape2D.disabled=false
+			process_mode=Node.PROCESS_MODE_INHERIT
+		else:
+			visible=false
+			$CollisionShape2D.disabled=true
+			process_mode=Node.PROCESS_MODE_DISABLED
+		dead=false
+		health=mHealth

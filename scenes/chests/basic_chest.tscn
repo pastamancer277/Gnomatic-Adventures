@@ -37,6 +37,22 @@ animations = [{
 "loop": false,
 "name": &"open",
 "speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yue2o")
+}],
+"loop": false,
+"name": &"setClosed",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilhio")
+}],
+"loop": false,
+"name": &"setOpen",
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8me8i"]
@@ -48,11 +64,13 @@ radius = 14.0
 [node name="Chest" type="CharacterBody2D" unique_id=1071843645 groups=["entity"]]
 z_index = 1
 y_sort_enabled = true
+collision_layer = 4
+collision_mask = 15
 script = ExtResource("1_sy5e1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=117843915]
 sprite_frames = SubResource("SpriteFrames_kg5gm")
-animation = &"open"
+animation = &"setClosed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1544982247]
 position = Vector2(0, 3)

@@ -53,3 +53,35 @@ func removeItems(item: Item, amount: int = 1):
 	if items[item] <= 0:
 		items.erase(item)
 	inventory_updated.emit()
+
+func getInventory():
+	return items
+
+func saveData():
+	var data: Dictionary
+	for item in items.keys():
+		if item != null:
+			data[item.resource_path] = items[item]
+	SaveManager.addSaveData("World", "inventory", data)
+
+
+func loadData():
+	items.clear()
+	var data = SaveManager.getData("World", "inventory")
+	
+	if data == null:
+		print("No inventory data found in save.")
+		return
+	
+	var count = min(data.size(), max_slots)
+	
+	for key in data.keys():
+		var path = key
+		var amount = int(data[key])
+		
+		if ResourceLoader.exists(path):
+			var item_resource:Item = load(path)
+			items[item_resource] = amount
+		else:
+			printerr("Failed to load item: File not found at ", path)
+	inventory_updated.emit()

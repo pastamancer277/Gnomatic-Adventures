@@ -6,9 +6,12 @@ var combat=false
 var quest=false
 var player=null
 
+var tamed=false
+
 @onready var allyScene= preload("res://scenes/cats/basic_cat_ally.tscn")
 
 func _ready():
+	$/root/SaveManager.loaded.connect(loadDataLate)
 	playerNode.resetGame.connect(reset)
 	pos=global_position
 
@@ -41,7 +44,7 @@ func runDialogue():
 	$Dialogue.interact()
 
 func questComplete():
-	pass
+	tamed=true
 
 func damage(d: int, pos, knock):
 	if(combat):
@@ -67,3 +70,18 @@ func reset():
 	$DetectionArea/CollisionShape2D.disabled=false
 	global_position=pos
 	$Dialogue.reset()
+
+func saveData():
+	$/root/SaveManager.addSaveData("NPCs", name, {"dead" = dead, "quest" = quest, "combat" = combat, "tamed" = tamed})
+
+func loadDataLate():
+	var data = $/root/SaveManager.getData("NPCs", name)
+	if data.get("dead", false) == true:
+		disappear()
+	if data.get("tamed", false) == true:
+		loadTamed()
+	quest = data.get("quest", false)
+	combat = data.get("combat", false)
+
+func loadTamed():
+	tamed=true

@@ -21,6 +21,10 @@ var game_first_load=true
 func _ready():
 	change_area("Forest2")
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("Load Data"):
+		$/root/SaveManager.loadGame()
+
 func finish_scene_change(name: String):
 	if scene_transit:
 		scene_transit=false
@@ -61,3 +65,17 @@ func resetGame():
 	change_area("Forest2")
 	player.global_position.x=player_start_x
 	player.global_position.y=player_start_y
+
+func saveData():
+	var data={
+		"loc" = cur_area,
+	}
+	$/root/SaveManager.addSaveData("World", name, data)
+
+func loadData():
+	var data = $/root/SaveManager.getData("World", name)
+	cur_area= data.get("loc", cur_area)
+	change_area(cur_area)
+	for node in $/root/Main/Sort/PlayerEntities.get_children():
+		if(not node.name=="Player"):
+			node.queue_free()

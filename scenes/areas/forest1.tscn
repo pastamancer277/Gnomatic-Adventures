@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://csrusfcx7xp8g" path="res://assets/sprites/objects/objects.png" id="4_eyc41"]
 [ext_resource type="PackedScene" uid="uid://b02bhbqdbog8w" path="res://scenes/chests/basic_chest_1.tscn" id="5_pqpu3"]
 [ext_resource type="PackedScene" uid="uid://cuqox7w1ayuab" path="res://scenes/NPCs/ForestNPC3.tscn" id="7_mt2jm"]
+[ext_resource type="PackedScene" uid="uid://kby6wao6ru81" path="res://scenes/save_point.tscn" id="8_svmhd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhdnn"]
 texture = ExtResource("2_y6wjh")
@@ -133,6 +134,9 @@ position = Vector2(116.96008, 191.81398)
 
 [node name="ForestNPC3" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=1834193905 instance=ExtResource("7_mt2jm")]
 position = Vector2(199, 100)
+
+[node name="SavePoint" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=862322370 instance=ExtResource("8_svmhd")]
+position = Vector2(298, 86)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=2065946082]
 polygon = PackedVector2Array(212, 60, 323, 61, 324, 106, 341, 123, 412, 126, 416, 230, 340, 235, 340, 242, 327, 246, 324, 260, 286, 262, 282, 247, 245, 247, 245, 260, 111, 260, 106, 246, 46, 243, 47, 189, 63, 187, 64, 160, 127, 159, 127, 127, 156, 126, 158, 44, 210, 47, 217, -1, 21, 18, 26, 364, 473, 371, 453, 54, 211, 22)

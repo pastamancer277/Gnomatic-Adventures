@@ -7,3 +7,4 @@ func interact(player):
 	if $/root/Main/Systems/Inventory.tryRemove({key_item: 1}):
 		get_node("../AnimatedSprite2D").play("open")
 		$/root/Main/Systems/Inventory.add_item({fish: 3})
+		get_parent().setOpen(true)

@@ -2,12 +2,15 @@
 
 class_name area
 
+var active
+
 func _process(delta: float) -> void:
 	change_scene()
 
 @abstract func change_scene()
 
 func set_active(is_active: bool) -> void:
+	active=is_active
 	visible = is_active
 	set_all_tile_collisions(is_active)
 	
@@ -27,3 +30,6 @@ func set_all_tile_collisions(active: bool) -> void:
 		if layer is TileMapLayer:
 			layer.collision_enabled = active
 			layer.visible=active
+
+func getActive():
+	return active

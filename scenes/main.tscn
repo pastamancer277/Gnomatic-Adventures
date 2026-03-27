@@ -27,6 +27,7 @@ y_sort_enabled = true
 y_sort_enabled = true
 
 [node name="Player" parent="Sort/PlayerEntities" unique_id=1658835578 instance=ExtResource("2_o6xl0")]
+motion_mode = 0
 
 [node name="Systems" parent="." unique_id=399427317 instance=ExtResource("3_sugp2")]
 

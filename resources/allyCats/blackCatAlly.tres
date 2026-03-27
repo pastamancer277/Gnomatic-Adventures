@@ -148,6 +148,7 @@ script = ExtResource("1_qbgec")
 maxHealth = 50
 speed = 40
 attackValue = 5
+knockback = 10.0
 sightRadius = 100
 attackRadius = 10.0
 regenSpeed = 1.0

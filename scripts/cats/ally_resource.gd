@@ -5,6 +5,7 @@ class_name allyResource
 @export var maxHealth: int
 @export var speed: int
 @export var attackValue: int
+@export var knockback: float
 
 @export var sightRadius: int
 @export var attackRadius: float

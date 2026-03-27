@@ -111,6 +111,11 @@ func damage(d: int, pos, knock):
 	else:
 		$RegenTimer.start(resource.regenSpeed)
 
+func hitBy(node: Node):
+	if(node.name == "Player"):
+		player_chase=true
+		player=node
+
 func dropItems():
 	for term in resource.items:
 		var am: int = term.amount
@@ -140,3 +145,16 @@ func _on_respawn_timer_timeout():
 	process_mode=Node.PROCESS_MODE_INHERIT
 	health=mHealth
 	dead=false
+
+func loadData():
+	global_position=pos
+	health=mHealth
+	dead=false
+	if(get_parent().get_parent().getActive()):
+		visible=true
+		$CollisionShape2D.disabled=false
+		process_mode=Node.PROCESS_MODE_INHERIT
+	else:
+		visible=false
+		$CollisionShape2D.disabled=true
+		process_mode=Node.PROCESS_MODE_DISABLED

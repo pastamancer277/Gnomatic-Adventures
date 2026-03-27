@@ -328,3 +328,44 @@ func reset():
 	xp=0
 	socialCredit=50
 	keywords=[]
+
+func saveData():
+	var data={
+		"locX" = global_position.x,
+		"locY" = global_position.y,
+		"mHealth" = mHealth,
+		"attack_value"=attack_value,
+		"knockback" = knockback,
+		"shield"= shield,
+		"alive"=alive,
+		"killRating"=killRating,
+
+		"level"=level,
+		"levelPoints"=levelPoints,
+		"xp"=xp,
+		"socialCredit"=socialCredit,
+		"keywords"=keywords
+	}
+	$/root/SaveManager.setSaveData("Player", data)
+
+func loadData():
+	var data = $/root/SaveManager.getAccessData("Player")
+	
+	if data == null or data.is_empty():
+		return
+
+	global_position.x = data["locX"]
+	global_position.y = data["locY"]
+
+	mHealth = data.get("mHealth", mHealth)
+	attack_value = data.get("attack_value", attack_value)
+	knockback = data.get("knockback", knockback)
+	shield = data.get("shield", shield)
+	alive = data.get("alive", alive)
+	killRating = int(data.get("killRating", killRating))
+
+	level = int(data.get("level", level))
+	levelPoints = int(data.get("levelPoints", levelPoints))
+	xp = data.get("xp", xp)
+	socialCredit = int(data.get("socialCredit", socialCredit))
+	keywords = data.get("keywords", keywords)
