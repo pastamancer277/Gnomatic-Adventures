@@ -147,5 +147,8 @@ polygon = PackedVector2Array(212, 60, 323, 61, 324, 106, 341, 123, 412, 126, 416
 position = Vector2(398.5, 176.5)
 shape = SubResource("RectangleShape2D_d50ij")
 
+[node name="Forest2" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=1254783125]
+position = Vector2(359, 174)
+
 [connection signal="body_entered" from="Cliffside->World" to="." method="_on_cliffside_world_body_entered"]
 [connection signal="body_exited" from="Cliffside->World" to="." method="_on_cliffside_world_body_exited"]

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bgcp3t4vqdfgr" path="res://scenes/areas/forest2.tscn" id="2_85g3d"]
 [ext_resource type="PackedScene" uid="uid://ctqcvkt7je1qr" path="res://scenes/player.tscn" id="2_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://dxwohl5i6bba8" path="res://scenes/areas/forest1.tscn" id="2_tipki"]
+[ext_resource type="PackedScene" uid="uid://bwopwoieri5y8" path="res://scenes/areas/forest3.tscn" id="3_85g3d"]
 [ext_resource type="PackedScene" uid="uid://uk85sldfb4ug" path="res://scenes/systems.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://e5lj58ypiw1s" path="res://scenes/areas/city1.tscn" id="3_tipki"]
 [ext_resource type="PackedScene" uid="uid://8yqjwryrxrxr" path="res://scenes/inventory.tscn" id="5_o6xl0"]
@@ -17,9 +18,11 @@ y_sort_enabled = true
 [node name="Areas" type="Node2D" parent="Sort" unique_id=830521584]
 y_sort_enabled = true
 
+[node name="Forest1" parent="Sort/Areas" unique_id=76430044 instance=ExtResource("2_tipki")]
+
 [node name="Forest2" parent="Sort/Areas" unique_id=1349325032 instance=ExtResource("2_85g3d")]
 
-[node name="Forest1" parent="Sort/Areas" unique_id=76430044 instance=ExtResource("2_tipki")]
+[node name="Forest3" parent="Sort/Areas" unique_id=1694440480 instance=ExtResource("3_85g3d")]
 
 [node name="City1" parent="Sort/Areas" unique_id=1197791721 instance=ExtResource("3_tipki")]
 
