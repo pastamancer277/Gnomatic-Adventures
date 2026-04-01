@@ -727,10 +727,10 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
-radius = 6.0
+radius = 14.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
-size = Vector2(24, 11)
+size = Vector2(24, 21)
 
 [sub_resource type="Animation" id="Animation_smehm"]
 resource_name = "attack"
@@ -818,7 +818,7 @@ collision_mask = 2
 script = ExtResource("3_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackDown" unique_id=1991274966]
-position = Vector2(0, 6.5)
+position = Vector2(0, 11.5)
 shape = SubResource("RectangleShape2D_qlg0r")
 
 [node name="AttackRight" type="Area2D" parent="." unique_id=1996762050]
