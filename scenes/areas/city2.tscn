@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cv7f5fh3caefc" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Struct.png" id="4_py5fx"]
 [ext_resource type="Texture2D" uid="uid://cypehk5don2o4" path="res://assets/sprites/Biome/Roofs.png" id="4_ydaih"]
 [ext_resource type="Texture2D" uid="uid://xx1ohmvo1cqm" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Tileset Stone Ground.png" id="5_ydaih"]
+[ext_resource type="Texture2D" uid="uid://dvw4xjkvkyrgo" path="res://assets/sprites/Biome/Props.png" id="7_0n7n0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_puqa6"]
 texture = ExtResource("2_3nhoh")
@@ -2607,6 +2608,158 @@ texture = ExtResource("5_ydaih")
 [sub_resource type="TileSet" id="TileSet_py5fx"]
 sources/0 = SubResource("TileSetAtlasSource_ydaih")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d4xqe"]
+texture = ExtResource("7_0n7n0")
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+0:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+0:13/0 = 0
+4:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_syi5y"]
+sources/3 = SubResource("TileSetAtlasSource_d4xqe")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0n7n0"]
+size = Vector2(48, 49)
+
 [node name="City2" unique_id=1349325032 instance=ExtResource("1_pld3q")]
 
 [node name="Ground" type="TileMapLayer" parent="TileMap" parent_id_path=PackedInt32Array(41032152) index="0" unique_id=1770520763]
@@ -2634,8 +2787,18 @@ tile_set = SubResource("TileSet_p82lg")
 tile_map_data = PackedByteArray("AADv////AAAFAAUAAADv//3/AAAFAAAAAADv//7/AAAFAAEAAADu//3/AAANAAgAAADu////AAANAAkAAADu/wAAAAAFAAQAAADu//z/AAAFAAQAAADu//v/AAAFAAQAAADu/wEAAAAFAAQAAADt/wEAAAACAAMAAADs/wEAAAACAAMAAADr/wEAAAACAAMAAADq/wEAAAACAAMAAADr/wAAAAACAAMAAADr////AAACAAMAAADq////AAACAAMAAADq//7/AAACAAMAAADq//3/AAACAAMAAADq//z/AAACAAMAAADq//v/AAACAAMAAADr//v/AAACAAMAAADs//v/AAACAAMAAADt//v/AAACAAMAAADt//z/AAACAAMAAADs/wAAAAACAAMAAADq/wAAAAACAAMAAADs////AAACAAMAAADs//7/AAACAAMAAADs//3/AAACAAMAAADs//z/AAACAAMAAADr//z/AAACAAMAAADr//3/AAACAAMAAADr//7/AAACAAMAAADt//3/AAACAAMAAADt//7/AAACAAMAAADt////AAACAAMAAADt/wAAAAACAAMAAADu//7/AAACAAMAAAA=")
 tile_set = SubResource("TileSet_py5fx")
 
+[node name="Decorations" type="TileMapLayer" parent="TileMap" parent_id_path=PackedInt32Array(41032152) index="5" unique_id=941862880]
+tile_map_data = PackedByteArray("AAD6/w4AAwAMAAkAAAD7/w4AAwAOAAkAAAD6/w0AAwAMAAcAAAD7/w0AAwAOAAcAAAD+/w4AAwAMAAkAAAD//w4AAwAOAAkAAAD+/w0AAwAMAAcAAAD//w0AAwAOAAcAAAD//wkAAwAOAAcAAAD//woAAwAOAAkAAAD+/woAAwAMAAkAAAD+/wkAAwAMAAcAAAD7/woAAwAOAAkAAAD6/woAAwAMAAkAAAD6/wkAAwAMAAcAAAD7/wkAAwAOAAcAAAAdAP7/AwAFAAsAAAAdAP3/AwAFAAoAAAAeAP7/AwAGAAsAAAAeAP3/AwAGAAoAAAAfAP7/AwAHAAsAAAAfAP3/AwAHAAoAAAAgAP7/AwAIAAsAAAAgAP3/AwAIAAoAAAACAAsAAwAMAAcAAAACAAwAAwAMAAkAAAADAAsAAwAOAAcAAAADAAwAAwAOAAkAAAAGAAsAAwAMAAcAAAAGAAwAAwAMAAkAAAAHAAsAAwAOAAcAAAAHAAwAAwAOAAkAAAALAAwAAwAOAAkAAAAKAAwAAwAMAAkAAAAKAAsAAwAMAAcAAAALAAsAAwAOAAcAAAAVAAsAAwAGAAQAAAAVAAwAAwAGAAUAAAAWAAsAAwAHAAQAAAAWAAwAAwAHAAUAAAATAAwAAwAKAAEAAAATAA0AAwAKAAIAAAATAA4AAwAKAAMAAAAUAAwAAwALAAEAAAAUAA0AAwALAAIAAAAUAA4AAwALAAMAAAAQAAsAAwAGAAQAAAAQAAwAAwAGAAUAAAARAAsAAwAHAAQAAAARAAwAAwAHAAUAAAAEAPv/AwAIAAEAAAAEAPz/AwAIAAIAAAAEAP3/AwAIAAMAAAAFAPv/AwAJAAEAAAAFAPz/AwAJAAIAAAAFAP3/AwAJAAMAAAAAAPv/AwAIAAEAAAAAAPz/AwAIAAIAAAAAAP3/AwAIAAMAAAABAPv/AwAJAAEAAAABAPz/AwAJAAIAAAABAP3/AwAJAAMAAAD8//v/AwAIAAEAAAD8//z/AwAIAAIAAAD8//3/AwAIAAMAAAD9//v/AwAJAAEAAAD9//z/AwAJAAIAAAD9//3/AwAJAAMAAAD4//v/AwAIAAEAAAD4//z/AwAIAAIAAAD4//3/AwAIAAMAAAD5//v/AwAJAAEAAAD5//z/AwAJAAIAAAD5//3/AwAJAAMAAAAIAPv/AwAIAAEAAAAIAPz/AwAIAAIAAAAIAP3/AwAIAAMAAAAJAPv/AwAJAAEAAAAJAPz/AwAJAAIAAAAJAP3/AwAJAAMAAAAMAPv/AwAIAAEAAAAMAPz/AwAIAAIAAAAMAP3/AwAIAAMAAAANAPv/AwAJAAEAAAANAPz/AwAJAAIAAAANAP3/AwAJAAMAAAAQAPv/AwAIAAEAAAAQAPz/AwAIAAIAAAAQAP3/AwAIAAMAAAARAPv/AwAJAAEAAAARAPz/AwAJAAIAAAARAP3/AwAJAAMAAAAUAPv/AwAIAAEAAAAUAPz/AwAIAAIAAAAUAP3/AwAIAAMAAAAVAPv/AwAJAAEAAAAVAPz/AwAJAAIAAAAVAP3/AwAJAAMAAAAYAPv/AwAIAAEAAAAYAPz/AwAIAAIAAAAYAP3/AwAIAAMAAAAZAPv/AwAJAAEAAAAZAPz/AwAJAAIAAAAZAP3/AwAJAAMAAAA=")
+tile_set = SubResource("TileSet_syi5y")
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=1504294446]
 polygon = PackedVector2Array(-277, 312, -273, -3, -335, -2, -333, -51, -274, -50, -276, -212, 545, -210, 546, 320, -265, 321, -265, 545, 768, 545, 769, -384, -463, -385, -463, 543, -266, 547, -263, 320)
 
 [node name="city1" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=110528406]
 position = Vector2(-277, -19)
+
+[node name="2>1" type="Area2D" parent="." index="4" unique_id=536265900]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2>1" index="0" unique_id=479683693]
+position = Vector2(-310, -26.5)
+shape = SubResource("RectangleShape2D_0n7n0")
