@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bwopwoieri5y8" path="res://scenes/areas/forest3.tscn" id="3_85g3d"]
 [ext_resource type="PackedScene" uid="uid://uk85sldfb4ug" path="res://scenes/systems.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://e5lj58ypiw1s" path="res://scenes/areas/city1.tscn" id="3_tipki"]
-[ext_resource type="PackedScene" uid="uid://8yqjwryrxrxr" path="res://scenes/inventory.tscn" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bt205s22y2kmk" path="res://scenes/dialogue.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://cprvocsaem7dq" path="res://scenes/screens/screen.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://dr2tfqbn85xgn" path="res://scenes/ui_interface.tscn" id="9_choun"]
 
 [node name="Main" type="Node" unique_id=842974705]
 
@@ -36,19 +36,13 @@ motion_mode = 0
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=648745836]
 
-[node name="Inventory" parent="UI" unique_id=1340913624 instance=ExtResource("5_o6xl0")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 3.0
-offset_bottom = 3.0
-grow_horizontal = 1
-grow_vertical = 1
+[node name="UI Interface" parent="UI" unique_id=1464526898 instance=ExtResource("9_choun")]
 
 [node name="Dialogue" parent="UI" unique_id=2067749993 instance=ExtResource("7_tipki")]
 
-[node name="Screen" parent="UI" unique_id=1991471752 instance=ExtResource("9_85g3d")]
+[node name="Screens" type="Node" parent="UI" unique_id=1978611562]
+process_mode = 3
+
+[node name="TitleScreen" parent="UI/Screens" unique_id=1991471752 instance=ExtResource("9_85g3d")]
 offset_right = -178.03601
 offset_bottom = 108.9436

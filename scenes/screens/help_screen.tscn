@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://boyhhkx2i6hup"]
+
+[ext_resource type="Script" path="res://scripts/screens/help_screen.gd" id="1_bb8y4"]
+[ext_resource type="Texture2D" path="res://assets/icons/Up Arrow.png" id="2_d8e4h"]
+
+[node name="HelpScreen" type="Control" unique_id=170132556]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bb8y4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=680442087]
+position = Vector2(47.999985, 93)
+scale = Vector2(15.812503, 14.150003)
+texture = ExtResource("2_d8e4h")
+
+[node name="ReturnButton" type="Button" parent="." unique_id=1984930801]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 12.0
+offset_right = 132.0
+offset_bottom = 43.0
+text = "Return to Game"
+
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]

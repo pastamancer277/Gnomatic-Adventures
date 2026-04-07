@@ -3,21 +3,25 @@
 [ext_resource type="Texture2D" uid="uid://bm7yt2bwkcy4c" path="res://assets/sprites/Biome/Biome 01/Biome 01/01 - Visualization.png" id="1_6rfyb"]
 [ext_resource type="Script" uid="uid://c1xf0cuy0ba3o" path="res://scripts/screens/basic_screen.gd" id="1_314sv"]
 
-[sub_resource type="Theme" id="Theme_314sv"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_314sv"]
+bg_color = Color(1, 1, 1, 0.41568628)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
 
 [node name="Screen" type="Control" unique_id=1991471752]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -3.0
-offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_314sv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=318035540]
-position = Vector2(324, 324)
+position = Vector2(963.0001, 531.5)
+scale = Vector2(2.9722223, 1.6404321)
 texture = ExtResource("1_6rfyb")
 
 [node name="Button" type="Button" parent="." unique_id=81341868]
@@ -29,7 +33,7 @@ offset_left = 37.0
 offset_top = 66.0
 offset_right = -957.99994
 offset_bottom = -499.0
-theme = SubResource("Theme_314sv")
+theme_override_styles/focus = SubResource("StyleBoxFlat_314sv")
 text = "Start!"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=434308587]

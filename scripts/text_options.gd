@@ -1,6 +1,6 @@
 extends Node
 
-@onready var inventory = $/root/Main/UI/Inventory
+@onready var inventory = $"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/Inventory"
 @export var button: PackedScene
 
 func _process(delta: float) -> void:

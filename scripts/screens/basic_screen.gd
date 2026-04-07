@@ -1,16 +1,19 @@
 extends Control
 
+class_name screen
 
+@onready var isFocus = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("ui_down") || Input.is_action_just_pressed("ui_up")|| Input.is_action_just_pressed("ui_left") || Input.is_action_just_pressed("ui_right"):
+		isFocus = $Button
+		isFocus.grab_focus()
+	if isFocus != null and Input.is_action_just_pressed("ui_accept"):
+		$"/root/Global".pause = false
+		isFocus = null
+		queue_free() 
 	
-
-func _on_button_pressed() -> void:
-	$"/root/Global".pause = false
-	queue_free() # Replace with function body.
