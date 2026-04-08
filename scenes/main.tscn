@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ymwd2tog7ob6" path="res://scenes/areas/mob1.tscn" id="8_trceg"]
 [ext_resource type="PackedScene" uid="uid://cprvocsaem7dq" path="res://scenes/screens/screen.tscn" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://dr2tfqbn85xgn" path="res://scenes/ui_interface.tscn" id="9_choun"]
+[ext_resource type="PackedScene" uid="uid://brnjlnygjkq78" path="res://scenes/screens/instruction_screen.tscn" id="13_a8y0u"]
 
 [node name="Main" type="Node" unique_id=842974705]
 
@@ -61,6 +62,8 @@ motion_mode = 0
 
 [node name="Screens" type="Node" parent="UI" unique_id=1978611562]
 process_mode = 3
+
+[node name="InstructionScreen" parent="UI/Screens" unique_id=1231221103 instance=ExtResource("13_a8y0u")]
 
 [node name="TitleScreen" parent="UI/Screens" unique_id=1991471752 instance=ExtResource("9_85g3d")]
 offset_right = -178.03601

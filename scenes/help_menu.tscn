@@ -2,57 +2,72 @@
 
 [ext_resource type="Script" uid="uid://cvws1ad4agvg8" path="res://scripts/help_menu.gd" id="1_akeme"]
 [ext_resource type="Texture2D" uid="uid://cqh8tkgviwuc" path="res://assets/icons/Settings.png" id="1_g0qdk"]
-[ext_resource type="Theme" uid="uid://8yntgav2cnsc" path="res://assets/themes/panel_container.tres" id="2_8f3ry"]
-[ext_resource type="Theme" uid="uid://c6tvwmr0ivjut" path="res://assets/themes/button_theme.tres" id="2_akeme"]
+[ext_resource type="Theme" uid="uid://c6tvwmr0ivjut" path="res://assets/themes/help_menu_button.tres" id="2_akeme"]
 [ext_resource type="Texture2D" uid="uid://bup00qn3dj08i" path="res://assets/icons/Pause.png" id="2_nx501"]
 [ext_resource type="Texture2D" uid="uid://d17knws2s3o76" path="res://assets/icons/Right Arrow.png" id="3_2xk8j"]
 [ext_resource type="Theme" uid="uid://b15a07rd88w1m" path="res://assets/themes/margin_container_theme.tres" id="3_k65vi"]
+[ext_resource type="Texture2D" uid="uid://cx6fsceayqi8g" path="res://assets/icons/Up Arrow.png" id="5_8f3ry"]
 
-[node name="HelpMenu" type="Control" unique_id=1381030712]
-layout_mode = 3
+[node name="HelpMenu" type="PanelContainer" unique_id=1761127978]
+anchors_preset = -1
 anchor_left = -0.021000002
-anchor_right = -0.006
-anchor_bottom = 0.030000001
+anchor_right = -0.008
+anchor_bottom = 0.019000001
 offset_left = 0.19200134
-offset_right = 0.52000046
-offset_bottom = -0.40000153
-size_flags_horizontal = 8
+offset_right = -0.76800156
+offset_bottom = -0.52000046
+size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("1_akeme")
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1776369672]
-layout_mode = 0
-size_flags_vertical = 3
-size_flags_stretch_ratio = 1.42
-theme = ExtResource("2_8f3ry")
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=970866563]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=970866563]
 layout_mode = 2
-size_flags_stretch_ratio = 3.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 theme = ExtResource("3_k65vi")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1329170610]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1329170610]
 layout_mode = 2
-theme_override_constants/separation = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 1
 
-[node name="HelpButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=356646762]
+[node name="HelpButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=356646762]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.58
+mouse_filter = 2
 theme = ExtResource("2_akeme")
+button_mask = 0
 text = "Help/Pause"
 icon = ExtResource("2_nx501")
 
-[node name="SettingButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1638494532]
+[node name="LevelButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1994108620]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.58
+mouse_filter = 2
+theme = ExtResource("2_akeme")
+button_mask = 0
+text = "Level Up"
+icon = ExtResource("5_8f3ry")
+
+[node name="SettingButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1638494532]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
 theme = ExtResource("2_akeme")
 text = "Settings"
 icon = ExtResource("1_g0qdk")
 
-[node name="CreditButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1317972679]
+[node name="CreditButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1317972679]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
 theme = ExtResource("2_akeme")
 text = "Credits"
 icon = ExtResource("3_2xk8j")
-
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HelpButton" to="." method="_on_help_button_pressed"]
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/SettingButton" to="." method="_on_setting_button_pressed"]
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/CreditButton" to="." method="_on_credit_button_pressed"]

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b434nmc2e0gua" path="res://scripts/inventory.gd" id="1_qw0r6"]
 [ext_resource type="PackedScene" uid="uid://c3pg5pi87ia3p" path="res://scenes/item_slot.tscn" id="2_hj2ta"]
 [ext_resource type="Theme" uid="uid://8yntgav2cnsc" path="res://assets/themes/panel_container.tres" id="3_ty45s"]
+[ext_resource type="Theme" uid="uid://dgi7kajo0do8d" path="res://assets/themes/label.tres" id="4_53g1v"]
 
 [node name="Inventory" type="Control" unique_id=1340913624]
 layout_mode = 3
@@ -45,11 +46,12 @@ show_percentage = false
 
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=935079044]
 layout_mode = 2
-theme_override_font_sizes/font_size = 6
+theme = ExtResource("4_53g1v")
 text = "XP"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=264325293]
 layout_mode = 2
+size_flags_stretch_ratio = 3.53
 metadata/_edit_lock_ = true
 
 [node name="SocialCredit" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1728082070]

@@ -5,9 +5,10 @@ var is_focus = null
 @onready var control = $"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/VBoxContainer/Control2"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print(grid)
+	is_focus = $Button
+	is_focus.grab_focus()
 	$"/root/Global".pause = true;
-	print("tree")
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -20,12 +21,3 @@ func _process(delta: float) -> void:
 		control.reset_count()
 		$"/root/Global".pause = false;
 		queue_free()
-
-
-func _on_button_pressed() -> void:
-	visible = false
-	grid.change_clicked()
-	grid.visible = true
-	control.delete_menu()
-	control.reset_count()
-	$"/root/Global".pause = false;

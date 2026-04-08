@@ -2,6 +2,7 @@ extends Node
 
 var player_alive=true
 var pause = true
+var dialogue = false
 @onready var player = get_node("/root/Main/Sort/PlayerEntities/Player")
 
 var cur_area := ""

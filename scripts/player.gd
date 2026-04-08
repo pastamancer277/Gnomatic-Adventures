@@ -272,6 +272,7 @@ func gainXP(val: int):
 		xp-=100
 		level+=1
 		levelPoints+=1
+		$"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/VBoxContainer/Control2/Grid/Button".add_theme_stylebox_override("normal", load("res://scenes/screens/red_notification_stylebox.tres"))
 func getXP():
 	return xp
 

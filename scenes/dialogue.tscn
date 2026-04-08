@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cfpo8n3wlgfhf" path="res://scripts/dialogue.gd" id="1_3n4vj"]
 [ext_resource type="Script" uid="uid://b7g1sf5jhsh6c" path="res://scripts/text_options.gd" id="2_bfpow"]
+[ext_resource type="Theme" uid="uid://0wtapkh4u36h" path="res://assets/themes/dialogue_label.tres" id="2_fyky8"]
+[ext_resource type="Theme" uid="uid://8yntgav2cnsc" path="res://assets/themes/panel_container.tres" id="2_led2e"]
 [ext_resource type="PackedScene" uid="uid://7i0uxbaa047g" path="res://scenes/dialogue_button.tscn" id="3_bfpow"]
 
 [node name="Dialogue" type="CanvasLayer" unique_id=2067749993]
@@ -16,16 +18,18 @@ offset_right = 40.0
 offset_bottom = 20.0
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="VBoxContainer" unique_id=52916371]
+[node name="Panel" type="PanelContainer" parent="VBoxContainer" unique_id=1091544369]
 visible = false
 custom_minimum_size = Vector2(100, 20)
 layout_mode = 2
 size_flags_vertical = 4
+mouse_filter = 2
+theme = ExtResource("2_led2e")
 
 [node name="DialogueText" type="RichTextLabel" parent="VBoxContainer/Panel" unique_id=1639311585]
-layout_mode = 0
-offset_right = 1000.0
-offset_bottom = 20.0
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("2_fyky8")
 theme_override_font_sizes/normal_font_size = 7
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1917417057]

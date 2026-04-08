@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://8yqjwryrxrxr" path="res://scenes/inventory.tscn" id="1_eijpg"]
 [ext_resource type="Script" uid="uid://boid5l5046sxd" path="res://scripts/grid_button.gd" id="2_2bqn5"]
 [ext_resource type="PackedScene" uid="uid://c30r5q4dv4tat" path="res://scenes/gri_button.tscn" id="3_ufqre"]
-[ext_resource type="PackedScene" uid="uid://byh4cs663rp0s" path="res://scenes/help_menu.tscn" id="4_ufqre"]
 
 [node name="UI Interface" type="Control" unique_id=1464526898]
 layout_mode = 3
@@ -46,8 +45,6 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.05
 script = ExtResource("2_2bqn5")
-grid = ExtResource("3_ufqre")
-help_menu = ExtResource("4_ufqre")
 
 [node name="Grid" parent="VBoxContainer/HBoxContainer/VBoxContainer/Control2" unique_id=390392859 instance=ExtResource("3_ufqre")]
 layout_mode = 0
