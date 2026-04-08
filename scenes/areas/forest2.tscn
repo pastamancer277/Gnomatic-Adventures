@@ -1817,6 +1817,7 @@ tile_map_data = PackedByteArray("AAD5//z/AQAFAAIAADD5//3/AQAFAAIAADD5//7/AQAFAAI
 tile_set = SubResource("TileSet_udkau")
 
 [node name="ForestNPC1" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="0" unique_id=1704687357 instance=ExtResource("7_e2bmm")]
+visible = false
 position = Vector2(-27, 73)
 
 [node name="Slime" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=1614433100 instance=ExtResource("9_x3itf")]

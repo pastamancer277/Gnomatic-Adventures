@@ -3464,13 +3464,16 @@ sources/1 = SubResource("TileSetAtlasSource_wsi3d")
 sources/3 = SubResource("TileSetAtlasSource_b8cnf")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sfdmy"]
-size = Vector2(90, 87)
+size = Vector2(95, 87)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bn0e7"]
-size = Vector2(142, 98)
+size = Vector2(76, 98)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvkxu"]
-size = Vector2(25.5, 24)
+size = Vector2(27.5, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8cnf"]
+size = Vector2(58, 23.5)
 
 [node name="City1" unique_id=1349325032 instance=ExtResource("1_gfdvo")]
 script = ExtResource("2_wvkxu")
@@ -3517,22 +3520,34 @@ position = Vector2(61, -223)
 position = Vector2(13, 222)
 
 [node name="ToAlly" type="Area2D" parent="." index="4" unique_id=1658173766]
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToAlly" index="0" unique_id=178318019]
-position = Vector2(-329, 75.5)
+position = Vector2(-326.5, 75.5)
 shape = SubResource("RectangleShape2D_sfdmy")
 
 [node name="1>2" type="Area2D" parent="." index="5" unique_id=1810615800]
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="1>2" index="0" unique_id=757006614]
-position = Vector2(510, 73)
+position = Vector2(443, 64)
 shape = SubResource("RectangleShape2D_bn0e7")
 
-[node name="toJuce" type="Area2D" parent="." index="6" unique_id=2136518030]
-metadata/_edit_lock_ = true
+[node name="toJuice" type="Area2D" parent="." index="6" unique_id=2136518030]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="toJuce" index="0" unique_id=560370289]
-position = Vector2(13.25, 210)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="toJuice" index="0" unique_id=560370289]
+position = Vector2(14.25, 218)
 shape = SubResource("RectangleShape2D_wvkxu")
+
+[node name="city>forest" type="Area2D" parent="." index="7" unique_id=1369971091]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="city>forest" index="0" unique_id=1074706420]
+position = Vector2(61, -248)
+shape = SubResource("RectangleShape2D_b8cnf")
+
+[connection signal="body_entered" from="ToAlly" to="." method="_on_to_ally_body_entered"]
+[connection signal="body_exited" from="ToAlly" to="." method="_on_to_ally_body_exited"]
+[connection signal="body_entered" from="1>2" to="." method="_on__body_entered"]
+[connection signal="body_exited" from="1>2" to="." method="_on__body_exited"]
+[connection signal="body_entered" from="toJuice" to="." method="_on_to_juice_body_entered"]
+[connection signal="body_exited" from="toJuice" to="." method="_on_to_juice_body_exited"]
+[connection signal="body_entered" from="city>forest" to="." method="_on_cityforest_body_entered"]
+[connection signal="body_exited" from="city>forest" to="." method="_on_cityforest_body_exited"]
