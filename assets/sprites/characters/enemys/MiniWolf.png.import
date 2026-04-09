@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0vvdwn0mrj5e"
-path="res://.godot/imported/BearForward.png-0a207045d34253bf8b2899f2d609b7e9.ctex"
+uid="uid://pc6gonkxu3va"
+path="res://.godot/imported/MiniWolf.png-6241f5418be815bec9070c1f49b5b8b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/BearForward.png"
-dest_files=["res://.godot/imported/BearForward.png-0a207045d34253bf8b2899f2d609b7e9.ctex"]
+source_file="res://assets/sprites/characters/enemys/MiniWolf.png"
+dest_files=["res://.godot/imported/MiniWolf.png-6241f5418be815bec9070c1f49b5b8b5.ctex"]
 
 [params]
 
