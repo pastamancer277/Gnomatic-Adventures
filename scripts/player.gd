@@ -44,12 +44,6 @@ func _physics_process(delta: float) -> void:
 			attack()
 		if(Input.is_action_just_pressed("RangedAttack")&&attack_cooldown):
 			rangedAttack()
-		if(Input.is_action_just_pressed("LevelAttack")):
-			levelAttack()
-		if(Input.is_action_just_pressed("LevelHealth")):
-			levelHealth()
-		if(Input.is_action_just_pressed("LevelShield")):
-			levelShield()
 	
 	if(health<=0):
 		alive=false;
@@ -313,8 +307,8 @@ func changeRating(val: int):
 	killRating+=val
 
 func reset():
-	resetGame.emit()
-	$/root/Global.resetGame()
+	#resetGame.emit()
+	#$/root/Global.resetGame()
 	$/root/Main/UI/Dialogue.reset()
 	
 	currnet_dir ="down"
@@ -339,6 +333,7 @@ func saveData():
 		"locX" = global_position.x,
 		"locY" = global_position.y,
 		"mHealth" = mHealth,
+		"health" = health,
 		"attack_value"=attack_value,
 		"knockback" = knockback,
 		"shield"= shield,
@@ -363,6 +358,7 @@ func loadData():
 	global_position.y = data["locY"]
 
 	mHealth = data.get("mHealth", mHealth)
+	health = data.get("health", health)
 	attack_value = data.get("attack_value", attack_value)
 	knockback = data.get("knockback", knockback)
 	shield = data.get("shield", shield)

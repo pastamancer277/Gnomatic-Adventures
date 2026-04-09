@@ -26,10 +26,12 @@ func _process(delta:float) -> void:
 
 
 func _on_reload_pressed() -> void:
-	$/root/Global.loadData()
-	$"/root/Global".pause = false
+	$/root/SaveManager.loadGame()
+	$/root/Global.pause = false
+	queue_free()
 
 
 func _on_restart_pressed() -> void:
-	$"/root/Global".resetGame()
-	$"/root/Global".pause = false
+	$/root/Global.resetGame()
+	$/root/Global.pause = false
+	queue_free()

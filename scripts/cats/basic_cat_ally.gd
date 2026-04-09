@@ -174,3 +174,6 @@ func _on_respawn_timer_timeout():
 	process_mode=Node.PROCESS_MODE_INHERIT
 	health=mHealth
 	dead=false
+
+func reset():
+	queue_free()

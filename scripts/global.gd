@@ -52,6 +52,14 @@ func resetGame():
 	change_area("Forest2")
 	player.global_position.x=player_start_x
 	player.global_position.y=player_start_y
+	reset_all_nodes(get_node("/root"))
+
+func reset_all_nodes(root_node):
+	if root_node.has_method("reset"):
+		root_node.reset()
+	
+	for child in root_node.get_children():
+		reset_all_nodes(child)
 
 func saveData():
 	var data={
