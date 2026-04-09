@@ -22,7 +22,7 @@ var attacking=false
 
 var level=1
 var levelPoints=0
-var xp=0
+var xp=99
 var socialCredit=50
 var keywords=[]
 
@@ -55,6 +55,10 @@ func _physics_process(delta: float) -> void:
 		alive=false;
 		health=0
 		$AnimationPlayer.play("death")
+
+func _create_death_screen():
+	var death = load("res://scenes/screens/death_screen.tscn").instantiate()
+	$/root/Main/UI/Screens.add_child(death)
 
 func player_movement(delta):
 	if knockback_velocity.length() > 10:

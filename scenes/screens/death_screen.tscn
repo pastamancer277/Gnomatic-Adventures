@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cwy3u1728hyg8"]
 
+[ext_resource type="Script" uid="uid://bsv12w7lhtoh8" path="res://scripts/screens/death_screen.gd" id="1_6oeqw"]
 [ext_resource type="Texture2D" uid="uid://cx6fsceayqi8g" path="res://assets/icons/Up Arrow.png" id="1_85l65"]
 [ext_resource type="Theme" uid="uid://dgi7kajo0do8d" path="res://assets/themes/label.tres" id="2_6oeqw"]
 [ext_resource type="Theme" uid="uid://cupigso84clu8" path="res://assets/themes/screen_button.tres" id="3_1gxbh"]
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6oeqw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1700984283]
 position = Vector2(563.0001, 497)
@@ -27,11 +29,19 @@ layout_mode = 2
 theme = ExtResource("2_6oeqw")
 text = "Possible stats you get"
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=746386268]
+[node name="Reload" type="Button" parent="VBoxContainer" unique_id=288942664]
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("3_1gxbh")
 theme_type_variation = &"ScreenButton"
-text = "Restart at Save"
+text = "Reload at Save"
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="Restart" type="Button" parent="VBoxContainer" unique_id=746386268]
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("3_1gxbh")
+theme_type_variation = &"ScreenButton"
+text = "Restart Game"
+
+[connection signal="pressed" from="VBoxContainer/Reload" to="." method="_on_reload_pressed"]
+[connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]

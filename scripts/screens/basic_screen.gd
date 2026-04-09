@@ -15,9 +15,5 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	print("hello")
-	print(isFocus)
 	queue_free() 
-	print(isFocus)
-	print("hello")
 	$/root/Main/UI/Screens/InstructionScreen.is_focus.grab_focus() # Replace with function body.
