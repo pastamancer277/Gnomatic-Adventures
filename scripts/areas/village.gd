@@ -1,16 +1,6 @@
 extends area
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_to_forest_3_body_entered(body: Node2D) -> void:
 	if(body.name=="Player"&&Global.cur_area=="Village1"):
 		Global.scene_transit=true
@@ -19,5 +9,16 @@ func _on_to_forest_3_body_entered(body: Node2D) -> void:
 
 
 func _on_to_forest_3_body_exited(body: Node2D) -> void:
+	if(body.name=="Player"&&Global.cur_area=="Village1"):
+		Global.scene_transit=false
+
+
+func _on_to_farm_body_entered(body: Node2D) -> void:
+	if(body.name=="Player"&&Global.cur_area=="Village1"):
+		Global.scene_transit=true
+		locationChange="Country"
+
+
+func _on_to_farm_body_exited(body: Node2D) -> void:
 	if(body.name=="Player"&&Global.cur_area=="Village1"):
 		Global.scene_transit=false

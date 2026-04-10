@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c1tagi2snao18" path="res://assets/sprites/characters/BrownCat_Free_Carysaurus/BrownBack.png" id="6_81v27"]
 [ext_resource type="Texture2D" uid="uid://mloalm7uiips" path="res://assets/sprites/characters/BrownCat_Free_Carysaurus/BrownFront.png" id="7_kl257"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1q6x7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_81v27"]
 resource_local_to_scene = true
 shader = ExtResource("3_s6k2o")
 shader_parameter/active = false
@@ -281,7 +281,7 @@ animations = [{
 radius = 6.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nj8ka"]
-radius = 287.11148
+radius = 122.80879
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mpvus"]
 radius = 15.0
@@ -292,7 +292,7 @@ y_sort_enabled = true
 script = ExtResource("2_1f0e1")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=653963757]
-material = SubResource("ShaderMaterial_1q6x7")
+material = SubResource("ShaderMaterial_81v27")
 position = Vector2(-1, -5)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_u0spo")
