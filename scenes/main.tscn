@@ -41,10 +41,10 @@ position = Vector2(658, 49)
 position = Vector2(849, 195)
 
 [node name="Mob1" parent="Sort/Areas" unique_id=1857116627 instance=ExtResource("8_trceg")]
-position = Vector2(-639, 21)
+position = Vector2(-869, 23)
 
 [node name="Mob2" parent="Sort/Areas" unique_id=1067824948 instance=ExtResource("8_trceg")]
-position = Vector2(-639, 21)
+position = Vector2(-869, 32)
 
 [node name="PlayerEntities" type="Node2D" parent="Sort" unique_id=488688547]
 y_sort_enabled = true
