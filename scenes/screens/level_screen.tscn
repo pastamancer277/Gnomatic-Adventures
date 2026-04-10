@@ -73,4 +73,7 @@ mouse_filter = 2
 theme = ExtResource("4_ndapp")
 text = "Return to Game"
 
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ButtonContainer/AttackButton" to="." method="_on_attack_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ButtonContainer/ShieldButton" to="." method="_on_shield_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ButtonContainer/HealthButton" to="." method="_on_health_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]

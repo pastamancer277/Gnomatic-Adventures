@@ -3,18 +3,22 @@
 [ext_resource type="Script" uid="uid://osjg5ulnj8g2" path="res://scripts/item_slot.gd" id="1_567tv"]
 
 [node name="ItemSlot" type="TextureRect" unique_id=1703807302]
-offset_right = 64.0
-offset_bottom = 64.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 script = ExtResource("1_567tv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=242351045]
+position = Vector2(5, 6)
 
 [node name="AmountLabel" type="Label" parent="." unique_id=1180706842]
 layout_mode = 0
-offset_left = -20.0
-offset_top = 10.0
-offset_right = 20.0
-offset_bottom = 33.0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 8.0
+offset_bottom = 20.0
 theme_override_font_sizes/font_size = 7
 horizontal_alignment = 1

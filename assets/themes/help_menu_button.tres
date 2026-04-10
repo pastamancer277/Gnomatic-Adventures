@@ -1,7 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://c6tvwmr0ivjut"]
 
 [ext_resource type="StyleBox" uid="uid://conqgeiiwiru2" path="res://assets/themes/style_box_flat_focus.tres" id="1_ydmtu"]
-[ext_resource type="StyleBox" uid="uid://de0dpvbs43cy" path="res://style_box_flat_normal.tres" id="2_48wse"]
+[ext_resource type="StyleBox" uid="uid://de0dpvbs43cy" path="res://assets/themes/style_box_flat_normal.tres" id="2_48wse"]
 
 [resource]
 Button/constants/h_separation = 1

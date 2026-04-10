@@ -45,10 +45,11 @@ func _physics_process(delta: float) -> void:
 		if(Input.is_action_just_pressed("RangedAttack")&&attack_cooldown):
 			rangedAttack()
 	
-	if(health<=0):
+	if(health<=0 and alive):
 		alive=false;
 		health=0
-		$AnimationPlayer.play("death")
+		#$AnimationPlayer.play("death")
+		_create_death_screen()
 
 func _create_death_screen():
 	var death = load("res://scenes/screens/death_screen.tscn").instantiate()
@@ -270,7 +271,9 @@ func gainXP(val: int):
 		xp-=100
 		level+=1
 		levelPoints+=1
-		$"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/VBoxContainer/Control2/Grid/Button".add_theme_stylebox_override("normal", load("res://scenes/screens/red_notification_stylebox.tres"))
+		print("level up")
+		$"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/VBoxContainer/Control2/Grid/Button".add_theme_stylebox_override("normal", load("res://assets/themes/red_notification_stylebox.tres"))
+		print($"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/VBoxContainer/Control2/Grid/Button".has_theme_stylebox_override("normal"))
 func getXP():
 	return xp
 

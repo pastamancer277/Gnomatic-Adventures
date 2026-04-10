@@ -5,6 +5,9 @@ extends screen
 @onready var shield = $VBoxContainer/HBoxContainer/ButtonContainer/ShieldButton
 @onready var health = $VBoxContainer/HBoxContainer/ButtonContainer/HealthButton
 @onready var return_button = $VBoxContainer/ReturnButton
+@onready var attack_label = $VBoxContainer/HBoxContainer/LabelContainer/Attack
+@onready var shield_label =$VBoxContainer/HBoxContainer/LabelContainer/Shield
+@onready var health_label = $VBoxContainer/HBoxContainer/LabelContainer/Health
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -38,6 +41,9 @@ func _process(delta: float) -> void:
 	elif Input.is_action_just_pressed("ui_up") and (isFocus == attack):
 			isFocus = return_button
 			isFocus.grab_focus()
+	attack_label.text = "Attack: " + str($/root/Main/Sort/PlayerEntities/Player.attack_value)
+	shield_label.text = "Shield:" + str($/root/Main/Sort/PlayerEntities/Player.shield)
+	health_label.text = "Max Health:" + str($/root/Main/Sort/PlayerEntities/Player.mHealth)
 
 
 func _on_return_button_pressed() -> void:
@@ -45,4 +51,15 @@ func _on_return_button_pressed() -> void:
 	grid.visible = true
 	control.reset_count()
 	$"/root/Global".pause = false;
-	queue_free() # Replace with function body.
+	queue_free()
+
+
+func _on_attack_button_pressed() -> void:
+	$/root/Main/Sort/PlayerEntities/Player.levelAttack()
+
+
+func _on_shield_button_pressed() -> void:
+	$/root/Main/Sort/PlayerEntities/Player.levelShield() 
+
+func _on_health_button_pressed() -> void:
+	$/root/Main/Sort/PlayerEntities/Player.levelHealth()

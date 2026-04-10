@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cwy3u1728hyg8"]
 
 [ext_resource type="Script" uid="uid://bsv12w7lhtoh8" path="res://scripts/screens/death_screen.gd" id="1_6oeqw"]
-[ext_resource type="Texture2D" uid="uid://cx6fsceayqi8g" path="res://assets/icons/Up Arrow.png" id="1_85l65"]
+[ext_resource type="Texture2D" uid="uid://naxbdhvtjyev" path="res://assets/sprites/DeathImage.png" id="2_1gxbh"]
 [ext_resource type="Theme" uid="uid://dgi7kajo0do8d" path="res://assets/themes/label.tres" id="2_6oeqw"]
 [ext_resource type="Theme" uid="uid://cupigso84clu8" path="res://assets/themes/screen_button.tres" id="3_1gxbh"]
 
@@ -15,25 +15,32 @@ grow_vertical = 2
 script = ExtResource("1_6oeqw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1700984283]
-position = Vector2(563.0001, 497)
-scale = Vector2(202.74611, 66.706245)
-texture = ExtResource("1_85l65")
+position = Vector2(112, 57)
+scale = Vector2(0.33413175, 0.30918476)
+texture = ExtResource("2_1gxbh")
+
+[node name="Label" type="Label" parent="." unique_id=789455178]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 13.0
+offset_right = 70.0
+offset_bottom = 22.0
+theme = ExtResource("2_6oeqw")
+text = "Possible stats you get"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=715869878]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=789455178]
-layout_mode = 2
-theme = ExtResource("2_6oeqw")
-text = "Possible stats you get"
+offset_left = 148.0
+offset_top = 69.0
+offset_right = 209.0
+offset_bottom = 105.0
 
 [node name="Reload" type="Button" parent="VBoxContainer" unique_id=288942664]
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("3_1gxbh")
 theme_type_variation = &"ScreenButton"
+theme_override_font_sizes/font_size = 8
 text = "Reload at Save"
 
 [node name="Restart" type="Button" parent="VBoxContainer" unique_id=746386268]
@@ -41,6 +48,7 @@ layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("3_1gxbh")
 theme_type_variation = &"ScreenButton"
+theme_override_font_sizes/font_size = 8
 text = "Restart Game"
 
 [connection signal="pressed" from="VBoxContainer/Reload" to="." method="_on_reload_pressed"]
