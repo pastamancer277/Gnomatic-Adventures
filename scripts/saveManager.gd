@@ -34,7 +34,6 @@ func saveGame():
 	file.close()
 
 func loadGame():
-	print("run")
 	if not FileAccess.file_exists(SAVE_PATH):
 		return null
 		

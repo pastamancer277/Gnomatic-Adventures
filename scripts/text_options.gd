@@ -7,7 +7,7 @@ var count = 0
 
 
 func _process(delta: float) -> void:
-	if isFocus == null:
+	if isFocus == null && get_children().size()>count:
 		isFocus = get_children().get(count)
 		if isFocus != null:
 			isFocus.grab_focus()
@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 		count = 0
 	if count <0:
 		count = 0
-	if get_children().get(count) != null:
+	if get_children().size()>count:
 		isFocus = get_children().get(count)
 		isFocus.grab_focus()
 
