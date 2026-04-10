@@ -4,8 +4,15 @@
 [ext_resource type="Script" uid="uid://rmim0gs4k258" path="res://scripts/cats/black_cat_enemy.gd" id="2_1f0e1"]
 [ext_resource type="Script" uid="uid://cxjnyfpxkmyo0" path="res://scripts/cats/black_cat_dialogue.gd" id="3_0kwv7"]
 [ext_resource type="Texture2D" uid="uid://bui3pxf7oawsf" path="res://assets/sprites/characters/BrownCat_Free_Carysaurus/BrownCat_Free_Carysaurus/Brown-Idle.png" id="3_mpvus"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="3_s6k2o"]
 [ext_resource type="Script" uid="uid://bisdwbbdqcc5y" path="res://scripts/cats/black_cat_quest.gd" id="4_p2shl"]
 [ext_resource type="Texture2D" uid="uid://m8t1dl5aey7" path="res://assets/sprites/characters/BrownCat_Free_Carysaurus/BrownCat_Free_Carysaurus/Brown-Run.png" id="4_s6k2o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1q6x7"]
+resource_local_to_scene = true
+shader = ExtResource("3_s6k2o")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1q6x7"]
 atlas = ExtResource("3_mpvus")
@@ -144,6 +151,11 @@ animations = [{
 "loop": true,
 "name": &"walk",
 "speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walkforword",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0blkw"]
@@ -161,10 +173,11 @@ y_sort_enabled = true
 script = ExtResource("2_1f0e1")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=653963757]
+material = SubResource("ShaderMaterial_1q6x7")
 position = Vector2(0, -5)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_u0spo")
-animation = &"walk"
+animation = &"walkforword"
 autoplay = "idle"
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=733226745]
@@ -187,10 +200,10 @@ script = ExtResource("3_0kwv7")
 [node name="TamingQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(1443803205) index="0" unique_id=1440822031]
 script = ExtResource("4_p2shl")
 
-[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_entered" from="DetectionArea" to="." method="playerEntered"]
-[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="playerExited"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
 [connection signal="body_entered" from="AttackBox" to="." method="_on_attackbox_body_entered"]
 [connection signal="body_exited" from="AttackBox" to="." method="_on_attackbox_body_exited"]
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
