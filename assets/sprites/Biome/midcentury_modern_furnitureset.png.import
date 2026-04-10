@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://darjs53vh0vjc"
-path="res://.godot/imported/furniture_32x32_v1.0.png-0e8e2a967424adf774b1a1d4781d2cb3.ctex"
+uid="uid://bq38mbxnlwokl"
+path="res://.godot/imported/midcentury_modern_furnitureset.png-50384cec9e6826085fb3efdd66946b05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Biome/furniture_32x32_v1.0.png"
-dest_files=["res://.godot/imported/furniture_32x32_v1.0.png-0e8e2a967424adf774b1a1d4781d2cb3.ctex"]
+source_file="res://assets/sprites/Biome/midcentury_modern_furnitureset.png"
+dest_files=["res://.godot/imported/midcentury_modern_furnitureset.png-50384cec9e6826085fb3efdd66946b05.ctex"]
 
 [params]
 
