@@ -2800,10 +2800,11 @@ tile_set = SubResource("TileSet_syi5y")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=1504294446]
 polygon = PackedVector2Array(-277, 312, -273, -3, -335, -2, -333, -51, -274, -50, -276, -212, 545, -210, 546, 320, -265, 321, -265, 545, 768, 545, 769, -384, -463, -385, -463, 543, -266, 547, -263, 320)
 
-[node name="city1" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=110528406]
+[node name="City1" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=110528406]
 position = Vector2(-277, -19)
 
-[node name="jail" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="1" unique_id=1586785002]
+[node name="Jail" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="1" unique_id=1586785002]
+position = Vector2(317, 252)
 
 [node name="2>1" type="Area2D" parent="." index="4" unique_id=536265900]
 

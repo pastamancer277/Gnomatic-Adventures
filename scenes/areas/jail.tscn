@@ -5186,8 +5186,8 @@ tile_set = SubResource("TileSet_y68od")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=499348716]
 polygon = PackedVector2Array(-42, 43, -42, 118, -224, 115, -227, 64, -48, 66, -45, 39, -220, 35, -238, 36, -233, 338, -321, 337, -324, 145, -245, 147, -240, 132, -337, 129, -333, 335, -417, 335, -419, 129, -498, 128, -498, 145, -431, 145, -434, 338, -498, 341, -502, -63, -498, -112, -369, -104, -369, 33, -498, 35, -495, 49, -354, 48, -357, -77, -239, -75, -237, -17, -50, -16, -45, -31, -15, -30, -17, -109, 220, -109, 228, -91, 225, -19, 173, -21, 171, -40, 146, -41, 150, -1, 225, 2, 227, 112, 170, 117, 163, 133, 125, 134, 118, 117, 89, 112, 89, 71, 73, 70, 70, 115, -24, 117, -26, 43, -35, 446, 430, 446, 431, 132, 430, -319, -488, -321, -689, -322, -689, 447, -35, 447, -24, 115)
 
-[node name="city2" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=1528478400]
-position = Vector2(146, 121)
+[node name="City2" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=1528478400]
+position = Vector2(146, 117)
 
 [node name="toCity" type="Area2D" parent="." index="4" unique_id=1891986921]
 

@@ -1,7 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://cupigso84clu8"]
 
 [ext_resource type="StyleBox" uid="uid://conqgeiiwiru2" path="res://assets/themes/style_box_flat_focus.tres" id="1_jwcvp"]
-[ext_resource type="StyleBox" path="res://style_box_flat_normal.tres" id="2_cxh31"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwcvp"]
 content_margin_left = 2.0
@@ -19,7 +18,7 @@ Button/constants/h_separation = 1
 Button/constants/icon_max_width = 3
 Button/font_sizes/font_size = 3
 Button/styles/focus = ExtResource("1_jwcvp")
-Button/styles/normal = ExtResource("2_cxh31")
+Button/styles/normal = null
 ScreenButton/base_type = &"Button"
 ScreenButton/constants/h_separation = 3
 ScreenButton/font_sizes/font_size = 16

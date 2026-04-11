@@ -1190,16 +1190,22 @@ tile_set = SubResource("TileSet_ehnuc")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=557783940]
 polygon = PackedVector2Array(-67, 104, -62, 594, -111, 589, -117, 655, -112, 718, -64, 720, -64, 738, 884, 731, 897, -154, 771, -161, 775, -253, 671, -253, 673, -164, 182, -161, 136, -159, 80, -161, 50, -161, -60, -162, -60, -49, -65, 20, -77, 129, -330, 50, -323, -393, 1133, -383, 1140, 966, -325, 966, -327, 59)
 
+[node name="Forest3" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=32777609]
+position = Vector2(-68, 652)
+
+[node name="Farm" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="1" unique_id=435315384]
+position = Vector2(727, -171)
+
 [node name="ToForest3" type="Area2D" parent="." index="4" unique_id=2105035760]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToForest3" index="0" unique_id=521156419]
-position = Vector2(-95, 656)
+position = Vector2(-119, 652)
 shape = SubResource("RectangleShape2D_moe3i")
 
 [node name="ToFarm" type="Area2D" parent="." index="5" unique_id=979922020]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToFarm" index="0" unique_id=673919095]
-position = Vector2(724.5, -218.25)
+position = Vector2(725, -244)
 shape = SubResource("RectangleShape2D_tlamr")
 
 [connection signal="body_entered" from="ToForest3" to="." method="_on_to_forest_3_body_entered"]

@@ -2001,10 +2001,10 @@ sources/1 = SubResource("TileSetAtlasSource_wsi3d")
 sources/3 = SubResource("TileSetAtlasSource_b8cnf")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sfdmy"]
-size = Vector2(95, 87)
+size = Vector2(70, 87)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bn0e7"]
-size = Vector2(76, 98)
+size = Vector2(47, 98)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvkxu"]
 size = Vector2(27.5, 40)
@@ -2054,18 +2054,24 @@ polygon = PackedVector2Array(-274, -224, -277, 44, -318, 43, -320, 92, -277, 92,
 position = Vector2(61, -223)
 
 [node name="JuceShop" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="1" unique_id=47976624]
-position = Vector2(13, 222)
+position = Vector2(16, 244)
+
+[node name="City2" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="2" unique_id=92599890]
+position = Vector2(412, 79)
+
+[node name="Mob1" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="3" unique_id=452322001]
+position = Vector2(-274, 77)
 
 [node name="ToAlly" type="Area2D" parent="." index="4" unique_id=1658173766]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToAlly" index="0" unique_id=178318019]
-position = Vector2(-326.5, 75.5)
+position = Vector2(-339, 75.5)
 shape = SubResource("RectangleShape2D_sfdmy")
 
 [node name="1>2" type="Area2D" parent="." index="5" unique_id=1810615800]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="1>2" index="0" unique_id=757006614]
-position = Vector2(443, 64)
+position = Vector2(457.5, 64)
 shape = SubResource("RectangleShape2D_bn0e7")
 
 [node name="toJuice" type="Area2D" parent="." index="6" unique_id=2136518030]

@@ -1332,7 +1332,7 @@ texture = ExtResource("3_semcw")
 sources/0 = SubResource("TileSetAtlasSource_semcw")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kjyj3"]
-size = Vector2(45, 47)
+size = Vector2(24.5, 47)
 
 [node name="Mob1" unique_id=1349325032 instance=ExtResource("1_kkb4q")]
 script = ExtResource("2_kjyj3")
@@ -1365,13 +1365,13 @@ tile_set = SubResource("TileSet_fsw2t")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=2045232044]
 polygon = PackedVector2Array(10, -121, 563, -120, 563, 12, 607, 13, 612, 65, 566, 63, 562, 325, -131, 324, -131, -127, 8, -121, 21, -340, -276, -337, -266, 468, 686, 468, 681, -327, 23, -342)
 
-[node name="ToCity" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=1910116002]
-position = Vector2(573, 37)
+[node name="City1" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=1910116002]
+position = Vector2(562, 42)
 
 [node name="toCity" type="Area2D" parent="." index="4" unique_id=1475836614]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="toCity" index="0" unique_id=860476264]
-position = Vector2(573, 37)
+position = Vector2(583.25, 37)
 shape = SubResource("RectangleShape2D_kjyj3")
 
 [connection signal="body_entered" from="toCity" to="." method="_on_to_city_body_entered"]

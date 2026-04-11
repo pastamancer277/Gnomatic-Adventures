@@ -16,7 +16,7 @@ func _on_to_forest_3_body_exited(body: Node2D) -> void:
 func _on_to_farm_body_entered(body: Node2D) -> void:
 	if(body.name=="Player"&&Global.cur_area=="Village1"):
 		Global.scene_transit=true
-		locationChange="Country"
+		locationChange="Farm"
 
 
 func _on_to_farm_body_exited(body: Node2D) -> void:

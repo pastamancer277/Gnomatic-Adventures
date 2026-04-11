@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://544q7gcm2ury" path="res://scenes/areas/area.tscn" id="1_qs5k7"]
 [ext_resource type="Texture2D" uid="uid://cmgrrfm3q2fbv" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/Bright Grass.png" id="2_266t7"]
-[ext_resource type="Script" uid="uid://0mxkvxb80onl" path="res://scripts/areas/country.gd" id="2_d5gyy"]
+[ext_resource type="Script" uid="uid://0mxkvxb80onl" path="res://scripts/areas/farm.gd" id="2_d5gyy"]
 [ext_resource type="Texture2D" uid="uid://c62sjsk3jb12q" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="3_d5gyy"]
 [ext_resource type="TileSet" uid="uid://b35b6yqw1lsnu" path="res://assets/sprites/characters/BrownCat_Free_Carysaurus/new_tile_set.tres" id="4_prkmf"]
 [ext_resource type="Texture2D" uid="uid://bqg8ow8e4uyn0" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Plant Resized.png" id="5_lf1po"]
@@ -1409,9 +1409,9 @@ texture = ExtResource("8_lf1po")
 sources/0 = SubResource("TileSetAtlasSource_3pclt")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qs5k7"]
-size = Vector2(170, 52)
+size = Vector2(170, 38)
 
-[node name="Country" unique_id=1349325032 instance=ExtResource("1_qs5k7")]
+[node name="Farm" unique_id=1349325032 instance=ExtResource("1_qs5k7")]
 script = ExtResource("2_d5gyy")
 
 [node name="Ground" type="TileMapLayer" parent="TileMap" parent_id_path=PackedInt32Array(41032152) index="0" unique_id=1194712985]
@@ -1447,10 +1447,13 @@ y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAGAP//BQAOAAAAAAAKAP//BQAOAAAAAAAOAP//BQAOAAAAAAAOAAMABQAOAAAAAAAKAAMABQAOAAAAAAAGAAMABQAOAAAAAAACAAMABQAOAAAAAAD+/wMABQAOAAAAAAD6/wMABQAOAAAAAAACAP//BQAOAAAAAAD+////BQAOAAAAAAD6////BQAOAAAAAAD6//v/BQAOAAAAAAD+//v/BQAOAAAAAAACAPv/BQAOAAAAAAAGAPv/BQAOAAAAAAAKAPv/BQAOAAAAAAAOAPv/BQAOAAAAAAASAAMABQAOAAAAAAASAP//BQAOAAAAAAASAPv/BQAOAAAAAAA=")
 tile_set = ExtResource("5_prkmf")
 
+[node name="Village1" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=783414120]
+position = Vector2(0, 180)
+
 [node name="ToVillage" type="Area2D" parent="." index="4" unique_id=116875023]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToVillage" index="0" unique_id=589215221]
-position = Vector2(11, 228)
+position = Vector2(11, 235)
 shape = SubResource("RectangleShape2D_qs5k7")
 
 [connection signal="body_entered" from="ToVillage" to="." method="_on_to_village_body_entered"]

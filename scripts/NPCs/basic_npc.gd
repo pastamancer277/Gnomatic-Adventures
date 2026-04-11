@@ -102,6 +102,8 @@ func loadData():
 		dead=true
 		health=0
 	else:
+		$CollisionShape2D.disabled=false
+		$Area2D/CollisionShape2D.disabled=false
 		if(get_parent().get_parent().getActive()):
 			visible=true
 			process_mode=Node.PROCESS_MODE_INHERIT
