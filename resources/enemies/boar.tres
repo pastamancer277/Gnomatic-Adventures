@@ -1,0 +1,133 @@
+[gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://bol020bxwbhj3"]
+
+[ext_resource type="Texture2D" uid="uid://bj42tipr1454s" path="res://assets/sprites/characters/enemys/MiniBoar.png" id="1_30sn1"]
+[ext_resource type="Script" uid="uid://bivhtsi4pg5j2" path="res://scripts/enemies/item_drop.gd" id="2_lrvy4"]
+[ext_resource type="Resource" uid="uid://cyfo11f0xylab" path="res://resources/items/Meat.tres" id="3_c27qa"]
+[ext_resource type="Resource" uid="uid://hsuuxrxn0f0j" path="res://resources/enemies/item_drop.tres" id="4_lrvy4"]
+[ext_resource type="Script" uid="uid://b28ajlgdgglkr" path="res://scripts/enemies/enemy_resource.gd" id="4_uqxul"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36cxl"]
+atlas = ExtResource("1_30sn1")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrvy4"]
+atlas = ExtResource("1_30sn1")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c27qa"]
+atlas = ExtResource("1_30sn1")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqxul"]
+atlas = ExtResource("1_30sn1")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovn7w"]
+atlas = ExtResource("1_30sn1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cir4"]
+atlas = ExtResource("1_30sn1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xua6v"]
+atlas = ExtResource("1_30sn1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rhar"]
+atlas = ExtResource("1_30sn1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0jj4"]
+atlas = ExtResource("1_30sn1")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0dr0"]
+atlas = ExtResource("1_30sn1")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i4au"]
+atlas = ExtResource("1_30sn1")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggbih"]
+atlas = ExtResource("1_30sn1")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l0bbc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36cxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrvy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c27qa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqxul")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovn7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cir4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xua6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rhar")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0jj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0dr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0i4au")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggbih")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_c27qa"]
+script = ExtResource("2_lrvy4")
+file = ExtResource("3_c27qa")
+amount = 4
+metadata/_custom_type_script = "uid://bivhtsi4pg5j2"
+
+[resource]
+script = ExtResource("4_uqxul")
+maxHealth = 140
+speed = 45
+attackValue = 20
+knockback = 120.0
+xpValue = 35
+sightRadius = 65
+attackRadius = 20.0
+regenSpeed = 1.6
+regenAmount = 20
+attackCooldown = 1.2
+respawnTime = 80.0
+collisionRadius = 15.0
+animations = SubResource("SpriteFrames_l0bbc")
+items = Array[ExtResource("2_lrvy4")]([SubResource("Resource_c27qa"), ExtResource("4_lrvy4")])
+metadata/_custom_type_script = "uid://b28ajlgdgglkr"

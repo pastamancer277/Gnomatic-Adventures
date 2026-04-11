@@ -17,7 +17,7 @@ func interact():
 			dialogueBox.dialogue("I don't know you! Go away!", self)
 			dialogueBox.setDialogueOption("...", 2)
 	else: if(run==2):
-		dialogueBox.dialogue("Can you kill those three slimes, and bring me the slime?",self)
+		dialogueBox.dialogue("Can you kill those monsters, and bring me the fur?",self)
 		dialogueBox.setDialogueOption("Sure!", 0)
 		dialogueBox.setDialogueOption("Fine, I suppose", 1)
 		dialogueBox.setDialogueOption("No, I'm busy", 2)

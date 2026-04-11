@@ -7,11 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://bqg8ow8e4uyn0" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Plant Resized.png" id="5_8sdqp"]
 [ext_resource type="PackedScene" uid="uid://cgc26yscm8igx" path="res://scenes/NPCs/ForestNPC1.tscn" id="7_e2bmm"]
 [ext_resource type="PackedScene" uid="uid://bmw1xq14alg87" path="res://scenes/enemies/basic_enemy.tscn" id="9_x3itf"]
-[ext_resource type="Resource" uid="uid://cl6lnrvkk43ug" path="res://resources/enemies/slime.tres" id="10_38r6r"]
+[ext_resource type="Resource" uid="uid://b5k3m5y1n4l3k" path="res://resources/enemies/deer2.tres" id="10_1ftgr"]
+[ext_resource type="Resource" uid="uid://cl6lnrvkk43ug" path="res://resources/enemies/deer1.tres" id="10_38r6r"]
 [ext_resource type="PackedScene" uid="uid://bm6wgggxoplqg" path="res://scenes/enemies/basic_sprite.tscn" id="10_50rke"]
 [ext_resource type="Resource" uid="uid://cl2ny66ihtsxq" path="res://resources/sprites/woodSprite.tres" id="11_1ftgr"]
 [ext_resource type="Texture2D" uid="uid://xx1ohmvo1cqm" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Tileset Stone Ground.png" id="11_xba2m"]
 [ext_resource type="PackedScene" uid="uid://dqyakadp7w8ew" path="res://scenes/NPCs/ForestNPC2.tscn" id="12_50rke"]
+[ext_resource type="Resource" uid="uid://dno82fef7tk7i" path="res://resources/enemies/bunny.tres" id="14_3h4ii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qjxi2"]
 texture = ExtResource("3_bkfpv")
@@ -426,25 +428,33 @@ tile_set = SubResource("TileSet_udkau")
 visible = false
 position = Vector2(-27, 73)
 
-[node name="Slime" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=1614433100 instance=ExtResource("9_x3itf")]
+[node name="Deer" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=1614433100 instance=ExtResource("9_x3itf")]
 position = Vector2(132, 145)
 enemyResource = ExtResource("10_38r6r")
 
-[node name="Slime2" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=1802414241 instance=ExtResource("9_x3itf")]
-position = Vector2(79, -89)
+[node name="Deer2" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=904221084 instance=ExtResource("9_x3itf")]
+position = Vector2(84, -37)
 enemyResource = ExtResource("10_38r6r")
 
-[node name="Slime3" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="3" unique_id=2019318359 instance=ExtResource("9_x3itf")]
-position = Vector2(361, -21)
-enemyResource = ExtResource("10_38r6r")
+[node name="Deer3" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="3" unique_id=2070085788 instance=ExtResource("9_x3itf")]
+position = Vector2(339, -68)
+enemyResource = ExtResource("10_1ftgr")
 
-[node name="BasicEnemy" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="4" unique_id=1104365912 instance=ExtResource("10_50rke")]
+[node name="WoodSprite" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="4" unique_id=1104365912 instance=ExtResource("10_50rke")]
 position = Vector2(-41, -101)
 motion_mode = 0
 resource = ExtResource("11_1ftgr")
 
 [node name="ForestNPC2" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="5" unique_id=1834193905 instance=ExtResource("12_50rke")]
 position = Vector2(366, 225)
+
+[node name="Bunny" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="6" unique_id=1256954893 instance=ExtResource("9_x3itf")]
+position = Vector2(407, 61)
+enemyResource = ExtResource("14_3h4ii")
+
+[node name="Bunny2" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="7" unique_id=615767333 instance=ExtResource("9_x3itf")]
+position = Vector2(429, 41)
+enemyResource = ExtResource("14_3h4ii")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=1861828475]
 polygon = PackedVector2Array(-100, -144, 374, -147, 366, -139, 358, -138, 357, -112, 372, -110, 370, -91, 379, -75, 409, -75, 416, -78, 420, -96, 432, -95, 438, -99, 436, -115, 432, -122, 429, -134, 422, -143, 414, -147, 551, -150, 548, -91, 595, -90, 594, 45, 547, 45, 547, 176, 536, 178, 536, 189, 526, 195, 493, 204, 487, 212, 478, 218, 470, 227, 469, 245, 458, 244, 416, 245, 431, 257, 433, 276, 359, 273, 354, 245, -101, 247, -95, 58, -149, 55, -149, -53, -96, -58, -99, -190, -166, -140, -167, 286, 628, 294, 628, -174, -99, -175)

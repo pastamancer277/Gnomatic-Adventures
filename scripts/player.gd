@@ -22,7 +22,7 @@ var attacking=false
 
 var level=1
 var levelPoints=0
-var xp=99
+var xp=0
 var socialCredit=50
 var keywords=[]
 
@@ -273,9 +273,7 @@ func gainXP(val: int):
 		xp-=100
 		level+=1
 		levelPoints+=1
-		print("level up")
 		$"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/VBoxContainer/Control2/Grid/Button".add_theme_stylebox_override("normal", load("res://assets/themes/red_notification_stylebox.tres"))
-		print($"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/VBoxContainer/Control2/Grid/Button".has_theme_stylebox_override("normal"))
 func getXP():
 	return xp
 

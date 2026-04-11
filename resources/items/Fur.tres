@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://xnhwbjuiucay"]
+
+[ext_resource type="Script" uid="uid://cc4te3g41ua7s" path="res://scripts/itemResource.gd" id="1_e30ne"]
+[ext_resource type="Texture2D" uid="uid://si7224oaxcok" path="res://assets/sprites/The Female Adventurer/The Female Adventurer - Free/Shadow.png" id="1_p5pwe"]
+
+[resource]
+script = ExtResource("1_e30ne")
+name = "Fur"
+icon = ExtResource("1_p5pwe")
+metadata/_custom_type_script = "uid://cc4te3g41ua7s"
