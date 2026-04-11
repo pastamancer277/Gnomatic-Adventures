@@ -6,14 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://brkivji8hrlk4" path="res://assets/sprites/tilesets/plains.png" id="3_bkfpv"]
 [ext_resource type="Texture2D" uid="uid://bqg8ow8e4uyn0" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Plant Resized.png" id="5_8sdqp"]
 [ext_resource type="PackedScene" uid="uid://cgc26yscm8igx" path="res://scenes/NPCs/ForestNPC1.tscn" id="7_e2bmm"]
+[ext_resource type="Resource" uid="uid://dk5t67ad15uvi" path="res://resources/enemies/deer1.tres" id="9_3h4ii"]
 [ext_resource type="PackedScene" uid="uid://bmw1xq14alg87" path="res://scenes/enemies/basic_enemy.tscn" id="9_x3itf"]
-[ext_resource type="Resource" uid="uid://b5k3m5y1n4l3k" path="res://resources/enemies/deer2.tres" id="10_1ftgr"]
-[ext_resource type="Resource" uid="uid://cl6lnrvkk43ug" path="res://resources/enemies/deer1.tres" id="10_38r6r"]
+[ext_resource type="Resource" path="res://resources/enemies/deer2.tres" id="10_8sdqp"]
 [ext_resource type="PackedScene" uid="uid://bm6wgggxoplqg" path="res://scenes/enemies/basic_sprite.tscn" id="10_50rke"]
 [ext_resource type="Resource" uid="uid://cl2ny66ihtsxq" path="res://resources/sprites/woodSprite.tres" id="11_1ftgr"]
 [ext_resource type="Texture2D" uid="uid://xx1ohmvo1cqm" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Tileset Stone Ground.png" id="11_xba2m"]
 [ext_resource type="PackedScene" uid="uid://dqyakadp7w8ew" path="res://scenes/NPCs/ForestNPC2.tscn" id="12_50rke"]
-[ext_resource type="Resource" uid="uid://dno82fef7tk7i" path="res://resources/enemies/bunny.tres" id="14_3h4ii"]
+[ext_resource type="Resource" uid="uid://bwsermbw83onl" path="res://resources/enemies/bunny.tres" id="14_3h4ii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qjxi2"]
 texture = ExtResource("3_bkfpv")
@@ -430,15 +430,15 @@ position = Vector2(-27, 73)
 
 [node name="Deer" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=1614433100 instance=ExtResource("9_x3itf")]
 position = Vector2(132, 145)
-enemyResource = ExtResource("10_38r6r")
+enemyResource = ExtResource("9_3h4ii")
 
 [node name="Deer2" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=904221084 instance=ExtResource("9_x3itf")]
 position = Vector2(84, -37)
-enemyResource = ExtResource("10_38r6r")
+enemyResource = ExtResource("9_3h4ii")
 
 [node name="Deer3" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="3" unique_id=2070085788 instance=ExtResource("9_x3itf")]
 position = Vector2(339, -68)
-enemyResource = ExtResource("10_1ftgr")
+enemyResource = ExtResource("10_8sdqp")
 
 [node name="WoodSprite" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="4" unique_id=1104365912 instance=ExtResource("10_50rke")]
 position = Vector2(-41, -101)

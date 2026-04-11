@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://b5k3m5y1n4l3k"]
+[gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://c4yq0yy4cxpdg"]
 
 [ext_resource type="Texture2D" uid="uid://bnw5s6eald4hi" path="res://assets/sprites/characters/enemys/MiniDeer2.png" id="1_8gdn3"]
 [ext_resource type="Script" uid="uid://bivhtsi4pg5j2" path="res://scripts/enemies/item_drop.gd" id="2_8gdn3"]

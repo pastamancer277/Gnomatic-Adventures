@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://dno82fef7tk7i"]
+[gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://bwsermbw83onl"]
 
 [ext_resource type="Texture2D" uid="uid://dp4ev8ml0cemh" path="res://assets/sprites/characters/enemys/MiniBunny.png" id="1_7me4w"]
 [ext_resource type="Script" uid="uid://bivhtsi4pg5j2" path="res://scripts/enemies/item_drop.gd" id="2_u2j40"]
