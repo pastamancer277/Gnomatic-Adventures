@@ -50,6 +50,8 @@ func _physics_process(delta: float) -> void:
 		health=0
 		#$AnimationPlayer.play("death")
 		_create_death_screen()
+		print(get_window().size.x)
+		print(get_window().size.y)
 
 func _create_death_screen():
 	var death = load("res://scenes/screens/death_screen.tscn").instantiate()

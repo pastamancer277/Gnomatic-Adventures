@@ -15,8 +15,8 @@ grow_vertical = 2
 script = ExtResource("1_6oeqw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1700984283]
-position = Vector2(112, 57)
-scale = Vector2(0.33413175, 0.30918476)
+position = Vector2(196, 108.00001)
+scale = Vector2(0.58696103, 0.587)
 texture = ExtResource("2_1gxbh")
 
 [node name="Label" type="Label" parent="." unique_id=789455178]
@@ -30,17 +30,16 @@ text = "Possible stats you get"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=715869878]
 layout_mode = 0
-offset_left = 148.0
-offset_top = 69.0
-offset_right = 209.0
-offset_bottom = 105.0
+offset_left = 265.0
+offset_top = 9.0
+offset_right = 382.0
+offset_bottom = 67.0
 
 [node name="Reload" type="Button" parent="VBoxContainer" unique_id=288942664]
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("3_1gxbh")
 theme_type_variation = &"ScreenButton"
-theme_override_font_sizes/font_size = 8
 text = "Reload at Save"
 
 [node name="Restart" type="Button" parent="VBoxContainer" unique_id=746386268]
@@ -48,7 +47,6 @@ layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("3_1gxbh")
 theme_type_variation = &"ScreenButton"
-theme_override_font_sizes/font_size = 8
 text = "Restart Game"
 
 [connection signal="pressed" from="VBoxContainer/Reload" to="." method="_on_reload_pressed"]

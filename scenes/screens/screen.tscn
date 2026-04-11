@@ -14,8 +14,8 @@ grow_vertical = 2
 script = ExtResource("1_314sv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=318035540]
-position = Vector2(106.31943, 56.04013)
-scale = Vector2(0.31940287, 0.30412972)
+position = Vector2(195.81941, 108.04014)
+scale = Vector2(0.5873669, 0.58673847)
 texture = ExtResource("2_1r2no")
 
 [node name="Button" type="Button" parent="." unique_id=81341868]
@@ -23,14 +23,14 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 81.0
-offset_top = 74.0
-offset_right = -1794.0
-offset_bottom = -982.0
+offset_left = 159.0
+offset_top = 153.0
+offset_right = -1711.0
+offset_bottom = -900.0
 mouse_filter = 2
 theme = ExtResource("3_1r2no")
 theme_type_variation = &"ScreenButton"
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 16
 text = "Enter!"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=434308587]
