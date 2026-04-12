@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://doewc10pm5irj" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Structures/Buildings/Props.png" id="7_gbtq8"]
 [ext_resource type="PackedScene" uid="uid://8vol0sip0u3e" path="res://scenes/NPCs/CityNPC1.tscn" id="10_b8cnf"]
 [ext_resource type="Texture2D" uid="uid://cr5cqr05uyulp" path="res://assets/sprites/Biome/Walls.png" id="10_bn0e7"]
+[ext_resource type="PackedScene" uid="uid://bmw1xq14alg87" path="res://scenes/enemies/basic_enemy.tscn" id="10_wvkxu"]
+[ext_resource type="Resource" uid="uid://cagdfvhselp0l" path="res://resources/enemies/bird.tres" id="11_gbtq8"]
+[ext_resource type="Resource" uid="uid://bwvnlnm3ptxex" path="res://resources/enemies/bear.tres" id="12_imk6h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sfdmy"]
 texture = ExtResource("3_asbs4")
@@ -2050,6 +2053,18 @@ tile_set = SubResource("TileSet_jcmmt")
 
 [node name="CityNPC1" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="0" unique_id=1834193905 instance=ExtResource("10_b8cnf")]
 position = Vector2(-23, -104)
+
+[node name="Bird" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=1614433100 instance=ExtResource("10_wvkxu")]
+position = Vector2(62, 39)
+enemyResource = ExtResource("11_gbtq8")
+
+[node name="Bird2" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=1074230362 instance=ExtResource("10_wvkxu")]
+position = Vector2(-246, 247)
+enemyResource = ExtResource("11_gbtq8")
+
+[node name="Bear" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="3" unique_id=568343734 instance=ExtResource("10_wvkxu")]
+position = Vector2(369, 251)
+enemyResource = ExtResource("12_imk6h")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=1090135025]
 polygon = PackedVector2Array(-274, -224, -277, 44, -318, 43, -320, 92, -277, 92, -278, 366, 32, 367, 28, 441, 100, 441, 94, 361, 403, 362, 402, 89, 459, 95, 455, 44, 401, 44, 403, -231, 96, -231, 92, -269, 35, -271, 36, -233, -260, -230, -260, -433, 689, -435, 690, 592, -544, 592, -546, -209, -545, -435, -260, -434, -274, -225)

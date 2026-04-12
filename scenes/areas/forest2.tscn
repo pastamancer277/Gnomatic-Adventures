@@ -432,7 +432,7 @@ position = Vector2(132, 145)
 enemyResource = ExtResource("9_3h4ii")
 
 [node name="Deer2" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=904221084 instance=ExtResource("9_x3itf")]
-position = Vector2(84, -37)
+position = Vector2(73, -71)
 enemyResource = ExtResource("9_3h4ii")
 
 [node name="Deer3" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="3" unique_id=2070085788 instance=ExtResource("9_x3itf")]

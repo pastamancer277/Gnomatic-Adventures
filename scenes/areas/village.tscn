@@ -7,8 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://doewc10pm5irj" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Structures/Buildings/Props.png" id="4_rpcri"]
 [ext_resource type="Texture2D" uid="uid://cpj7q304014b" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Structures/Buildings/Roofs.png" id="5_ilfds"]
 [ext_resource type="Texture2D" uid="uid://bqg8ow8e4uyn0" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Plant Resized.png" id="6_moe3i"]
-[ext_resource type="PackedScene" uid="uid://cmgpv5ts5g6qm" path="res://scenes/NPCs/Kid.tscn" id="8_rpcri"]
-[ext_resource type="PackedScene" uid="uid://cc8xaon0nf2dy" path="res://scenes/NPCs/villager1.tscn" id="9_ilfds"]
+[ext_resource type="PackedScene" path="res://scenes/NPCs/Kid.tscn" id="8_rpcri"]
+[ext_resource type="PackedScene" path="res://scenes/NPCs/villager1.tscn" id="9_ilfds"]
+[ext_resource type="PackedScene" uid="uid://bmw1xq14alg87" path="res://scenes/enemies/basic_enemy.tscn" id="10_3i1a1"]
+[ext_resource type="Resource" uid="uid://bmswyvpe1fvqo" path="res://resources/enemies/fox.tres" id="11_enqqm"]
+[ext_resource type="Resource" uid="uid://bol020bxwbhj3" path="res://resources/enemies/boar.tres" id="12_5chbg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehnuc"]
 texture = ExtResource("2_moe3i")
@@ -1194,6 +1197,18 @@ position = Vector2(609, 531)
 
 [node name="Villager1" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=583183753 instance=ExtResource("9_ilfds")]
 position = Vector2(94, 44)
+
+[node name="Fox" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=1614433100 instance=ExtResource("10_3i1a1")]
+position = Vector2(2, 510)
+enemyResource = ExtResource("11_enqqm")
+
+[node name="Fox2" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="3" unique_id=241680738 instance=ExtResource("10_3i1a1")]
+position = Vector2(633, 117)
+enemyResource = ExtResource("11_enqqm")
+
+[node name="Boar" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="4" unique_id=1278874134 instance=ExtResource("10_3i1a1")]
+position = Vector2(416, 381)
+enemyResource = ExtResource("12_5chbg")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=557783940]
 polygon = PackedVector2Array(-67, 104, -62, 594, -111, 589, -117, 655, -112, 718, -64, 720, -64, 738, 884, 731, 897, -154, 771, -161, 775, -253, 671, -253, 673, -164, 182, -161, 136, -159, 80, -161, 50, -161, -60, -162, -60, -49, -65, 20, -77, 129, -330, 50, -323, -393, 1133, -383, 1140, 966, -325, 966, -327, 59)

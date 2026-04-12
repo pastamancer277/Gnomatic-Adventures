@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://cypehk5don2o4" path="res://assets/sprites/Biome/Roofs.png" id="4_ydaih"]
 [ext_resource type="Texture2D" uid="uid://xx1ohmvo1cqm" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Tileset Stone Ground.png" id="5_ydaih"]
 [ext_resource type="Texture2D" uid="uid://dvw4xjkvkyrgo" path="res://assets/sprites/Biome/Props.png" id="7_0n7n0"]
+[ext_resource type="PackedScene" uid="uid://bmw1xq14alg87" path="res://scenes/enemies/basic_enemy.tscn" id="9_d4xqe"]
+[ext_resource type="Resource" uid="uid://bwvnlnm3ptxex" path="res://resources/enemies/bear.tres" id="10_syi5y"]
+[ext_resource type="Resource" uid="uid://cagdfvhselp0l" path="res://resources/enemies/bird.tres" id="11_jsssp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_puqa6"]
 texture = ExtResource("2_3nhoh")
@@ -2796,6 +2799,14 @@ tile_set = SubResource("TileSet_py5fx")
 [node name="Decorations" type="TileMapLayer" parent="TileMap" parent_id_path=PackedInt32Array(41032152) index="5" unique_id=941862880]
 tile_map_data = PackedByteArray("AAD6/w4AAwAMAAkAAAD7/w4AAwAOAAkAAAD6/w0AAwAMAAcAAAD7/w0AAwAOAAcAAAD+/w4AAwAMAAkAAAD//w4AAwAOAAkAAAD+/w0AAwAMAAcAAAD//w0AAwAOAAcAAAD//wkAAwAOAAcAAAD//woAAwAOAAkAAAD+/woAAwAMAAkAAAD+/wkAAwAMAAcAAAD7/woAAwAOAAkAAAD6/woAAwAMAAkAAAD6/wkAAwAMAAcAAAD7/wkAAwAOAAcAAAAdAP7/AwAFAAsAAAAdAP3/AwAFAAoAAAAeAP7/AwAGAAsAAAAeAP3/AwAGAAoAAAAfAP7/AwAHAAsAAAAfAP3/AwAHAAoAAAAgAP7/AwAIAAsAAAAgAP3/AwAIAAoAAAACAAsAAwAMAAcAAAACAAwAAwAMAAkAAAADAAsAAwAOAAcAAAADAAwAAwAOAAkAAAAGAAsAAwAMAAcAAAAGAAwAAwAMAAkAAAAHAAsAAwAOAAcAAAAHAAwAAwAOAAkAAAALAAwAAwAOAAkAAAAKAAwAAwAMAAkAAAAKAAsAAwAMAAcAAAALAAsAAwAOAAcAAAAVAAsAAwAGAAQAAAAVAAwAAwAGAAUAAAAWAAsAAwAHAAQAAAAWAAwAAwAHAAUAAAATAAwAAwAKAAEAAAATAA0AAwAKAAIAAAATAA4AAwAKAAMAAAAUAAwAAwALAAEAAAAUAA0AAwALAAIAAAAUAA4AAwALAAMAAAAQAAsAAwAGAAQAAAAQAAwAAwAGAAUAAAARAAsAAwAHAAQAAAARAAwAAwAHAAUAAAAEAPv/AwAIAAEAAAAEAPz/AwAIAAIAAAAEAP3/AwAIAAMAAAAFAPv/AwAJAAEAAAAFAPz/AwAJAAIAAAAFAP3/AwAJAAMAAAAAAPv/AwAIAAEAAAAAAPz/AwAIAAIAAAAAAP3/AwAIAAMAAAABAPv/AwAJAAEAAAABAPz/AwAJAAIAAAABAP3/AwAJAAMAAAD8//v/AwAIAAEAAAD8//z/AwAIAAIAAAD8//3/AwAIAAMAAAD9//v/AwAJAAEAAAD9//z/AwAJAAIAAAD9//3/AwAJAAMAAAD4//v/AwAIAAEAAAD4//z/AwAIAAIAAAD4//3/AwAIAAMAAAD5//v/AwAJAAEAAAD5//z/AwAJAAIAAAD5//3/AwAJAAMAAAAIAPv/AwAIAAEAAAAIAPz/AwAIAAIAAAAIAP3/AwAIAAMAAAAJAPv/AwAJAAEAAAAJAPz/AwAJAAIAAAAJAP3/AwAJAAMAAAAMAPv/AwAIAAEAAAAMAPz/AwAIAAIAAAAMAP3/AwAIAAMAAAANAPv/AwAJAAEAAAANAPz/AwAJAAIAAAANAP3/AwAJAAMAAAAQAPv/AwAIAAEAAAAQAPz/AwAIAAIAAAAQAP3/AwAIAAMAAAARAPv/AwAJAAEAAAARAPz/AwAJAAIAAAARAP3/AwAJAAMAAAAUAPv/AwAIAAEAAAAUAPz/AwAIAAIAAAAUAP3/AwAIAAMAAAAVAPv/AwAJAAEAAAAVAPz/AwAJAAIAAAAVAP3/AwAJAAMAAAAYAPv/AwAIAAEAAAAYAPz/AwAIAAIAAAAYAP3/AwAIAAMAAAAZAPv/AwAJAAEAAAAZAPz/AwAJAAIAAAAZAP3/AwAJAAMAAAA=")
 tile_set = SubResource("TileSet_syi5y")
+
+[node name="Bird" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="0" unique_id=1614433100 instance=ExtResource("9_d4xqe")]
+position = Vector2(62, 39)
+enemyResource = ExtResource("11_jsssp")
+
+[node name="Bear" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=1586741269 instance=ExtResource("9_d4xqe")]
+position = Vector2(491, 251)
+enemyResource = ExtResource("10_syi5y")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=1504294446]
 polygon = PackedVector2Array(-277, 312, -273, -3, -335, -2, -333, -51, -274, -50, -276, -212, 545, -210, 546, 320, -265, 321, -265, 545, 768, 545, 769, -384, -463, -385, -463, 543, -266, 547, -263, 320)
