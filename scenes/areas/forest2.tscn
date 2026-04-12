@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cgc26yscm8igx" path="res://scenes/NPCs/ForestNPC1.tscn" id="7_e2bmm"]
 [ext_resource type="Resource" uid="uid://dk5t67ad15uvi" path="res://resources/enemies/deer1.tres" id="9_3h4ii"]
 [ext_resource type="PackedScene" uid="uid://bmw1xq14alg87" path="res://scenes/enemies/basic_enemy.tscn" id="9_x3itf"]
-[ext_resource type="Resource" path="res://resources/enemies/deer2.tres" id="10_8sdqp"]
+[ext_resource type="Resource" uid="uid://c4yq0yy4cxpdg" path="res://resources/enemies/deer2.tres" id="10_8sdqp"]
 [ext_resource type="PackedScene" uid="uid://bm6wgggxoplqg" path="res://scenes/enemies/basic_sprite.tscn" id="10_50rke"]
 [ext_resource type="Resource" uid="uid://cl2ny66ihtsxq" path="res://resources/sprites/woodSprite.tres" id="11_1ftgr"]
 [ext_resource type="Texture2D" uid="uid://xx1ohmvo1cqm" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Tileset Stone Ground.png" id="11_xba2m"]
@@ -425,7 +425,6 @@ tile_map_data = PackedByteArray("AAD5//z/AQAFAAIAADD5//3/AQAFAAIAADD5//7/AQAFAAI
 tile_set = SubResource("TileSet_udkau")
 
 [node name="ForestNPC1" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="0" unique_id=1704687357 instance=ExtResource("7_e2bmm")]
-visible = false
 position = Vector2(-27, 73)
 
 [node name="Deer" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=1614433100 instance=ExtResource("9_x3itf")]

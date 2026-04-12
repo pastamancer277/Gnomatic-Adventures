@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://8vol0sip0u3e"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_sxcap"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_2vcfa"]
+[ext_resource type="Texture2D" uid="uid://pihby5r2i5d3" path="res://assets/sprites/characters/Luna.png" id="3_pbfab"]
+[ext_resource type="Script" uid="uid://nuiw47p2f5yj" path="res://scripts/NPCs/city1dialogue.gd" id="4_eb2fr"]
+[ext_resource type="Script" path="res://scripts/quests/WoodQuest.gd" id="5_g0xge"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k8ggy"]
+resource_local_to_scene = true
+shader = ExtResource("2_2vcfa")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="CityNPC1" unique_id=1834193905 instance=ExtResource("1_sxcap")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_k8ggy")
+texture = ExtResource("3_pbfab")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("4_eb2fr")
+
+[node name="WoodQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(879326239) index="0" unique_id=2102810096]
+script = ExtResource("5_g0xge")

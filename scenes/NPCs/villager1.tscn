@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cc8xaon0nf2dy"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_4v3n6"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_sod1w"]
+[ext_resource type="Texture2D" uid="uid://biuaggjnopww4" path="res://assets/sprites/characters/NPC1.png" id="3_kd44d"]
+[ext_resource type="Script" uid="uid://ccobedyb2luj4" path="res://scripts/NPCs/villager1dialogue.gd" id="4_sod1w"]
+[ext_resource type="Script" uid="uid://cj3g3j1afr0ed" path="res://scripts/Quests/furquest.gd" id="5_kd44d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_brhin"]
+resource_local_to_scene = true
+shader = ExtResource("2_sod1w")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="Villager1" unique_id=1834193905 instance=ExtResource("1_4v3n6")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_brhin")
+texture = ExtResource("3_kd44d")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("4_sod1w")
+
+[node name="FurQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(879326239) index="0" unique_id=1359635229]
+script = ExtResource("5_kd44d")
