@@ -8,7 +8,7 @@ func _ready() -> void:
 func interact():
 	if(run==1):
 		if(player.getSocialCredit()>50):
-			dialogueBox.dialogue("Hello there, sorry we are out of juice do to a guy in sunglasses ordering it all", self)
+			dialogueBox.dialogue("Hello there! sorry we are out of juice, a guy in sunglasses ordering it all", self)
 			dialogueBox.setDialogueOption("Aww that's to bad, nice shop tho", 0)
 			dialogueBox.setDialogueOption("Ugh, ok", 1)
 		else:
