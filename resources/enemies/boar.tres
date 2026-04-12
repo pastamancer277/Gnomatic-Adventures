@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://bol020bxwbhj3"]
+[gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://dp0uhux2sfxjo"]
 
 [ext_resource type="Texture2D" uid="uid://bj42tipr1454s" path="res://assets/sprites/characters/enemys/MiniBoar.png" id="1_30sn1"]
 [ext_resource type="Script" uid="uid://bivhtsi4pg5j2" path="res://scripts/enemies/item_drop.gd" id="2_lrvy4"]

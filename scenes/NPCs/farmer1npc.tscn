@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cjg3s5r2pwj6o"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_cv0c3"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_aps8b"]
+[ext_resource type="Texture2D" uid="uid://dmdshcbpdkn6x" path="res://assets/sprites/characters/LumberJack.png" id="3_aps8b"]
+[ext_resource type="Script" uid="uid://b20p81e0uyj7j" path="res://scripts/NPCs/Farmer1Dialogue.gd" id="3_h4c0u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aps8b"]
+resource_local_to_scene = true
+shader = ExtResource("2_aps8b")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="Farmer1NPC" unique_id=1834193905 instance=ExtResource("1_cv0c3")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_aps8b")
+texture = ExtResource("3_aps8b")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("3_h4c0u")

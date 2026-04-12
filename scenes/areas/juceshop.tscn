@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://ckwda6mcioavg" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Structures/Stations/Cooking Station/Cooker/Cooker_04-Sheet.png" id="3_8lo6u"]
 [ext_resource type="Texture2D" uid="uid://b17j76h3ogaiy" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Structures/Stations/Alchemy/Alchemy_Table_01-Sheet.png" id="4_560h7"]
 [ext_resource type="Texture2D" uid="uid://bq38mbxnlwokl" path="res://assets/sprites/Biome/midcentury_modern_furnitureset.png" id="6_8lo6u"]
+[ext_resource type="PackedScene" uid="uid://bmbtmy8x88hi6" path="res://scenes/NPCs/duck.tscn" id="7_560h7"]
+[ext_resource type="PackedScene" uid="uid://c02tssh1eurye" path="res://scenes/NPCs/juceshop1npc.tscn" id="8_g08ur"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g08ur"]
 texture = ExtResource("2_wy2by")
@@ -5384,8 +5386,14 @@ z_index = 2
 tile_map_data = PackedByteArray("AAABAAYAAAAOAC4AAAACAAYAAAAOAC4AAAADAAYAAAAOAC4AAAAEAAYAAAAOAC4AAAAFAAYAAAAOAC4AAAAGAAYAAAAOAC4AAAAHAAYAAAAOAC4AAAAIAAYAAAAOAC4AAAAJAAYAAAAOAC4AAAAKAAUAAAAOAC4AAGAKAAQAAAAOAC4AAGAKAAMAAAAOAC4AAGAKAAIAAAAOAC4AAGAKAAEAAAAOAC4AAGAKAAAAAAAOAC4AAGAKAPj/AAAOAC4AAGAKAPn/AAAOAC4AAGAKAPr/AAAOAC4AAGAKAPv/AAAOAC4AAGAKAPz/AAAOAC4AAGAKAP3/AAAOAC4AAGAKAP7/AAAOAC4AAGAKAP//AAAOAC4AAGAJAPf/AAAOAC4AADAIAPf/AAAOAC4AADAHAPf/AAAOAC4AADAGAPf/AAAOAC4AADAFAPf/AAAOAC4AADAEAPf/AAAOAC4AADADAPf/AAAOAC4AADACAPf/AAAOAC4AADABAPf/AAAOAC4AADAAAPf/AAAOAC4AADD///f/AAAOAC4AADD+//f/AAAOAC4AADD9//f/AAAOAC4AADD8//j/AAAOAC4AAFD8//n/AAAOAC4AAFD8//r/AAAOAC4AAFD8//v/AAAOAC4AAFD8//z/AAAOAC4AAFD8//3/AAAOAC4AAFD8//7/AAAOAC4AAFD8////AAAOAC4AAFD8/wAAAAAOAC4AAFD8/wEAAAAOAC4AAFD8/wIAAAAOAC4AAFD8/wMAAAAOAC4AAFD8/wQAAAAOAC4AAFD8/wUAAAAOAC4AAFD9/wcAAAAOAC4AAGAAAAcAAAAOAC4AAGAAAAgAAAAPAC4AAAD9/wgAAAAPAC4AAFD8/wYAAAAPAC4AAFAKAAYAAAAPAC4AAAAAAAYAAAAPAC0AAAD9/wYAAAAPAC0AAFAKAPf/AAAPAC0AAFD8//f/AAAPAC0AAAA=")
 tile_set = SubResource("TileSet_upr0x")
 
+[node name="Duck" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="0" unique_id=1834193905 instance=ExtResource("7_560h7")]
+position = Vector2(71, 4)
+
+[node name="JuceShop1NPC" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=142748453 instance=ExtResource("8_g08ur")]
+position = Vector2(-9, -16)
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=537676364]
-polygon = PackedVector2Array(-51, -2, 38, -3, 37, -27, 59, -27, 60, 12, -53, 14, -51, 100, -40, 100, -35, 107, -35, 127, -35, 127, -35, 132, 0, 130, 2, 106, 11, 98, 52, 95, 52, 75, 92, 75, 93, 95, 162, 97, 163, 62, 132, 63, 132, 23, 160, 22, 160, -20, 133, -20, 134, -59, 26, -60, 30, -41, -52, -40, -51, -3, -144, -2, -143, -209, 255, -208, 256, 176, -144, 176, -145, 0)
+polygon = PackedVector2Array(-51, -2, 38, -3, 37, -27, 59, -27, 61, 6, 77, 6, 78, 15, -53, 14, -51, 100, -40, 100, -35, 107, -35, 127, -35, 127, -35, 132, 0, 130, 2, 106, 11, 98, 52, 95, 52, 75, 92, 75, 93, 95, 162, 97, 163, 62, 132, 63, 132, 23, 160, 22, 160, -20, 133, -20, 134, -59, 26, -60, 30, -41, -52, -40, -51, -3, -144, -2, -143, -209, 255, -208, 256, 176, -144, 176, -145, 0)
 
 [node name="City1" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=52566890]
 position = Vector2(-17, 115)
