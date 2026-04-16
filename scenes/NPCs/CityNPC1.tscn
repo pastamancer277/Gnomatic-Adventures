@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://8vol0sip0u3e"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_45htn"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_odn3c"]
+[ext_resource type="Script" uid="uid://nuiw47p2f5yj" path="res://scripts/NPCs/city1Dialogue.gd" id="3_odn3c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d2qfh"]
+resource_local_to_scene = true
+shader = ExtResource("2_odn3c")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="BasicNPC" unique_id=1834193905 instance=ExtResource("1_45htn")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_d2qfh")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("3_odn3c")
