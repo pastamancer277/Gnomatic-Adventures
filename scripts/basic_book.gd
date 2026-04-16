@@ -5,7 +5,15 @@ var page = 0
 var isOpen = false
 var pages = null
 
+@export var bookResource: Resource
+
 func _ready() -> void:
+	$Sprite2D.texture = bookResource.cover
+	
+	for texture in bookResource.pages:
+		var p = Sprite2D.new()
+		p.texture = texture
+		$BookPages.add_child(p)
 	pages = $BookPages.get_children()
 	$BookPages.visible=false
 
