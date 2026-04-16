@@ -4,6 +4,6 @@ extends quest
 @onready var meat=preload("res://resources/items/Meat.tres")
 
 func tryComplete():
-	if($/root/Main/Systems/Inventory.tryRemove({fish: 3})):
+	if($/root/Main/Systems/Inventory.tryRemove({fish: 3, meat: 5})):
 		complete=true
 		get_parent().get_parent().questComplete()

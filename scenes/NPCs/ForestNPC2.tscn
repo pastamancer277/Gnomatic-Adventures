@@ -1,12 +1,22 @@
 [gd_scene format=3 uid="uid://dqyakadp7w8ew"]
 
 [ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_eotf0"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_5bt2y"]
 [ext_resource type="Texture2D" uid="uid://jhtrfpska3p6" path="res://assets/sprites/characters/Idle-Guard1.png" id="2_8cktr"]
+[ext_resource type="Script" uid="uid://b1r62c62h3m84" path="res://scripts/NPCs/forestNPC2.gd" id="2_spuyj"]
 [ext_resource type="Script" uid="uid://cltgxpx3qrau1" path="res://scripts/NPCs/forest2Dialogue.gd" id="3_8cktr"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_spuyj"]
+resource_local_to_scene = true
+shader = ExtResource("2_5bt2y")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
 [node name="ForestNPC2" unique_id=1834193905 instance=ExtResource("1_eotf0")]
+script = ExtResource("2_spuyj")
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_spuyj")
 texture = ExtResource("2_8cktr")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]

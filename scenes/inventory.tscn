@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b434nmc2e0gua" path="res://scripts/inventory.gd" id="1_qw0r6"]
 [ext_resource type="PackedScene" uid="uid://c3pg5pi87ia3p" path="res://scenes/item_slot.tscn" id="2_hj2ta"]
+[ext_resource type="Theme" uid="uid://8yntgav2cnsc" path="res://assets/themes/panel_container.tres" id="3_ty45s"]
+[ext_resource type="Theme" uid="uid://dgi7kajo0do8d" path="res://assets/themes/label.tres" id="4_53g1v"]
 
 [node name="Inventory" type="Control" unique_id=1340913624]
 layout_mode = 3
@@ -21,48 +23,43 @@ item_slot_scene = ExtResource("2_hj2ta")
 layout_mode = 0
 offset_right = 60.0
 offset_bottom = 50.0
+theme = ExtResource("3_ty45s")
 
-[node name="Panel" type="Panel" parent="PanelContainer" unique_id=1868603280]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=501952066]
 layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/Panel" unique_id=501952066]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 7.0
-offset_right = 52.0
-offset_bottom = 47.0
 metadata/_edit_lock_ = true
 
-[node name="GridContainer" type="GridContainer" parent="PanelContainer/Panel/VBoxContainer" unique_id=884358431]
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer" unique_id=884358431]
 layout_mode = 2
 size_flags_vertical = 3
 columns = 5
 metadata/_edit_lock_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/Panel/VBoxContainer" unique_id=509762361]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=509762361]
 layout_mode = 2
 metadata/_edit_lock_ = true
 
-[node name="XP" type="ProgressBar" parent="PanelContainer/Panel/VBoxContainer/HBoxContainer" unique_id=742351336]
+[node name="XP" type="ProgressBar" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=742351336]
 layout_mode = 2
 size_flags_horizontal = 3
 show_percentage = false
 
-[node name="Label" type="Label" parent="PanelContainer/Panel/VBoxContainer/HBoxContainer" unique_id=935079044]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=935079044]
 layout_mode = 2
-theme_override_font_sizes/font_size = 6
+theme = ExtResource("4_53g1v")
 text = "XP"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/Panel/VBoxContainer" unique_id=264325293]
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=264325293]
 layout_mode = 2
+size_flags_stretch_ratio = 3.53
 metadata/_edit_lock_ = true
 
-[node name="SocialCredit" type="Label" parent="PanelContainer/Panel/VBoxContainer/HBoxContainer2" unique_id=1728082070]
+[node name="SocialCredit" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1728082070]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 7
 
-[node name="Label" type="Label" parent="PanelContainer/Panel/VBoxContainer/HBoxContainer2" unique_id=1235199049]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1235199049]
 layout_mode = 2
 theme_override_font_sizes/font_size = 6
 text = "SC"

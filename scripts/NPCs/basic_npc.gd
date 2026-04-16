@@ -25,6 +25,7 @@ func _process(delta):
 
 func update_health():
 	if(health<=0):
+		deathCollisions()
 		health=0
 	
 	var hBar= $HealthBar
@@ -58,13 +59,16 @@ func damage(d: int, pos, knock):
 		$RegenTimer.start(3)
 
 func onDeath():
+	deathCollisions()
+	player_near=false
+	player.changeRating(killValue)
+	saveData()
+
+func deathCollisions():
 	visible=false
 	$CollisionShape2D.disabled=true
 	$Area2D/CollisionShape2D.disabled=true
 	dead=true
-	player_near=false
-	player.changeRating(killValue)
-	saveData()
 
 func _on_area_2d_body_exited(body):
 	if(loc==$/root/Global.getCurArea()):
@@ -98,13 +102,13 @@ func loadData():
 		dead=true
 		health=0
 	else:
+		$CollisionShape2D.disabled=false
+		$Area2D/CollisionShape2D.disabled=false
 		if(get_parent().get_parent().getActive()):
 			visible=true
-			$CollisionShape2D.disabled=false
 			process_mode=Node.PROCESS_MODE_INHERIT
 		else:
 			visible=false
-			$CollisionShape2D.disabled=true
 			process_mode=Node.PROCESS_MODE_DISABLED
 		dead=false
 		health=mHealth

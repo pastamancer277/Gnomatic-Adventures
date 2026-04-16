@@ -1,0 +1,147 @@
+[gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://cteomxelu15t8"]
+
+[ext_resource type="Texture2D" uid="uid://pc6gonkxu3va" path="res://assets/sprites/characters/enemys/MiniWolf.png" id="1_78dli"]
+[ext_resource type="Script" uid="uid://bivhtsi4pg5j2" path="res://scripts/enemies/item_drop.gd" id="2_78dli"]
+[ext_resource type="Resource" uid="uid://cyfo11f0xylab" path="res://resources/items/Meat.tres" id="3_oxm75"]
+[ext_resource type="Script" uid="uid://b28ajlgdgglkr" path="res://scripts/enemies/enemy_resource.gd" id="4_ey6ka"]
+[ext_resource type="Resource" uid="uid://hsuuxrxn0f0j" path="res://resources/enemies/item_drop.tres" id="4_oxm75"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxm75"]
+atlas = ExtResource("1_78dli")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ey6ka"]
+atlas = ExtResource("1_78dli")
+region = Rect2(32, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0imst"]
+atlas = ExtResource("1_78dli")
+region = Rect2(64, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7x360"]
+atlas = ExtResource("1_78dli")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tc7g4"]
+atlas = ExtResource("1_78dli")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4ay0"]
+atlas = ExtResource("1_78dli")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpie2"]
+atlas = ExtResource("1_78dli")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrclm"]
+atlas = ExtResource("1_78dli")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s43p"]
+atlas = ExtResource("1_78dli")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m6pl"]
+atlas = ExtResource("1_78dli")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q06er"]
+atlas = ExtResource("1_78dli")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yim5d"]
+atlas = ExtResource("1_78dli")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgfbd"]
+atlas = ExtResource("1_78dli")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jc113"]
+atlas = ExtResource("1_78dli")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_slapw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxm75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ey6ka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0imst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7x360")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tc7g4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4ay0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpie2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrclm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s43p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4m6pl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q06er")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yim5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgfbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jc113")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_3xrwl"]
+script = ExtResource("2_78dli")
+file = ExtResource("3_oxm75")
+amount = 1
+metadata/_custom_type_script = "uid://bivhtsi4pg5j2"
+
+[resource]
+script = ExtResource("4_ey6ka")
+maxHealth = 100
+speed = 45
+attackValue = 18
+knockback = 35.0
+xpValue = 17
+sightRadius = 70
+attackRadius = 12.0
+regenSpeed = 1.0
+regenAmount = 8
+attackCooldown = 0.7
+respawnTime = 45.0
+collisionRadius = 6.0
+animations = SubResource("SpriteFrames_slapw")
+items = Array[ExtResource("2_78dli")]([SubResource("Resource_3xrwl"), ExtResource("4_oxm75")])
+metadata/_custom_type_script = "uid://b28ajlgdgglkr"

@@ -13,7 +13,7 @@ shader_parameter/active = false
 shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6mn8q"]
-radius = 61.03278
+radius = 57.035076
 
 [node name="BasicNPC" type="CharacterBody2D" unique_id=1834193905 groups=["damagable", "entity"]]
 z_index = 1

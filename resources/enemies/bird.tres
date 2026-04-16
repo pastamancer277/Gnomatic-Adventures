@@ -1,0 +1,117 @@
+[gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://cagdfvhselp0l"]
+
+[ext_resource type="Texture2D" uid="uid://uueq88n1kf7w" path="res://assets/sprites/characters/enemys/MiniBird.png" id="1_uxhg7"]
+[ext_resource type="Script" uid="uid://bivhtsi4pg5j2" path="res://scripts/enemies/item_drop.gd" id="2_temww"]
+[ext_resource type="Script" uid="uid://b28ajlgdgglkr" path="res://scripts/enemies/enemy_resource.gd" id="4_wfql5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oysi"]
+atlas = ExtResource("1_uxhg7")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_temww"]
+atlas = ExtResource("1_uxhg7")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jd1e3"]
+atlas = ExtResource("1_uxhg7")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfql5"]
+atlas = ExtResource("1_uxhg7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmk8h"]
+atlas = ExtResource("1_uxhg7")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_leocb"]
+atlas = ExtResource("1_uxhg7")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rt6es"]
+atlas = ExtResource("1_uxhg7")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kn33a"]
+atlas = ExtResource("1_uxhg7")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltwxw"]
+atlas = ExtResource("1_uxhg7")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3w17j"]
+atlas = ExtResource("1_uxhg7")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23fsj"]
+atlas = ExtResource("1_uxhg7")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_slapw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oysi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_temww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jd1e3")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfql5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmk8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_leocb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rt6es")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kn33a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltwxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3w17j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23fsj")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("4_wfql5")
+maxHealth = 20
+speed = 60
+attackValue = 4
+knockback = 8.0
+xpValue = 4
+sightRadius = 130
+attackRadius = 9.0
+regenSpeed = 0.5
+regenAmount = 3
+attackCooldown = 0.4
+respawnTime = 7.0
+collisionRadius = 4.0
+animations = SubResource("SpriteFrames_slapw")
+metadata/_custom_type_script = "uid://b28ajlgdgglkr"

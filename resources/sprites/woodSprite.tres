@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="sprite_res" format=3 uid="uid://cl2ny66ihtsxq"]
 
 [ext_resource type="Script" uid="uid://bivhtsi4pg5j2" path="res://scripts/enemies/item_drop.gd" id="1_7k3ac"]
-[ext_resource type="Texture2D" uid="uid://cin4b2bcufiq7" path="res://assets/sprites/characters/Fairy 1.png" id="1_wrpog"]
+[ext_resource type="Texture2D" uid="uid://de3ammhdttr3o" path="res://assets/sprites/characters/Fairy 3.png" id="1_wrpog"]
 [ext_resource type="Script" uid="uid://bmx56pvc40q6v" path="res://scripts/enemies/sprite_res.gd" id="2_lctu0"]
 [ext_resource type="Resource" uid="uid://cfrvwrwa2hrkc" path="res://resources/items/Wood.tres" id="5_yhmhw"]
 
@@ -200,7 +200,7 @@ metadata/_custom_type_script = "uid://bivhtsi4pg5j2"
 [resource]
 script = ExtResource("2_lctu0")
 maxHealth = 5
-speed = 10
+speed = 90
 sightRadius = 50
 regenSpeed = 1.0
 regenAmount = 1

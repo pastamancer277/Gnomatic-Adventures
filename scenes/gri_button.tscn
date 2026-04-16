@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c30r5q4dv4tat"]
+
+[ext_resource type="Theme" uid="uid://8yntgav2cnsc" path="res://assets/themes/panel_container.tres" id="1_gmeq4"]
+[ext_resource type="Theme" uid="uid://c6tvwmr0ivjut" path="res://assets/themes/help_menu_button.tres" id="1_hlbgu"]
+[ext_resource type="Texture2D" uid="uid://b4b53ek27bfgs" path="res://assets/icons/grid_icon.png" id="1_jqh3q"]
+[ext_resource type="Script" uid="uid://d4brmbjb7f7ub" path="res://scripts/gri_button.gd" id="2_mvp4q"]
+
+[node name="Grid" type="PanelContainer" unique_id=390392859]
+custom_minimum_size = Vector2(12, 12)
+offset_right = 73.0
+offset_bottom = 71.0
+size_flags_horizontal = 8
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.34
+theme = ExtResource("1_gmeq4")
+script = ExtResource("2_mvp4q")
+
+[node name="Button" type="Button" parent="." unique_id=852259195]
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_hlbgu")
+theme_override_constants/icon_max_width = 100
+icon = ExtResource("1_jqh3q")
+icon_alignment = 1
+expand_icon = true

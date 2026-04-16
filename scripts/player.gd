@@ -11,7 +11,7 @@ var secDir = "none"
 var mHealth=100
 var health=100
 var attack_value=20
-var knockback = 100
+var knockback = 120
 var shield=0
 var alive=true
 var attack_cooldown=true
@@ -44,17 +44,18 @@ func _physics_process(delta: float) -> void:
 			attack()
 		if(Input.is_action_just_pressed("RangedAttack")&&attack_cooldown):
 			rangedAttack()
-		if(Input.is_action_just_pressed("LevelAttack")):
-			levelAttack()
-		if(Input.is_action_just_pressed("LevelHealth")):
-			levelHealth()
-		if(Input.is_action_just_pressed("LevelShield")):
-			levelShield()
 	
-	if(health<=0):
+	if(health<=0 and alive):
 		alive=false;
 		health=0
-		$AnimationPlayer.play("death")
+		#$AnimationPlayer.play("death")
+		_create_death_screen()
+		print(get_window().size.x)
+		print(get_window().size.y)
+
+func _create_death_screen():
+	var death = load("res://scenes/screens/death_screen.tscn").instantiate()
+	$/root/Main/UI/Screens.add_child(death)
 
 func player_movement(delta):
 	if knockback_velocity.length() > 10:
@@ -272,6 +273,7 @@ func gainXP(val: int):
 		xp-=100
 		level+=1
 		levelPoints+=1
+		$"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/VBoxContainer/Control2/Grid/Button".add_theme_stylebox_override("normal", load("res://assets/themes/red_notification_stylebox.tres"))
 func getXP():
 	return xp
 
@@ -308,8 +310,8 @@ func changeRating(val: int):
 	killRating+=val
 
 func reset():
-	resetGame.emit()
-	$/root/Global.resetGame()
+	#resetGame.emit()
+	#$/root/Global.resetGame()
 	$/root/Main/UI/Dialogue.reset()
 	
 	currnet_dir ="down"
@@ -334,6 +336,7 @@ func saveData():
 		"locX" = global_position.x,
 		"locY" = global_position.y,
 		"mHealth" = mHealth,
+		"health" = health,
 		"attack_value"=attack_value,
 		"knockback" = knockback,
 		"shield"= shield,
@@ -358,6 +361,7 @@ func loadData():
 	global_position.y = data["locY"]
 
 	mHealth = data.get("mHealth", mHealth)
+	health = data.get("health", health)
 	attack_value = data.get("attack_value", attack_value)
 	knockback = data.get("knockback", knockback)
 	shield = data.get("shield", shield)

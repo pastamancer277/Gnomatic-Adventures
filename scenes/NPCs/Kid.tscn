@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cmgpv5ts5g6qm"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_fm8q8"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_3k4wb"]
+[ext_resource type="Script" uid="uid://dnxdefprxwwrh" path="res://scripts/NPCs/Kiddialogue.gd" id="3_3k4wb"]
+[ext_resource type="Texture2D" uid="uid://6fp1dlwe8jyp" path="res://assets/sprites/characters/Kid.png" id="3_4p7yl"]
+[ext_resource type="Script" uid="uid://bqpmp7stf7d2u" path="res://scripts/NPCs/meatquests.gd" id="4_k6nxh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k6nxh"]
+resource_local_to_scene = true
+shader = ExtResource("2_3k4wb")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="Kid" unique_id=1834193905 instance=ExtResource("1_fm8q8")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_k6nxh")
+texture = ExtResource("3_4p7yl")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("3_3k4wb")
+
+[node name="MeatQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(879326239) index="0" unique_id=1460459705]
+script = ExtResource("4_k6nxh")

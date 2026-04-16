@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bvcvmai18kffk"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_8x0uf"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_htdfi"]
+[ext_resource type="Texture2D" uid="uid://d3p8rdqfpix16" path="res://assets/sprites/characters/Gnomester.png" id="3_qsdt0"]
+[ext_resource type="Script" uid="uid://dh7i437la2xar" path="res://scripts/NPCs/City2dialoge.gd" id="4_4noa4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xfoxn"]
+resource_local_to_scene = true
+shader = ExtResource("2_htdfi")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="City2NPC" unique_id=1834193905 instance=ExtResource("1_8x0uf")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_xfoxn")
+texture = ExtResource("3_qsdt0")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("4_4noa4")

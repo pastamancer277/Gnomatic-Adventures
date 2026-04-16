@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://7i0uxbaa047g"]
 
-[ext_resource type="Script" uid="uid://do4naq44bcnaf" path="res://scripts/dialogue_button.gd" id="1_irtb7"]
+[ext_resource type="Theme" uid="uid://cupigso84clu8" path="res://assets/themes/screen_button.tres" id="1_dolk3"]
+[ext_resource type="Script" path="res://scripts/dialogue_button.gd" id="1_irtb7"]
 
 [node name="DialogueButton" type="Button" unique_id=1142496482]
 offset_right = 8.0
 offset_bottom = 8.0
+mouse_filter = 2
+theme = ExtResource("1_dolk3")
+button_mask = 0
 script = ExtResource("1_irtb7")

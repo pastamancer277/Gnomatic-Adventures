@@ -16,14 +16,18 @@ func _ready():
 	pos=global_position
 
 func _physics_process(delta: float) -> void:
-	if(combat and !$/root/Global.getPaused()):
-		update_health()
-		attack()
-		move()
-	else: if(not player == null):
-		$HealthBar.visible=false
-		if(Input.is_action_just_pressed("Interact")):
-			runDialogue()
+	if dead:
+		$CollisionShape2D.disabled=true
+		visible=false
+	else:
+		if(combat and !$/root/Global.getPaused()):
+			update_health()
+			attack()
+			move()
+		else: if(not player == null):
+			$HealthBar.visible=false
+			if(Input.is_action_just_pressed("Interact")):
+				runDialogue()
 
 func playerEntered(body: Node2D):
 	if(body.name=="Player" and !combat):

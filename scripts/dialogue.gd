@@ -10,7 +10,6 @@ func dialogue(text: String, npc: Node):
 func show_text(text: String):
 	$VBoxContainer/Panel/DialogueText.text = text
 	$VBoxContainer/Panel.visible = true
-	print($VBoxContainer/Panel.visible)
 
 func setDialogueOption(text: String, key: int):
 	$VBoxContainer/HBoxContainer.setDialogueOption(text,key)

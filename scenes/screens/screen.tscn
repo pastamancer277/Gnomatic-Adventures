@@ -1,36 +1,37 @@
 [gd_scene format=3 uid="uid://cprvocsaem7dq"]
 
-[ext_resource type="Texture2D" uid="uid://bm7yt2bwkcy4c" path="res://assets/sprites/Biome/Biome 01/Biome 01/01 - Visualization.png" id="1_6rfyb"]
 [ext_resource type="Script" uid="uid://c1xf0cuy0ba3o" path="res://scripts/screens/basic_screen.gd" id="1_314sv"]
-
-[sub_resource type="Theme" id="Theme_314sv"]
+[ext_resource type="Texture2D" uid="uid://dpu5drcg13a3c" path="res://assets/sprites/GnomeTital.png" id="2_1r2no"]
+[ext_resource type="Theme" uid="uid://cupigso84clu8" path="res://assets/themes/screen_button.tres" id="3_1r2no"]
 
 [node name="Screen" type="Control" unique_id=1991471752]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -3.0
-offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_314sv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=318035540]
-position = Vector2(324, 324)
-texture = ExtResource("1_6rfyb")
+position = Vector2(195.81941, 108.04014)
+scale = Vector2(0.5873669, 0.58673847)
+texture = ExtResource("2_1r2no")
 
 [node name="Button" type="Button" parent="." unique_id=81341868]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 37.0
-offset_top = 66.0
-offset_right = -957.99994
-offset_bottom = -499.0
-theme = SubResource("Theme_314sv")
-text = "Start!"
+offset_left = 159.0
+offset_top = 153.0
+offset_right = -1711.0
+offset_bottom = -900.0
+mouse_filter = 2
+theme = ExtResource("3_1r2no")
+theme_type_variation = &"ScreenButton"
+theme_override_font_sizes/font_size = 16
+text = "Enter!"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=434308587]
 position = Vector2(576, 322)

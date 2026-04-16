@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bmbtmy8x88hi6"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_ujxqb"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_ovtd7"]
+[ext_resource type="Texture2D" uid="uid://e1bi2fhgbyec" path="res://assets/sprites/characters/Duck.png" id="3_jtyx8"]
+[ext_resource type="Script" uid="uid://csu7r54fu7ojj" path="res://scripts/NPCs/duckdialogue.gd" id="4_0ywm6"]
+[ext_resource type="Script" uid="uid://c82mq6vriichg" path="res://scripts/quests/PolmegranateQuest.gd" id="5_ovtd7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ovtd7"]
+resource_local_to_scene = true
+shader = ExtResource("2_ovtd7")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="Duck" unique_id=1834193905 instance=ExtResource("1_ujxqb")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_ovtd7")
+texture = ExtResource("3_jtyx8")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1457364912) index="0" unique_id=1181231519]
+metadata/_edit_lock_ = true
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("4_0ywm6")
+
+[node name="PolmegranateQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(879326239) index="0" unique_id=238498044]
+script = ExtResource("5_ovtd7")

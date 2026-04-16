@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c02tssh1eurye"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_gtal1"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_a15wc"]
+[ext_resource type="Script" uid="uid://cfubah80qx88w" path="res://scripts/NPCs/JuceShop1dialogue.gd" id="3_4ld4r"]
+[ext_resource type="Texture2D" uid="uid://bblvdr7e2m1s5" path="res://assets/sprites/characters/JuiceGuy.png" id="3_a15wc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a15wc"]
+resource_local_to_scene = true
+shader = ExtResource("2_a15wc")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="JuceShop1NPC" unique_id=1834193905 instance=ExtResource("1_gtal1")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_a15wc")
+texture = ExtResource("3_a15wc")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("3_4ld4r")

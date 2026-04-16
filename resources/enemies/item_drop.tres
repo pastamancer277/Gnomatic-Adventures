@@ -1,7 +1,10 @@
 [gd_resource type="Resource" script_class="item_drop" format=3 uid="uid://hsuuxrxn0f0j"]
 
+[ext_resource type="Resource" uid="uid://xnhwbjuiucay" path="res://resources/items/Fur.tres" id="1_7egfo"]
 [ext_resource type="Script" uid="uid://bivhtsi4pg5j2" path="res://scripts/enemies/item_drop.gd" id="1_dqh2o"]
 
 [resource]
 script = ExtResource("1_dqh2o")
+file = ExtResource("1_7egfo")
+amount = 2
 metadata/_custom_type_script = "uid://bivhtsi4pg5j2"
