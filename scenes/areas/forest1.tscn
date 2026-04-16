@@ -974,7 +974,10 @@ position = Vector2(298, 86)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=2065946082]
 polygon = PackedVector2Array(212, 60, 323, 61, 324, 106, 341, 123, 412, 126, 416, 230, 340, 235, 340, 242, 327, 246, 324, 260, 286, 262, 282, 247, 245, 247, 245, 260, 111, 260, 106, 246, 46, 243, 47, 189, 63, 187, 64, 160, 127, 159, 127, 127, 156, 126, 158, 44, 210, 47, 217, -1, 21, 18, 26, 364, 473, 371, 453, 54, 211, 22)
 
-[node name="Cliffside->World" type="Area2D" parent="." index="3" unique_id=1729209477]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyCollisions" parent_id_path=PackedInt32Array(1550626514) index="0" unique_id=2079218793]
+polygon = PackedVector2Array(212, 60, 323, 61, 324, 106, 341, 123, 340, 235, 340, 242, 327, 246, 324, 260, 286, 262, 282, 247, 245, 247, 245, 260, 111, 260, 106, 246, 46, 243, 47, 189, 63, 187, 64, 160, 127, 159, 127, 127, 156, 126, 158, 44, 210, 47, 217, -1, 21, 18, 26, 364, 473, 371, 453, 54, 211, 22)
+
+[node name="Cliffside->World" type="Area2D" parent="." index="4" unique_id=1729209477]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cliffside->World" index="0" unique_id=887349228]
 position = Vector2(398.5, 176.5)

@@ -2417,7 +2417,7 @@ tile_set = SubResource("TileSet_kpok4")
 position = Vector2(749, 418)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=1180989924]
-polygon = PackedVector2Array(241, 210, 959, 208, 963, 371, 1046, 372, 1045, 481, 956, 485, 958, 528, 238, 529, 239, 404, 68, 405, 47, 242, 239, 245, 245, 59, -218, 81, -164, 647, 1225, 616, 1179, -42, 229, -34)
+polygon = PackedVector2Array(245, 197, 971, 198, 974, 369, 1046, 372, 1045, 481, 975, 482, 971, 538, 228, 540, 229, 401, 68, 405, 47, 242, 228, 243, 245, 59, -218, 81, -164, 647, 1225, 616, 1179, -42, 229, -34)
 
 [node name="Forest3->2" type="Area2D" parent="." index="3" unique_id=1421777671]
 
@@ -2425,17 +2425,20 @@ polygon = PackedVector2Array(241, 210, 959, 208, 963, 371, 1046, 372, 1045, 481,
 position = Vector2(101, 341)
 shape = SubResource("RectangleShape2D_bksvw")
 
-[node name="Forest2" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=928316128]
-position = Vector2(217, 355)
-
-[node name="Village1" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="1" unique_id=716730323]
-position = Vector2(989, 417)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyCollisions" parent_id_path=PackedInt32Array(1550626514) index="0" unique_id=1298315054]
+polygon = PackedVector2Array(245, 197, 971, 198, 974, 369, 975, 482, 971, 538, 228, 540, 229, 401, 228, 243, 245, 59, -218, 81, -164, 647, 1225, 616, 1179, -42, 229, -34)
 
 [node name="ToVillage" type="Area2D" parent="." index="5" unique_id=1220566128]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToVillage" index="0" unique_id=71771746]
 position = Vector2(1024, 425)
 shape = SubResource("RectangleShape2D_t4iyb")
+
+[node name="Forest2" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=928316128]
+position = Vector2(217, 355)
+
+[node name="Village1" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="1" unique_id=716730323]
+position = Vector2(989, 417)
 
 [connection signal="body_entered" from="Forest3->2" to="." method="_on_cliffside_transit_body_entered"]
 [connection signal="body_exited" from="Forest3->2" to="." method="_on_cliffside_transit_body_exited"]

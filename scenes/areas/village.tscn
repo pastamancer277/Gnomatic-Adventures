@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cmgpv5ts5g6qm" path="res://scenes/NPCs/Kid.tscn" id="8_rpcri"]
 [ext_resource type="PackedScene" uid="uid://cc8xaon0nf2dy" path="res://scenes/NPCs/villager1.tscn" id="9_ilfds"]
 [ext_resource type="PackedScene" uid="uid://bmw1xq14alg87" path="res://scenes/enemies/basic_enemy.tscn" id="10_3i1a1"]
-[ext_resource type="Resource" uid="uid://cfhc8r5vmviy8" path="res://resources/enemies/fox.tres" id="11_enqqm"]
-[ext_resource type="Resource" uid="uid://dp0uhux2sfxjo" path="res://resources/enemies/boar.tres" id="12_5chbg"]
+[ext_resource type="Resource" uid="uid://bmswyvpe1fvqo" path="res://resources/enemies/fox.tres" id="11_enqqm"]
+[ext_resource type="Resource" uid="uid://bol020bxwbhj3" path="res://resources/enemies/boar.tres" id="12_5chbg"]
 [ext_resource type="PackedScene" uid="uid://hes6l4tty6pi" path="res://scenes/NPCs/villagenpc2.tscn" id="13_enqqm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehnuc"]
@@ -1217,11 +1217,8 @@ position = Vector2(770, 406)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=557783940]
 polygon = PackedVector2Array(-67, 104, -62, 594, -111, 589, -117, 655, -112, 718, -64, 720, -69, 728, 884, 731, 897, -154, 771, -161, 775, -253, 671, -253, 673, -164, 182, -161, 136, -159, 80, -161, 50, -161, -60, -162, -60, -49, -65, 20, -77, 129, -330, 50, -323, -393, 1133, -383, 1140, 966, -325, 966, -327, 59)
 
-[node name="Forest3" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=32777609]
-position = Vector2(-68, 652)
-
-[node name="Farm" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="1" unique_id=435315384]
-position = Vector2(727, -171)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyCollisions" parent_id_path=PackedInt32Array(1550626514) index="0" unique_id=2049996727]
+polygon = PackedVector2Array(-67, 104, -62, 594, -64, 720, -69, 728, 884, 731, 897, -154, 771, -161, 673, -164, 182, -161, 136, -159, 80, -161, 50, -161, -60, -162, -60, -49, -65, 20, -77, 129, -330, 50, -323, -393, 1133, -383, 1140, 966, -325, 966, -327, 59)
 
 [node name="ToForest3" type="Area2D" parent="." index="4" unique_id=2105035760]
 
@@ -1234,6 +1231,12 @@ shape = SubResource("RectangleShape2D_moe3i")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToFarm" index="0" unique_id=673919095]
 position = Vector2(725, -244)
 shape = SubResource("RectangleShape2D_tlamr")
+
+[node name="Forest3" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=32777609]
+position = Vector2(-68, 652)
+
+[node name="Farm" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="1" unique_id=435315384]
+position = Vector2(727, -171)
 
 [connection signal="body_entered" from="ToForest3" to="." method="_on_to_forest_3_body_entered"]
 [connection signal="body_exited" from="ToForest3" to="." method="_on_to_forest_3_body_exited"]

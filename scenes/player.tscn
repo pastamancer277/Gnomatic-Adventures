@@ -512,10 +512,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
-radius = 14.0
+radius = 22.0
+height = 44.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
-size = Vector2(24, 21)
+size = Vector2(56, 26)
 
 [sub_resource type="Animation" id="Animation_smehm"]
 resource_name = "attack"
@@ -590,8 +591,10 @@ y_sort_enabled = true
 material = SubResource("ShaderMaterial_smehm")
 position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_apa73")
-animation = &"side_walk"
+animation = &"side_attack"
 autoplay = "front_idle"
+frame = 3
+frame_progress = 1.0
 offset = Vector2(0, -15)
 
 [node name="AttackLeft" type="Area2D" parent="." unique_id=498221297]
@@ -600,7 +603,7 @@ collision_mask = 2
 script = ExtResource("3_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackLeft" unique_id=271489657]
-position = Vector2(-8, -6)
+position = Vector2(-13, -6)
 shape = SubResource("CapsuleShape2D_dqkch")
 
 [node name="AttackUp" type="Area2D" parent="." unique_id=1091549403]
@@ -609,7 +612,7 @@ collision_mask = 2
 script = ExtResource("3_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackUp" unique_id=1965232891]
-position = Vector2(0, -16.5)
+position = Vector2(0, -22)
 shape = SubResource("RectangleShape2D_qlg0r")
 
 [node name="AttackDown" type="Area2D" parent="." unique_id=1615479699]
@@ -618,7 +621,7 @@ collision_mask = 2
 script = ExtResource("3_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackDown" unique_id=1991274966]
-position = Vector2(0, 11.5)
+position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_qlg0r")
 
 [node name="AttackRight" type="Area2D" parent="." unique_id=1996762050]
@@ -627,7 +630,7 @@ collision_mask = 2
 script = ExtResource("3_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRight" unique_id=347567280]
-position = Vector2(8, -6)
+position = Vector2(12, -6)
 shape = SubResource("CapsuleShape2D_dqkch")
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=1046083403]

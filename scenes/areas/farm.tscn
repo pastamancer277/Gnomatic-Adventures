@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cypehk5don2o4" path="res://assets/sprites/Biome/Roofs.png" id="6_d5gyy"]
 [ext_resource type="Texture2D" uid="uid://dvw4xjkvkyrgo" path="res://assets/sprites/Biome/Props.png" id="8_lf1po"]
 [ext_resource type="PackedScene" uid="uid://bmw1xq14alg87" path="res://scenes/enemies/basic_enemy.tscn" id="10_cinds"]
-[ext_resource type="Resource" uid="uid://dp0uhux2sfxjo" path="res://resources/enemies/boar.tres" id="11_d3mk0"]
-[ext_resource type="Resource" uid="uid://cfhc8r5vmviy8" path="res://resources/enemies/fox.tres" id="12_4jh1b"]
+[ext_resource type="Resource" uid="uid://bol020bxwbhj3" path="res://resources/enemies/boar.tres" id="11_d3mk0"]
+[ext_resource type="Resource" uid="uid://bmswyvpe1fvqo" path="res://resources/enemies/fox.tres" id="12_4jh1b"]
 [ext_resource type="PackedScene" uid="uid://cjg3s5r2pwj6o" path="res://scenes/NPCs/farmer1npc.tscn" id="13_d3mk0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2uufh"]
@@ -1471,16 +1471,17 @@ position = Vector2(498, 89)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=811395656]
 polygon = PackedVector2Array(657, 26, 659, 170, 27, 169, 30, 257, -31, 258, -30, 167, -148, 168, -150, -139, 662, -144, 657, 26, 814, 13, 814, -303, -354, -304, -352, 349, 816, 355, 814, 13)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/CollisionPolygon2D" index="0" unique_id=89677198]
-
-[node name="Village1" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=783414120]
-position = Vector2(0, 180)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyCollisions" parent_id_path=PackedInt32Array(1550626514) index="0" unique_id=1575846431]
+polygon = PackedVector2Array(657, 26, 659, 170, 27, 169, -30, 167, -148, 168, -150, -139, 662, -144, 657, 26, 814, 13, 814, -303, -354, -304, -352, 349, 816, 355, 814, 13)
 
 [node name="ToVillage" type="Area2D" parent="." index="4" unique_id=116875023]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToVillage" index="0" unique_id=589215221]
 position = Vector2(11, 235)
 shape = SubResource("RectangleShape2D_qs5k7")
+
+[node name="Village1" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=783414120]
+position = Vector2(0, 180)
 
 [connection signal="body_entered" from="ToVillage" to="." method="_on_to_village_body_entered"]
 [connection signal="body_exited" from="ToVillage" to="." method="_on_to_village_body_exited"]

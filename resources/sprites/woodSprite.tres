@@ -200,7 +200,7 @@ metadata/_custom_type_script = "uid://bivhtsi4pg5j2"
 [resource]
 script = ExtResource("2_lctu0")
 maxHealth = 5
-speed = 10
+speed = 90
 sightRadius = 50
 regenSpeed = 1.0
 regenAmount = 1

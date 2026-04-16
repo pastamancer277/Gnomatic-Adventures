@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bwopwoieri5y8" path="res://scenes/areas/forest3.tscn" id="3_85g3d"]
 [ext_resource type="PackedScene" uid="uid://uk85sldfb4ug" path="res://scenes/systems.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://e5lj58ypiw1s" path="res://scenes/areas/city1.tscn" id="3_tipki"]
-[ext_resource type="PackedScene" uid="uid://6tyiv2u6l0o5" path="res://scenes/areas/juceshop.tscn" id="5_choun"]
+[ext_resource type="PackedScene" uid="uid://6tyiv2u6l0o5" path="res://scenes/areas/juiceshop.tscn" id="5_choun"]
 [ext_resource type="PackedScene" uid="uid://c3u4v6sdds18" path="res://scenes/areas/city2.tscn" id="6_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://bt205s22y2kmk" path="res://scenes/dialogue.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://ba3b2jopd7xaf" path="res://scenes/areas/jail.tscn" id="7_trceg"]
