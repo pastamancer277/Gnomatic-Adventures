@@ -126,7 +126,8 @@ RangedAttack={
 2d_physics/layer_2="Enemies"
 2d_physics/layer_3="Walls"
 2d_physics/layer_4="Player Projectiles"
-2d_physics/layer_5="Enemy walls"
+2d_physics/layer_5="Enemy Walls"
+2d_physics/layer_6="Layer 6"
 
 [physics]
 

@@ -458,7 +458,10 @@ enemyResource = ExtResource("14_3h4ii")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=1861828475]
 polygon = PackedVector2Array(-100, -144, 374, -147, 366, -139, 358, -138, 357, -112, 372, -110, 370, -91, 379, -75, 409, -75, 416, -78, 420, -96, 432, -95, 438, -99, 436, -115, 432, -122, 429, -134, 422, -143, 414, -147, 551, -150, 548, -91, 595, -90, 594, 45, 547, 45, 547, 176, 536, 178, 536, 189, 526, 195, 493, 204, 487, 212, 478, 218, 470, 227, 469, 245, 458, 244, 416, 245, 431, 257, 433, 276, 359, 273, 354, 245, -101, 247, -95, 58, -149, 55, -149, -53, -96, -58, -99, -190, -166, -140, -167, 286, 628, 294, 628, -174, -99, -175)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyCollisions" parent_id_path=PackedInt32Array(1550626514) index="0" unique_id=1778789527]
+[node name="EnemyCollisions" parent="." index="3" unique_id=1550626514]
+collision_layer = 32
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyCollisions" index="0" unique_id=1778789527]
 polygon = PackedVector2Array(-100, -144, 374, -147, 366, -139, 358, -138, 357, -112, 372, -110, 370, -91, 379, -75, 409, -75, 416, -78, 420, -96, 432, -95, 438, -99, 436, -115, 432, -122, 429, -134, 422, -143, 414, -147, 551, -150, 548, -91, 547, 45, 547, 176, 536, 178, 536, 189, 526, 195, 493, 204, 487, 212, 478, 218, 470, 227, 469, 245, 458, 244, 416, 245, 354, 245, -101, 247, -95, 58, -96, -58, -99, -190, -166, -140, -167, 286, 628, 294, 628, -174, -99, -175)
 
 [node name="2->1" type="Area2D" parent="." index="4" unique_id=1132489565]

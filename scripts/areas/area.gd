@@ -24,6 +24,9 @@ func set_active(is_active: bool) -> void:
 	for collision in $Collisions.get_children():
 		if collision is CollisionShape2D or collision is CollisionPolygon2D:
 			collision.set_deferred("disabled", not is_active)
+	for collision in $EnemyCollisions.get_children():
+		if collision is CollisionShape2D or collision is CollisionPolygon2D:
+			collision.set_deferred("disabled", not is_active)
 	
 	for entity in $Entities.get_children():
 		entity.visible = is_active

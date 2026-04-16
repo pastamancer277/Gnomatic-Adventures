@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 signal resetGame
 signal respawn
+signal jailed
 
 @export var basicRanged: PackedScene
 
@@ -308,6 +309,9 @@ func hasKeyword(key: String):
 
 func changeRating(val: int):
 	killRating+=val
+	if(killRating>0):
+		$/root/Global.change_area("Jail")
+		jailed.emit()
 
 func reset():
 	#resetGame.emit()
