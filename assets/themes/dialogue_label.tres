@@ -1,4 +1,4 @@
 [gd_resource type="Theme" format=3 uid="uid://0wtapkh4u36h"]
 
 [resource]
-RichTextLabel/font_sizes/normal_font_size = 7
+RichTextLabel/font_sizes/normal_font_size = 9

@@ -72,3 +72,5 @@ process_mode = 3
 [node name="TitleScreen" parent="UI/Screens" unique_id=1991471752 instance=ExtResource("9_85g3d")]
 offset_right = -178.03601
 offset_bottom = 108.9436
+
+[node name="Popups" type="Node" parent="UI" unique_id=1932928493]

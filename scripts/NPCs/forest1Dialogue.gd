@@ -25,7 +25,9 @@ func interact():
 		dialogueBox.dialogue("Have you killed the slimes?",self)
 		dialogueBox.setDialogueOption("Yeah, here", 0)
 		dialogueBox.setDialogueOption("No", 1)
-	else: if(run==4):
+	else: if run ==4:
+		run = 5
+	else: if(run==5):
 		dialogueBox.dialogue("Thank you so much!",self)
 		dialogueBox.setDialogueOption("You're welcome", 0)
 
@@ -50,8 +52,12 @@ func playerResponse(key: int):
 			if(slimeQuest.isComplete()):
 				run+=1
 				interact()
+				var popup_scene = load("res://scenes/popups.tscn").instantiate()
+				$"/root/Main/UI/Popups".add_child(popup_scene)
+				popup_scene.set_text("You gained a key! There must be a chest somewhere...")
+				$/root/Global.multiple_popups()
 		if(key==1):
 			pass
-	else: if(run==4):
+	else: if(run==5):
 		if(key==0):
 			pass

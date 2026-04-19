@@ -23,7 +23,9 @@ func interact():
 		dialogueBox.dialogue("Did you bring the wood?",self)
 		dialogueBox.setDialogueOption("Yeah, here", 0)
 		dialogueBox.setDialogueOption("No", 1)
-	else: if(run==4):
+	else: if run == 4:
+		run = 5
+	else: if run ==5:
 		dialogueBox.dialogue("Thanks",self)
 		dialogueBox.setDialogueOption("You're welcome", 0)
 

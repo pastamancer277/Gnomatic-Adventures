@@ -11,8 +11,7 @@ func interact():
 		dialogueBox.dialogue("I think I'll need a little more...",self)
 		dialogueBox.setDialogueOption("Ah, okay", 0)
 	else: if(run==3):
-		dialogueBox.dialogue("I will begin a house for myself, I think.",self)
-		dialogueBox.setDialogueOption("Can't wait to see it!", 0)
+		run=4
 	else: if(run==4):
 		dialogueBox.dialogue("You may go now.",self)
 		dialogueBox.setDialogueOption("Thanks!", 0)

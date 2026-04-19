@@ -24,14 +24,16 @@ var attacking=false
 var level=1
 var levelPoints=0
 var xp=0
-var socialCredit=50
+var socialCredit=52
 var keywords=[]
 
 var knockback_velocity = Vector2.ZERO
 
+@onready var slimeball_item: Item = preload("res://resources/items/Fur.tres")
 func _ready() -> void:
 	$AnimatedSprite2D.play("front_idle")
 	$HealthBar.max_value=mHealth
+	$/root/Main/Systems/Inventory.add_item({slimeball_item:6})
 
 func _physics_process(delta: float) -> void:
 	if(Input.is_action_just_pressed("Reset")):
@@ -274,12 +276,20 @@ func gainXP(val: int):
 		xp-=100
 		level+=1
 		levelPoints+=1
+		var popup_scene = load("res://scenes/popups.tscn").instantiate()
+		$"/root/Main/UI/Popups".add_child(popup_scene)
+		popup_scene.set_text("You leveled up! View stats in the Help Menu.")
+		$/root/Global.multiple_popups()
 		$"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/VBoxContainer/Control2/Grid/Button".add_theme_stylebox_override("normal", load("res://assets/themes/red_notification_stylebox.tres"))
 func getXP():
 	return xp
 
 func changeCredit(val: int):
 	socialCredit+=val
+	var popup_scene = load("res://scenes/popups.tscn").instantiate()
+	$"/root/Main/UI/Popups".add_child(popup_scene)
+	popup_scene.set_text("You gained Social Credit!")
+	$/root/Global.multiple_popups()
 
 func getSocialCredit():
 	return socialCredit

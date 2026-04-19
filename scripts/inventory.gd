@@ -3,6 +3,7 @@ extends Control
 @onready var inventory = get_node("/root/Main/Systems/Inventory")
 @onready var grid = $PanelContainer/VBoxContainer/GridContainer
 @onready var xp = $PanelContainer/VBoxContainer/HBoxContainer/XP
+@onready var xp_label = $PanelContainer/VBoxContainer/HBoxContainer/Label
 @onready var social_credit = $"PanelContainer/VBoxContainer/HBoxContainer2/SocialCredit"
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
 
@@ -19,6 +20,7 @@ func _ready():
 
 func _process(delta: float) -> void:
 	xp.value = player.getXP()
+	xp_label.text = "Level: " + str(player.level)
 	social_credit.text = str(player.getSocialCredit())
 
 func update_ui():

@@ -4,10 +4,11 @@ var count = 0
 @onready var inventory = $"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/Inventory"
 @onready var grid = $"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/VBoxContainer/Control2/Grid"
 @export var button: PackedScene
+var text = false
 
 
 func _process(delta: float) -> void:
-	if isFocus == null && get_children().size()>count:
+	if isFocus == null && get_children().size()>count and !text:
 		isFocus = get_children().get(count)
 		if isFocus != null:
 			isFocus.grab_focus()
@@ -21,15 +22,18 @@ func _process(delta: float) -> void:
 				
 	if Input.is_action_just_pressed("ui_right"):
 		count+=1
+		text = false
 	elif Input.is_action_just_pressed("ui_left"):
 		count-=1
+		text = false
 	if count >= get_child_count():
 		count = 0
 	if count <0:
 		count = 0
-	if get_children().size()>count:
+	if get_children().size()>count and !text:
 		isFocus = get_children().get(count)
 		isFocus.grab_focus()
+
 
 func setDialogueOption(text: String, key: int):
 	var child = button.instantiate()
