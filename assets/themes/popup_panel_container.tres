@@ -1,0 +1,13 @@
+[gd_resource type="Theme" format=3 uid="uid://bfpv36kf82lx3"]
+
+[ext_resource type="Texture2D" uid="uid://b1r3pmtbtdt3v" path="res://assets/icons/Popup Border Green.png" id="1_11bun"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_201id"]
+texture = ExtResource("1_11bun")
+texture_margin_left = 50.0
+texture_margin_top = 40.0
+texture_margin_right = 50.0
+texture_margin_bottom = 40.0
+
+[resource]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_201id")

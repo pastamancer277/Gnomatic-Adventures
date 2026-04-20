@@ -21,8 +21,8 @@ item_slot_scene = ExtResource("2_hj2ta")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1436915803]
 layout_mode = 0
-offset_right = 60.0
-offset_bottom = 50.0
+offset_right = 77.0
+offset_bottom = 51.0
 theme = ExtResource("3_ty45s")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=501952066]
@@ -49,6 +49,9 @@ layout_mode = 2
 theme = ExtResource("4_53g1v")
 text = "XP"
 
+[node name="Control" type="Control" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1399203079]
+layout_mode = 2
+
 [node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=264325293]
 layout_mode = 2
 size_flags_stretch_ratio = 3.53
@@ -62,4 +65,7 @@ theme_override_font_sizes/font_size = 7
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1235199049]
 layout_mode = 2
 theme_override_font_sizes/font_size = 6
-text = "SC"
+text = "Social Credit"
+
+[node name="Control" type="Control" parent="PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1663681862]
+layout_mode = 2

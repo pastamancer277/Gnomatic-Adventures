@@ -1,8 +1,9 @@
 extends area
 
+var inJail = false
 
-# Called when the node enters the scene tree for the first time.
-
+func _ready() -> void:
+	player.jailed.connect(sentToJail)
 
 func _on_to_city_body_entered(body: Node2D) -> void:
 	if body.name=="Player"&&Global.cur_area=="Jail":
@@ -13,3 +14,7 @@ func _on_to_city_body_entered(body: Node2D) -> void:
 func _on_to_city_body_exited(body: Node2D) -> void:
 	if body.name=="Player"&&Global.cur_area=="City2":
 		Global.scene_transit=false
+
+func sentToJail():
+	player.global_position = $EnterPoints/InJail.global_position
+	inJail=true

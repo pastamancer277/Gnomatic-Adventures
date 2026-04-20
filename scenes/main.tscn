@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dr2tfqbn85xgn" path="res://scenes/ui_interface.tscn" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://cwit83qfnih8d" path="res://scenes/areas/village.tscn" id="9_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://d2aqs3xcygtik" path="res://scenes/areas/farm.tscn" id="10_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://0f3tc54xlsk" path="res://scenes/areas/startvillage.tscn" id="11_muem4"]
 [ext_resource type="PackedScene" uid="uid://brnjlnygjkq78" path="res://scenes/screens/instruction_screen.tscn" id="13_a8y0u"]
 
 [node name="Main" type="Node" unique_id=842974705]
@@ -47,6 +48,8 @@ y_sort_enabled = true
 
 [node name="Farm" parent="Sort/Areas" unique_id=714462220 instance=ExtResource("10_jbj1t")]
 
+[node name="Village2" parent="Sort/Areas" unique_id=2099802254 instance=ExtResource("11_muem4")]
+
 [node name="PlayerEntities" type="Node2D" parent="Sort" unique_id=488688547]
 y_sort_enabled = true
 
@@ -69,3 +72,5 @@ process_mode = 3
 [node name="TitleScreen" parent="UI/Screens" unique_id=1991471752 instance=ExtResource("9_85g3d")]
 offset_right = -178.03601
 offset_bottom = 108.9436
+
+[node name="Popups" type="Node" parent="UI" unique_id=1932928493]
