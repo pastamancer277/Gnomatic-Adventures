@@ -9,21 +9,21 @@ func _ready() -> void:
 func interact():
 	if(run==1):
 		if(player.getSocialCredit()>50):
-			dialogueBox.dialogue("Hello there", self)
-			dialogueBox.setDialogueOption("Hi are you the polmegranate farmer?", 0)
-			dialogueBox.setDialogueOption("Ugh, people", 1)
+			dialogueBox.dialogue("Hello there.", self)
+			dialogueBox.setDialogueOption("Hi, are you the pomegranate farmer?", 0)
+			dialogueBox.setDialogueOption("Ugh, people...", 1)
 		else:
-			dialogueBox.dialogue("Sorry i have other things to do", self)
+			dialogueBox.dialogue("Sorry, I have other things to do", self)
 			dialogueBox.setDialogueOption("...", 2)
 	else: if(run==2):
-		dialogueBox.dialogue("Yes I am is there anything i can help you with?",self)
-		dialogueBox.setDialogueOption("Yes I need a polmegranate can I have one please", 0)
-		dialogueBox.setDialogueOption("I need a polmegranate", 1)
-		dialogueBox.setDialogueOption("Never mind", 2)
+		dialogueBox.dialogue("Yes, I am. is there anything i can help you with?",self)
+		dialogueBox.setDialogueOption("Yes, I need a pomegranate. Can I have one please?", 0)
+		dialogueBox.setDialogueOption("I need a pomegranate.", 1)
+		dialogueBox.setDialogueOption("Never mind.", 2)
 	else: if(run==3):
-		dialogueBox.dialogue("Oh of course I have more than I know what to do with here you go",self)
+		dialogueBox.dialogue("Oh, of course. I have more than I know what to do with. Here you go.",self)
 		dialogueBox.setDialogueOption("Thank you!", 0)
-		dialogueBox.setDialogueOption("Thanks", 1)
+		dialogueBox.setDialogueOption("Thanks.", 1)
 	
 
 func playerResponse(key: int):

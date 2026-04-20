@@ -10,12 +10,12 @@ func _ready() -> void:
 func interact():
 	if(run==1):
 	
-			dialogueBox.dialogue("oh no oh no", self)
-			dialogueBox.setDialogueOption("Hello what's wrong?", 0)
+			dialogueBox.dialogue("Oh nooo, oh no no no!", self)
+			dialogueBox.setDialogueOption("Hello, what's troubling you?", 0)
 			dialogueBox.setDialogueOption("...Bye", 1)
 		
 	else: if(run==2):
-		dialogueBox.dialogue("I need to get fur to make a blanket. The furtrader is missing tho. Can you get me fur?",self)
+		dialogueBox.dialogue("I need to get fur to make a blanket, but the fur trader is missing! Can you get me fur?",self)
 		dialogueBox.setDialogueOption("Sure!", 0)
 		dialogueBox.setDialogueOption("Fine, I suppose", 1)
 		dialogueBox.setDialogueOption("No, I'm busy", 2)
@@ -27,7 +27,7 @@ func interact():
 		run = 5
 	else: if run == 5:
 		dialogueBox.dialogue("Thank you so much! Now I can make my blanket!",self)
-		dialogueBox.setDialogueOption("You're welcome", 0)
+		dialogueBox.setDialogueOption("You're welcome!", 0)
 
 func playerResponse(key: int):
 	if(run == 1):

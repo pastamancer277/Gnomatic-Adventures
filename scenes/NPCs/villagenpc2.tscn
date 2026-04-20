@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bblvdr7e2m1s5" path="res://assets/sprites/characters/JuiceGuy.png" id="3_gv3ks"]
 [ext_resource type="Script" uid="uid://bksfech3oqfg3" path="res://scripts/NPCs/VillageNPC2.gd" id="4_di1v7"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bm262"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b2mcj"]
 resource_local_to_scene = true
 shader = ExtResource("2_rbfqk")
 shader_parameter/active = false
@@ -14,7 +14,7 @@ shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 [node name="VillageNPC2" unique_id=1834193905 instance=ExtResource("1_b2mcj")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
-material = SubResource("ShaderMaterial_bm262")
+material = SubResource("ShaderMaterial_b2mcj")
 texture = ExtResource("3_gv3ks")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]

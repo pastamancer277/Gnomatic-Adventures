@@ -1,13 +1,21 @@
 [gd_scene format=3 uid="uid://cuqox7w1ayuab"]
 
 [ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_yvjvm"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_3d8u2"]
 [ext_resource type="Texture2D" uid="uid://dmdshcbpdkn6x" path="res://assets/sprites/characters/LumberJack.png" id="2_rj0qc"]
 [ext_resource type="Script" uid="uid://bejg7mt5mg1qu" path="res://scripts/NPCs/forest3Dialogue.gd" id="3_reor6"]
 [ext_resource type="Script" uid="uid://fp3eao17ufcr" path="res://scripts/quests/WoodQuest.gd" id="4_3d8u2"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f4ytd"]
+resource_local_to_scene = true
+shader = ExtResource("2_3d8u2")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
 [node name="ForestNPC3" unique_id=1834193905 instance=ExtResource("1_yvjvm")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_f4ytd")
 texture = ExtResource("2_rj0qc")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]

@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://58yv2xuec0ju" path="res://scripts/NPCs/forest1Dialogue.gd" id="3_q5t66"]
 [ext_resource type="Script" uid="uid://0a7rocsbioqt" path="res://scripts/quests/slime_quest.gd" id="4_q5t66"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mbrhi"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_argi2"]
 resource_local_to_scene = true
 shader = ExtResource("2_argi2")
 shader_parameter/active = false
@@ -15,7 +15,7 @@ shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 [node name="ForestNPC1" unique_id=1704687357 instance=ExtResource("1_mh6k8")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
-material = SubResource("ShaderMaterial_mbrhi")
+material = SubResource("ShaderMaterial_argi2")
 texture = ExtResource("2_kchg7")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]

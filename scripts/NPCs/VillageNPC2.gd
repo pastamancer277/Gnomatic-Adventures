@@ -7,7 +7,7 @@ func _ready() -> void:
 
 func interact():
 	if(run==1):
-		dialogueBox.dialogue("The farmer lives just up this path", self)
+		dialogueBox.dialogue("The farmer lives just up this path. His specialty is pomegranates.", self)
 
 
 func playerResponse(key: int):

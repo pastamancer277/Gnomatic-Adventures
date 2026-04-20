@@ -4,17 +4,17 @@ extends dialogue
 
 func interact():
 	if(run==1):
-		dialogueBox.dialogue("I need wood. Go fetch me some wood sprites.", self)
+		dialogueBox.dialogue("I need wood. Would you go hunt for a wood sprite to get some for me?.", self)
 		dialogueBox.setDialogueOption("Ok!", 0)
-		dialogueBox.setDialogueOption("I have your wood right here sir", 1)
+		dialogueBox.setDialogueOption("I have your wood right here, sir.", 1)
 	else: if(run==2):
-		dialogueBox.dialogue("I think I'll need a little more...",self)
-		dialogueBox.setDialogueOption("Ah, okay", 0)
+		dialogueBox.dialogue("I think I'll need more.",self)
+		dialogueBox.setDialogueOption("Ah, okay.", 0)
 	else: if(run==3):
 		run=4
 	else: if(run==4):
-		dialogueBox.dialogue("You may go now.",self)
-		dialogueBox.setDialogueOption("Thanks!", 0)
+		dialogueBox.dialogue("Thanks again.",self)
+		dialogueBox.setDialogueOption("You're welcome!", 0)
 		dialogueBox.setDialogueOption("Bye!", 0)
 
 func playerResponse(key: int):

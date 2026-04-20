@@ -8,11 +8,12 @@ func _ready() -> void:
 func interact():
 	if(run==1):
 		if(player.getSocialCredit()>50):
-			dialogueBox.dialogue("Hello there! sorry we are out of juice, a guy in sunglasses ordered it all", self)
-			dialogueBox.setDialogueOption("Aww that's to bad, nice shop tho", 0)
-			dialogueBox.setDialogueOption("Ugh, ok", 1)
+			dialogueBox.dialogue("Hello there! Sorry, we are out of juice. A guy in sunglasses ordered the last of our stock.", self)
+			dialogueBox.setDialogueOption("Aww that's too bad. nice shop though!", 0)
+			dialogueBox.setDialogueOption("Ugh, ok.", 1)
+>>>>>>> Stashed changes
 		else:
-			dialogueBox.dialogue("This Duck is so anyoing constantly going on about polmegranates", self)
+			dialogueBox.dialogue("This Duck is so annyoing, constantly going on about pomegranates", self)
 			dialogueBox.setDialogueOption("...", 2)
 	
 	

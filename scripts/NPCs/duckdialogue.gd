@@ -10,22 +10,22 @@ func _ready() -> void:
 func interact():
 	if(run==1):
 	
-			dialogueBox.dialogue("Do you have any Polmegranates", self)
-			dialogueBox.setDialogueOption("No why", 0)
-			dialogueBox.setDialogueOption("Eww no", 1)
+			dialogueBox.dialogue("Do you have any pomegranates?", self)
+			dialogueBox.setDialogueOption("No, why?", 0)
+			dialogueBox.setDialogueOption("Eww no!", 1)
 		
 	else: if(run==2):
-		dialogueBox.dialogue("I love Polmegranates but this guy dosn't have any, can you get me some?",self)
+		dialogueBox.dialogue("I love pomegranates but this guy dosn't have any, can you get me some?",self)
 		dialogueBox.setDialogueOption("Sure!", 0)
 		dialogueBox.setDialogueOption("Fine, I suppose", 1)
 		dialogueBox.setDialogueOption("No, I'm busy", 2)
 	else: if(run==3):
-		dialogueBox.dialogue("Polmegranate?",self)
-		dialogueBox.setDialogueOption("Yeah, here", 0)
-		dialogueBox.setDialogueOption("No,your so anoying", 1)
+		dialogueBox.dialogue("pomegranate?",self)
+		dialogueBox.setDialogueOption("Yeah, here.", 0)
+		dialogueBox.setDialogueOption("No, your're SO annoying.", 1)
 	else: if(run==4):
-		dialogueBox.dialogue("Yay polmegranates! Thank you!",self)
-		dialogueBox.setDialogueOption("You're welcome", 0)
+		dialogueBox.dialogue("Yay! Pomegranates! Thank you!",self)
+		dialogueBox.setDialogueOption("You're welcome.", 0)
 
 func playerResponse(key: int):
 	if(run == 1):
