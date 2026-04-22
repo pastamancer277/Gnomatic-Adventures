@@ -31,3 +31,14 @@ func _on_f3_body_entered(body: Node2D) -> void:
 func _on_f3_body_exited(body: Node2D) -> void:
 	if(body.name=="Player"&&Global.cur_area=="Forest2"):
 		Global.scene_transit=false
+
+
+func _on_to_starting_village_body_entered(body: Node2D) -> void:
+	if(body.name=="Player"&&Global.cur_area=="Forest2"):
+		Global.scene_transit=true
+		locationChange="StartingVillage"
+
+
+func _on_to_starting_village_body_exited(body: Node2D) -> void:
+	if(body.name=="Player"&&Global.cur_area=="Forest2"):
+		Global.scene_transit=false
