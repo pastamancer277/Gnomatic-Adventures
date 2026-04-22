@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bjispdte6canv"]
+
+[ext_resource type="Script" uid="uid://d085hy0km8dbx" path="res://scripts/rangedWeapons/fireball.gd" id="1_h8s4r"]
+[ext_resource type="Texture2D" uid="uid://crsc7gdphfxgm" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Structures/Stations/Bonfire/Fire_01-Sheet.png" id="2_h8s4r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3si6e"]
+size = Vector2(128, 24)
+
+[node name="Fireball" type="RigidBody2D" unique_id=1579132551 groups=["rangedEnemy"]]
+z_index = 1
+y_sort_enabled = true
+collision_layer = 32
+collision_mask = 5
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 3
+script = ExtResource("1_h8s4r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=653986862]
+scale = Vector2(0.25, 0.25)
+shape = SubResource("RectangleShape2D_3si6e")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1752478997]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_h8s4r")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
