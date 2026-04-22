@@ -1,0 +1,225 @@
+[gd_scene format=3 uid="uid://dkpbbbi82n5e5"]
+
+[ext_resource type="PackedScene" uid="uid://6mmv4jq4gjd3" path="res://scenes/cats/basic_cat_enemy.tscn" id="1_u0fx8"]
+[ext_resource type="Script" uid="uid://6hl2vt4d8n5l" path="res://scripts/cats/white_cat_enemy.gd" id="2_6tfpp"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_20kbc"]
+[ext_resource type="Texture2D" uid="uid://ckkds4noqpo7q" path="res://assets/sprites/characters/WhiteCat_Free_Carysaurus/WhiteCat_Free_Carysaurus/White-Idle.png" id="2_u0fx8"]
+[ext_resource type="PackedScene" uid="uid://bmw1xq14alg87" path="res://scenes/enemies/basic_enemy.tscn" id="3_6tfpp"]
+[ext_resource type="Texture2D" uid="uid://tltdxee4lfe8" path="res://assets/sprites/characters/WhiteCat_Free_Carysaurus/WhiteCat_Free_Carysaurus/White-Run.png" id="3_20kbc"]
+[ext_resource type="PackedScene" uid="uid://bjispdte6canv" path="res://scenes/rangedWeapons/fireball.tscn" id="4_f6uwg"]
+[ext_resource type="Resource" uid="uid://bwsermbw83onl" path="res://resources/enemies/bunny.tres" id="4_sabvp"]
+[ext_resource type="Resource" uid="uid://dk5t67ad15uvi" path="res://resources/enemies/deer1.tres" id="5_f6uwg"]
+[ext_resource type="PackedScene" uid="uid://ydrufmc17n5t" path="res://scenes/damage_area.tscn" id="5_fl1dj"]
+[ext_resource type="Texture2D" uid="uid://ru7hhpv65keu" path="res://assets/icons/sprite/Fur.png" id="6_7unr0"]
+[ext_resource type="Resource" uid="uid://bwvnlnm3ptxex" path="res://resources/enemies/bear.tres" id="6_lhq3o"]
+[ext_resource type="Script" uid="uid://bmwfo2faw14nm" path="res://scripts/cats/white_cat_dialogue.gd" id="11_lhq3o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sxh6p"]
+resource_local_to_scene = true
+shader = ExtResource("2_20kbc")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tfpp"]
+atlas = ExtResource("2_u0fx8")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rls5o"]
+atlas = ExtResource("2_u0fx8")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1yqv"]
+atlas = ExtResource("2_u0fx8")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sabvp"]
+atlas = ExtResource("2_u0fx8")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6uwg"]
+atlas = ExtResource("2_u0fx8")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhq3o"]
+atlas = ExtResource("2_u0fx8")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxh6p"]
+atlas = ExtResource("2_u0fx8")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fl1dj"]
+atlas = ExtResource("2_u0fx8")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7unr0"]
+atlas = ExtResource("2_u0fx8")
+region = Rect2(384, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wenb"]
+atlas = ExtResource("2_u0fx8")
+region = Rect2(432, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plim8"]
+atlas = ExtResource("2_u0fx8")
+region = Rect2(480, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cf01"]
+atlas = ExtResource("2_u0fx8")
+region = Rect2(528, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wvbl"]
+atlas = ExtResource("3_20kbc")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4f53"]
+atlas = ExtResource("3_20kbc")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_164wd"]
+atlas = ExtResource("3_20kbc")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5l541"]
+atlas = ExtResource("3_20kbc")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e00hp"]
+atlas = ExtResource("3_20kbc")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eruy4"]
+atlas = ExtResource("3_20kbc")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cjogs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tfpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rls5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1yqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sabvp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6uwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhq3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxh6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fl1dj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7unr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wenb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plim8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cf01")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wvbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4f53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_164wd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5l541")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e00hp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eruy4")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rls5o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x1yqv"]
+radius = 111.62885
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sabvp"]
+radius = 28.160255
+
+[node name="WhiteCatEnemy" unique_id=72348834 instance=ExtResource("1_u0fx8")]
+script = ExtResource("2_6tfpp")
+enemyScene = ExtResource("3_6tfpp")
+fireballScene = ExtResource("4_f6uwg")
+damageArea = ExtResource("5_fl1dj")
+hairImage = ExtResource("6_7unr0")
+rabbit = ExtResource("4_sabvp")
+deer = ExtResource("5_f6uwg")
+bear = ExtResource("6_lhq3o")
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=653963757]
+material = SubResource("ShaderMaterial_sxh6p")
+sprite_frames = SubResource("SpriteFrames_cjogs")
+animation = &"idle"
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=733226745]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_rls5o")
+
+[node name="CollisionShape2D" parent="DetectionArea" parent_id_path=PackedInt32Array(770416748) index="0" unique_id=938400520]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_x1yqv")
+
+[node name="CollisionShape2D" parent="AttackBox" parent_id_path=PackedInt32Array(1213018617) index="0" unique_id=606064724]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_sabvp")
+
+[node name="AttackCooldown" parent="." index="4" unique_id=1479018735]
+wait_time = 0.8
+
+[node name="RegenTimer" parent="." index="6" unique_id=1081065502]
+wait_time = 1.0
+
+[node name="Dialogue" parent="." index="7" unique_id=1381320995]
+script = ExtResource("11_lhq3o")
+
+[node name="SummonTimer" type="Timer" parent="." index="10" unique_id=1748597796]
+wait_time = 4.5
+
+[node name="FireballTimer" type="Timer" parent="." index="11" unique_id=654049256]
+wait_time = 2.1999999999999997
+
+[node name="HairTimer" type="Timer" parent="." index="12" unique_id=1533787508]
+wait_time = 0.3
+
+[connection signal="body_entered" from="DetectionArea" to="." method="playerEntered"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="playerExited"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="AttackBox" to="." method="_on_attackbox_body_entered"]
+[connection signal="body_exited" from="AttackBox" to="." method="_on_attackbox_body_exited"]
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="RegenTimer" to="." method="_on_regen_timer_timeout"]
+[connection signal="timeout" from="SummonTimer" to="." method="_on_summon_timer_timeout"]
+[connection signal="timeout" from="FireballTimer" to="." method="_on_fireball_timer_timeout"]
+[connection signal="timeout" from="HairTimer" to="." method="_on_hair_timer_timeout"]

@@ -62,7 +62,7 @@ region = Rect2(128, 32, 32, 32)
 atlas = ExtResource("1_bt0m7")
 region = Rect2(160, 32, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_l0bbc"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_mnfve"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -143,6 +143,6 @@ regenAmount = 20
 attackCooldown = 1.2
 respawnTime = 80.0
 collisionRadius = 15.0
-animations = SubResource("SpriteFrames_l0bbc")
+animations = SubResource("SpriteFrames_mnfve")
 items = Array[ExtResource("1_m5xqg")]([SubResource("Resource_gk0v3"), ExtResource("4_1y3vy")])
 metadata/_custom_type_script = "uid://b28ajlgdgglkr"
