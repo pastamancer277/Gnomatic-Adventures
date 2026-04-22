@@ -14,7 +14,7 @@ var player_start_y=37
 var game_first_load=true
 
 func _ready():
-	change_area("Forest2")
+	change_area("StartingForest")
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Load Data"):
@@ -49,7 +49,7 @@ func getCurArea():
 
 func resetGame():
 	game_first_load = true
-	change_area("Forest2")
+	change_area("StartingForest")
 	player.global_position.x=player_start_x
 	player.global_position.y=player_start_y
 	reset_all_nodes(get_node("/root"))
