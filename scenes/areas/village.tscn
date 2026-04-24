@@ -1215,10 +1215,10 @@ enemyResource = ExtResource("12_5chbg")
 position = Vector2(770, 406)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=557783940]
-polygon = PackedVector2Array(-67, 104, -62, 594, -111, 589, -117, 655, -112, 718, -64, 720, -69, 728, 884, 731, 897, -154, 771, -161, 775, -253, 671, -253, 673, -164, 182, -161, 136, -159, 80, -161, 50, -161, -60, -162, -60, -49, -65, 20, -77, 129, -330, 50, -323, -393, 1133, -383, 1140, 966, -325, 966, -327, 59)
+polygon = PackedVector2Array(-67, 104, -62, 594, -111, 589, -117, 655, -112, 718, -64, 720, 884, 731, 897, -154, 771, -161, 775, -253, 671, -253, 673, -164, -60, -162, -65, 100, -330, 50, -323, -393, 1133, -383, 1140, 966, -325, 966, -327, 59)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyCollisions" parent_id_path=PackedInt32Array(1550626514) index="0" unique_id=2049996727]
-polygon = PackedVector2Array(-67, 104, -62, 594, -64, 720, -69, 728, 884, 731, 897, -154, 771, -161, 673, -164, 182, -161, 136, -159, 80, -161, 50, -161, -60, -162, -60, -49, -65, 20, -77, 129, -330, 50, -323, -393, 1133, -383, 1140, 966, -325, 966, -327, 59)
+polygon = PackedVector2Array(-67, 104, -62, 594, -64, 720, 884, 731, 897, -154, 720.91223, -155.47202, -60, -162, -62, 100, -330, 50, -323, -393, 1133, -383, 1140, 966, -325, 966, -327, 59)
 
 [node name="ToForest3" type="Area2D" parent="." index="4" unique_id=2105035760]
 

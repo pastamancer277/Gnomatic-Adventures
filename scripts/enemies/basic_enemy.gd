@@ -105,7 +105,6 @@ func move():
 		velocity = Vector2.ZERO
 		if(!player_chase.is_empty() and health>0):
 			var p=player_chase.get(0)
-			$AnimatedSprite2D.play("walk")
 			if(p.position.x-position.x<0):
 				velocity.x=-speed
 				$AnimatedSprite2D.flip_h=true
@@ -116,6 +115,14 @@ func move():
 				velocity.y=-speed
 			else:
 				velocity.y=speed
+			if(abs(p.position.y-position.y)>abs(p.position.x-position.x)):
+				$AnimatedSprite2D.flip_h=false
+				if(velocity.y>0):
+					$AnimatedSprite2D.play("forward")
+				else:
+					$AnimatedSprite2D.play("backward")
+			else:
+				$AnimatedSprite2D.play("walk")
 		else: if(health>0):
 			velocity.x=0
 			velocity.y=0
@@ -213,6 +220,9 @@ func reset():
 	_on_respawn_timer_timeout()
 
 func loadData():
+	if(summoned):
+		queue_free()
+	
 	global_position=pos
 	health=mHealth
 	dead=false

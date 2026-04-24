@@ -96,7 +96,7 @@ func saveData():
 
 func loadData():
 	var data = $/root/SaveManager.getData("NPCs", name)
-	if data["dead"] == true:
+	if(data!={} and data["dead"] == true):
 		visible=false
 		$CollisionShape2D.disabled=true
 		$Area2D/CollisionShape2D.disabled=true
