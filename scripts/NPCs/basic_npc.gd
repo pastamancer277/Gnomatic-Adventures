@@ -74,6 +74,7 @@ func _on_area_2d_body_exited(body):
 	if(loc==$/root/Global.getCurArea()):
 		if body.name == "Player":
 			player_near = false
+			print("clear")
 			$/root/Main/UI/Dialogue.clearDialogue($Dialogue)
 	saveData()
 

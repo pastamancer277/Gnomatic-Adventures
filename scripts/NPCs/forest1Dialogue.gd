@@ -9,22 +9,16 @@ func _ready() -> void:
 	slimeQuest=get_node("../Quests/SlimeQuest")
 	person_name = "Fred"
 	tex = PortableCompressedTexture2D.new()
-	
-	var im = load("res://assets/sprites/characters/Kid.png").get_image()
-	im = im.get_region(Rect2(im.get_width()/3,im.get_width()/10, im.get_width()/2, im.get_height()/2))
-	#var im = load("res://assets/sprites/characters/NPC1.png").get_image()
-	#im = im.get_region(Rect2(im.get_width()/3,0, im.get_width()/2, im.get_height()/1.5))
+	var im = load("res://assets/sprites/characters/NPC1.png").get_image()
+	im = im.get_region(Rect2(im.get_width()/3,0, im.get_width()/2, im.get_height()/1.5))
 	tex.create_from_image(im, PortableCompressedTexture2D.COMPRESSION_MODE_LOSSLESS)
 
 func interact():
 	if(run==1):
 		if(player.getSocialCredit()>50):
-			#dialogueBox.dialogue("Hello there", self, name, tex)
-			#dialogueBox.setDialogueOption("Hi", 0)
-			#dialogueBox.setDialogueOption("Ugh, people", 1)
-			dialogueBox.dialogue("Hi, can you help me?!", self,person_name, tex)
-			dialogueBox.setDialogueOption("Hi, of course I can help.", 0)
-			dialogueBox.setDialogueOption("No kid, i have better things to do.", 1)
+			dialogueBox.dialogue("Hello there", self, person_name, tex)
+			dialogueBox.setDialogueOption("Hi", 0)
+			dialogueBox.setDialogueOption("Ugh, people", 1)
 		else:
 			dialogueBox.dialogue("I don't know you. Come back when you're more popular.", self,person_name, tex)
 			dialogueBox.setDialogueOption("...", 2)

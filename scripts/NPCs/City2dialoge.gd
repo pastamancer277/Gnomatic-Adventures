@@ -13,7 +13,7 @@ func _ready() -> void:
 func interact():
 	if(run==1):
 		dialogueBox.dialogue("I've heard there is a farmer who sells pomegranates. He lives past the village.", self,person_name, tex)
-
+		dialogueBox.setDialogueOption("Thank you!", 0)
 
 func playerResponse(key: int):
 	if(run == 1):

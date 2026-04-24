@@ -46,6 +46,8 @@ func setDialogueOption(text: String, key: int):
 	grid.visible = false
 
 func clearButtons():
+	if($/root/Global != null):
+		$/root/Global.pause = false
 	inventory.visible = true
 	grid.visible = true
 	for child in get_children():

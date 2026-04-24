@@ -12,7 +12,8 @@ func _ready() -> void:
 
 func interact():
 	if(run==1):
-		dialogueBox.dialogue("The farmer lives just up this path. His specialty is pomegranates.", self,person_name, tex)
+		dialogueBox.dialogue("The farmer lives just up this path. His specialty is pomegranates. Everyone knows gnomes LOVE pomegranates.", self,person_name, tex)
+		dialogueBox.setDialogueOption("Thank you!", 0)
 
 
 func playerResponse(key: int):

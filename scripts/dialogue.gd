@@ -8,9 +8,10 @@ var currentNPCDialogue: Node
 var full_text = ""
 var scroll_speed = 2
 func _process(delta: float) -> void:
-	print(panel_container.size.y)
+	pass
 
 func dialogue(text: String, npc: Node, name: String, picture: PortableCompressedTexture2D):
+	#$/root/Global.pause = true
 	buttons.clearButtons()
 	currentNPCDialogue=npc
 	$PanelContainer/HBoxContainer/VBoxContainer/Name.text = name
@@ -24,9 +25,7 @@ func dialogue(text: String, npc: Node, name: String, picture: PortableCompressed
 func _is_too_long()-> void:
 	if full_text.length() < 45 or full_text[43] == " " or full_text[44] == " " or full_text[43] =="." or full_text[43] =="!" or full_text[44] =="." or full_text[44] =="!":
 		dialogue_text.text += full_text.substr(0,45)
-		print(full_text)
 		full_text = full_text.substr(45, full_text.length()-45)
-		print(full_text)
 	else:
 		var index = 0
 		for i in range(45):
@@ -35,7 +34,6 @@ func _is_too_long()-> void:
 		dialogue_text.text += full_text.substr(0, index+1)
 		full_text = full_text.substr(index+1, full_text.length()-(index+1))
 	if full_text.length()>44:
-		print("recursion")
 		currentNPCDialogue.text += "\n"
 		_is_too_long()
 	else: 
@@ -49,7 +47,8 @@ func show_text(text: String):
 	dialogue_text.text = text
 	_is_too_long()
 	panel_container.visible = true
-	print(panel_container.visible )
+	$/root/Global.pause = true
+	print($/root/Global )
 
 func setDialogueOption(text: String, key: int):
 	buttons.setDialogueOption(text,key)
