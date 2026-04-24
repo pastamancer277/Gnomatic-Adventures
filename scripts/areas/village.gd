@@ -4,7 +4,7 @@ extends area
 func _on_to_forest_3_body_entered(body: Node2D) -> void:
 	if(body.name=="Player"&&Global.cur_area=="Village1"):
 		Global.scene_transit=true
-		locationChange="Forest2"
+		locationChange="Forest3"
 
 
 

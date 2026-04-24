@@ -1150,7 +1150,7 @@ texture = ExtResource("6_moe3i")
 sources/0 = SubResource("TileSetAtlasSource_ilfds")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_moe3i"]
-size = Vector2(36, 132)
+size = Vector2(47, 132)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tlamr"]
 size = Vector2(111, 72.5)
@@ -1223,7 +1223,7 @@ polygon = PackedVector2Array(-67, 104, -62, 594, -64, 720, -69, 728, 884, 731, 8
 [node name="ToForest3" type="Area2D" parent="." index="4" unique_id=2105035760]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToForest3" index="0" unique_id=521156419]
-position = Vector2(-119, 652)
+position = Vector2(-124.5, 652)
 shape = SubResource("RectangleShape2D_moe3i")
 
 [node name="ToFarm" type="Area2D" parent="." index="5" unique_id=979922020]

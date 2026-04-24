@@ -2385,7 +2385,7 @@ sources/2 = SubResource("TileSetAtlasSource_hocru")
 sources/3 = SubResource("TileSetAtlasSource_gkvtl")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bksvw"]
-size = Vector2(222, 316)
+size = Vector2(153, 316)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4iyb"]
 size = Vector2(34, 117)
@@ -2417,12 +2417,12 @@ tile_set = SubResource("TileSet_kpok4")
 position = Vector2(658, 311)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=1180989924]
-polygon = PackedVector2Array(245, 197, 971, 198, 974, 369, 1046, 372, 1045, 481, 975, 482, 971, 538, 228, 540, 229, 401, 68, 405, 47, 242, 228, 243, 245, 59, -218, 81, -164, 647, 1225, 616, 1179, -42, 229, -34)
+polygon = PackedVector2Array(245, 197, 971, 198, 974, 369, 1046, 372, 1045, 481, 975, 482, 971, 538, 228, 540, 229, 401, 68, 405, 87, 245, 228, 243, 245, 59, -218, 81, -164, 647, 1225, 616, 1179, -42, 229, -34)
 
 [node name="Forest3->2" type="Area2D" parent="." index="3" unique_id=1421777671]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Forest3->2" index="0" unique_id=391918798]
-position = Vector2(101, 341)
+position = Vector2(66.5, 341)
 shape = SubResource("RectangleShape2D_bksvw")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyCollisions" parent_id_path=PackedInt32Array(1550626514) index="0" unique_id=1298315054]
