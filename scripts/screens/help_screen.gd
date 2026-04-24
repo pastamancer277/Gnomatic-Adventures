@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_down") || Input.is_action_just_pressed("ui_up")|| Input.is_action_just_pressed("ui_left") || Input.is_action_just_pressed("ui_right"):
 		is_focus = $Button
 		is_focus .grab_focus()
-	if is_focus  != null and Input.is_action_just_pressed("ui_accept"):
+	if is_focus  != null and Input.is_action_just_pressed("MeleeAttack"):
 		grid.change_clicked()
 		grid.visible = true
 		control.reset_count()

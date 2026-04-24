@@ -17,28 +17,28 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if !$/root/Global.pause:
-		if Input.is_action_just_pressed("ui_down") and (isFocus == help_button):
+		if Input.is_action_just_pressed("MoveDown") and (isFocus == help_button):
 			isFocus = level_button
 			isFocus.grab_focus()
-		elif Input.is_action_just_pressed("ui_down") and (isFocus == level_button):
+		elif Input.is_action_just_pressed("MoveDown") and (isFocus == level_button):
 			isFocus = setting_button
 			isFocus.grab_focus()
-		elif Input.is_action_just_pressed("ui_down") and (isFocus == setting_button):
+		elif Input.is_action_just_pressed("MoveDown") and (isFocus == setting_button):
 			isFocus = credit_button
 			isFocus.grab_focus()
-		elif Input.is_action_just_pressed("ui_down") and (isFocus == credit_button):
+		elif Input.is_action_just_pressed("MoveDown") and (isFocus == credit_button):
 			isFocus = help_button
 			isFocus.grab_focus()
-		elif Input.is_action_just_pressed("ui_up") and (isFocus == credit_button):
+		elif Input.is_action_just_pressed("MoveUp") and (isFocus == credit_button):
 			isFocus = setting_button
 			isFocus.grab_focus()
-		elif Input.is_action_just_pressed("ui_up") and (isFocus == setting_button):
+		elif Input.is_action_just_pressed("MoveUp") and (isFocus == setting_button):
 			isFocus = level_button
 			isFocus.grab_focus()
-		elif Input.is_action_just_pressed("ui_up") and (isFocus == level_button):
+		elif Input.is_action_just_pressed("MoveUp") and (isFocus == level_button):
 			isFocus = help_button
 			isFocus.grab_focus()
-		elif Input.is_action_just_pressed("ui_up") and (isFocus == help_button):
+		elif Input.is_action_just_pressed("MoveUp") and (isFocus == help_button):
 			isFocus = credit_button
 			isFocus.grab_focus()
 			

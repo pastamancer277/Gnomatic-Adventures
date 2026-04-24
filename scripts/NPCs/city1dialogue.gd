@@ -14,7 +14,6 @@ func _ready() -> void:
 
 func interact():
 	if(run==1):
-	
 			dialogueBox.dialogue("Hey, village kid", self, person_name, tex)
 			dialogueBox.setDialogueOption("Are you talking to me?", 0)
 			dialogueBox.setDialogueOption("I'm not a village kid jerk!", 1)

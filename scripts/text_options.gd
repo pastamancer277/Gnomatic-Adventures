@@ -13,17 +13,17 @@ func _process(delta: float) -> void:
 		if isFocus != null:
 			isFocus.grab_focus()
 			$/root/Global.dialogue = true
-	if(get_child_count() >0 and Input.is_action_just_pressed("ui_accept")):
+	if(get_child_count() >0 and Input.is_action_just_pressed("MeleeAttack")):
 		for child in get_children() :
 			if child == isFocus:
 				clearButtons()
 				get_parent().get_parent().get_parent().get_parent().playerResponse(child.getKey())
 				$/root/Global.dialogue = false
 				
-	if Input.is_action_just_pressed("ui_right"):
+	if Input.is_action_just_pressed("MoveRight"):
 		count+=1
 		text = false
-	elif Input.is_action_just_pressed("ui_left"):
+	elif Input.is_action_just_pressed("MoveLeft"):
 		count-=1
 		text = false
 	if count >= get_child_count():

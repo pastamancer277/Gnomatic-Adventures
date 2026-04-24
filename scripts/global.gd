@@ -79,7 +79,7 @@ func multiple_popups():
 	if $/root/Main/UI/Popups.get_child_count() >1:
 		var text = ""
 		for child in $/root/Main/UI/Popups.get_children():
-			text += child.get_child(0).get_child(0).get_child(0).get_child(0).text + "\n"
+			text += child.get_child(0).get_child(1).get_child(0).text + "\n"
 			child.queue_free()
 		var popup_scene = load("res://scenes/popups.tscn").instantiate()
 		$"/root/Main/UI/Popups".add_child(popup_scene)

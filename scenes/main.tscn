@@ -76,4 +76,5 @@ process_mode = 3
 offset_right = -178.03601
 offset_bottom = 108.9436
 
-[node name="Popups" type="Node" parent="UI" unique_id=1932928493]
+[node name="Popups" type="Node2D" parent="UI" unique_id=2023017706]
+position = Vector2(0, 210)
