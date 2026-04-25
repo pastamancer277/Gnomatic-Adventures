@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dlcpr2kmyuyfl"]
+
+[ext_resource type="Script" uid="uid://pj0rhadqgxe8" path="res://scenes/screens/label_screens.gd" id="1_3bmlh"]
+[ext_resource type="Theme" uid="uid://b15a07rd88w1m" path="res://assets/themes/margin_container_theme.tres" id="1_sb362"]
+[ext_resource type="Theme" uid="uid://dgi7kajo0do8d" path="res://assets/themes/label.tres" id="2_3bmlh"]
+
+[node name="CreditScreen" type="PanelContainer" unique_id=2035891481]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_3bmlh")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=876202913]
+layout_mode = 2
+theme = ExtResource("1_sb362")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1001461454]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=789455178]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("2_3bmlh")
+theme_override_font_sizes/font_size = 10
+text = "Thank the amaing Maddie Meisinger-Blaschak for finding, editing and making our art.
+Thank you, Nick Butkiewicz, for making our game fun and spell checked!
+Thanks to Dylan Scott for making all the unseen stuff.
+And lastly thank you so much to Alyssa Wright for all the seen, non-art elements."

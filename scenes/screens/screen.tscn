@@ -33,7 +33,4 @@ theme_type_variation = &"ScreenButton"
 theme_override_font_sizes/font_size = 16
 text = "Enter!"
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=434308587]
-position = Vector2(576, 322)
-
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

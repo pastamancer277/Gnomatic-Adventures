@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://c76q05njocpxs" path="res://scripts/help_meus_interface.gd" id="1_ikybi"]
 [ext_resource type="Theme" uid="uid://8yntgav2cnsc" path="res://assets/themes/panel_container.tres" id="1_kj118"]
 [ext_resource type="PackedScene" uid="uid://stn2cwdxicvt" path="res://scenes/screens/level_screen.tscn" id="3_4d6lk"]
+[ext_resource type="PackedScene" uid="uid://5o0ds5jvbf4l" path="res://scenes/screens/setting_screen.tscn" id="3_tr62h"]
+[ext_resource type="PackedScene" uid="uid://dlcpr2kmyuyfl" path="res://scenes/screens/credit_screen.tscn" id="3_wdrym"]
 [ext_resource type="PackedScene" uid="uid://cl8qhbjfnu4t6" path="res://scenes/screens/help_screen.tscn" id="4_4df2b"]
 
 [node name="HelpMenusInterface" type="PanelContainer" unique_id=1690450220]
@@ -26,7 +28,15 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 2
 
-[node name="LevelScreen" parent="VBoxContainer/HBoxContainer" unique_id=1231221103 instance=ExtResource("3_4d6lk")]
+[node name="SettingScreen" parent="VBoxContainer/HBoxContainer" unique_id=1231221103 instance=ExtResource("3_tr62h")]
+visible = false
+layout_mode = 2
+
+[node name="CreditScreen" parent="VBoxContainer/HBoxContainer" unique_id=697065739 instance=ExtResource("3_wdrym")]
+visible = false
+layout_mode = 2
+
+[node name="LevelScreen" parent="VBoxContainer/HBoxContainer" unique_id=342495069 instance=ExtResource("3_4d6lk")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -34,7 +44,6 @@ size_flags_horizontal = 3
 [node name="HelpScreen" parent="VBoxContainer/HBoxContainer" unique_id=1590639544 instance=ExtResource("4_4df2b")]
 visible = false
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=630164011]
 layout_mode = 2

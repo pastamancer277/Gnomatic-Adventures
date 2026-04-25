@@ -9,6 +9,8 @@ extends Control
 @onready var credit_button: Button = $VBoxContainer/HBoxContainer/VBoxContainer/HelpMenu/MarginContainer/VBoxContainer/CreditButton
 
 @onready var help_screen = $VBoxContainer/HBoxContainer/HelpScreen
+@onready var credit_screen = $VBoxContainer/HBoxContainer/CreditScreen
+@onready var setting_screen = $VBoxContainer/HBoxContainer/SettingScreen
 
 @onready var level_screen = $VBoxContainer/HBoxContainer/LevelScreen
 @onready var attack = $VBoxContainer/HBoxContainer/LevelScreen/MarginContainer/VBoxContainer/HBoxContainer/ButtonContainer/AttackButton
@@ -33,6 +35,8 @@ func _process(delta: float) -> void:
 		visible = false
 		help_screen.visible = false
 		level_screen.visible = false
+		credit_screen.visible = false
+		setting_screen.visible = false
 		inventory.visible = true
 		$"/root/Global".pause = false
 		isFocus = help_button
@@ -126,12 +130,20 @@ func _process(delta: float) -> void:
 		if isFocus == help_button :
 			help_screen.visible = true
 			level_screen.visible = false
+			credit_screen.visible = false
+			setting_screen.visible = false
 		elif  isFocus == level_button :
 			level_screen.visible = true
 			help_screen.visible = false
+			credit_screen.visible = false
+			setting_screen.visible = false
 		elif  isFocus == setting_button :
 			level_screen.visible = false
 			help_screen.visible = false
+			credit_screen.visible = false
+			setting_screen.visible = true
 		elif  isFocus == credit_button :
 			level_screen.visible = false
 			help_screen.visible = false
+			credit_screen.visible = true
+			setting_screen.visible = false
