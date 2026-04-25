@@ -14,19 +14,19 @@ func _ready() -> void:
 func interact():
 	if(run==1):
 		if(player.getSocialCredit()>50):
-			dialogueBox.dialogue("Hello there.", self)
-			dialogueBox.setDialogueOption("Hi, are you the pomegranate farmer?", 0, name, tex)
+			dialogueBox.dialogue("Hello there.", self, person_name, tex)
+			dialogueBox.setDialogueOption("Hi, are you the pomegranate farmer?", 0)
 			dialogueBox.setDialogueOption("Ugh, people...", 1)
 		else:
-			dialogueBox.dialogue("Sorry, I have other things to do", self, name, tex)
+			dialogueBox.dialogue("Sorry, I have other things to do", self, person_name, tex)
 			dialogueBox.setDialogueOption("...", 2)
 	else: if(run==2):
-		dialogueBox.dialogue("Yes, I am. is there anything i can help you with?",self, name, tex)
+		dialogueBox.dialogue("Yes, I am. is there anything i can help you with?",self, person_name, tex)
 		dialogueBox.setDialogueOption("Yes, I need a pomegranate. Can I have one please?", 0)
 		dialogueBox.setDialogueOption("I need a pomegranate.", 1)
 		dialogueBox.setDialogueOption("Never mind.", 2)
 	else: if(run==3):
-		dialogueBox.dialogue("Oh, of course. I have more than I know what to do with. Here you go.",self, name, tex)
+		dialogueBox.dialogue("Oh, of course. I have more than I know what to do with. Here you go.",self, person_name, tex)
 		dialogueBox.setDialogueOption("Thank you!", 0)
 		dialogueBox.setDialogueOption("Thanks.", 1)
 	

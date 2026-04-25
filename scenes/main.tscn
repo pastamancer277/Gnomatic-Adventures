@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cci2hhens7k0q" path="res://scenes/areas/startingforest.tscn" id="11_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://0f3tc54xlsk" path="res://scenes/areas/startvillage.tscn" id="11_muem4"]
 [ext_resource type="PackedScene" uid="uid://brnjlnygjkq78" path="res://scenes/screens/instruction_screen.tscn" id="13_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://bckwtelincrg5" path="res://scenes/popups.tscn" id="19_0ld40"]
 
 [node name="Main" type="Node" unique_id=842974705]
 
@@ -77,4 +78,8 @@ offset_right = -178.03601
 offset_bottom = 108.9436
 
 [node name="Popups" type="Node2D" parent="UI" unique_id=2023017706]
-position = Vector2(0, 210)
+position = Vector2(189, 201)
+
+[node name="Popups" parent="UI/Popups" unique_id=1796603931 instance=ExtResource("19_0ld40")]
+
+[node name="Popups2" parent="UI/Popups" unique_id=116560995 instance=ExtResource("19_0ld40")]

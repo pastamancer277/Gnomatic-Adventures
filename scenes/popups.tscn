@@ -5,34 +5,24 @@
 
 [node name="Popups" type="Control" unique_id=1796603931]
 layout_mode = 3
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-grow_vertical = 0
+anchors_preset = 0
 scale = Vector2(0.4, 0.4)
-size_flags_horizontal = 8
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_201id")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1841846568]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=983765963]
 layout_mode = 1
-offset_top = -32.5
-offset_right = 97.0
-offset_bottom = -0.5
+offset_left = -47.5
+offset_top = -42.5
+offset_right = 45.5
+offset_bottom = -2.5
+grow_horizontal = 2
 
-[node name="Control" type="Control" parent="HBoxContainer" unique_id=2144860160]
+[node name="Label" type="Label" parent="CenterContainer" unique_id=1095534591]
 layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=362605037]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-alignment = 2
-
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1095534591]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
 size_flags_stretch_ratio = 3.0
 theme = ExtResource("3_2ysno")
 theme_type_variation = &"PopupLabel"
