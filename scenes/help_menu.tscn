@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://byh4cs663rp0s"]
 
-[ext_resource type="Script" uid="uid://cvws1ad4agvg8" path="res://scripts/help_menu.gd" id="1_akeme"]
 [ext_resource type="Texture2D" uid="uid://cqh8tkgviwuc" path="res://assets/icons/Settings.png" id="1_g0qdk"]
+[ext_resource type="Theme" uid="uid://8yntgav2cnsc" path="res://assets/themes/panel_container.tres" id="1_k65vi"]
 [ext_resource type="Theme" uid="uid://c6tvwmr0ivjut" path="res://assets/themes/help_menu_button.tres" id="2_akeme"]
 [ext_resource type="Texture2D" uid="uid://bup00qn3dj08i" path="res://assets/icons/Pause.png" id="2_nx501"]
 [ext_resource type="Texture2D" uid="uid://d17knws2s3o76" path="res://assets/icons/Right Arrow.png" id="3_2xk8j"]
@@ -9,34 +9,26 @@
 [ext_resource type="Texture2D" uid="uid://cx6fsceayqi8g" path="res://assets/icons/Up Arrow.png" id="5_8f3ry"]
 
 [node name="HelpMenu" type="PanelContainer" unique_id=1761127978]
-anchors_preset = -1
-anchor_left = -0.021000002
-anchor_right = -0.008
-anchor_bottom = 0.019000001
-offset_left = 0.19200134
-offset_right = 7.2319984
-offset_bottom = 36.48
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-script = ExtResource("1_akeme")
+theme = ExtResource("1_k65vi")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=970866563]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
 theme = ExtResource("3_k65vi")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1329170610]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
 theme_override_constants/separation = 1
 
 [node name="HelpButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=356646762]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-size_flags_stretch_ratio = 0.58
+size_flags_vertical = 3
 mouse_filter = 2
 theme = ExtResource("2_akeme")
 button_mask = 0
@@ -45,9 +37,7 @@ icon = ExtResource("2_nx501")
 
 [node name="LevelButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1994108620]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-size_flags_stretch_ratio = 0.58
+size_flags_vertical = 3
 mouse_filter = 2
 theme = ExtResource("2_akeme")
 button_mask = 0
@@ -56,8 +46,7 @@ icon = ExtResource("5_8f3ry")
 
 [node name="SettingButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1638494532]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
+size_flags_vertical = 3
 mouse_filter = 2
 theme = ExtResource("2_akeme")
 text = "Settings"
@@ -65,8 +54,7 @@ icon = ExtResource("1_g0qdk")
 
 [node name="CreditButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1317972679]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
+size_flags_vertical = 3
 mouse_filter = 2
 theme = ExtResource("2_akeme")
 text = "Credits"

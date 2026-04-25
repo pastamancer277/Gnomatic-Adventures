@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://cl8qhbjfnu4t6"]
 
-[ext_resource type="Script" uid="uid://bptlcws50quk7" path="res://scripts/screens/help_screen.gd" id="1_8l0br"]
-[ext_resource type="Texture2D" uid="uid://cx6fsceayqi8g" path="res://assets/icons/Up Arrow.png" id="1_p44hu"]
-[ext_resource type="Theme" uid="uid://cupigso84clu8" path="res://assets/themes/screen_button.tres" id="3_hsmrg"]
+[ext_resource type="Theme" uid="uid://b15a07rd88w1m" path="res://assets/themes/margin_container_theme.tres" id="2_tqtlj"]
 [ext_resource type="Theme" uid="uid://dgi7kajo0do8d" path="res://assets/themes/label.tres" id="3_tqtlj"]
 
 [node name="HelpScreen" type="Control" unique_id=1231221103]
@@ -12,34 +10,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8l0br")
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1700984283]
-position = Vector2(563.0001, 497)
-scale = Vector2(202.74611, 66.706245)
-texture = ExtResource("1_p44hu")
-
-[node name="Label" type="Label" parent="." unique_id=789455178]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=876202913]
 layout_mode = 0
-offset_right = 162.0
-offset_bottom = 57.0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("2_tqtlj")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1001461454]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=789455178]
+layout_mode = 2
+size_flags_vertical = 6
 theme = ExtResource("3_tqtlj")
+theme_override_font_sizes/font_size = 15
 text = "WASD to move
 E to interact with NPCs
 Spacebar to attack
 Arrow keys for focusing on stuff
 Enter to click a button"
-
-[node name="Button" type="Button" parent="." unique_id=746386268]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 2.0
-offset_top = 63.0
-offset_right = 133.0
-offset_bottom = 94.0
-mouse_filter = 2
-theme = ExtResource("3_hsmrg")
-theme_type_variation = &"ScreenButton"
-text = "Return to Game"
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

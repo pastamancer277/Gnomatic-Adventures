@@ -12,12 +12,10 @@ func _ready() -> void:
 func set_text(text: String) -> void:
 	full_text = text
 	_is_too_long()
-	$/root/Global.multiple_popups()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print (global_position.y)
 	time_out-= 1
 	modulate.a  = time_out/208.0
 	if modulate.a >1.0:

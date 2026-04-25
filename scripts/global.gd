@@ -79,7 +79,6 @@ func multiple_popups():
 	if $/root/Main/UI/Popups.get_child_count() >1:
 		var num = $/root/Main/UI/Popups.get_child_count()
 		var pos = 210 - 10*num
-		print(pos)
 		for child in $/root/Main/UI/Popups.get_children():
 			child.global_position.y = pos
 			num-=1

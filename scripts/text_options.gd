@@ -2,7 +2,6 @@ extends Node
 var isFocus = null
 var count = 0
 @onready var inventory = $"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/Inventory"
-@onready var grid = $"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/VBoxContainer/Control2/Grid"
 @export var button: PackedScene
 var text = false
 
@@ -43,12 +42,10 @@ func setDialogueOption(text: String, key: int):
 	child.add_theme_font_size_override("font_size", 7)
 	child.visible=true
 	inventory.visible = false
-	grid.visible = false
 
 func clearButtons():
 	if($/root/Global != null):
 		$/root/Global.pause = false
 	inventory.visible = true
-	grid.visible = true
 	for child in get_children():
 		child.queue_free()
