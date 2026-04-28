@@ -45,10 +45,11 @@ size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_35gjq")
 
 [node name="Stuff" type="RichTextLabel" parent="BoxContainer/LeftPage/PanelContainer" unique_id=143126151]
+texture_filter = 2
 layout_mode = 2
 theme_override_colors/default_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
 theme_override_font_sizes/normal_font_size = 11
-text = "Years ago gnomes and cats were mortal enemy’s. Cats would attack our villages and play with us like toys. This is what started the great Cat and gnome war of 999 BGE. After many years of fighting the council of cat elders met with the newly instated gnome queen Freyga and formed a truce. For centuries after gnomes and cats lived in harmony and even became friends."
+text = "Years ago gnomes and cats were mortal enemies. Cats would attack our villages and play with us like toys. This is what started the great Cat and Gnome war of 753 BGE. After many years of fighting the Council of Cat Elders met with the newly instated gnome Queen Freyga and formed a truce. For centuries after, gnomes and cats lived in harmony and even became friends."
 fit_content = true
 
 [node name="RightPage" type="MarginContainer" parent="BoxContainer" unique_id=1881507546]
@@ -65,8 +66,10 @@ size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_g846l")
 
 [node name="Stuff" type="RichTextLabel" parent="BoxContainer/RightPage/PanelContainer" unique_id=333977993]
+texture_filter = 2
 layout_mode = 2
+mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 12
-text = "Within the past 100 years there has been an increase in cat attacks and anti gnome movements amongst the cats. It has been speculated that the council has been overthrown and now there is one cat leader. In response to this the Gnomic government has permitted hostility towards cats. 
+text = "Within the past 100 years, there has been an increase in cat attacks and anti-gnome movements amongst the cats. It has been speculated that the Council has been overthrown and there is now one cat leader. In response to this, the Gnomic government has permitted hostility towards cats. 
 "

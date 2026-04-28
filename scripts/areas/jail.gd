@@ -19,3 +19,7 @@ func sentToJail():
 	player.global_position = $EnterPoints/InJail.global_position
 	inJail=true
 	$Entities/JailNPC.block()
+	var popup_scene = load("res://scenes/popups.tscn").instantiate()
+	$"/root/Main/UI/Popups".add_child(popup_scene)
+	popup_scene.set_text("You murdered them! Straight to Jail!!")
+	$/root/Global.multiple_popups()

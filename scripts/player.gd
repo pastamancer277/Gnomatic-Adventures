@@ -284,7 +284,7 @@ func gainXP(val: int):
 		$"/root/Main/UI/Popups".add_child(popup_scene)
 		popup_scene.set_text("You leveled up! Press ESC")
 		$/root/Global.multiple_popups()
-		$"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/VBoxContainer/Control2/Grid/Button".add_theme_stylebox_override("normal", load("res://assets/themes/red_notification_stylebox.tres"))
+
 func getXP():
 	return xp
 

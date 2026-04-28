@@ -19,7 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://brnjlnygjkq78" path="res://scenes/screens/instruction_screen.tscn" id="13_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://dr2tfqbn85xgn" path="res://scenes/ui_interface.tscn" id="16_0ld40"]
 [ext_resource type="PackedScene" uid="uid://dj5uvev70smpw" path="res://scenes/screens/cut_scene.tscn" id="19_gqmmt"]
-[ext_resource type="PackedScene" path="res://scenes/help_meus_interface.tscn" id="20_gqmmt"]
+[ext_resource type="PackedScene" uid="uid://cvyi1p1nle8rs" path="res://scenes/screens/table_screen.tscn" id="19_yc10j"]
+[ext_resource type="PackedScene" uid="uid://bd04aqfrwamqb" path="res://scenes/help_meus_interface.tscn" id="20_gqmmt"]
 
 [node name="Main" type="Node" unique_id=842974705]
 
@@ -77,6 +78,8 @@ process_mode = 3
 [node name="InstructionScreen" parent="UI/Screens" unique_id=1231221103 instance=ExtResource("13_a8y0u")]
 
 [node name="CutScene" parent="UI/Screens" unique_id=1991471752 instance=ExtResource("19_gqmmt")]
+
+[node name="TableScreen" parent="UI/Screens" unique_id=1392285594 instance=ExtResource("19_yc10j")]
 
 [node name="TitleScreen" parent="UI/Screens" unique_id=1752973298 instance=ExtResource("9_85g3d")]
 offset_right = -178.03601
