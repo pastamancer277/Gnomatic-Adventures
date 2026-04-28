@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_704dc"]
 [ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_8j50p"]
 [ext_resource type="Script" uid="uid://cndmv435v7bir" path="res://scripts/NPCs/firstCatDialogue.gd" id="3_8j50p"]
+[ext_resource type="Texture2D" uid="uid://mloalm7uiips" path="res://assets/sprites/characters/BrownCat_Free_Carysaurus/BrownFront.png" id="3_np50v"]
+[ext_resource type="Script" uid="uid://crvbiwubjxsjj" path="res://scripts/quests/catPieQuest.gd" id="4_fymeh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fymeh"]
 resource_local_to_scene = true
@@ -14,6 +16,10 @@ shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
 material = SubResource("ShaderMaterial_fymeh")
+texture = ExtResource("3_np50v")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]
 script = ExtResource("3_8j50p")
+
+[node name="catPieQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(879326239) index="0" unique_id=756310445]
+script = ExtResource("4_fymeh")
