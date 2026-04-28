@@ -22,6 +22,9 @@ var regen_amount
 var respawn_time
 var xpValue
 
+var cleared = false
+var summoned = false
+
 var pos
 
 var knockback_velocity = Vector2.ZERO
@@ -30,6 +33,12 @@ func _ready() -> void:
 	playerNode.resetGame.connect(reset)
 	
 	pos=global_position
+	
+	if(enemyResource!=null):
+		setup()
+
+func setup():
+	cleared=true
 	
 	attack_speed=enemyResource.attackCooldown
 	regen_speed=enemyResource.regenSpeed
@@ -54,9 +63,12 @@ func _ready() -> void:
 	$DetectionArea/CollisionShape2D.shape=detShape
 	$AnimatedSprite2D.sprite_frames=enemyResource.animations
 	$AnimatedSprite2D.play("idle")
+func setRes(res: enemy_res):
+	enemyResource=res
+	setup()
 
 func _physics_process(delta: float) -> void:
-	if(not dead and !$/root/Global.getPaused()):
+	if(not dead and !$/root/Global.getPaused() and cleared):
 		$CollisionShape2D.disabled=false
 		visible=true
 		update_health()
@@ -93,7 +105,6 @@ func move():
 		velocity = Vector2.ZERO
 		if(!player_chase.is_empty() and health>0):
 			var p=player_chase.get(0)
-			$AnimatedSprite2D.play("walk")
 			if(p.position.x-position.x<0):
 				velocity.x=-speed
 				$AnimatedSprite2D.flip_h=true
@@ -104,6 +115,14 @@ func move():
 				velocity.y=-speed
 			else:
 				velocity.y=speed
+			if(abs(p.position.y-position.y)>abs(p.position.x-position.x)):
+				$AnimatedSprite2D.flip_h=false
+				if(velocity.y>0):
+					$AnimatedSprite2D.play("forward")
+				else:
+					$AnimatedSprite2D.play("backward")
+			else:
+				$AnimatedSprite2D.play("walk")
 		else: if(health>0):
 			velocity.x=0
 			velocity.y=0
@@ -173,12 +192,15 @@ func _on_regen_timer_timeout() -> void:
 			health=mHealth
 
 func onDeath():
-	dropItems()
-	playerNode.gainXP(xpValue)
-	visible=false
-	$CollisionShape2D.disabled=true
-	dead=true
-	$RespawnTimer.start(respawn_time)
+	if(summoned):
+		queue_free()
+	else:
+		dropItems()
+		playerNode.gainXP(xpValue)
+		visible=false
+		$CollisionShape2D.disabled=true
+		dead=true
+		$RespawnTimer.start(respawn_time)
 
 func _on_respawn_timer_timeout():
 	global_position=pos
@@ -191,10 +213,16 @@ func _on_respawn_timer_timeout():
 func isDead():
 	return dead
 
+func setSummon(s):
+	summoned=s
+
 func reset():
 	_on_respawn_timer_timeout()
 
 func loadData():
+	if(summoned):
+		queue_free()
+	
 	global_position=pos
 	health=mHealth
 	dead=false

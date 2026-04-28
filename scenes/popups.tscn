@@ -1,54 +1,31 @@
 [gd_scene format=3 uid="uid://bckwtelincrg5"]
 
 [ext_resource type="Script" uid="uid://01trm3ebisvo" path="res://scripts/popups.gd" id="1_201id"]
-[ext_resource type="Theme" uid="uid://bfpv36kf82lx3" path="res://assets/themes/popup_panel_container.tres" id="1_fk52g"]
-[ext_resource type="Theme" uid="uid://cupigso84clu8" path="res://assets/themes/screen_button.tres" id="3_jha0h"]
+[ext_resource type="Theme" uid="uid://dgi7kajo0do8d" path="res://assets/themes/label.tres" id="3_2ysno"]
 
 [node name="Popups" type="Control" unique_id=1796603931]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+scale = Vector2(0.4, 0.4)
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_201id")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=932344636]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=983765963]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = 2.0
+offset_left = -47.5
+offset_top = -42.5
+offset_right = 45.5
+offset_bottom = -2.5
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 19
-theme_override_constants/margin_top = 19
-theme_override_constants/margin_right = 19
-theme_override_constants/margin_bottom = 19
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=325099010]
-clip_contents = true
-layout_mode = 2
-theme = ExtResource("1_fk52g")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer" unique_id=362605037]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1095534591]
-layout_mode = 2
-size_flags_vertical = 6
-size_flags_stretch_ratio = 3.0
-theme_override_font_sizes/font_size = 10
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1424683760]
+[node name="Label" type="Label" parent="CenterContainer" unique_id=1095534591]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 3
-mouse_filter = 2
-theme = ExtResource("3_jha0h")
-theme_override_font_sizes/font_size = 8
-text = "Thank you!"
-
-[connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+size_flags_vertical = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("3_2ysno")
+theme_type_variation = &"PopupLabel"
+text = "level up!"
+horizontal_alignment = 1
+vertical_alignment = 1

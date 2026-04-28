@@ -1,5 +1,8 @@
 [gd_resource type="Theme" format=3 uid="uid://8yntgav2cnsc"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3i2ev"]
+bg_color = Color(2.782559e-08, 0.04829155, 0.022154346, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eijpg"]
 bg_color = Color(0, 0, 0, 0.5294118)
 corner_radius_top_left = 1
@@ -7,5 +10,11 @@ corner_radius_top_right = 1
 corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wghha"]
+bg_color = Color(0.79624295, 0.796243, 0.7962429, 0.8901961)
+
 [resource]
+Inventory/base_type = &"PanelContainer"
+Inventory/styles/panel = SubResource("StyleBoxFlat_3i2ev")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_eijpg")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_wghha")

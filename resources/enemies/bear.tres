@@ -6,68 +6,65 @@
 [ext_resource type="Resource" uid="uid://cyfo11f0xylab" path="res://resources/items/Meat.tres" id="3_mnfve"]
 [ext_resource type="Resource" uid="uid://hsuuxrxn0f0j" path="res://resources/enemies/item_drop.tres" id="4_1y3vy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nxa61"]
-atlas = ExtResource("1_bt0m7")
-region = Rect2(0, 224, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_mnfve"]
 atlas = ExtResource("1_bt0m7")
-region = Rect2(32, 224, 32, 32)
+region = Rect2(0, 448, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1y3vy"]
 atlas = ExtResource("1_bt0m7")
-region = Rect2(64, 224, 32, 32)
+region = Rect2(64, 448, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gk0v3"]
 atlas = ExtResource("1_bt0m7")
-region = Rect2(96, 224, 32, 32)
+region = Rect2(128, 448, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2nagx"]
 atlas = ExtResource("1_bt0m7")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(192, 448, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rodl5"]
 atlas = ExtResource("1_bt0m7")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xyag6"]
 atlas = ExtResource("1_bt0m7")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s83f6"]
 atlas = ExtResource("1_bt0m7")
-region = Rect2(96, 0, 32, 32)
+region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_waq2h"]
 atlas = ExtResource("1_bt0m7")
-region = Rect2(0, 32, 32, 32)
+region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0pqhn"]
 atlas = ExtResource("1_bt0m7")
-region = Rect2(32, 32, 32, 32)
+region = Rect2(0, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yalkb"]
 atlas = ExtResource("1_bt0m7")
-region = Rect2(64, 32, 32, 32)
+region = Rect2(64, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eipf4"]
 atlas = ExtResource("1_bt0m7")
-region = Rect2(96, 32, 32, 32)
+region = Rect2(128, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_am3v2"]
 atlas = ExtResource("1_bt0m7")
-region = Rect2(128, 32, 32, 32)
+region = Rect2(192, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kjipx"]
 atlas = ExtResource("1_bt0m7")
-region = Rect2(160, 32, 32, 32)
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0bbc"]
+atlas = ExtResource("1_bt0m7")
+region = Rect2(320, 64, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mnfve"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nxa61")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mnfve")
 }, {
@@ -76,15 +73,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gk0v3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nagx")
 }],
 "loop": false,
 "name": &"death",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2nagx")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rodl5")
 }, {
@@ -93,15 +90,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_s83f6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_waq2h")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_waq2h")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0pqhn")
 }, {
@@ -116,6 +113,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kjipx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0bbc")
 }],
 "loop": true,
 "name": &"walk",
@@ -133,11 +133,11 @@ metadata/_custom_type_script = "uid://bivhtsi4pg5j2"
 script = ExtResource("2_bt0m7")
 maxHealth = 180
 speed = 36
-attackValue = 25
+attackValue = 40
 knockback = 95.0
 xpValue = 35
-sightRadius = 70
-attackRadius = 20.0
+sightRadius = 85
+attackRadius = 24.0
 regenSpeed = 1.6
 regenAmount = 20
 attackCooldown = 1.2

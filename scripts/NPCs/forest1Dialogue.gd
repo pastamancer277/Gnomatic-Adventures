@@ -3,32 +3,38 @@ extends dialogue
 var slimeQuest
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
 
+
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
 	slimeQuest=get_node("../Quests/SlimeQuest")
+	person_name = "Fred"
+	tex = PortableCompressedTexture2D.new()
+	var im = load("res://assets/sprites/characters/NPC1.png").get_image()
+	im = im.get_region(Rect2(im.get_width()/3,0, im.get_width()/2, im.get_height()/1.5))
+	tex.create_from_image(im, PortableCompressedTexture2D.COMPRESSION_MODE_LOSSLESS)
 
 func interact():
 	if(run==1):
 		if(player.getSocialCredit()>50):
-			dialogueBox.dialogue("Hello there", self)
-			dialogueBox.setDialogueOption("Hi.", 0)
-			dialogueBox.setDialogueOption("Ugh, people...", 1)
+			dialogueBox.dialogue("Hello there", self, person_name, tex)
+			dialogueBox.setDialogueOption("Hi", 0)
+			dialogueBox.setDialogueOption("Ugh, people", 1)
 		else:
-			dialogueBox.dialogue("I don't know you. Come back when you're more popular.", self)
+			dialogueBox.dialogue("I don't know you. Come back when you're more popular.", self,person_name, tex)
 			dialogueBox.setDialogueOption("...", 2)
 	else: if(run==2):
-		dialogueBox.dialogue("Can you kill those animals and bring me the fur?",self)
+		dialogueBox.dialogue("Can you kill those animals and bring me the fur?",self ,person_name, tex)
 		dialogueBox.setDialogueOption("Sure!", 0)
 		dialogueBox.setDialogueOption("Fine, I suppose.", 1)
 		dialogueBox.setDialogueOption("No, I'm busy.", 2)
 	else: if(run==3):
-		dialogueBox.dialogue("Have you killed the animals?",self)
+		dialogueBox.dialogue("Have you killed the animals?",self,person_name, tex)
 		dialogueBox.setDialogueOption("Yeah, here", 0)
 		dialogueBox.setDialogueOption("No", 1)
 	else: if run ==4:
 		run = 5
 	else: if(run==5):
-		dialogueBox.dialogue("Thank you so much!",self)
+		dialogueBox.dialogue("Thank you so much!",self,person_name, tex)
 		dialogueBox.setDialogueOption("You're welcome.", 0)
 
 func playerResponse(key: int):

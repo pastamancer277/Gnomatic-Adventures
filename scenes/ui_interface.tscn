@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://dr2tfqbn85xgn"]
 
 [ext_resource type="PackedScene" uid="uid://8yqjwryrxrxr" path="res://scenes/inventory.tscn" id="1_eijpg"]
-[ext_resource type="Script" uid="uid://boid5l5046sxd" path="res://scripts/grid_button.gd" id="2_2bqn5"]
-[ext_resource type="PackedScene" uid="uid://c30r5q4dv4tat" path="res://scenes/gri_button.tscn" id="3_ufqre"]
 
 [node name="UI Interface" type="Control" unique_id=1464526898]
 layout_mode = 3
@@ -27,35 +25,9 @@ size_flags_vertical = 3
 [node name="Inventory" parent="VBoxContainer/HBoxContainer" unique_id=1340913624 instance=ExtResource("1_eijpg")]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.37
 metadata/_edit_use_anchors_ = true
-
-[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=1829109143]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 12.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=630164011]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.2
-
-[node name="Control2" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=443454503]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 2.05
-script = ExtResource("2_2bqn5")
-
-[node name="Grid" parent="VBoxContainer/HBoxContainer/VBoxContainer/Control2" unique_id=390392859 instance=ExtResource("3_ufqre")]
-layout_mode = 0
-offset_top = 1.0
-offset_right = 21.0
-offset_bottom = 23.0
-
-[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=121534480]
-layout_mode = 2
-size_flags_vertical = 3
 
 [node name="Control" type="Control" parent="VBoxContainer" unique_id=1719661573]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0

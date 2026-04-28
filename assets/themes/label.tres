@@ -2,3 +2,8 @@
 
 [resource]
 Label/font_sizes/font_size = 6
+PopupLabel/base_type = &"Label"
+PopupLabel/colors/font_color = Color(1, 1, 1, 1)
+PopupLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+PopupLabel/constants/outline_size = 4
+PopupLabel/font_sizes/font_size = 23

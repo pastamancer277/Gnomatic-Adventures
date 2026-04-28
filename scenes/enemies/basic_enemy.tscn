@@ -63,6 +63,7 @@ position = Vector2(0, -4)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=292355404]
 material = SubResource("ShaderMaterial_ibjif")
+position = Vector2(0, -15)
 animation = &""
 autoplay = "idle"
 offset = Vector2(0, -6)

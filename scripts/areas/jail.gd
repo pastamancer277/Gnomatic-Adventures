@@ -18,3 +18,4 @@ func _on_to_city_body_exited(body: Node2D) -> void:
 func sentToJail():
 	player.global_position = $EnterPoints/InJail.global_position
 	inJail=true
+	$Entities/JailNPC.block()

@@ -5,7 +5,7 @@
 
 [resource]
 Button/constants/h_separation = 1
-Button/constants/icon_max_width = 3
-Button/font_sizes/font_size = 4
+Button/constants/icon_max_width = 60
+Button/font_sizes/font_size = 20
 Button/styles/focus = ExtResource("1_ydmtu")
 Button/styles/normal = ExtResource("2_48wse")

@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://dj5uvev70smpw"]
+
+[ext_resource type="Script" uid="uid://dct8cjjbm201d" path="res://scripts/screens/cut_scene.gd" id="1_g846l"]
+[ext_resource type="Texture2D" uid="uid://b1qi7q2t26fe5" path="res://assets/sprites/Book page.png" id="2_h58ad"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35gjq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g846l"]
+bg_color = Color(0.6, 0.6, 0.6, 0.023529412)
+
+[node name="CutScene" type="Control" unique_id=1991471752]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g846l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=318035540]
+position = Vector2(196.89694, 114.74981)
+scale = Vector2(0.18606873, 0.14422238)
+texture = ExtResource("2_h58ad")
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=1677766719]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+offset_bottom = -12.0
+
+[node name="LeftPage" type="MarginContainer" parent="BoxContainer" unique_id=503361860]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="BoxContainer/LeftPage" unique_id=1872046240]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_35gjq")
+
+[node name="Stuff" type="RichTextLabel" parent="BoxContainer/LeftPage/PanelContainer" unique_id=143126151]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_font_sizes/normal_font_size = 11
+text = "Years ago gnomes and cats were mortal enemy’s. Cats would attack our villages and play with us like toys. This is what started the great Cat and gnome war of 999 BGE. After many years of fighting the council of cat elders met with the newly instated gnome queen Freyga and formed a truce. For centuries after gnomes and cats lived in harmony and even became friends."
+fit_content = true
+
+[node name="RightPage" type="MarginContainer" parent="BoxContainer" unique_id=1881507546]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="BoxContainer/RightPage" unique_id=464949721]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_g846l")
+
+[node name="Stuff" type="RichTextLabel" parent="BoxContainer/RightPage/PanelContainer" unique_id=333977993]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 12
+text = "Within the past 100 years there has been an increase in cat attacks and anti gnome movements amongst the cats. It has been speculated that the council has been overthrown and now there is one cat leader. In response to this the Gnomic government has permitted hostility towards cats. 
+"

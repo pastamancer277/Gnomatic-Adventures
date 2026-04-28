@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnkjt38dbakju"
-path="res://.godot/imported/GnomeTital.png-902080474a904cf639c0f7ac33f53158.ctex"
+uid="uid://b1qi7q2t26fe5"
+path="res://.godot/imported/Book page.png-0b0239cdd975548fcef2386241437020.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/themes/GnomeTital.png"
-dest_files=["res://.godot/imported/GnomeTital.png-902080474a904cf639c0f7ac33f53158.ctex"]
+source_file="res://assets/sprites/Book page.png"
+dest_files=["res://.godot/imported/Book page.png-0b0239cdd975548fcef2386241437020.ctex"]
 
 [params]
 

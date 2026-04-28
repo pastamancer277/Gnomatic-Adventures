@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ydrufmc17n5t"]
+
+[ext_resource type="Script" uid="uid://b2h1xut6hx0dl" path="res://scripts/damage_area.gd" id="1_5frsa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fhj2k"]
+radius = 20.0
+
+[node name="DamageArea" type="Node2D" unique_id=1372488660]
+script = ExtResource("1_5frsa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=979350583]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1589808633]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1737906957]
+shape = SubResource("CircleShape2D_fhj2k")
+
+[node name="DamageTimer" type="Timer" parent="." unique_id=2046420997]
+wait_time = 0.2
+autostart = true
+
+[node name="Timer" type="Timer" parent="." unique_id=634717307]
+wait_time = 5.0
+autostart = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="DamageTimer" to="." method="_on_damage_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -5,23 +5,28 @@ extends dialogue
 
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
+	person_name = "Patrick"
+	tex = PortableCompressedTexture2D.new()
+	var im = load("res://assets/sprites/characters/Idle-Guard1.png").get_image()
+	im = im.get_region(Rect2(im.get_width()/4,0, im.get_width()/2, im.get_height()/1.5))
+	tex.create_from_image(im, PortableCompressedTexture2D.COMPRESSION_MODE_LOSSLESS)
 
 func interact():
 	if(run==1):
 		if(player.getSocialCredit()>50):
-			dialogueBox.dialogue("Hello there.", self)
+			dialogueBox.dialogue("Hello there.", self, person_name, tex)
 			dialogueBox.setDialogueOption("Hi, are you the pomegranate farmer?", 0)
 			dialogueBox.setDialogueOption("Ugh, people...", 1)
 		else:
-			dialogueBox.dialogue("Sorry, I have other things to do", self)
+			dialogueBox.dialogue("Sorry, I have other things to do", self, person_name, tex)
 			dialogueBox.setDialogueOption("...", 2)
 	else: if(run==2):
-		dialogueBox.dialogue("Yes, I am. is there anything i can help you with?",self)
+		dialogueBox.dialogue("Yes, I am. is there anything i can help you with?",self, person_name, tex)
 		dialogueBox.setDialogueOption("Yes, I need a pomegranate. Can I have one please?", 0)
 		dialogueBox.setDialogueOption("I need a pomegranate.", 1)
 		dialogueBox.setDialogueOption("Never mind.", 2)
 	else: if(run==3):
-		dialogueBox.dialogue("Oh, of course. I have more than I know what to do with. Here you go.",self)
+		dialogueBox.dialogue("Oh, of course. I have more than I know what to do with. Here you go.",self, person_name, tex)
 		dialogueBox.setDialogueOption("Thank you!", 0)
 		dialogueBox.setDialogueOption("Thanks.", 1)
 	

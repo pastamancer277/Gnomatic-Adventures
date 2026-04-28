@@ -74,6 +74,7 @@ func _on_area_2d_body_exited(body):
 	if(loc==$/root/Global.getCurArea()):
 		if body.name == "Player":
 			player_near = false
+			print("clear")
 			$/root/Main/UI/Dialogue.clearDialogue($Dialogue)
 	saveData()
 
@@ -95,7 +96,7 @@ func saveData():
 
 func loadData():
 	var data = $/root/SaveManager.getData("NPCs", name)
-	if data["dead"] == true:
+	if(data!={} and data["dead"] == true):
 		visible=false
 		$CollisionShape2D.disabled=true
 		$Area2D/CollisionShape2D.disabled=true

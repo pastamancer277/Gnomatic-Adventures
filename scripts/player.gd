@@ -9,8 +9,8 @@ signal jailed
 const SPEED = 100
 var currnet_dir ="down"
 var secDir = "none"
-var mHealth=100
-var health=100
+var mHealth=10000
+var health=10000
 var attack_value=20
 var knockback = 120
 var shield=0
@@ -66,56 +66,60 @@ func player_movement(delta):
 		knockback_velocity = lerp(knockback_velocity, Vector2.ZERO, 0.1)
 	else:
 		velocity = Vector2.ZERO
-	
+		
+		var speed=SPEED
+		if(Input.is_action_pressed("Run")):
+			speed*=1.3
+		
 		if(Input.is_action_pressed("MoveRight")&&not Input.is_action_pressed("MoveLeft")):
 			if(Input.is_action_pressed("MoveUp")&& not Input.is_action_pressed("MoveDown")):
 				currnet_dir="right"
 				secDir="up"
 				play_anim(1)
-				velocity.x=SPEED*sin(deg_to_rad(45))
-				velocity.y=-SPEED*sin(deg_to_rad(45))
+				velocity.x=speed*sin(deg_to_rad(45))
+				velocity.y=-speed*sin(deg_to_rad(45))
 			elif(Input.is_action_pressed("MoveDown")&& not Input.is_action_pressed("MoveUp")):
 				currnet_dir="right"
 				secDir="down"
 				play_anim(1)
-				velocity.x=SPEED*sin(deg_to_rad(45))
-				velocity.y=SPEED*sin(deg_to_rad(45))
+				velocity.x=speed*sin(deg_to_rad(45))
+				velocity.y=speed*sin(deg_to_rad(45))
 			else:
 				currnet_dir="right"
 				secDir="none"
 				play_anim(1)
-				velocity.x=SPEED
+				velocity.x=speed
 				velocity.y=0
 		elif(Input.is_action_pressed("MoveLeft")&&not Input.is_action_pressed("MoveRight")):
 			if(Input.is_action_pressed("MoveUp")&& not Input.is_action_pressed("MoveDown")):
 				currnet_dir="left"
 				secDir="up"
 				play_anim(1)
-				velocity.x=-SPEED*sin(deg_to_rad(45))
-				velocity.y=-SPEED*sin(deg_to_rad(45))
+				velocity.x=-speed*sin(deg_to_rad(45))
+				velocity.y=-speed*sin(deg_to_rad(45))
 			elif(Input.is_action_pressed("MoveDown")&& not Input.is_action_pressed("MoveUp")):
 				currnet_dir="left"
 				secDir="down"
 				play_anim(1)
-				velocity.x=-SPEED*sin(deg_to_rad(45))
-				velocity.y=SPEED*sin(deg_to_rad(45))
+				velocity.x=-speed*sin(deg_to_rad(45))
+				velocity.y=speed*sin(deg_to_rad(45))
 			else:
 				currnet_dir="left"
 				secDir="none"
 				play_anim(1)
-				velocity.x=-SPEED
+				velocity.x=-speed
 				velocity.y=0
 		elif(Input.is_action_pressed("MoveDown")&& not Input.is_action_pressed("MoveUp")):
 			currnet_dir="down"
 			secDir="none"
 			play_anim(1)
-			velocity.y=SPEED
+			velocity.y=speed
 			velocity.x=0
 		elif(Input.is_action_pressed("MoveUp")&& not Input.is_action_pressed("MoveDown")):
 			currnet_dir="up"
 			secDir="none"
 			play_anim(1)
-			velocity.y=-SPEED
+			velocity.y=-speed
 			velocity.x=0
 		else:
 			play_anim(0)
@@ -278,7 +282,7 @@ func gainXP(val: int):
 		levelPoints+=1
 		var popup_scene = load("res://scenes/popups.tscn").instantiate()
 		$"/root/Main/UI/Popups".add_child(popup_scene)
-		popup_scene.set_text("You leveled up! View stats in the Help Menu.")
+		popup_scene.set_text("You leveled up! Press ESC")
 		$/root/Global.multiple_popups()
 		$"/root/Main/UI/UI Interface/VBoxContainer/HBoxContainer/VBoxContainer/Control2/Grid/Button".add_theme_stylebox_override("normal", load("res://assets/themes/red_notification_stylebox.tres"))
 func getXP():

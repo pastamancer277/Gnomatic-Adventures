@@ -31,7 +31,6 @@ func _physics_process(delta: float) -> void:
 
 func playerEntered(body: Node2D):
 	if(body.name=="Player" and !combat):
-		runDialogue()
 		player=body
 
 func playerExited(body: Node2D):

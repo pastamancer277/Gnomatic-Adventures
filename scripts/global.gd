@@ -77,10 +77,9 @@ func loadData():
 
 func multiple_popups():
 	if $/root/Main/UI/Popups.get_child_count() >1:
-		var text = ""
+		var num = $/root/Main/UI/Popups.get_child_count()
+		var pos = 210 - 10*num
 		for child in $/root/Main/UI/Popups.get_children():
-			text += child.get_child(0).get_child(0).get_child(0).get_child(0).text + "\n"
-			child.queue_free()
-		var popup_scene = load("res://scenes/popups.tscn").instantiate()
-		$"/root/Main/UI/Popups".add_child(popup_scene)
-		popup_scene.set_text(text)
+			child.global_position.y = pos
+			num-=1
+			pos = 210 - 10*num

@@ -4,6 +4,8 @@ class_name dialogue
 
 var run=1
 var dialogueBox
+var tex = null
+var person_name: String = ""
 
 func _ready():
 	dialogueBox=$/root/Main/UI/Dialogue
