@@ -5,12 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://vt2aqaqauasb" path="res://assets/sprites/tilesets/grass.png" id="3_dgf10"]
 [ext_resource type="Texture2D" uid="uid://csrusfcx7xp8g" path="res://assets/sprites/objects/objects.png" id="4_eyc41"]
 [ext_resource type="Texture2D" uid="uid://cmgrrfm3q2fbv" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/Bright Grass.png" id="5_i0g3n"]
-[ext_resource type="PackedScene" uid="uid://b02bhbqdbog8w" path="res://scenes/chests/basic_chest_1.tscn" id="5_pqpu3"]
 [ext_resource type="Texture2D" uid="uid://dymyxr8hnhwa8" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Tileset Grass.png" id="6_4p4yo"]
 [ext_resource type="Texture2D" uid="uid://bqg8ow8e4uyn0" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Plant Resized.png" id="7_jnse1"]
 [ext_resource type="PackedScene" uid="uid://cuqox7w1ayuab" path="res://scenes/NPCs/ForestNPC3.tscn" id="7_mt2jm"]
 [ext_resource type="Texture2D" uid="uid://ckqqqnsfl6h62" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="8_4p4yo"]
 [ext_resource type="PackedScene" uid="uid://kby6wao6ru81" path="res://scenes/save_point.tscn" id="8_svmhd"]
+[ext_resource type="PackedScene" uid="uid://bfnabbipkrrh" path="res://scenes/chests/basic_chest.tscn" id="11_jnse1"]
+[ext_resource type="Resource" uid="uid://c8bxpkr5ijvnt" path="res://resources/chests/chest1.tres" id="12_rhuqt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3gtsj"]
 texture = ExtResource("3_dgf10")
@@ -962,14 +963,15 @@ use_parent_material = true
 tile_map_data = PackedByteArray("AAAVAAcABQABAAEAAAAVAAgABQABAAIAAAAVAAkABQABAAMAAAAVAA0ABQABAAEAAAAVAA4ABQABAAIAAAAWAAUABQACAAIAAAAWAAYABQACAAIAAAAWAAcABQACAAIAAAAWAAgABQACAAIAAAAWAAkABQACAAIAAAAWAA0ABQACAAIAAAAWAA4ABQACAAIAAAAWAA8ABQACAAIAAAAWABAABQACAAIAAAAXAAUABQACAAIAAAAXAAYABQACAAIAAAAXAAcABQACAAIAAAAXAAgABQACAAIAAAAXAAkABQACAAIAAAAXAAoABQACAAIAAAAXAAsABQACAAIAAAAXAAwABQACAAIAAAAXAA0ABQACAAIAAAAXAA4ABQACAAIAAAAXAA8ABQACAAIAAAAXABAABQACAAIAAAAYAAUABQACAAIAAAAYAAYABQACAAIAAAAYAAcABQACAAIAAAAYAAgABQACAAIAAAAYAAkABQACAAIAAAAYAAoABQACAAIAAAAYAAsABQACAAIAAAAYAAwABQACAAIAAAAYAA0ABQACAAIAAAAYAA4ABQACAAIAAAAYAA8ABQACAAIAAAAYABAABQACAAIAAAAZAAUABQACAAIAAAAZAAYABQACAAIAAAAZAAcABQACAAIAAAAZAAgABQACAAIAAAAZAAkABQACAAIAAAAZAAoABQACAAIAAAAZAAsABQACAAIAAAAZAAwABQACAAIAAAAZAA0ABQACAAIAAAAZAA4ABQACAAIAAAAZAA8ABQACAAIAAAAZABAABQACAAIAAAAaAAUABQACAAIAAAAaAAYABQACAAIAAAAaAAcABQACAAIAAAAaAAgABQACAAIAAAAaAAkABQACAAIAAAAaAAoABQACAAIAAAAaAAsABQACAAIAAAAaAAwABQACAAIAAAAaAA0ABQACAAIAAAAaAA4ABQACAAIAAAAaAA8ABQACAAIAAAAaABAABQACAAIAAAAbAAUABQACAAIAAAAbAAYABQACAAIAAAAbAAcABQACAAIAAAAbAAgABQACAAIAAAAbAAkABQACAAIAAAAbAAoABQACAAIAAAAbAAsABQACAAIAAAAbAAwABQACAAIAAAAbAA0ABQACAAIAAAAbAA4ABQACAAIAAAAbAA8ABQACAAIAAAAbABAABQACAAIAAAAcAAUABQACAAIAAAAcAAYABQACAAIAAAAcAAcABQACAAIAAAAcAAgABQACAAIAAAAcAAkABQACAAIAAAAcAAoABQACAAIAAAAcAAsABQACAAIAAAAcAAwABQACAAIAAAAcAA0ABQACAAIAAAAcAA4ABQACAAIAAAAcAA8ABQACAAIAAAAcABAABQACAAIAAAAdAAUABQACAAIAAAAdAAYABQACAAIAAAAdAAcABQACAAIAAAAdAAgABQACAAIAAAAdAAkABQACAAIAAAAdAAoABQACAAIAAAAdAAsABQACAAIAAAAdAAwABQACAAIAAAAdAA0ABQACAAIAAAAdAA4ABQACAAIAAAAdAA8ABQACAAIAAAAdABAABQACAAIAAAAeAAUABQACAAIAAAAeAAYABQACAAIAAAAeAAcABQACAAIAAAAeAAgABQACAAIAAAAeAAkABQACAAIAAAAeAAoABQACAAIAAAAeAAsABQACAAIAAAAeAAwABQACAAIAAAAeAA0ABQACAAIAAAAeAA4ABQACAAIAAAAeAA8ABQACAAIAAAAeABAABQACAAIAAAAfAAUABQACAAIAAAAfAAYABQACAAIAAAAfAAcABQACAAIAAAAfAAgABQACAAIAAAAfAAkABQACAAIAAAAfAAoABQACAAIAAAAfAAsABQACAAIAAAAfAAwABQACAAIAAAAfAA0ABQACAAIAAAAfAA4ABQACAAIAAAAfAA8ABQACAAIAAAAfABAABQACAAIAAAAVAA8ABQABAAMAAAAVAAYABQACAAIAAAAWAAwABQACAAEAAAAWAAoABQADAAEAADAWAAsABQADAAEAABAVAAwABQACAAAAAGAVAAsABQABAAAAAAA=")
 tile_set = SubResource("TileSet_lk7sa")
 
-[node name="Chest" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="0" unique_id=937120461 instance=ExtResource("5_pqpu3")]
-position = Vector2(116.96008, 191.81398)
-
-[node name="ForestNPC3" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=1834193905 instance=ExtResource("7_mt2jm")]
+[node name="ForestNPC3" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="0" unique_id=1834193905 instance=ExtResource("7_mt2jm")]
 position = Vector2(199, 100)
 
-[node name="SavePoint" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=862322370 instance=ExtResource("8_svmhd")]
+[node name="SavePoint" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=862322370 instance=ExtResource("8_svmhd")]
 position = Vector2(298, 86)
+
+[node name="Chest" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=1071843645 instance=ExtResource("11_jnse1")]
+position = Vector2(106, 198)
+resource = ExtResource("12_rhuqt")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=2065946082]
 polygon = PackedVector2Array(206, 62, 213, 69, 314, 68, 312, 86, 325, 98, 326, 121, 341, 135, 412, 126, 416, 230, 340, 235, 340, 242, 327, 246, 324, 260, 286, 262, 282, 247, 245, 247, 245, 260, 111, 260, 98, 251, 46, 249, 37, 237, 31, 215, 47, 189, 63, 187, 71, 168, 131, 168, 134, 138, 166, 130, 165, 61, 185.47833, 60.024837, 192, 53, 200, 60, 217, -1, 21, 18, 26, 364, 473, 371, 453, 54, 211, 22)
