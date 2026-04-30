@@ -14,10 +14,9 @@ func _ready() -> void:
 
 func interact():
 	if(run==1):
-		if(player.getSocialCredit()>50):
-			dialogueBox.dialogue("Hello my grandchild.", self,person_name, tex)
-			dialogueBox.setDialogueOption("Hi Grandma!", 0)
-			dialogueBox.setDialogueOption("Guess what I did today, Grandma!", 1)
+		dialogueBox.dialogue("Hello my grandchild.", self,person_name, tex)
+		dialogueBox.setDialogueOption("Hi Grandma!", 0)
+		dialogueBox.setDialogueOption("Guess what I did today, Grandma!", 1)
 	else: if(run==2):
 		dialogueBox.dialogue("What did you do today, little one?",self,person_name, tex)
 		dialogueBox.setDialogueOption("I befriended a cat!", 0)
@@ -33,21 +32,63 @@ func interact():
 	else: if(run==6):
 		dialogueBox.dialogue("Yes, but I will tell you the story some other time. For now, I forbid you from visiting this 'friendly' cat. If the townsgnomes found out, you would surely be banned from the village.",self,person_name, tex)
 		dialogueBox.setDialogueOption("Okay, Grandma.", 0)
+	else: if(run==7):
+		dialogueBox.dialogue("Now now, there's a pomegranate pie in the oven for you.",self,person_name, tex)
+		dialogueBox.setDialogueOption("Ohhh boy, thank you!!", 0)
+		
+	else: if(run==8):
+		dialogueBox.dialogue("Did you give the pie to the CAT?!",self,person_name, tex)
+		dialogueBox.setDialogueOption("How'd you know! And so what, it's my friend!", 0)
+	else: if(run==9):
+		dialogueBox.dialogue("One of the watch-gnomes from the village saw you talking to the cat and giving it the pie. The village security has deemed you a cat-sympathiser, they're on their way to kick you out of the village. I'm sorry.",self,person_name, tex)
+		dialogueBox.setDialogueOption("I'll make this right. I show gnomekind that cats don't have to be bad.", 0)
+		
 	
 func playerResponse(key: int):
 	if(run == 1):
+		interact()
 		if(key==0 or key==1):
 			run+=1
 			interact()
 	else: if(run==2):
 		if(key==0):
 			run+=1
+			interact()
 	else: if(run==3):
 		if(key==0):
-				run+=1
-				interact()
-		if(key==1):
-			pass
+			run+=1
+			interact()
+	else: if(run==4):
+		if(key==0):
+			run+=1
+			interact()
 	else: if(run==5):
+		if(key==0):
+			run+=1
+			interact()
+	else: if(run==6):
+		if(key==0):
+			run+=1
+			interact()
+	else: if(run==7):
+		if(key==0):
+			player.addKeyword("catHasPie")
+			pass
+	#other dialogue string starts here.
+	else: if(run==8):
+		if(player.hasKeyword("catHasPie")):
+			run+=1
+			interact()
+		else:
+			pass
+	else: if(run==7):
+		if(key==0):
+			run+=1
+			interact()
+	else: if(run==8):
+		if(key==0):
+			run+=1
+			interact()
+	else: if(run==9):
 		if(key==0):
 			pass

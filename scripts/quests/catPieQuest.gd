@@ -7,6 +7,6 @@ func _ready():
 	pass
 
 func tryComplete():
-	if($/root/Main/Systems/Inventory.tryRemove({Pie_item: 3})):
+	if($/root/Main/Systems/Inventory.tryRemove({Pie_item: 1})):
 		complete=true
-		player.changeCredit(1)
+		player.addKeyword("catHasPie")
