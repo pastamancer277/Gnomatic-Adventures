@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cci2hhens7k0q" path="res://scenes/areas/startingforest.tscn" id="11_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://0f3tc54xlsk" path="res://scenes/areas/startvillage.tscn" id="11_muem4"]
 [ext_resource type="PackedScene" uid="uid://brnjlnygjkq78" path="res://scenes/screens/instruction_screen.tscn" id="13_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://rw8qinn1ehfw" path="res://scenes/areas/grandmahouse.tscn" id="13_jscy8"]
 [ext_resource type="PackedScene" uid="uid://dr2tfqbn85xgn" path="res://scenes/ui_interface.tscn" id="16_0ld40"]
 [ext_resource type="PackedScene" uid="uid://dj5uvev70smpw" path="res://scenes/screens/cut_scene.tscn" id="19_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://cvyi1p1nle8rs" path="res://scenes/screens/table_screen.tscn" id="19_yc10j"]
@@ -55,6 +56,8 @@ y_sort_enabled = true
 [node name="StartingForest" parent="Sort/Areas" unique_id=594030835 instance=ExtResource("11_dp3eg")]
 
 [node name="StartingVillage" parent="Sort/Areas" unique_id=762648635 instance=ExtResource("11_muem4")]
+
+[node name="GrandmaHouse" parent="Sort/Areas" unique_id=1872806750 instance=ExtResource("13_jscy8")]
 
 [node name="PlayerEntities" type="Node2D" parent="Sort" unique_id=488688547]
 y_sort_enabled = true

@@ -1,10 +1,15 @@
 [gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://bol020bxwbhj3"]
 
 [ext_resource type="Texture2D" uid="uid://bj42tipr1454s" path="res://assets/sprites/characters/enemys/MiniBoar.png" id="1_30sn1"]
+[ext_resource type="Texture2D" uid="uid://co3ap4hs3q7kf" path="res://assets/sprites/characters/enemys/BoarFrontBack.png" id="1_c27qa"]
 [ext_resource type="Script" uid="uid://bivhtsi4pg5j2" path="res://scripts/enemies/item_drop.gd" id="2_lrvy4"]
 [ext_resource type="Resource" uid="uid://cyfo11f0xylab" path="res://resources/items/Meat.tres" id="3_c27qa"]
 [ext_resource type="Resource" uid="uid://hsuuxrxn0f0j" path="res://resources/enemies/item_drop.tres" id="4_lrvy4"]
 [ext_resource type="Script" uid="uid://b28ajlgdgglkr" path="res://scripts/enemies/enemy_resource.gd" id="4_uqxul"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8mco"]
+atlas = ExtResource("1_c27qa")
+region = Rect2(0, 76, 45, 76)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lrvy4"]
 atlas = ExtResource("1_30sn1")
@@ -21,6 +26,10 @@ region = Rect2(128, 320, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ovn7w"]
 atlas = ExtResource("1_30sn1")
 region = Rect2(192, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jaldj"]
+atlas = ExtResource("1_c27qa")
+region = Rect2(0, 0, 45, 76)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6cir4"]
 atlas = ExtResource("1_30sn1")
@@ -58,6 +67,14 @@ region = Rect2(192, 64, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_m8mco")
+}],
+"loop": true,
+"name": &"backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_lrvy4")
 }, {
 "duration": 1.0,
@@ -71,6 +88,14 @@ animations = [{
 }],
 "loop": false,
 "name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jaldj")
+}],
+"loop": true,
+"name": &"forward",
 "speed": 5.0
 }, {
 "frames": [{

@@ -1,10 +1,15 @@
 [gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://c4yq0yy4cxpdg"]
 
 [ext_resource type="Texture2D" uid="uid://bnw5s6eald4hi" path="res://assets/sprites/characters/enemys/MiniDeer2.png" id="1_8gdn3"]
+[ext_resource type="Texture2D" uid="uid://b6suep0dcr01g" path="res://assets/sprites/characters/enemys/Deer2FontBack.png" id="1_821yg"]
 [ext_resource type="Script" uid="uid://bivhtsi4pg5j2" path="res://scripts/enemies/item_drop.gd" id="2_8gdn3"]
 [ext_resource type="Resource" uid="uid://cyfo11f0xylab" path="res://resources/items/Meat.tres" id="3_821yg"]
 [ext_resource type="Script" uid="uid://b28ajlgdgglkr" path="res://scripts/enemies/enemy_resource.gd" id="4_fqocu"]
 [ext_resource type="Resource" uid="uid://hsuuxrxn0f0j" path="res://resources/enemies/item_drop.tres" id="4_mmjpn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fegt"]
+atlas = ExtResource("1_821yg")
+region = Rect2(0, 40, 33, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8gdn3"]
 atlas = ExtResource("1_8gdn3")
@@ -21,6 +26,22 @@ region = Rect2(128, 384, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_mmjpn"]
 atlas = ExtResource("1_8gdn3")
 region = Rect2(192, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tfoc"]
+atlas = ExtResource("1_821yg")
+region = Rect2(0, 0, 33, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nh1lk"]
+atlas = ExtResource("1_821yg")
+region = Rect2(33, 0, 33, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vedtf"]
+atlas = ExtResource("1_821yg")
+region = Rect2(66, 0, 33, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b17j6"]
+atlas = ExtResource("1_821yg")
+region = Rect2(99, 0, 33, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mb1nb"]
 atlas = ExtResource("1_8gdn3")
@@ -70,6 +91,14 @@ region = Rect2(128, 128, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_7fegt")
+}],
+"loop": true,
+"name": &"backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8gdn3")
 }, {
 "duration": 1.0,
@@ -83,6 +112,23 @@ animations = [{
 }],
 "loop": false,
 "name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tfoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nh1lk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vedtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b17j6")
+}],
+"loop": true,
+"name": &"forward",
 "speed": 5.0
 }, {
 "frames": [{
