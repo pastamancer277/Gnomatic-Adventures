@@ -23,3 +23,14 @@ func _on_to_start_forest_body_entered(body: Node2D) -> void:
 func _on_to_start_forest_body_exited(body: Node2D) -> void:
 	if(body.name=="Player"&&Global.cur_area=="StartingVillage"):
 		Global.scene_transit=false
+
+
+func _on_to_grandma_house_body_entered(body: Node2D) -> void:
+	if(body.name=="Player"&&Global.cur_area=="StartingVillage"):
+		Global.scene_transit=true
+		locationChange="GrandmaHouse"
+
+
+func _on_to_grandma_house_body_exited(body: Node2D) -> void:
+	if(body.name=="Player"&&Global.cur_area=="StartingVillage"):
+		Global.scene_transit=false

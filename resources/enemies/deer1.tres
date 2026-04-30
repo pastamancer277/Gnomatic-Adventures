@@ -7,6 +7,10 @@
 [ext_resource type="Resource" uid="uid://hsuuxrxn0f0j" path="res://resources/enemies/item_drop.tres" id="4_m740h"]
 [ext_resource type="Script" uid="uid://b28ajlgdgglkr" path="res://scripts/enemies/enemy_resource.gd" id="5_sabp5"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8oph"]
+atlas = ExtResource("2_8bb4u")
+region = Rect2(0, 94, 67, 94)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ij0k"]
 atlas = ExtResource("1_2ij0k")
 region = Rect2(0, 320, 64, 64)
@@ -25,19 +29,19 @@ region = Rect2(192, 320, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rue8s"]
 atlas = ExtResource("2_8bb4u")
-region = Rect2(0, 0, 33, 40)
+region = Rect2(0, 0, 67, 94)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pvv3v"]
 atlas = ExtResource("2_8bb4u")
-region = Rect2(33, 0, 33, 40)
+region = Rect2(67, 0, 67, 94)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4tp3p"]
 atlas = ExtResource("2_8bb4u")
-region = Rect2(66, 0, 33, 40)
+region = Rect2(134, 0, 67, 94)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6aiku"]
 atlas = ExtResource("2_8bb4u")
-region = Rect2(99, 0, 33, 40)
+region = Rect2(201, 0, 67, 94)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sabp5"]
 atlas = ExtResource("1_2ij0k")
@@ -85,7 +89,10 @@ region = Rect2(128, 128, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_slapw"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8oph")
+}],
 "loop": true,
 "name": &"backward",
 "speed": 5.0

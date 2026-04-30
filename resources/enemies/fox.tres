@@ -1,10 +1,15 @@
 [gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://bmswyvpe1fvqo"]
 
+[ext_resource type="Texture2D" uid="uid://djfomid78g3wq" path="res://assets/sprites/characters/enemys/FoxFrontBack.png" id="1_1pdml"]
 [ext_resource type="Texture2D" uid="uid://bwibvo37tdvrn" path="res://assets/sprites/characters/enemys/MiniFox.png" id="1_ukxgu"]
 [ext_resource type="Script" uid="uid://bivhtsi4pg5j2" path="res://scripts/enemies/item_drop.gd" id="2_ukxgu"]
 [ext_resource type="Resource" uid="uid://cyfo11f0xylab" path="res://resources/items/Meat.tres" id="3_1pdml"]
 [ext_resource type="Resource" uid="uid://hsuuxrxn0f0j" path="res://resources/enemies/item_drop.tres" id="4_1pdml"]
 [ext_resource type="Script" uid="uid://b28ajlgdgglkr" path="res://scripts/enemies/enemy_resource.gd" id="4_5oc0o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkeed"]
+atlas = ExtResource("1_1pdml")
+region = Rect2(57, 0, 57, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ukxgu"]
 atlas = ExtResource("1_ukxgu")
@@ -21,6 +26,10 @@ region = Rect2(96, 240, 48, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_lhjkn"]
 atlas = ExtResource("1_ukxgu")
 region = Rect2(144, 240, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghena"]
+atlas = ExtResource("1_1pdml")
+region = Rect2(0, 0, 57, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uyd3k"]
 atlas = ExtResource("1_ukxgu")
@@ -70,6 +79,14 @@ region = Rect2(96, 96, 48, 48)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_wkeed")
+}],
+"loop": true,
+"name": &"backwards",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ukxgu")
 }, {
 "duration": 1.0,
@@ -83,6 +100,14 @@ animations = [{
 }],
 "loop": false,
 "name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghena")
+}],
+"loop": true,
+"name": &"forward",
 "speed": 5.0
 }, {
 "frames": [{
