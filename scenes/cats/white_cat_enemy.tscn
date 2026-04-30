@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dkpbbbi82n5e5"]
 
 [ext_resource type="PackedScene" uid="uid://6mmv4jq4gjd3" path="res://scenes/cats/basic_cat_enemy.tscn" id="1_u0fx8"]
-[ext_resource type="Script" uid="uid://6hl2vt4d8n5l" path="res://scripts/cats/white_cat_enemy.gd" id="2_6tfpp"]
+[ext_resource type="Script" path="res://scripts/cats/white_cat_enemy.gd" id="2_6tfpp"]
 [ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_20kbc"]
 [ext_resource type="Texture2D" uid="uid://ckkds4noqpo7q" path="res://assets/sprites/characters/WhiteCat_Free_Carysaurus/WhiteCat_Free_Carysaurus/White-Idle.png" id="2_u0fx8"]
 [ext_resource type="PackedScene" uid="uid://bmw1xq14alg87" path="res://scenes/enemies/basic_enemy.tscn" id="3_6tfpp"]
@@ -12,9 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://ydrufmc17n5t" path="res://scenes/damage_area.tscn" id="5_fl1dj"]
 [ext_resource type="Texture2D" uid="uid://ru7hhpv65keu" path="res://assets/icons/sprite/Fur.png" id="6_7unr0"]
 [ext_resource type="Resource" uid="uid://bwvnlnm3ptxex" path="res://resources/enemies/bear.tres" id="6_lhq3o"]
-[ext_resource type="Script" uid="uid://bmwfo2faw14nm" path="res://scripts/cats/white_cat_dialogue.gd" id="11_lhq3o"]
+[ext_resource type="Script" path="res://scripts/cats/white_cat_dialogue.gd" id="11_lhq3o"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_sxh6p"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fl1dj"]
 resource_local_to_scene = true
 shader = ExtResource("2_20kbc")
 shader_parameter/active = false
@@ -178,7 +178,7 @@ deer = ExtResource("5_f6uwg")
 bear = ExtResource("6_lhq3o")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=653963757]
-material = SubResource("ShaderMaterial_sxh6p")
+material = SubResource("ShaderMaterial_fl1dj")
 sprite_frames = SubResource("SpriteFrames_cjogs")
 animation = &"idle"
 

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://mloalm7uiips" path="res://assets/sprites/characters/BrownCat_Free_Carysaurus/BrownFront.png" id="3_np50v"]
 [ext_resource type="Script" uid="uid://crvbiwubjxsjj" path="res://scripts/quests/catPieQuest.gd" id="4_fymeh"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fymeh"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_np50v"]
 resource_local_to_scene = true
 shader = ExtResource("2_8j50p")
 shader_parameter/active = false
@@ -15,7 +15,7 @@ shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 [node name="firstCat" unique_id=1834193905 instance=ExtResource("1_704dc")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
-material = SubResource("ShaderMaterial_fymeh")
+material = SubResource("ShaderMaterial_np50v")
 texture = ExtResource("3_np50v")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]
