@@ -32,9 +32,7 @@ theme = ExtResource("3_6nv6t")
 theme_override_font_sizes/font_size = 20
 text = "WASD to move
 E to interact with NPCs
-Spacebar to attack
-Arrow keys for focusing on stuff
-Enter to click a button"
+Spacebar to attack/select"
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=746386268]
 layout_mode = 2
@@ -42,6 +40,6 @@ mouse_filter = 2
 theme = ExtResource("4_e7nqa")
 theme_type_variation = &"ScreenButton"
 button_mask = 0
-text = "Enter Game"
+text = "Space to Start"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
