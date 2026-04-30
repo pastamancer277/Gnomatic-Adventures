@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="enemy_res" format=3 uid="uid://dk5t67ad15uvi"]
 
 [ext_resource type="Texture2D" uid="uid://ckdmec3j40fjy" path="res://assets/sprites/characters/enemys/MiniDeer1.png" id="1_2ij0k"]
+[ext_resource type="Texture2D" uid="uid://bluqylt0iquqj" path="res://assets/sprites/characters/enemys/Deer1FontBack.png" id="2_8bb4u"]
 [ext_resource type="Script" uid="uid://bivhtsi4pg5j2" path="res://scripts/enemies/item_drop.gd" id="2_pkjug"]
 [ext_resource type="Resource" uid="uid://cyfo11f0xylab" path="res://resources/items/Meat.tres" id="3_8bb4u"]
 [ext_resource type="Resource" uid="uid://hsuuxrxn0f0j" path="res://resources/enemies/item_drop.tres" id="4_m740h"]
@@ -21,6 +22,22 @@ region = Rect2(128, 320, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_m740h"]
 atlas = ExtResource("1_2ij0k")
 region = Rect2(192, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rue8s"]
+atlas = ExtResource("2_8bb4u")
+region = Rect2(0, 0, 33, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvv3v"]
+atlas = ExtResource("2_8bb4u")
+region = Rect2(33, 0, 33, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tp3p"]
+atlas = ExtResource("2_8bb4u")
+region = Rect2(66, 0, 33, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6aiku"]
+atlas = ExtResource("2_8bb4u")
+region = Rect2(99, 0, 33, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sabp5"]
 atlas = ExtResource("1_2ij0k")
@@ -68,6 +85,11 @@ region = Rect2(128, 128, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_slapw"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"backward",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2ij0k")
@@ -83,6 +105,23 @@ animations = [{
 }],
 "loop": false,
 "name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rue8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvv3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tp3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6aiku")
+}],
+"loop": true,
+"name": &"forward",
 "speed": 5.0
 }, {
 "frames": [{

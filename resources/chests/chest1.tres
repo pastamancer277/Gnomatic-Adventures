@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="chests" format=3 uid="uid://c8bxpkr5ijvnt"]
+
+[ext_resource type="Script" uid="uid://cc4te3g41ua7s" path="res://scripts/itemResource.gd" id="1_i2xid"]
+[ext_resource type="Resource" uid="uid://d12shla1cbpty" path="res://resources/items/Fish.tres" id="2_1c4qk"]
+[ext_resource type="Script" uid="uid://dl4rqk1bmfjtc" path="res://resources/chests/chest_resource.gd" id="2_7do8u"]
+[ext_resource type="Resource" uid="uid://bjdppvvxc6yqt" path="res://resources/items/BasicKey.tres" id="3_kknag"]
+
+[resource]
+script = ExtResource("2_7do8u")
+name = "Chest1"
+require = Array[ExtResource("1_i2xid")]([ExtResource("3_kknag")])
+items = Array[ExtResource("1_i2xid")]([ExtResource("2_1c4qk"), ExtResource("2_1c4qk"), ExtResource("2_1c4qk")])
+metadata/_custom_type_script = "uid://dl4rqk1bmfjtc"

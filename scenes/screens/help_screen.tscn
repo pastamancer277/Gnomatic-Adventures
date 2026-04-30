@@ -29,6 +29,5 @@ theme = ExtResource("3_tqtlj")
 theme_override_font_sizes/font_size = 15
 text = "WASD to move
 E to interact with NPCs
-Spacebar to attack
-Arrow keys for focusing on stuff
-Enter to click a button"
+Spacebar to attack/select
+"

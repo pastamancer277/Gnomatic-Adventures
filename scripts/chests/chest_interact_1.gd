@@ -10,5 +10,5 @@ func interact(player):
 		get_parent().setOpen(true)
 		var popup_scene = load("res://scenes/popups.tscn").instantiate()
 		$"/root/Main/UI/Popups".add_child(popup_scene)
-		popup_scene.set_text("You gained fish! ")
+		popup_scene.set_text("You gained fish!")
 		$/root/Global.multiple_popups()

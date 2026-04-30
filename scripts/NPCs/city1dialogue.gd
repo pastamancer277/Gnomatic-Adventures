@@ -27,9 +27,7 @@ func interact():
 		dialogueBox.dialogue("Did you bring the wood?",self, person_name, tex)
 		dialogueBox.setDialogueOption("Yeah, here", 0)
 		dialogueBox.setDialogueOption("No", 1)
-	else: if run == 4:
-		run = 5
-	else: if run ==5:
+	else: if run ==4:
 		dialogueBox.dialogue("Thanks",self)
 		dialogueBox.setDialogueOption("You're welcome", 0, person_name, tex)
 
@@ -53,6 +51,7 @@ func playerResponse(key: int):
 			if(meatQuest.isComplete()):
 				run+=1
 				interact()
+				$/root/Main/Systems/Inventory.add_item({gold:3})
 		if(key==1):
 			pass
 	else: if(run==4):

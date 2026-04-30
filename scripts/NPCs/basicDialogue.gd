@@ -2,6 +2,8 @@ extends Node
 
 class_name dialogue
 
+@onready var gold: Item = preload("res://resources/items/Gold.tres")
+
 var run=1
 var dialogueBox
 var tex = null

@@ -52,6 +52,7 @@ func playerResponse(key: int):
 			if(pQuest.isComplete()):
 				run+=1
 				interact()
+				player.add_keyword("duck")
 		if(key==1):
 			pass
 	else: if(run==4):

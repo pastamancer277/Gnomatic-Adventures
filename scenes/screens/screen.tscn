@@ -23,14 +23,15 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 159.0
-offset_top = 153.0
-offset_right = -1711.0
-offset_bottom = -900.0
+offset_left = 146.0
+offset_top = 143.0
+offset_right = -932.0
+offset_bottom = -455.0
 mouse_filter = 2
 theme = ExtResource("3_1r2no")
 theme_type_variation = &"ScreenButton"
 theme_override_font_sizes/font_size = 16
-text = "Enter!"
+text = "Space to
+ Start"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
