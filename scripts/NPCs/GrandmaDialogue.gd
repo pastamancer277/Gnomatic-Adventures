@@ -1,11 +1,11 @@
 extends dialogue
 
-var slimeQuest
+#var slimeQuest
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
 
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
-	slimeQuest=get_node("../Quests/SlimeQuest")
+	#slimeQuest=get_node("../Quests/SlimeQuest")
 	person_name = "Grandma"
 	tex = PortableCompressedTexture2D.new()
 	var im = load("res://assets/sprites/characters/NPC1.png").get_image()
@@ -16,7 +16,7 @@ func interact():
 	if(run==1):
 		if(player.getSocialCredit()>50):
 			dialogueBox.dialogue("Hello there", self,person_name, tex)
-			dialogueBox.setDialogueOption("Hi.", 0)
+			dialogueBox.setDialogueOption("Hello my grandchild.", 0)
 			dialogueBox.setDialogueOption("Ugh, people...", 1)
 		else:
 			dialogueBox.dialogue("I don't know you. Come back when you're more popular.", self,person_name, tex)
@@ -48,13 +48,10 @@ func playerResponse(key: int):
 	else: if(run==2):
 		if(key==0 or key==1):
 			run+=1
-			slimeQuest.activate()
 		if(key==2):
 			pass
 	else: if(run==3):
 		if(key==0):
-			slimeQuest.tryComplete()
-			if(slimeQuest.isComplete()):
 				run+=1
 				interact()
 				var popup_scene = load("res://scenes/popups.tscn").instantiate()
