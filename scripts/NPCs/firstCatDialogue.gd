@@ -2,6 +2,7 @@ extends dialogue
 
 var catPieQuest
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
+@onready var Pie_item: Item = preload("res://resources/items/Pie.tres")
 
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
@@ -22,7 +23,7 @@ func interact():
 		dialogueBox.dialogue("Woah, relax! I just want some pie!",self, person_name, tex)
 		dialogueBox.setDialogueOption("You're lying, you just want to eat me! Everyone knows only Gnomes love pie.", 0)
 	else: if(run==3):
-		dialogueBox.dialogue("We cats like pie and pomegranates, just the same as Gnomes, I just want to be friends.",self,person_name, tex)
+		dialogueBox.dialogue("We cats like pie and blueberrys, just the same as Gnomes, I just want to be friends.",self,person_name, tex)
 		dialogueBox.setDialogueOption("Okay! I'll find you a pie, just don't eat me!.", 0)
 	else: if (run==4):
 		dialogueBox.dialogue("Do you have the pie?",self,person_name, tex)
@@ -64,6 +65,7 @@ func playerResponse(key: int):
 				run+=1
 	else: if(run==5):
 		if(key==0):
+			run-=1
 			pass
 	else: if(run==6):
 		run+=1

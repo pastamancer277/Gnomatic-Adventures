@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bqdx613uflp5b"]
+
+[ext_resource type="Texture2D" uid="uid://deqpfy726iov" path="res://assets/icons/sprite/BlueBearies.png" id="1_6y8n7"]
+[ext_resource type="Script" uid="uid://cc4te3g41ua7s" path="res://scripts/itemResource.gd" id="1_hakrn"]
+
+[resource]
+script = ExtResource("1_hakrn")
+icon = ExtResource("1_6y8n7")
+metadata/_custom_type_script = "uid://cc4te3g41ua7s"

@@ -5353,6 +5353,9 @@ sources/0 = SubResource("TileSetAtlasSource_q683v")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yu3b2"]
 size = Vector2(32, 14)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ioghr"]
+radius = 18.681541
+
 [node name="GrandmaHouse" unique_id=1349325032 instance=ExtResource("1_yu3b2")]
 script = ExtResource("2_ioghr")
 
@@ -5403,5 +5406,12 @@ shape = SubResource("RectangleShape2D_yu3b2")
 [node name="StartingVillage" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=52566890]
 position = Vector2(-17, 103)
 
+[node name="NearOven" type="Area2D" parent="." index="6" unique_id=1455718532]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NearOven" index="0" unique_id=2129169508]
+position = Vector2(49, -28)
+shape = SubResource("CircleShape2D_ioghr")
+
 [connection signal="body_entered" from="houce>village" to="." method="_on_houcevillage_body_entered"]
 [connection signal="body_exited" from="houce>village" to="." method="_on_houcevillage_body_exited"]
+[connection signal="body_entered" from="NearOven" to="." method="_on_near_oven_body_entered"]

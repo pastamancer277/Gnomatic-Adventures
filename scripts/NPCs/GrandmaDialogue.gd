@@ -71,8 +71,9 @@ func playerResponse(key: int):
 			run+=1
 			interact()
 	else: if(run==7):
+		if(player.hasKeyword("catHasPie")):
+			run+=1
 		if(key==0):
-			player.addKeyword("catHasPie")
 			pass
 	#other dialogue string starts here.
 	else: if(run==8):
@@ -90,5 +91,6 @@ func playerResponse(key: int):
 			run+=1
 			interact()
 	else: if(run==9):
+		player.changeCredit(-2)
 		if(key==0):
 			pass

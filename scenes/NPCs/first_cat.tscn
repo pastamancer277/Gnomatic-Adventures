@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_704dc"]
 [ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_8j50p"]
 [ext_resource type="Script" uid="uid://cndmv435v7bir" path="res://scripts/NPCs/firstCatDialogue.gd" id="3_8j50p"]
-[ext_resource type="Texture2D" uid="uid://mloalm7uiips" path="res://assets/sprites/characters/BrownCat_Free_Carysaurus/BrownFront.png" id="3_np50v"]
+[ext_resource type="Texture2D" uid="uid://lm3mjvirluq3" path="res://assets/sprites/characters/OrangeTabby.png" id="3_np50v"]
 [ext_resource type="Script" uid="uid://crvbiwubjxsjj" path="res://scripts/quests/catPieQuest.gd" id="4_fymeh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_np50v"]

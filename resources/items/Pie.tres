@@ -1,7 +1,9 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://bockt1qv26h3a"]
 
 [ext_resource type="Script" uid="uid://cc4te3g41ua7s" path="res://scripts/itemResource.gd" id="1_hakrn"]
+[ext_resource type="Texture2D" uid="uid://cfhaas5wehnle" path="res://assets/icons/sprite/Pie.png" id="1_n11yg"]
 
 [resource]
 script = ExtResource("1_hakrn")
+icon = ExtResource("1_n11yg")
 metadata/_custom_type_script = "uid://cc4te3g41ua7s"

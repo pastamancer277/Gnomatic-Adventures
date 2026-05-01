@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://1q1b2bionj5e" path="res://assets/sprites/characters/Grandma.png" id="3_aaev2"]
 [ext_resource type="Script" uid="uid://bwtyd8ij08bct" path="res://scripts/NPCs/GrandmaDialogue.gd" id="4_0hgv7"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_47c6l"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aaev2"]
 resource_local_to_scene = true
 shader = ExtResource("2_y7gp8")
 shader_parameter/active = false
@@ -14,7 +14,7 @@ shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 [node name="GrandmaNPC" unique_id=1834193905 instance=ExtResource("1_7ebxf")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
-material = SubResource("ShaderMaterial_47c6l")
+material = SubResource("ShaderMaterial_aaev2")
 texture = ExtResource("3_aaev2")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]

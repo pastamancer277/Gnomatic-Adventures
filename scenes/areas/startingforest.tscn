@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://cmgrrfm3q2fbv" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/Bright Grass.png" id="2_hyvkx"]
 [ext_resource type="Texture2D" uid="uid://bqg8ow8e4uyn0" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Plant Resized.png" id="3_am7fp"]
 [ext_resource type="Texture2D" uid="uid://c62sjsk3jb12q" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="3_hyvkx"]
+[ext_resource type="PackedScene" uid="uid://dayvrfnul8ep5" path="res://scenes/NPCs/first_cat.tscn" id="6_chjrc"]
+[ext_resource type="PackedScene" uid="uid://bm6wgggxoplqg" path="res://scenes/enemies/basic_sprite.tscn" id="7_d0kil"]
+[ext_resource type="Resource" uid="uid://dn7yta0xno8ng" path="res://resources/sprites/bluebearySprite.tres" id="8_8tocs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_chjrc"]
 texture = ExtResource("2_hyvkx")
@@ -1129,11 +1132,21 @@ z_index = 2
 tile_map_data = PackedByteArray("AAAWAAEAAAACAAEAAAAVAAEAAAACAAAAAGAVAPz/AAACAAAAAGAWAAAAAAADAAEAAGAWAP3/AAADAAEAAFAVAP3/AAADAAAAADAVAAAAAAADAAAAAGAWAPz/AAACAAEAAAAXAPz/AAACAAEAAAAYAPz/AAACAAEAAAAZAPz/AAACAAEAAAAaAPz/AAACAAEAAAAaAP3/AAACAAEAAAAaAP7/AAACAAEAAAAaAP//AAACAAEAAAAaAAAAAAACAAEAAAAaAAEAAAACAAEAAAAaAAIAAAACAAEAAAAZAAIAAAACAAEAAAAZAAEAAAACAAEAAAAYAAEAAAACAAEAAAAXAAEAAAACAAEAAAAXAAAAAAACAAEAAAAYAAAAAAACAAEAAAAZAAAAAAACAAEAAAAZAP//AAACAAEAAAAZAP7/AAACAAEAAAAYAP7/AAABAAEAAAAYAP3/AAACAAEAAAAXAP3/AAABAAEAAGAZAP3/AAACAAEAAAAXAP//AAADAAEAAGAWAP//AAADAAAAAGAYAP//AAACAAEAAAA=")
 tile_set = SubResource("TileSet_mcghw")
 
+[node name="firstCat" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="0" unique_id=1834193905 instance=ExtResource("6_chjrc")]
+position = Vector2(-134, -20)
+
+[node name="BasicSprite" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=1614433100 instance=ExtResource("7_d0kil")]
+position = Vector2(36, -64)
+resource = ExtResource("8_8tocs")
+
+[node name="BasicSprite2" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=798098069 instance=ExtResource("7_d0kil")]
+resource = ExtResource("8_8tocs")
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=396103356]
-polygon = PackedVector2Array(-219, -216, -217, 169, 350, 173, 347, 22, 469, 20, 467, -58, 347, -44, 347, -210, -209, -216, -199, -354, 623, -316, 591, 325, -315, 290, -334, -369, -215, -359)
+polygon = PackedVector2Array(-219, -216, -215, 159, 348, 161, 347, 22, 469, 20, 467, -58, 347, -44, 347, -210, -209, -216, -199, -354, 623, -316, 591, 325, -315, 290, -334, -369, -215, -359)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyCollisions" parent_id_path=PackedInt32Array(1550626514) index="0" unique_id=776281797]
-polygon = PackedVector2Array(-219, -216, -217, 169, 350, 173, 347, 22, 347, -44, 347, -210, -209, -216, -199, -354, 623, -316, 591, 325, -315, 290, -334, -369, -215, -359)
+polygon = PackedVector2Array(-215, -214, -206, 154, 345, 154, 347, 22, 347, -44, 347, -210, -209, -216, -199, -354, 623, -316, 591, 325, -315, 290, -334, -369, -215, -359)
 
 [node name="StartingVillage" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="0" unique_id=257844861]
 position = Vector2(377, -20)
