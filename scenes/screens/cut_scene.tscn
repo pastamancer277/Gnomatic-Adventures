@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://d0wj6j2sdc5ea"]
+[gd_scene format=3 uid="uid://dj5uvev70smpw"]
 
-[ext_resource type="Script" path="res://scripts/screens/cut_scene.gd" id="1_g846l"]
+[ext_resource type="Script" uid="uid://dct8cjjbm201d" path="res://scripts/screens/cut_scene.gd" id="1_g846l"]
 [ext_resource type="Texture2D" uid="uid://b1qi7q2t26fe5" path="res://assets/sprites/Book page.png" id="2_h58ad"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35gjq"]
@@ -45,6 +45,7 @@ size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_35gjq")
 
 [node name="Stuff" type="RichTextLabel" parent="BoxContainer/LeftPage/PanelContainer" unique_id=143126151]
+texture_filter = 2
 layout_mode = 2
 theme_override_colors/default_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
 theme_override_font_sizes/normal_font_size = 11
@@ -68,5 +69,5 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_g846l")
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 12
-text = "But, within the past 100 years there has been an increase in cat attacks and anti-gnome sentiment amongst the cats. It has been speculated that the council has been overthrown and now there is one cat leader. In response to this the Gnomic government has permitted hostility towards cats. 
+text = "But, within the past 100 years there has been an increase in cat attacks and anti-gnome sentiment amongst the cats. It has been speculated that the council has been overthrown and now there is one cat leader. In response to this the Gnomadic government has permitted hostility towards cats. 
 "

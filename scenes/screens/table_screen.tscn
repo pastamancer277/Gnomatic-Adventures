@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cvyi1p1nle8rs"]
 
-[ext_resource type="Script" path="res://scripts/screens/table_screen.gd" id="1_gc4mu"]
+[ext_resource type="Script" uid="uid://cde2lok24m5h1" path="res://scripts/screens/table_screen.gd" id="1_gc4mu"]
 [ext_resource type="Texture2D" uid="uid://bkqsmnyimuqbf" path="res://assets/sprites/Desk.png" id="2_gc4mu"]
 
 [node name="TableScreen" type="Control" unique_id=1991471752]
@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_gc4mu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=318035540]
-position = Vector2(195.81941, 108.04014)
-scale = Vector2(2, 2)
+texture_filter = 1
+position = Vector2(204.74998, 125.49999)
+scale = Vector2(0.13683335, 0.11155555)
 texture = ExtResource("2_gc4mu")

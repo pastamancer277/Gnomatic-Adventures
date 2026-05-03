@@ -8,10 +8,9 @@ func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
 	tex = PortableCompressedTexture2D.new()
 	person_name = "Friendly Cat"
-	#These commented out lines have to be adjusted for the cat.
-	#var im = load("res://assets/sprites/characters/Idle-Guard1.png").get_image()
-	#im = im.get_region(Rect2(im.get_width()/4,0, im.get_width()/2, im.get_height()/1.5))
-	#tex.create_from_image(im, PortableCompressedTexture2D.COMPRESSION_MODE_LOSSLESS)
+	var im = load("res://assets/sprites/characters/OrangeTabby.png").get_image()
+	im = im.get_region(Rect2(im.get_width()/3,im.get_height()/3, im.get_width()/2, im.get_height()/1.5))
+	tex.create_from_image(im, PortableCompressedTexture2D.COMPRESSION_MODE_LOSSLESS)
 	catPieQuest=get_node("../Quests/catPieQuest")
 
 func interact():
@@ -50,6 +49,7 @@ func playerResponse(key: int):
 	else: if(run==2):
 		if(key==0):
 			run+=1
+			interact()
 	else: if(run==3):
 		if(key==0):
 			catPieQuest.activate()
@@ -61,8 +61,10 @@ func playerResponse(key: int):
 			catPieQuest.tryComplete()
 			if(catPieQuest.isComplete()):
 				run+=2
+				interact()
 			else:
 				run+=1
+				interact()
 	else: if(run==5):
 		if(key==0):
 			run-=1

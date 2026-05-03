@@ -48,7 +48,6 @@ func show_text(text: String):
 	_is_too_long()
 	panel_container.visible = true
 	$/root/Global.pause = true
-	print($/root/Global )
 
 func setDialogueOption(text: String, key: int):
 	buttons.setDialogueOption(text,key)

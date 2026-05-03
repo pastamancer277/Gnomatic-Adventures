@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cfpo8n3wlgfhf" path="res://scripts/dialogue.gd" id="1_3n4vj"]
 [ext_resource type="Script" uid="uid://b7g1sf5jhsh6c" path="res://scripts/text_options.gd" id="2_bfpow"]
 [ext_resource type="Theme" uid="uid://0wtapkh4u36h" path="res://assets/themes/dialogue_label.tres" id="2_fyky8"]
-[ext_resource type="Theme" uid="uid://bfpv36kf82lx3" path="res://assets/themes/popup_panel_container.tres" id="2_led2e"]
+[ext_resource type="Theme" uid="uid://chdh21ncjh3ic" path="res://assets/themes/popup_panel_container.tres" id="2_led2e"]
 [ext_resource type="PackedScene" uid="uid://7i0uxbaa047g" path="res://scenes/dialogue_button.tscn" id="3_bfpow"]
 
 [node name="Dialogue" type="CanvasLayer" unique_id=2067749993]

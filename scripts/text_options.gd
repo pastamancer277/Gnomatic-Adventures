@@ -7,6 +7,7 @@ var text = false
 
 
 func _process(delta: float) -> void:
+	_check_length()
 	if isFocus == null && get_children().size()>count and !text:
 		isFocus = get_children().get(count)
 		if isFocus != null:
@@ -49,3 +50,13 @@ func clearButtons():
 	inventory.visible = true
 	for child in get_children():
 		child.queue_free()
+func _check_length():
+	if get_parent().size.x >260:
+		var length = 0
+		var c = null
+		for child in get_children():
+			if child.size.x > length:
+				length = child.size.x
+				c = child
+		var text = c.text.length()
+		c.text = c.text.substr(0,text/2) + "\n" + c.text.substr(text/2, text)
