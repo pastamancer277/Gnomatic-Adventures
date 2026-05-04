@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://xl67y6ix3cd6" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Tilesets/Dungeon_Tiles.png" id="2_semcw"]
 [ext_resource type="Texture2D" uid="uid://cypehk5don2o4" path="res://assets/sprites/Biome/Roofs.png" id="3_fsw2t"]
 [ext_resource type="Texture2D" uid="uid://bhbttb2o42bxd" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/DarkRoof.png" id="3_semcw"]
+[ext_resource type="PackedScene" uid="uid://ck6tgxkokfoe6" path="res://scenes/NPCs/old_lady_npc.tscn" id="6_upjcm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fsw2t"]
 texture = ExtResource("2_semcw")
@@ -1372,6 +1373,9 @@ tile_set = SubResource("TileSet_3b7in")
 z_index = 2
 tile_map_data = PackedByteArray("AAAjAAEAAAAMAAkAAAAjAAIAAAAGAAMAAAAkAAEAAAADAAEAAAAlAAIAAAADAAEAAAAlAAEAAAADAAMAAAAmAAEAAAADAAMAAAAmAAIAAAADAAEAAAAnAAIAAAADAAEAAAAnAAEAAAADAAMAAAAnAAMAAAADAAEAAAAmAAMAAAADAAEAAAAlAAMAAAADAAEAAAAkAAMAAAADAAEAAAAjAAMAAAAGAAMAAAAjAAAAAAADAAMAAAAjAAQAAAAGAAMAAAAjAAUAAAAGAAMAAAAjAP//AAALAAEAADAkAP//AAADAAEAAAAlAP//AAADAAMAAAAmAP//AAADAAMAAAAnAP//AAADAAMAAAAnAAAAAAADAAMAAAAmAAAAAAADAAMAAAAlAAAAAAADAAMAAAAkAAAAAAADAAEAAAAkAAQAAAADAAEAAAAkAAUAAAADAAEAAAAlAAUAAAADAAEAAAAmAAUAAAADAAEAAAAnAAUAAAADAAEAAAAmAAQAAAADAAEAAAAnAAQAAAADAAEAAAAlAAQAAAADAAEAAAAiAP//AAAFAAUAADAiAAAAAAAAAAMAAAAiAAEAAAAAAAUAAAAjAP3/AAAGAAMAAAAjAP7/AAAGAAMAAAAkAP3/AAADAAEAAAAkAP7/AAADAAEAAAAkAAIAAAADAAEAAAAlAP3/AAADAAEAAAAlAP7/AAADAAEAAAAmAP3/AAADAAEAAAAmAP7/AAADAAEAAAAnAP3/AAADAAEAAAAnAP7/AAADAAEAAAA=")
 tile_set = SubResource("TileSet_fsw2t")
+
+[node name="OldLadyNPC" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="0" unique_id=1834193905 instance=ExtResource("6_upjcm")]
+position = Vector2(241, 43)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=2045232044]
 polygon = PackedVector2Array(10, -121, 563, -120, 563, 15, 543, 16, 544, 31, 563, 32, 608, 29, 610, 60, 544, 62, 544, 71, 563, 70, 562, 325, -131, 324, -131, -127, 8, -121, 21, -340, -276, -337, -266, 468, 686, 468, 681, -327, 23, -342)

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://baq68npof1p7n"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_0mltu"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_an3we"]
+[ext_resource type="Texture2D" uid="uid://bblvdr7e2m1s5" path="res://assets/sprites/characters/JuiceGuy.png" id="3_asdcf"]
+[ext_resource type="Script" uid="uid://dtrujqt1iduhp" path="res://scripts/NPCs/city_lore_NPC.gd" id="4_0mltu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dsy7l"]
+resource_local_to_scene = true
+shader = ExtResource("2_an3we")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="CityLoreNPC" unique_id=1834193905 instance=ExtResource("1_0mltu")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_dsy7l")
+texture = ExtResource("3_asdcf")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("4_0mltu")
