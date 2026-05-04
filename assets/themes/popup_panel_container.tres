@@ -1,13 +1,13 @@
 [gd_resource type="Theme" format=3 uid="uid://chdh21ncjh3ic"]
 
-[ext_resource type="Texture2D" uid="uid://b1r3pmtbtdt3v" path="res://assets/icons/Popup Border Green.png" id="1_11bun"]
+[ext_resource type="Texture2D" uid="uid://deux11jg0hlsd" path="res://assets/icons/Popup Border Green (1).png" id="1_sw8bg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_201id"]
-texture = ExtResource("1_11bun")
-texture_margin_left = 40.0
-texture_margin_top = 30.0
-texture_margin_right = 40.0
-texture_margin_bottom = 30.0
+texture = ExtResource("1_sw8bg")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
 
 [resource]
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_201id")

@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 		for child in get_children() :
 			if child == isFocus:
 				clearButtons()
-				get_parent().get_parent().get_parent().get_parent().playerResponse(child.getKey())
+				get_parent().get_parent().get_parent().get_parent().get_parent().playerResponse(child.getKey())
 				$/root/Global.dialogue = false
 				
 	if Input.is_action_just_pressed("MoveRight"):

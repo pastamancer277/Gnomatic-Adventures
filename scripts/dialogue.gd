@@ -2,9 +2,9 @@ extends CanvasLayer
 
 var currentNPCDialogue: Node
 @onready var panel_container = $PanelContainer
-@onready var dialogue_text = $PanelContainer/HBoxContainer/VBoxContainer/DialogueText
-@onready var buttons = $PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer
-@onready var texture_rect = $PanelContainer/HBoxContainer/MarginContainer/Control/TextureRect
+@onready var dialogue_text = $PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/DialogueText
+@onready var buttons = $PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer
+@onready var texture_rect = $PanelContainer/MarginContainer/HBoxContainer/MarginContainer/Control/TextureRect
 var full_text = ""
 var scroll_speed = 2
 func _process(delta: float) -> void:
@@ -14,7 +14,7 @@ func dialogue(text: String, npc: Node, name: String, picture: PortableCompressed
 	#$/root/Global.pause = true
 	buttons.clearButtons()
 	currentNPCDialogue=npc
-	$PanelContainer/HBoxContainer/VBoxContainer/Name.text = name
+	$PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Name.text = name
 	texture_rect.texture = picture
 	texture_rect.custom_minimum_size = Vector2(50, 40) # Set specific pixel size
 	texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
