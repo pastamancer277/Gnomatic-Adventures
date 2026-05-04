@@ -10,7 +10,6 @@
 script = ExtResource("1_3n4vj")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1722344758]
-visible = false
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -23,10 +22,17 @@ grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_led2e")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=757112999]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=958852111]
+layout_mode = 2
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_top = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=757112999]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer" unique_id=731347025]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=731347025]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 5
@@ -34,28 +40,28 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Control" type="Control" parent="PanelContainer/HBoxContainer/MarginContainer" unique_id=1086981782]
+[node name="Control" type="Control" parent="PanelContainer/MarginContainer/HBoxContainer/MarginContainer" unique_id=1086981782]
 layout_mode = 2
 size_flags_stretch_ratio = 2.0
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/HBoxContainer/MarginContainer/Control" unique_id=222289943]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer/MarginContainer/Control" unique_id=222289943]
 layout_mode = 0
 size_flags_horizontal = 3
 stretch_mode = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=1185693084]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=1185693084]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 
-[node name="Name" type="RichTextLabel" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=1708256279]
+[node name="Name" type="RichTextLabel" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1708256279]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_fyky8")
 text = "nameee"
 fit_content = true
 
-[node name="DialogueText" type="RichTextLabel" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=1639311585]
+[node name="DialogueText" type="RichTextLabel" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1639311585]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
@@ -64,13 +70,13 @@ fit_content = true
 scroll_active = false
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=1917417057]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1917417057]
 layout_mode = 2
 size_flags_vertical = 3
 script = ExtResource("2_bfpow")
 button = ExtResource("3_bfpow")
 
-[node name="Control" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=440398932]
+[node name="Control" type="Control" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=440398932]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1
