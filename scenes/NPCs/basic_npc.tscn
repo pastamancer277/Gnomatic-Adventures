@@ -38,11 +38,13 @@ shape = SubResource("CircleShape2D_6mn8q")
 
 [node name="Quests" type="Node" parent="." unique_id=879326239]
 
-[node name="HealthBar" type="ProgressBar" parent="." unique_id=1369844062]
-offset_left = -9.0
-offset_top = 8.0
-offset_right = 9.0
-offset_bottom = 12.0
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1584498457]
+modulate = Color(0.14901961, 0.75686276, 0.24313726, 1)
+offset_left = -7.0
+offset_top = 13.000007
+offset_right = 132.99998
+offset_bottom = 43.0
+scale = Vector2(0.1, 0.1)
 show_percentage = false
 
 [node name="RegenTimer" type="Timer" parent="." unique_id=1440074978]
