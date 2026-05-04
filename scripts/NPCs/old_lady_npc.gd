@@ -12,7 +12,7 @@ func _ready() -> void:
 
 func interact():
 	if(run==1):
-		dialogueBox.dialogue("Youngin, I was around when cats were our best friend. Heck, my best friends name was Meow...", self,person_name, tex)
+		dialogueBox.dialogue("Youngin, I was around when cats were our best friend. Heck, my best friend's name was Meow...", self,person_name, tex)
 		dialogueBox.setDialogueOption("Okay...", 0)
 
 

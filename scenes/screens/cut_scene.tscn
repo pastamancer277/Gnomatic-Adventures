@@ -49,7 +49,7 @@ texture_filter = 2
 layout_mode = 2
 theme_override_colors/default_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
 theme_override_font_sizes/normal_font_size = 11
-text = "Years ago, gnomes and cats were mortal enemies. Cats would attack gnome villages and play with them like toys. This is what started the great Cat and Gnome War of 999 BGE. After many years of fighting, the council of cat elders met with the newly instated gnome queen, Freyga, and formed a truce. For centuries, gnomes and cats lived in harmony and many became friends."
+text = "Years ago, gnomes and cats were mortal enemies. Cats would attack gnome villages and play with them like toys. This is what started the great Cat and Gnome War of 2856 BGE. After many years of fighting, the Council of Cat Elders met with the newly instated gnome queen, Freyga, and formed a truce. For centuries, gnomes and cats lived in harmony and many became friends."
 fit_content = true
 
 [node name="RightPage" type="MarginContainer" parent="BoxContainer" unique_id=1881507546]
@@ -69,5 +69,5 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_g846l")
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 12
-text = "But, within the past 100 years there has been an increase in cat attacks and anti-gnome sentiment amongst the cats. It has been speculated that the council has been overthrown and now there is one cat leader. In response to this the Gnomadic government has permitted hostility towards cats. 
+text = "But, within the past few centuries there has been an increase in cat attacks and anti-gnome sentiment amongst the cats. It has been speculated that the council has been overthrown and now there is one cat leader. In response to this the Gnomadic government has permitted hostility towards cats. 
 "
