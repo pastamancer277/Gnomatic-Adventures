@@ -15,7 +15,6 @@ func interact():
 		dialogueBox.dialogue("Youngin, I was around when cats were our best friend. Heck, my best friend's name was Meow...", self,person_name, tex)
 		dialogueBox.setDialogueOption("Okay...", 0)
 
-
 func playerResponse(key: int):
 	if(run == 1):
 		pass

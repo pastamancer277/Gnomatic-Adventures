@@ -38,8 +38,10 @@ func playerResponse(key: int):
 				interact()
 	else: if(run==2):
 		run=1
+		interact()
 	else: if(run==3):
 		run=4
 		player.addKeyword("forest_clear")
+		interact()
 	else: if(run==4):
 		pass

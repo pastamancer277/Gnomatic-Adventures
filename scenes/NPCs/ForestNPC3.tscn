@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bejg7mt5mg1qu" path="res://scripts/NPCs/forest3Dialogue.gd" id="3_reor6"]
 [ext_resource type="Script" uid="uid://fp3eao17ufcr" path="res://scripts/quests/WoodQuest.gd" id="4_3d8u2"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_f4ytd"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3d8u2"]
 resource_local_to_scene = true
 shader = ExtResource("2_3d8u2")
 shader_parameter/active = false
@@ -15,7 +15,7 @@ shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 [node name="ForestNPC3" unique_id=1834193905 instance=ExtResource("1_yvjvm")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
-material = SubResource("ShaderMaterial_f4ytd")
+material = SubResource("ShaderMaterial_3d8u2")
 texture = ExtResource("2_rj0qc")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]
