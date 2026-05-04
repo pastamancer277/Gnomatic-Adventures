@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://544q7gcm2ury" path="res://scenes/areas/area.tscn" id="1_kh0cd"]
 [ext_resource type="Script" uid="uid://c8tf8sldcg3nq" path="res://scripts/areas/forest2.gd" id="2_qgo6a"]
 [ext_resource type="TileSet" uid="uid://bmvo5p0av7lkl" path="res://assets/sprites/characters/new_tile_set.tres" id="3_50rke"]
-[ext_resource type="Texture2D" uid="uid://brkivji8hrlk4" path="res://assets/sprites/tilesets/plains.png" id="3_bkfpv"]
 [ext_resource type="Texture2D" uid="uid://bqg8ow8e4uyn0" path="res://assets/sprites/Biome/TX Plant Resized.png" id="5_8sdqp"]
 [ext_resource type="PackedScene" uid="uid://cgc26yscm8igx" path="res://scenes/NPCs/ForestNPC1.tscn" id="7_e2bmm"]
 [ext_resource type="Resource" uid="uid://dk5t67ad15uvi" path="res://resources/enemies/deer1.tres" id="9_3h4ii"]
@@ -14,77 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://xx1ohmvo1cqm" path="res://assets/sprites/Biome/TX Tileset Stone Ground.png" id="11_xba2m"]
 [ext_resource type="PackedScene" uid="uid://dqyakadp7w8ew" path="res://scenes/NPCs/ForestNPC2.tscn" id="12_50rke"]
 [ext_resource type="Resource" uid="uid://bwsermbw83onl" path="res://resources/enemies/bunny.tres" id="14_3h4ii"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qjxi2"]
-texture = ExtResource("3_bkfpv")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-4:10/0 = 0
-5:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1rdc"]
 texture = ExtResource("5_8sdqp")
@@ -384,7 +312,6 @@ texture = ExtResource("11_xba2m")
 15:15/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_udkau"]
-sources/0 = SubResource("TileSetAtlasSource_qjxi2")
 sources/1 = SubResource("TileSetAtlasSource_f1rdc")
 sources/2 = SubResource("TileSetAtlasSource_pusa8")
 
