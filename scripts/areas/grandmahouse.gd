@@ -1,5 +1,6 @@
 extends area
 
+var pie = true;
 
 @onready var key_item: Item = preload("res://resources/items/Pie.tres")
 
@@ -17,4 +18,6 @@ func _on_houcevillage_body_exited(body: Node2D) -> void:
 
 func _on_near_oven_body_entered(body: Node2D) -> void:
 	if body.name=="Player"&&Global.cur_area=="GrandmaHouse":
-		$/root/Main/Systems/Inventory.add_item({key_item:1})
+		if pie:
+			$/root/Main/Systems/Inventory.add_item({key_item:1})
+			pie=false

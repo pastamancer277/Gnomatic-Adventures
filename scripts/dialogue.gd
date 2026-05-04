@@ -54,6 +54,7 @@ func setDialogueOption(text: String, key: int):
 
 func playerResponse(key: int):
 	panel_container.visible=false
+	$/root/Main/Sort/PlayerEntities/Player.pauseAttack()
 	currentNPCDialogue.playerResponse(key)
 
 func clearDialogue(npc: Node):
