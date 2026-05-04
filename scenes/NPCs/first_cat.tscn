@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://lm3mjvirluq3" path="res://assets/sprites/characters/OrangeTabby.png" id="3_np50v"]
 [ext_resource type="Script" uid="uid://crvbiwubjxsjj" path="res://scripts/quests/catPieQuest.gd" id="4_fymeh"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bo286"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e8l57"]
 resource_local_to_scene = true
 shader = ExtResource("2_8j50p")
 shader_parameter/active = false
@@ -17,7 +17,7 @@ shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 script = ExtResource("2_e8l57")
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
-material = SubResource("ShaderMaterial_bo286")
+material = SubResource("ShaderMaterial_e8l57")
 texture = ExtResource("3_np50v")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]
@@ -25,3 +25,15 @@ script = ExtResource("3_8j50p")
 
 [node name="catPieQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(879326239) index="0" unique_id=756310445]
 script = ExtResource("4_fymeh")
+
+[node name="HealthBar" parent="." index="5" unique_id=1584498457]
+offset_top = 25.00001
+offset_bottom = 55.0
+
+[node name="Button" type="Button" parent="." index="7" unique_id=1975754169]
+offset_left = -6.0
+offset_top = -21.0
+offset_right = 6.0
+offset_bottom = -2.0
+theme_override_font_sizes/font_size = 7
+text = "E"
