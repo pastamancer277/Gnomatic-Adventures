@@ -11,27 +11,25 @@ func _ready():
 	reload_button.grab_focus()
 
 func _process(delta:float) -> void:
-	if Input.is_action_just_pressed("ui_down") and (isFocus == reload_button):
+	if Input.is_action_just_pressed("MoveDown") and (isFocus == reload_button):
 			isFocus = restart_button
 			isFocus.grab_focus()
-	elif Input.is_action_just_pressed("ui_down") and (isFocus == restart_button):
+	elif Input.is_action_just_pressed("MoveDown") and (isFocus == restart_button):
 			isFocus = reload_button
 			isFocus.grab_focus()
-	elif Input.is_action_just_pressed("ui_up") and (isFocus == restart_button):
+	elif Input.is_action_just_pressed("MoveUp") and (isFocus == restart_button):
 			isFocus = reload_button
 			isFocus.grab_focus()
-	elif Input.is_action_just_pressed("ui_up") and (isFocus == reload_button):
+	elif Input.is_action_just_pressed("MoveUp") and (isFocus == reload_button):
 			isFocus = restart_button
 			isFocus.grab_focus()
-
-
-func _on_reload_pressed() -> void:
-	$/root/SaveManager.loadGame()
-	$/root/Global.pause = false
-	queue_free()
-
-
-func _on_restart_pressed() -> void:
-	$/root/Global.resetGame()
-	$/root/Global.pause = false
-	queue_free()
+			
+			
+	if Input.is_action_just_pressed("MeleeAttack") and (isFocus == reload_button):
+		$/root/SaveManager.loadGame()
+		$/root/Global.pause = false
+		queue_free()
+	elif Input.is_action_just_pressed("MeleeAttack") and (isFocus == restart_button):
+		$/root/Global.resetGame()
+		$/root/Global.pause = false
+		queue_free()

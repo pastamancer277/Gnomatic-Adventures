@@ -103,10 +103,13 @@ func _process(delta: float) -> void:
 		#Level Screen Functionality
 		if Input.is_action_just_pressed("MeleeAttack") and isFocus == attack:
 			$/root/Main/Sort/PlayerEntities/Player.levelAttack()
+			$"/root/Global".pause = true
 		elif Input.is_action_just_pressed("MeleeAttack") and isFocus == shield:
 			$/root/Main/Sort/PlayerEntities/Player.levelShield()
+			$"/root/Global".pause = true
 		elif Input.is_action_just_pressed("MeleeAttack") and isFocus == health:
 			$/root/Main/Sort/PlayerEntities/Player.levelHealth()
+			$"/root/Global".pause = true
 		
 		
 		# Focusing on level screen buttons

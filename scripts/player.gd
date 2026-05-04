@@ -295,7 +295,10 @@ func changeCredit(val: int):
 	socialCredit+=val
 	var popup_scene = load("res://scenes/popups.tscn").instantiate()
 	$"/root/Main/UI/Popups".add_child(popup_scene)
-	popup_scene.set_text("You gained Social Credit!")
+	if val > 0:
+		popup_scene.set_text("You gained Social Credit!")
+	else:
+		popup_scene.set_text("You lost Social Credit...")
 	$/root/Global.multiple_popups()
 
 func getSocialCredit():

@@ -4,7 +4,7 @@ extends Control
 @onready var grid = $PanelContainer/VBoxContainer/GridContainer
 @onready var xp = $PanelContainer/VBoxContainer/HBoxContainer/XP
 @onready var xp_label = $PanelContainer/VBoxContainer/HBoxContainer/Label
-@onready var social_credit = $"PanelContainer/VBoxContainer/HBoxContainer2/SocialCredit"
+@onready var social_credit = $"PanelContainer/VBoxContainer/HBoxContainer/SocialCredit"
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
 
 @export var item_slot_scene: PackedScene
