@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doewc10pm5irj"
-path="res://.godot/imported/Props.png-b7f47158df9ae0548383fee97c951e2f.ctex"
+uid="uid://bhbttb2o42bxd"
+path="res://.godot/imported/DarkRoof.png-2d0adb72775ced52d0bc839287ed1d30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Structures/Buildings/Props.png"
-dest_files=["res://.godot/imported/Props.png-b7f47158df9ae0548383fee97c951e2f.ctex"]
+source_file="res://assets/sprites/Biome/DarkRoof.png"
+dest_files=["res://.godot/imported/DarkRoof.png-2d0adb72775ced52d0bc839287ed1d30.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doewc10pm5irj"
-path="res://.godot/imported/Props.png-b7f47158df9ae0548383fee97c951e2f.ctex"
+uid="uid://dalqseggymmn0"
+path="res://.godot/imported/TX Plant.png-aacb1b4dcdc6276ebabaead477286a00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Structures/Buildings/Props.png"
-dest_files=["res://.godot/imported/Props.png-b7f47158df9ae0548383fee97c951e2f.ctex"]
+source_file="res://assets/sprites/Biome/TX Plant.png"
+dest_files=["res://.godot/imported/TX Plant.png-aacb1b4dcdc6276ebabaead477286a00.ctex"]
 
 [params]
 

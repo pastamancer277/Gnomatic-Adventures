@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doewc10pm5irj"
-path="res://.godot/imported/Props.png-b7f47158df9ae0548383fee97c951e2f.ctex"
+uid="uid://cmgrrfm3q2fbv"
+path="res://.godot/imported/Bright Grass.png-8c43dd21b8101e18ebcee0d2f82ec6a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Structures/Buildings/Props.png"
-dest_files=["res://.godot/imported/Props.png-b7f47158df9ae0548383fee97c951e2f.ctex"]
+source_file="res://assets/sprites/Biome/Bright Grass.png"
+dest_files=["res://.godot/imported/Bright Grass.png-8c43dd21b8101e18ebcee0d2f82ec6a7.ctex"]
 
 [params]
 

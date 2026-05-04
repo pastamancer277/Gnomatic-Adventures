@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://544q7gcm2ury" path="res://scenes/areas/area.tscn" id="1_e85my"]
 [ext_resource type="Script" uid="uid://ccb13g38p0nrq" path="res://scripts/areas/jail.gd" id="2_difex"]
 [ext_resource type="Texture2D" uid="uid://cr5cqr05uyulp" path="res://assets/sprites/Biome/Walls.png" id="2_wca3l"]
-[ext_resource type="Texture2D" uid="uid://xl67y6ix3cd6" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Tilesets/Dungeon_Tiles.png" id="3_difex"]
+[ext_resource type="Texture2D" uid="uid://xl67y6ix3cd6" path="res://assets/sprites/Biome/Dungeon_Tiles.png" id="3_difex"]
 [ext_resource type="Texture2D" uid="uid://bq38mbxnlwokl" path="res://assets/sprites/Biome/midcentury_modern_furnitureset.png" id="5_2845w"]
-[ext_resource type="PackedScene" path="res://scenes/NPCs/jail_npc.tscn" id="6_afgkn"]
+[ext_resource type="PackedScene" uid="uid://l7xayk3i8jb4" path="res://scenes/NPCs/jail_npc.tscn" id="6_afgkn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2845w"]
 texture = ExtResource("2_wca3l")

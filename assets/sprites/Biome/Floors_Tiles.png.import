@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doewc10pm5irj"
-path="res://.godot/imported/Props.png-b7f47158df9ae0548383fee97c951e2f.ctex"
+uid="uid://ckqqqnsfl6h62"
+path="res://.godot/imported/Floors_Tiles.png-62fd260c23c1e18cac6e3c9a1835a098.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Structures/Buildings/Props.png"
-dest_files=["res://.godot/imported/Props.png-b7f47158df9ae0548383fee97c951e2f.ctex"]
+source_file="res://assets/sprites/Biome/Floors_Tiles.png"
+dest_files=["res://.godot/imported/Floors_Tiles.png-62fd260c23c1e18cac6e3c9a1835a098.ctex"]
 
 [params]
 

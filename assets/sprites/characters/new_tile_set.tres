@@ -2,12 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://brkivji8hrlk4" path="res://assets/sprites/tilesets/plains.png" id="1_r04oe"]
 [ext_resource type="Texture2D" uid="uid://vt2aqaqauasb" path="res://assets/sprites/tilesets/grass.png" id="2_tmnaa"]
-[ext_resource type="Texture2D" uid="uid://bqg8ow8e4uyn0" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Plant Resized.png" id="3_xo3kw"]
+[ext_resource type="Texture2D" uid="uid://bqg8ow8e4uyn0" path="res://assets/sprites/Biome/TX Plant Resized.png" id="3_xo3kw"]
 [ext_resource type="Texture2D" uid="uid://csrusfcx7xp8g" path="res://assets/sprites/objects/objects.png" id="4_u586o"]
-[ext_resource type="Texture2D" uid="uid://drdc4nv6ojio2" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Tilesets/Water_tiles.png" id="5_chcsu"]
-[ext_resource type="Texture2D" uid="uid://c62sjsk3jb12q" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="6_d1cnd"]
-[ext_resource type="Texture2D" uid="uid://cmgrrfm3q2fbv" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/Bright Grass.png" id="7_yy2tw"]
-[ext_resource type="Texture2D" uid="uid://dalqseggymmn0" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Plant.png" id="8_vd2fg"]
+[ext_resource type="Texture2D" uid="uid://drdc4nv6ojio2" path="res://assets/sprites/Biome/Water_tiles.png" id="5_chcsu"]
+[ext_resource type="Texture2D" uid="uid://c62sjsk3jb12q" path="res://assets/sprites/Biome/Wall_Tiles.png" id="6_d1cnd"]
+[ext_resource type="Texture2D" uid="uid://cmgrrfm3q2fbv" path="res://assets/sprites/Biome/Bright Grass.png" id="7_yy2tw"]
+[ext_resource type="Texture2D" uid="uid://dalqseggymmn0" path="res://assets/sprites/Biome/TX Plant.png" id="8_vd2fg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c2ni6"]
 texture = ExtResource("1_r04oe")

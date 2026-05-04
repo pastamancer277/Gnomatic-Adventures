@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bjispdte6canv"]
 
 [ext_resource type="Script" uid="uid://d085hy0km8dbx" path="res://scripts/rangedWeapons/fireball.gd" id="1_h8s4r"]
-[ext_resource type="Texture2D" uid="uid://crsc7gdphfxgm" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Structures/Stations/Bonfire/Fire_01-Sheet.png" id="2_h8s4r"]
+[ext_resource type="Texture2D" uid="uid://crsc7gdphfxgm" path="res://assets/sprites/Biome/Fire_01-Sheet.png" id="2_h8s4r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3si6e"]
 size = Vector2(128, 24)

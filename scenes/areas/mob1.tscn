@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://544q7gcm2ury" path="res://scenes/areas/area.tscn" id="1_kkb4q"]
 [ext_resource type="Script" uid="uid://6egvk4e2yqfr" path="res://scripts/areas/mob1.gd" id="2_kjyj3"]
-[ext_resource type="Texture2D" uid="uid://xl67y6ix3cd6" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Tilesets/Dungeon_Tiles.png" id="2_semcw"]
+[ext_resource type="Texture2D" uid="uid://xl67y6ix3cd6" path="res://assets/sprites/Biome/Dungeon_Tiles.png" id="2_semcw"]
 [ext_resource type="Texture2D" uid="uid://cypehk5don2o4" path="res://assets/sprites/Biome/Roofs.png" id="3_fsw2t"]
-[ext_resource type="Texture2D" uid="uid://bhbttb2o42bxd" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/DarkRoof.png" id="3_semcw"]
+[ext_resource type="Texture2D" uid="uid://bhbttb2o42bxd" path="res://assets/sprites/Biome/DarkRoof.png" id="3_semcw"]
 [ext_resource type="PackedScene" uid="uid://ck6tgxkokfoe6" path="res://scenes/NPCs/old_lady_npc.tscn" id="6_upjcm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fsw2t"]

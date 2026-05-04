@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://c4iacudi7bbsu"]
 
 [ext_resource type="PackedScene" uid="uid://544q7gcm2ury" path="res://scenes/areas/area.tscn" id="1_qs5k7"]
-[ext_resource type="Texture2D" uid="uid://cmgrrfm3q2fbv" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/Bright Grass.png" id="2_266t7"]
-[ext_resource type="Texture2D" uid="uid://c62sjsk3jb12q" path="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="3_d5gyy"]
+[ext_resource type="Texture2D" uid="uid://cmgrrfm3q2fbv" path="res://assets/sprites/Biome/Bright Grass.png" id="2_266t7"]
+[ext_resource type="Texture2D" uid="uid://c62sjsk3jb12q" path="res://assets/sprites/Biome/Wall_Tiles.png" id="3_d5gyy"]
 [ext_resource type="TileSet" uid="uid://b35b6yqw1lsnu" path="res://assets/sprites/characters/BrownCat_Free_Carysaurus/new_tile_set.tres" id="4_prkmf"]
-[ext_resource type="Texture2D" uid="uid://bqg8ow8e4uyn0" path="res://assets/sprites/Biome/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Plant Resized.png" id="5_lf1po"]
+[ext_resource type="Texture2D" uid="uid://bqg8ow8e4uyn0" path="res://assets/sprites/Biome/TX Plant Resized.png" id="5_lf1po"]
 [ext_resource type="TileSet" uid="uid://bmvo5p0av7lkl" path="res://assets/sprites/characters/new_tile_set.tres" id="5_prkmf"]
 [ext_resource type="Texture2D" uid="uid://cypehk5don2o4" path="res://assets/sprites/Biome/Roofs.png" id="6_d5gyy"]
 [ext_resource type="Texture2D" uid="uid://dvw4xjkvkyrgo" path="res://assets/sprites/Biome/Props.png" id="8_lf1po"]

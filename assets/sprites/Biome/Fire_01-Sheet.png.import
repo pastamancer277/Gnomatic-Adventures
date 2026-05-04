@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doewc10pm5irj"
-path="res://.godot/imported/Props.png-b7f47158df9ae0548383fee97c951e2f.ctex"
+uid="uid://crsc7gdphfxgm"
+path="res://.godot/imported/Fire_01-Sheet.png-dcc3cf98da4d85f8f9f14b058245df7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Biome/Pixel Crawler - Free Pack 2.0.4/Pixel Crawler - Free Pack/Environment/Structures/Buildings/Props.png"
-dest_files=["res://.godot/imported/Props.png-b7f47158df9ae0548383fee97c951e2f.ctex"]
+source_file="res://assets/sprites/Biome/Fire_01-Sheet.png"
+dest_files=["res://.godot/imported/Fire_01-Sheet.png-dcc3cf98da4d85f8f9f14b058245df7d.ctex"]
 
 [params]
 

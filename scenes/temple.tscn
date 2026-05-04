@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cs0mxpbv5n8ds"]
+[gd_scene format=3 uid="uid://cs0mxpbv5n8ds"]
 
-[ext_resource type="Texture2D" uid="uid://dymyxr8hnhwa8" path="res://assets/sprites/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Tileset Grass.png" id="1_kyh5s"]
-[ext_resource type="Texture2D" uid="uid://cv7f5fh3caefc" path="res://assets/sprites/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Struct.png" id="2_a5w5l"]
-[ext_resource type="Texture2D" uid="uid://d22nhioouxh87" path="res://assets/sprites/Pixel Art Top Down/Pixel Art Top Down - Basic v1.2.2/Texture/TX Tileset Wall.png" id="3_jsg4b"]
+[ext_resource type="Texture2D" uid="uid://dymyxr8hnhwa8" path="res://assets/sprites/Biome/TX Tileset Grass.png" id="1_kyh5s"]
+[ext_resource type="Texture2D" uid="uid://cv7f5fh3caefc" path="res://assets/sprites/Biome/TX Struct.png" id="2_a5w5l"]
+[ext_resource type="Texture2D" uid="uid://d22nhioouxh87" path="res://assets/sprites/Biome/TX Tileset Wall.png" id="3_jsg4b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrfim"]
 texture = ExtResource("1_kyh5s")
