@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doewc10pm5irj"
-path="res://.godot/imported/Props.png-18bc054dfd7715eddb54e2190ab04524.ctex"
+uid="uid://deux11jg0hlsd"
+path="res://.godot/imported/Popup Border Green (1).png-182ed3c7185827e747715813ca9f132d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Biome/Props.png"
-dest_files=["res://.godot/imported/Props.png-18bc054dfd7715eddb54e2190ab04524.ctex"]
+source_file="res://assets/icons/Popup Border Green (1).png"
+dest_files=["res://.godot/imported/Popup Border Green (1).png-182ed3c7185827e747715813ca9f132d.ctex"]
 
 [params]
 
