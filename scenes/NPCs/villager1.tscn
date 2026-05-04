@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://ccobedyb2luj4" path="res://scripts/NPCs/villager1dialogue.gd" id="4_sod1w"]
 [ext_resource type="Script" uid="uid://cj3g3j1afr0ed" path="res://scripts/quests/furquest.gd" id="5_kd44d"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_brhin"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kd44d"]
 resource_local_to_scene = true
 shader = ExtResource("2_sod1w")
 shader_parameter/active = false
@@ -15,7 +15,7 @@ shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 [node name="Villager1" unique_id=1834193905 instance=ExtResource("1_4v3n6")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
-material = SubResource("ShaderMaterial_brhin")
+material = SubResource("ShaderMaterial_kd44d")
 texture = ExtResource("3_kd44d")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]

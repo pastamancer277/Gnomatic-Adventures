@@ -50,6 +50,7 @@ func playerResponse(key: int):
 		if(key==0 or key==1):
 			run+=1
 			slimeQuest.activate()
+			interact()
 		if(key==2):
 			pass
 	else: if(run==3):

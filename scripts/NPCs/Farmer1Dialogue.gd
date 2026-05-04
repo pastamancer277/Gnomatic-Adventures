@@ -43,6 +43,7 @@ func playerResponse(key: int):
 	else: if(run==2):
 		if(key==0 or key==1):
 			run+=1
+			interact()
 		if(key==2):
 			pass
 	else: if(run==3):

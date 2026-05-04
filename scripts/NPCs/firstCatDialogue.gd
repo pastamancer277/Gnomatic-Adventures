@@ -71,8 +71,10 @@ func playerResponse(key: int):
 			pass
 	else: if(run==6):
 		run+=1
+		interact()
 	else: if(run==7):
 		run+=1
+		interact()
 	else: if(run==8):
 		run+=1
 		pass
