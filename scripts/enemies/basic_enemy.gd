@@ -203,12 +203,13 @@ func onDeath():
 		$RespawnTimer.start(respawn_time)
 
 func _on_respawn_timer_timeout():
-	global_position=pos
-	visible=true
-	$CollisionShape2D.disabled=false
-	process_mode=Node.PROCESS_MODE_INHERIT
-	health=mHealth
-	dead=false
+	if(dead):
+		global_position=pos
+		visible=true
+		$CollisionShape2D.disabled=false
+		process_mode=Node.PROCESS_MODE_INHERIT
+		health=mHealth
+		dead=false
 
 func isDead():
 	return dead

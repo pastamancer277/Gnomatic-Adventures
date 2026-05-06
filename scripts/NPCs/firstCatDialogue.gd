@@ -56,7 +56,6 @@ func playerResponse(key: int):
 			run+=1
 			pass
 	else: if(run==4):
-		interact()
 		if(key==0):
 			catPieQuest.tryComplete()
 			if(catPieQuest.isComplete()):
