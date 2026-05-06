@@ -12,7 +12,7 @@ func _on_cliffside_transit_body_exited(body: Node2D) -> void:
 
 
 func _on_to_village_body_entered(body: Node2D) -> void:
-	if(body.name=="Player"&&Global.cur_area=="Forest3"):
+	if(body.name=="Player"&&Global.cur_area=="Forest3" and player.hasKeyword("black_cat_path_open")):
 		locationChange="Village1"
 		Global.scene_transit=true
 
