@@ -42,7 +42,9 @@ func interact():
 	else: if(run==9):
 		dialogueBox.dialogue("One of the watch-gnomes from the village saw you talking to the cat and giving it the pie. The village security has deemed you a cat-sympathiser, they're on their way to kick you out of the village. I'm sorry.",self,person_name, tex)
 		dialogueBox.setDialogueOption("I'll make this right. I show gnomekind that cats don't have to be bad.", 0)
-		
+	else: if(run==10):
+		dialogueBox.dialogue("Child, you can't be here anymore. You must leave.",self,person_name, tex)
+		dialogueBox.setDialogueOption("But...", 0)
 	
 func playerResponse(key: int):
 	if(run == 1):
@@ -92,5 +94,9 @@ func playerResponse(key: int):
 			interact()
 	else: if(run==9):
 		player.changeCredit(-2)
+		if(key==0):
+			run+=1
+			pass
+	else: if(run==10):
 		if(key==0):
 			pass

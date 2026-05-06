@@ -75,8 +75,6 @@ motion_mode = 0
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=648745836]
 
-[node name="Dialogue" parent="UI" unique_id=2067749993 instance=ExtResource("7_tipki")]
-
 [node name="UI Interface" parent="UI" unique_id=1464526898 instance=ExtResource("16_0ld40")]
 
 [node name="HelpMenusInterface" parent="UI" unique_id=637465045 instance=ExtResource("20_gqmmt")]
@@ -96,3 +94,5 @@ offset_bottom = 108.9436
 
 [node name="Popups" type="Node2D" parent="UI" unique_id=2023017706]
 position = Vector2(189, 201)
+
+[node name="Dialogue" parent="UI" unique_id=2067749993 instance=ExtResource("7_tipki")]

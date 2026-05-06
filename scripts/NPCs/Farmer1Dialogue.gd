@@ -29,6 +29,9 @@ func interact():
 		dialogueBox.dialogue("Oh, of course. I have more than I know what to do with. Here you go.",self, person_name, tex)
 		dialogueBox.setDialogueOption("Thank you!", 0)
 		dialogueBox.setDialogueOption("Thanks.", 1)
+	else: if(run==4):
+		dialogueBox.dialogue("You're welcome!",self, person_name, tex)
+		dialogueBox.setDialogueOption("...", 0)
 	
 
 func playerResponse(key: int):
@@ -47,9 +50,8 @@ func playerResponse(key: int):
 		if(key==2):
 			pass
 	else: if(run==3):
+		$/root/Main/Systems/Inventory.add_item({key_item:4})
 		if(key==0):
-				run+=1
-				interact()
-				$/root/Main/Systems/Inventory.add_item({key_item:4})
+			run+=1
 		if(key==1):
-			pass
+			run+=1
