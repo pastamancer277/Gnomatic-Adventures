@@ -24,6 +24,7 @@ var attacking=false
 var level=1
 var levelPoints=0
 var xp=0
+var xpToLevel = 100
 var socialCredit=50
 var keywords=[]
 
@@ -279,8 +280,9 @@ func setAllyPos():
 
 func gainXP(val: int):
 	xp+=val
-	if(xp>= 100):
-		xp-=100
+	if(xp>= xpToLevel):
+		xp-=xpToLevel
+		xpToLevel = int(xpToLevel*1.1)
 		level+=1
 		levelPoints+=1
 		var popup_scene = load("res://scenes/popups.tscn").instantiate()

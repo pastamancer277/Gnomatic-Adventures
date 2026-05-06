@@ -1155,6 +1155,18 @@ size = Vector2(47, 132)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tlamr"]
 size = Vector2(111, 72.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enqqm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5chbg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d54wb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vxsks"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ul2m5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0y6yd"]
+
 [node name="Village1" unique_id=1349325032 instance=ExtResource("1_qki3t")]
 script = ExtResource("2_tlamr")
 
@@ -1237,6 +1249,32 @@ position = Vector2(-68, 652)
 
 [node name="Farm" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="1" unique_id=435315384]
 position = Vector2(727, -171)
+
+[node name="toBasicHouse" type="Area2D" parent="." index="7" unique_id=786115513]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="toBasicHouse" index="0" unique_id=918234539]
+position = Vector2(544, -5)
+shape = SubResource("RectangleShape2D_enqqm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="toBasicHouse" index="1" unique_id=49640847]
+position = Vector2(144, 318)
+shape = SubResource("RectangleShape2D_5chbg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="toBasicHouse" index="2" unique_id=909428403]
+position = Vector2(160, 604)
+shape = SubResource("RectangleShape2D_d54wb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="toBasicHouse" index="3" unique_id=763983610]
+position = Vector2(561, 284)
+shape = SubResource("RectangleShape2D_vxsks")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="toBasicHouse" index="4" unique_id=350923260]
+position = Vector2(272, 126)
+shape = SubResource("RectangleShape2D_ul2m5")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="toBasicHouse" index="5" unique_id=363487545]
+position = Vector2(161, -51)
+shape = SubResource("RectangleShape2D_0y6yd")
 
 [connection signal="body_entered" from="ToForest3" to="." method="_on_to_forest_3_body_entered"]
 [connection signal="body_exited" from="ToForest3" to="." method="_on_to_forest_3_body_exited"]
