@@ -23,7 +23,7 @@ func interact():
 		dialogueBox.setDialogueOption("You're lying, you just want to eat me! Everyone knows only Gnomes love pie.", 0)
 	else: if(run==3):
 		dialogueBox.dialogue("We cats like pie and blueberrys, just the same as Gnomes, I just want to be friends.",self,person_name, tex)
-		dialogueBox.setDialogueOption("Okay! I'll find you a pie, just don't eat me!.", 0)
+		dialogueBox.setDialogueOption("Okay! I'll find you a pie, just don't eat me!", 0)
 	else: if (run==4):
 		dialogueBox.dialogue("Do you have the pie?",self,person_name, tex)
 		dialogueBox.setDialogueOption("yes, right here!", 0)
@@ -56,7 +56,6 @@ func playerResponse(key: int):
 			run+=1
 			pass
 	else: if(run==4):
-		interact()
 		if(key==0):
 			catPieQuest.tryComplete()
 			if(catPieQuest.isComplete()):

@@ -35,6 +35,8 @@ func saveGame():
 
 func loadGame():
 	if not FileAccess.file_exists(SAVE_PATH):
+		print("No save file found!")
+		$/root/Global.resetGame()
 		return null
 		
 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)

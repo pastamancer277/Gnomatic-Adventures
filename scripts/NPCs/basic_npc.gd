@@ -62,6 +62,7 @@ func onDeath():
 	deathCollisions()
 	player_near=false
 	player.changeRating(killValue)
+	player.changeCredit(-killValue*2)
 	saveData()
 
 func deathCollisions():

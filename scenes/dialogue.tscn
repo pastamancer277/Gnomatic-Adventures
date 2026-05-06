@@ -56,6 +56,7 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 
 [node name="Name" type="RichTextLabel" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1708256279]
+texture_filter = 2
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_fyky8")
@@ -63,6 +64,7 @@ text = "nameee"
 fit_content = true
 
 [node name="DialogueText" type="RichTextLabel" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1639311585]
+texture_filter = 2
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2

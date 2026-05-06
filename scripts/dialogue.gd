@@ -8,10 +8,11 @@ var currentNPCDialogue: Node
 var full_text = ""
 var scroll_speed = 2
 func _process(delta: float) -> void:
-	pass
+	if(panel_container.visible):
+		$/root/Global.pause = true
 
 func dialogue(text: String, npc: Node, name: String, picture: PortableCompressedTexture2D):
-	#$/root/Global.pause = true
+	$/root/Global.pause = true
 	buttons.clearButtons()
 	currentNPCDialogue=npc
 	$PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Name.text = name

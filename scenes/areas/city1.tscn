@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cpj7q304014b" path="res://assets/sprites/Biome/Roofs.png" id="5_b8cnf"]
 [ext_resource type="TileSet" uid="uid://b35b6yqw1lsnu" path="res://assets/sprites/characters/BrownCat_Free_Carysaurus/new_tile_set.tres" id="5_sfdmy"]
 [ext_resource type="Texture2D" uid="uid://bpuyvbapsxxai" path="res://assets/sprites/Biome/Shadows.png" id="6_wvkxu"]
-[ext_resource type="Texture2D" uid="uid://dvw4xjkvkyrgo" path="res://assets/sprites/Biome/Props.png" id="7_gbtq8"]
+[ext_resource type="Texture2D" uid="uid://doewc10pm5irj" path="res://assets/sprites/Biome/Props.png" id="7_gbtq8"]
 [ext_resource type="Texture2D" uid="uid://cr5cqr05uyulp" path="res://assets/sprites/Biome/Walls.png" id="10_bn0e7"]
 [ext_resource type="PackedScene" uid="uid://bmw1xq14alg87" path="res://scenes/enemies/basic_enemy.tscn" id="10_wvkxu"]
 [ext_resource type="Resource" uid="uid://cagdfvhselp0l" path="res://resources/enemies/bird.tres" id="11_gbtq8"]
@@ -2012,7 +2012,7 @@ size = Vector2(70, 87)
 size = Vector2(47, 98)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvkxu"]
-size = Vector2(27.5, 40)
+size = Vector2(27.5, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b8cnf"]
 size = Vector2(58, 23.5)
@@ -2091,7 +2091,7 @@ shape = SubResource("RectangleShape2D_bn0e7")
 [node name="toJuice" type="Area2D" parent="." index="6" unique_id=2136518030]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="toJuice" index="0" unique_id=560370289]
-position = Vector2(14.25, 218)
+position = Vector2(16.25, 214.5)
 shape = SubResource("RectangleShape2D_wvkxu")
 
 [node name="city>forest" type="Area2D" parent="." index="7" unique_id=1369971091]
@@ -2104,7 +2104,7 @@ shape = SubResource("RectangleShape2D_b8cnf")
 position = Vector2(61, -223)
 
 [node name="JuiceShop" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="1" unique_id=47976624]
-position = Vector2(16, 244)
+position = Vector2(16, 248)
 
 [node name="City2" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="2" unique_id=92599890]
 position = Vector2(412, 79)
