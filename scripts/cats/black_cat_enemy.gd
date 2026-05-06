@@ -5,7 +5,7 @@ extends catEnemy
 func _ready():
 	super._ready()
 	
-	mHealth=150
+	mHealth=210
 	health=mHealth
 	attack_value=12
 	knockback = 120.0

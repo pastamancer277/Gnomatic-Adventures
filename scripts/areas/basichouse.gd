@@ -9,7 +9,7 @@ func enterFrom(node:String):
 	player.global_position = $EnterPoints/Door.global_position
 
 func _on_exit_body_entered(body: Node2D) -> void:
-	if(body.name == "Player"):
+	if(body.name == "Player"&&Global.cur_area==name):
 		Global.scene_transit=true
 		locationChange=exitLoc
 		player.global_position = exitPos

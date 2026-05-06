@@ -9,9 +9,9 @@ signal jailed
 const SPEED = 100
 var currnet_dir ="down"
 var secDir = "none"
-var mHealth=100
-var health=100
-var attack_value=20
+var mHealth=10000
+var health=10000
+var attack_value=50
 var knockback = 120
 var shield=0
 var alive=true
