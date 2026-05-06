@@ -39,6 +39,7 @@ layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("4_e7nqa")
 theme_type_variation = &"ScreenButton"
+theme_override_font_sizes/font_size = 23
 button_mask = 0
 text = "Space to Start"
 

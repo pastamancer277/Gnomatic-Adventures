@@ -1,10 +1,10 @@
 extends Control
 
 @onready var inventory = get_node("/root/Main/Systems/Inventory")
-@onready var grid = $PanelContainer/VBoxContainer/GridContainer
-@onready var xp = $PanelContainer/VBoxContainer/HBoxContainer/XP
-@onready var xp_label = $PanelContainer/VBoxContainer/HBoxContainer/Label
-@onready var social_credit = $"PanelContainer/VBoxContainer/HBoxContainer/SocialCredit"
+@onready var grid = $PanelContainer/HBoxContainer/GridContainer
+@onready var xp = $PanelContainer/HBoxContainer/XP
+@onready var xp_label = $PanelContainer/HBoxContainer/Label
+@onready var social_credit = $"PanelContainer/HBoxContainer/SocialCredit"
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
 
 @export var item_slot_scene: PackedScene
@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 	social_credit.text = str(player.getSocialCredit())
 
 func update_ui():
-	var slots = $PanelContainer/VBoxContainer/GridContainer.get_children()
+	var slots = $PanelContainer/HBoxContainer/GridContainer.get_children()
 	var item_list = inventory.items.keys()
 	
 	for i in range(slots.size()):

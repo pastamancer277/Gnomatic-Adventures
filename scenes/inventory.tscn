@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c3pg5pi87ia3p" path="res://scenes/item_slot.tscn" id="2_hj2ta"]
 [ext_resource type="Theme" uid="uid://8yntgav2cnsc" path="res://assets/themes/panel_container.tres" id="3_ty45s"]
 [ext_resource type="Theme" uid="uid://dgi7kajo0do8d" path="res://assets/themes/label.tres" id="4_53g1v"]
+[ext_resource type="Script" uid="uid://pkdloh6bp2tu" path="res://scripts/label_toggle.gd" id="5_yyk2a"]
 
 [node name="Inventory" type="Control" unique_id=1340913624]
 layout_mode = 3
@@ -21,67 +22,80 @@ item_slot_scene = ExtResource("2_hj2ta")
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.9990001
-anchor_bottom = 0.717
+anchor_bottom = 0.30800003
 offset_right = 0.7248535
-offset_bottom = -0.1459961
+offset_bottom = -0.3040161
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_ty45s")
 theme_type_variation = &"Inventory"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1577368143]
-layout_mode = 2
-metadata/_edit_lock_ = true
-
-[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer" unique_id=884358431]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
-columns = 20
-metadata/_edit_lock_ = true
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=509762361]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=509762361]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 metadata/_edit_lock_ = true
 
-[node name="Toggle" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=530864850]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=169255349]
+texture_filter = 2
+layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="Toggle" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=530864850]
 texture_filter = 2
 layout_mode = 2
 theme = ExtResource("4_53g1v")
-text = "Tab to Toggle"
+theme_override_constants/line_spacing = -3
+theme_override_font_sizes/font_size = 5
+text = "  ESC"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_yyk2a")
 
-[node name="XP" type="ProgressBar" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=742351336]
+[node name="Toggle2" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=950711868]
+texture_filter = 2
 layout_mode = 2
-size_flags_horizontal = 3
+theme = ExtResource("4_53g1v")
+theme_override_constants/line_spacing = -3
+theme_override_font_sizes/font_size = 4
+text = "  Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_yyk2a")
+
+[node name="XP" type="ProgressBar" parent="PanelContainer/HBoxContainer" unique_id=742351336]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
 size_flags_vertical = 4
 size_flags_stretch_ratio = 20.0
 theme = ExtResource("3_ty45s")
 show_percentage = false
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=935079044]
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer" unique_id=935079044]
 texture_filter = 2
 layout_mode = 2
 theme = ExtResource("4_53g1v")
+theme_override_font_sizes/font_size = 5
 text = "XP"
 
-[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1235199049]
+[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer" unique_id=1235199049]
 texture_filter = 2
 layout_mode = 2
 size_flags_stretch_ratio = 1.34
-theme_override_font_sizes/font_size = 6
+theme_override_font_sizes/font_size = 5
 text = "Social Credit:"
 
-[node name="SocialCredit" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1728082070]
+[node name="SocialCredit" type="Label" parent="PanelContainer/HBoxContainer" unique_id=1728082070]
 texture_filter = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 6
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 5
 
-[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1640530217]
-texture_filter = 2
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/HBoxContainer" unique_id=884358431]
 layout_mode = 2
-size_flags_stretch_ratio = 1.34
-theme_override_font_sizes/font_size = 6
-text = "  "
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+columns = 15
+metadata/_edit_lock_ = true
