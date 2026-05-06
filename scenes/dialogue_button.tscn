@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://scripts/dialogue_button.gd" id="1_irtb7"]
 
 [node name="DialogueButton" type="Button" unique_id=1142496482]
+texture_filter = 2
 offset_right = 8.0
 offset_bottom = 8.0
 mouse_filter = 2

@@ -38,8 +38,9 @@ func _physics_process(delta: float) -> void:
 		visible=true
 		update_health()
 		move()
-	else:
+	elif $/root/Global.getPaused():
 		$CollisionShape2D.disabled=true
+	else:
 		visible=false
 
 func update_health():
