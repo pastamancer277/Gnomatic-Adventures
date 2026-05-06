@@ -29,19 +29,19 @@ region = Rect2(192, 384, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7tfoc"]
 atlas = ExtResource("1_821yg")
-region = Rect2(0, 0, 33, 40)
+region = Rect2(0, 0, 33, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nh1lk"]
 atlas = ExtResource("1_821yg")
-region = Rect2(33, 0, 33, 40)
+region = Rect2(33, 0, 33, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vedtf"]
 atlas = ExtResource("1_821yg")
-region = Rect2(66, 0, 33, 40)
+region = Rect2(66, 0, 33, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b17j6"]
 atlas = ExtResource("1_821yg")
-region = Rect2(99, 0, 33, 40)
+region = Rect2(99, 0, 33, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mb1nb"]
 atlas = ExtResource("1_8gdn3")

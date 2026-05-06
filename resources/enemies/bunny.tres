@@ -8,7 +8,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tk0xg"]
 atlas = ExtResource("1_dvbxb")
-region = Rect2(32, 0, 32, 42)
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dvbxb"]
 atlas = ExtResource("1_7me4w")
@@ -24,7 +24,7 @@ region = Rect2(64, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hprsb"]
 atlas = ExtResource("1_dvbxb")
-region = Rect2(0, 0, 32, 42)
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_diynv"]
 atlas = ExtResource("1_7me4w")
