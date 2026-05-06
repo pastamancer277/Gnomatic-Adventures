@@ -48,3 +48,13 @@ func _on__body_exited(body: Node2D) -> void:
 func _on_to_juice_body_exited(body: Node2D) -> void:
 	if(body.name=="Player"&&Global.cur_area=="City1"):
 		Global.scene_transit=false
+
+
+func _on_to_boss_map_body_entered(body: Node2D) -> void:
+	if(body.name=="Player"&&Global.cur_area=="City1"):
+		Global.scene_transit=true
+		locationChange="BossMap"
+
+func _on_to_boss_map_body_exited(body: Node2D) -> void:
+	if(body.name=="Player"&&Global.cur_area=="City1"):
+		Global.scene_transit=false

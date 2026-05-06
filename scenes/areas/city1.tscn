@@ -2017,6 +2017,9 @@ size = Vector2(27.5, 33)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b8cnf"]
 size = Vector2(58, 23.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_imk6h"]
+size = Vector2(70, 96.75)
+
 [node name="City1" unique_id=1349325032 instance=ExtResource("1_gfdvo")]
 script = ExtResource("2_wvkxu")
 
@@ -2112,6 +2115,15 @@ position = Vector2(412, 79)
 [node name="Mob1" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="3" unique_id=452322001]
 position = Vector2(-274, 77)
 
+[node name="BossMap" type="Node2D" parent="EnterPoints" parent_id_path=PackedInt32Array(1593923043) index="4" unique_id=348895024]
+position = Vector2(66, 360)
+
+[node name="toBossMap" type="Area2D" parent="." index="9" unique_id=1610324974]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="toBossMap" index="0" unique_id=2145155650]
+position = Vector2(65, 428.375)
+shape = SubResource("RectangleShape2D_imk6h")
+
 [connection signal="body_entered" from="ToAlly" to="." method="_on_to_ally_body_entered"]
 [connection signal="body_exited" from="ToAlly" to="." method="_on_to_ally_body_exited"]
 [connection signal="body_entered" from="1>2" to="." method="_on__body_entered"]
@@ -2120,3 +2132,5 @@ position = Vector2(-274, 77)
 [connection signal="body_exited" from="toJuice" to="." method="_on_to_juice_body_exited"]
 [connection signal="body_entered" from="city>forest" to="." method="_on_cityforest_body_entered"]
 [connection signal="body_exited" from="city>forest" to="." method="_on_cityforest_body_exited"]
+[connection signal="body_entered" from="toBossMap" to="." method="_on_to_boss_map_body_entered"]
+[connection signal="body_exited" from="toBossMap" to="." method="_on_to_boss_map_body_exited"]
