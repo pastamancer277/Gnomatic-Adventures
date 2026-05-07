@@ -20,14 +20,17 @@ func _physics_process(delta: float) -> void:
 		$CollisionShape2D.disabled=true
 		visible=false
 	else:
+		$CollisionShape2D.disabled=false
+		visible=true
 		if(combat and !$/root/Global.getPaused()):
 			update_health()
 			attack()
 			move()
-		else: if(not player == null):
+		else: 
 			$HealthBar.visible=false
-			if(Input.is_action_just_pressed("Interact")):
-				runDialogue()
+			if(not player == null):
+				if(Input.is_action_just_pressed("Interact")):
+					runDialogue()
 
 func playerEntered(body: Node2D):
 	if(body.name=="Player" and !combat):

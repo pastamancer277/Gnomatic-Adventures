@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://x35111dpcxg1" path="res://scripts/cats/brown_dialogue.gd" id="8_ad5c8"]
 [ext_resource type="Script" uid="uid://bisdwbbdqcc5y" path="res://scripts/cats/black_cat_quest.gd" id="9_cjos7"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_p3cmn"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c1q0f"]
 resource_local_to_scene = true
 shader = ExtResource("3_upww8")
 shader_parameter/active = false
@@ -194,7 +194,7 @@ y_sort_enabled = true
 script = ExtResource("2_ihbkt")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=653963757]
-material = SubResource("ShaderMaterial_p3cmn")
+material = SubResource("ShaderMaterial_c1q0f")
 position = Vector2(-1, -5)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_u0spo")
@@ -211,9 +211,6 @@ shape = SubResource("CircleShape2D_nj8ka")
 [node name="CollisionShape2D" parent="AttackBox" parent_id_path=PackedInt32Array(1213018617) index="0" unique_id=606064724]
 position = Vector2(0, 0)
 shape = SubResource("CircleShape2D_mpvus")
-
-[node name="HealthBar" parent="." index="5" unique_id=1053111102]
-max_value = 150.0
 
 [node name="Dialogue" parent="." index="7" unique_id=1381320995]
 script = ExtResource("8_ad5c8")
