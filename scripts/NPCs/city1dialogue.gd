@@ -8,7 +8,7 @@ func _ready() -> void:
 	meatQuest=get_node("../Quests/WoodQuest")
 	person_name = "Juliet"
 	tex = PortableCompressedTexture2D.new()
-	var im = load("res://assets/sprites/characters/Gnomester.png").get_image()
+	var im = load("res://assets/sprites/characters/gnome2.png").get_image()
 	im = im.get_region(Rect2(im.get_width()/3,0, im.get_width()/2, im.get_height()/1.5))
 	tex.create_from_image(im, PortableCompressedTexture2D.COMPRESSION_MODE_LOSSLESS)
 

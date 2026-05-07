@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://rvpx8kad7tpq"]
+
+[ext_resource type="Script" uid="uid://bg8twfigqtya7" path="res://scripts/quest_item.gd" id="1_tcj1n"]
+
+[node name="QuestItem" type="MarginContainer" unique_id=1144495576]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+script = ExtResource("1_tcj1n")
+
+[node name="MarginContainer" type="HBoxContainer" parent="." unique_id=1979152814]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=892978235]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
