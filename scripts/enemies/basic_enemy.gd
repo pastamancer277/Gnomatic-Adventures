@@ -120,7 +120,6 @@ func move():
 			else: if(moveDir=="left" and p.position.x-position.x>2):
 				$AnimatedSprite2D.flip_h=false
 				moveDir="right"
-				
 			$AnimatedSprite2D.play("walk")
 		else: if(health>0):
 			velocity.x=0

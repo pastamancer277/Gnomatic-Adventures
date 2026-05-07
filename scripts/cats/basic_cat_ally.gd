@@ -13,6 +13,7 @@ var health
 var attack_value
 var speed
 var knockback
+var moveDir="right"
 
 var knockback_velocity = Vector2.ZERO
 
@@ -86,14 +87,19 @@ func move():
 			$AnimatedSprite2D.play("walk")
 			if(moveTar.position.x-position.x<0):
 				velocity.x=-speed
-				$AnimatedSprite2D.flip_h=true
 			else:
 				velocity.x=speed
-				$AnimatedSprite2D.flip_h=false
 			if(moveTar.position.y-position.y<0):
 				velocity.y=-speed
 			else:
 				velocity.y=speed
+			
+			if(moveDir=="right" and moveTar.position.x-position.x<-2):
+				$AnimatedSprite2D.flip_h=true
+				moveDir="left"
+			else: if(moveDir=="left" and moveTar.position.x-position.x>2):
+				$AnimatedSprite2D.flip_h=false
+				moveDir="right"
 		else: if(health<=0):
 			velocity.x=0
 			velocity.y=0
@@ -101,14 +107,19 @@ func move():
 			$AnimatedSprite2D.play("walk")
 			if(player.position.x-position.x<0):
 				velocity.x=-speed
-				$AnimatedSprite2D.flip_h=true
 			else:
 				velocity.x=speed
-				$AnimatedSprite2D.flip_h=false
 			if(player.position.y-position.y<0):
 				velocity.y=-speed
 			else:
 				velocity.y=speed
+			
+			if(moveDir=="right" and player.position.x-position.x<-2):
+				$AnimatedSprite2D.flip_h=true
+				moveDir="left"
+			else: if(moveDir=="left" and player.position.x-position.x>2):
+				$AnimatedSprite2D.flip_h=false
+				moveDir="right"
 		else: if(health>0):
 			velocity.x=0
 			velocity.y=0
