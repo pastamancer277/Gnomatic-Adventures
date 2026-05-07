@@ -84,11 +84,11 @@ func onDeath():
 		super.onDeath()
 	else:
 		summonMinion()
-		summonMinion()
 		phase+=1
 		health=mHealth
 		fireball()
 		summonMinion()
+		$SummonTimer.start(0.2)
 
 func _on_summon_timer_timeout() -> void:
 	summon=true

@@ -26,6 +26,7 @@ var cleared = false
 var summoned = false
 
 var pos
+var moveDir="right"
 
 var knockback_velocity = Vector2.ZERO
 
@@ -107,22 +108,20 @@ func move():
 			var p=player_chase.get(0)
 			if(p.position.x-position.x<0):
 				velocity.x=-speed
-				$AnimatedSprite2D.flip_h=true
 			else:
 				velocity.x=speed
-				$AnimatedSprite2D.flip_h=false
 			if(p.position.y-position.y<0):
 				velocity.y=-speed
 			else:
 				velocity.y=speed
-			if(abs(p.position.y-position.y)>abs(p.position.x-position.x)):
+			if(moveDir=="right" and p.position.x-position.x<-2):
+				$AnimatedSprite2D.flip_h=true
+				moveDir="left"
+			else: if(moveDir=="left" and p.position.x-position.x>2):
 				$AnimatedSprite2D.flip_h=false
-				if(velocity.y>0):
-					$AnimatedSprite2D.play("forward")
-				else:
-					$AnimatedSprite2D.play("backward")
-			else:
-				$AnimatedSprite2D.play("walk")
+				moveDir="right"
+				
+			$AnimatedSprite2D.play("walk")
 		else: if(health>0):
 			velocity.x=0
 			velocity.y=0
