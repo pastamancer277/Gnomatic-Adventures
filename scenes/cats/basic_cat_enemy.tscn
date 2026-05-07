@@ -55,6 +55,8 @@ _data = {
 }
 
 [node name="BasicCatEnemy" type="CharacterBody2D" unique_id=72348834 groups=["damagable", "enemy", "entity"]]
+z_index = 1
+y_sort_enabled = true
 collision_layer = 2
 collision_mask = 29
 script = ExtResource("1_136sq")

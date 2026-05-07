@@ -3,7 +3,7 @@ extends catEnemy
 var summon = false
 var fire = false
 var hair = false
-var phase = 3
+var phase = 1
 
 @export var enemyScene:PackedScene
 @export var fireballScene:PackedScene
@@ -31,7 +31,7 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	super._physics_process(delta)
 	
-	if(combat):
+	if(combat and not dead):
 		if(summon):
 			summonMinion()
 			summon=false
@@ -47,7 +47,7 @@ func setCombat(c: bool):
 
 func move():
 	super.move()
-	if(phase==3 and hair):
+	if(phase==3 and hair and not dead):
 		hairDrop()
 		hair=false
 
