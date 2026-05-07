@@ -1,8 +1,8 @@
-[gd_scene format=4 uid="uid://ulwsvwwnbotm"]
+[gd_scene format=4 uid="uid://4dofr8omxkfy"]
 
 [ext_resource type="PackedScene" uid="uid://544q7gcm2ury" path="res://scenes/areas/area.tscn" id="1_pld3q"]
 [ext_resource type="Texture2D" uid="uid://dymyxr8hnhwa8" path="res://assets/sprites/Biome/TX Tileset Grass.png" id="2_3nhoh"]
-[ext_resource type="Script" uid="uid://d0obtkms3nhxr" path="res://scripts/areas/bossmap.gd" id="2_wusld"]
+[ext_resource type="Script" path="res://scripts/areas/bossmap.gd" id="2_wusld"]
 [ext_resource type="Texture2D" uid="uid://cr5cqr05uyulp" path="res://assets/sprites/Biome/Walls.png" id="3_puqa6"]
 [ext_resource type="Texture2D" uid="uid://cv7f5fh3caefc" path="res://assets/sprites/Biome/TX Struct.png" id="4_py5fx"]
 [ext_resource type="Texture2D" uid="uid://cpj7q304014b" path="res://assets/sprites/Biome/Roofs.png" id="4_ydaih"]
@@ -2530,10 +2530,12 @@ tile_map_data = PackedByteArray("AAD//woAAwAJAAEAAAD+/woAAwAIAAEAAAD6/woAAwAIAAE
 tile_set = SubResource("TileSet_syi5y")
 
 [node name="WhiteCatEnemy" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="0" unique_id=72348834 instance=ExtResource("9_bjyw6")]
+z_index = 0
+y_sort_enabled = false
 position = Vector2(81, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=1504294446]
-polygon = PackedVector2Array(-277, 312, -273, 15, -255, 15, -256, -2, -335, -2, -334, -38, -273, -35, -256, -33, -259, -49, -275, -48, -276, -212, 545, -210, 546, 320, -265, 321, -265, 545, 768, 545, 769, -384, -463, -385, -463, 543, -266, 547, -263, 320)
+polygon = PackedVector2Array(-277, 312, -273, 15, -255, 15, -256, -2, -335, -2, -334, -38, -273, -35, -256, -33, -259, -49, -275, -48, -276, -212, 46, -214, 51, -150, 64, -149, 53, -303, 111, -301, 100, -213, 96, -146, 111, -146, 112, -212, 545, -210, 546, 320, -265, 321, -265, 545, 768, 545, 769, -384, -463, -385, -463, 543, -266, 547, -263, 320)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyCollisions" parent_id_path=PackedInt32Array(1550626514) index="0" unique_id=1560934474]
 polygon = PackedVector2Array(-277, 312, -273, 15, -255, 15, -259, -49, -275, -48, -276, -212, 545, -210, 546, 320, -265, 321, -265, 545, 768, 545, 769, -384, -463, -385, -463, 543, -266, 547, -263, 320)

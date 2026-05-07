@@ -17,7 +17,7 @@ func interact():
 			dialogueBox.setDialogueOption("Aww that's too bad. nice shop though!", 0)
 			dialogueBox.setDialogueOption("Ugh, ok.", 1)
 		else:
-			dialogueBox.dialogue("This Duck is so annyoing, constantly going on about pomegranates", self. person_name, tex)
+			dialogueBox.dialogue("This Duck is so annyoing, constantly going on about pomegranates", self, person_name, tex)
 			dialogueBox.setDialogueOption("...", 2)
 	
 	
