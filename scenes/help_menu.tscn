@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d17knws2s3o76" path="res://assets/icons/Right Arrow.png" id="3_2xk8j"]
 [ext_resource type="Theme" uid="uid://b15a07rd88w1m" path="res://assets/themes/margin_container_theme.tres" id="3_k65vi"]
 [ext_resource type="Texture2D" uid="uid://cx6fsceayqi8g" path="res://assets/icons/Up Arrow.png" id="5_8f3ry"]
+[ext_resource type="Texture2D" uid="uid://b4b53ek27bfgs" path="res://assets/icons/grid_icon.png" id="8_k65vi"]
 
 [node name="HelpMenu" type="PanelContainer" unique_id=1761127978]
 anchors_preset = 15
@@ -59,3 +60,11 @@ mouse_filter = 2
 theme = ExtResource("2_akeme")
 text = "Credits"
 icon = ExtResource("3_2xk8j")
+
+[node name="QuestButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2080165884]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme = ExtResource("2_akeme")
+text = "Quests"
+icon = ExtResource("8_k65vi")

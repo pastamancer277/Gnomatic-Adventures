@@ -6,8 +6,8 @@ func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
 	tex = PortableCompressedTexture2D.new()
 	person_name = "Guard"
-	var im = load("res://assets/sprites/characters/Idle-Guard1.png").get_image()
-	im = im.get_region(Rect2(im.get_width()/4,0, im.get_width()/2, im.get_height()/1.5))
+	var im = load("res://assets/sprites/characters/FemaleGuard.png").get_image()
+	im = im.get_region(Rect2(im.get_width()/4,im.get_height()/10, im.get_width()/2, im.get_height()/1.5))
 	tex.create_from_image(im, PortableCompressedTexture2D.COMPRESSION_MODE_LOSSLESS)
 
 func interact():

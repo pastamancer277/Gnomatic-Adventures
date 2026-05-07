@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://wr256rcla4m4"]
+
+[ext_resource type="Script" uid="uid://dq8ancm2alv44" path="res://scripts/quest_menu.gd" id="1_87l24"]
+
+[node name="QuestMenu" type="VBoxContainer" unique_id=2131881977]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_87l24")

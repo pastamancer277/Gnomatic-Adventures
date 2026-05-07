@@ -12,6 +12,7 @@ func _ready() -> void:
 
 func interact():
 	if(run==1):
+		get_node("../Quests/WoodQuest").activate()
 		dialogueBox.dialogue("I need wood. Would you go hunt for a wood sprite to get some for me?.", self,person_name, tex)
 		dialogueBox.setDialogueOption("Ok!", 0)
 		dialogueBox.setDialogueOption("I have your wood right here, sir.", 1)
