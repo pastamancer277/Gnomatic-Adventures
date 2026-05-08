@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cyfptrs5uy4pm" path="res://assets/sprites/characters/FemaleGuard.png" id="3_3g8kn"]
 [ext_resource type="Script" uid="uid://dpqqd7c086vhj" path="res://scripts/NPCs/jail_npc_dialogue.gd" id="5_4y6xf"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4y6xf"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3g8kn"]
 resource_local_to_scene = true
 shader = ExtResource("2_a7v0p")
 shader_parameter/active = false
@@ -16,7 +16,7 @@ shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 script = ExtResource("2_3g8kn")
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
-material = SubResource("ShaderMaterial_4y6xf")
+material = SubResource("ShaderMaterial_3g8kn")
 texture = ExtResource("3_3g8kn")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]
