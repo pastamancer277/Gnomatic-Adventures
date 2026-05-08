@@ -4,8 +4,9 @@
 [ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_odn3c"]
 [ext_resource type="Texture2D" uid="uid://bp3xui6fi2b6u" path="res://assets/sprites/characters/gnome2.png" id="3_d2qfh"]
 [ext_resource type="Script" uid="uid://nuiw47p2f5yj" path="res://scripts/NPCs/city1dialogue.gd" id="3_odn3c"]
+[ext_resource type="Script" uid="uid://fp3eao17ufcr" path="res://scripts/quests/WoodQuest.gd" id="5_sxcap"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_sxcap"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2vcfa"]
 resource_local_to_scene = true
 shader = ExtResource("2_odn3c")
 shader_parameter/active = false
@@ -14,8 +15,11 @@ shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 [node name="BasicNPC" unique_id=1834193905 instance=ExtResource("1_45htn")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
-material = SubResource("ShaderMaterial_sxcap")
+material = SubResource("ShaderMaterial_2vcfa")
 texture = ExtResource("3_d2qfh")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]
 script = ExtResource("3_odn3c")
+
+[node name="WoodQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(879326239) index="0" unique_id=476004635]
+script = ExtResource("5_sxcap")

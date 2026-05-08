@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kby6wao6ru81"]
 
-[ext_resource type="Script" uid="uid://fr8lotst8pvm" path="res://scripts/save_point.gd" id="1_xvfwu"]
-[ext_resource type="Texture2D" uid="uid://e544s7q6y5te" path="res://assets/sprites/tilesets/floors/wooden.png" id="2_wiums"]
+[ext_resource type="Script" path="res://scripts/save_point.gd" id="1_xvfwu"]
+[ext_resource type="Texture2D" uid="uid://b5n6vnvftimfb" path="res://assets/sprites/objects/SaveCrystal.png" id="2_xvfwu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0rt3"]
 
@@ -19,7 +19,7 @@ script = ExtResource("1_xvfwu")
 shape = SubResource("RectangleShape2D_n0rt3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1175214366]
-texture = ExtResource("2_wiums")
+texture = ExtResource("2_xvfwu")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=280290217]
 

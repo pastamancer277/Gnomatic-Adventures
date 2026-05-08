@@ -1,17 +1,14 @@
 [gd_resource type="Resource" script_class="book" format=3 uid="uid://dqidrl75ejrsd"]
 
 [ext_resource type="Script" uid="uid://osr072diyjlr" path="res://scripts/bookResource.gd" id="1_euo3q"]
-[ext_resource type="Texture2D" uid="uid://vt2aqaqauasb" path="res://assets/sprites/tilesets/grass.png" id="1_ntva3"]
+[ext_resource type="Texture2D" uid="uid://cvw5q287t0pxx" path="res://assets/sprites/objects/Book of law cover.png" id="2_2nyn6"]
 [ext_resource type="Texture2D" uid="uid://bdcn8iwd1bvi8" path="res://assets/sprites/objects/chest_02.png" id="4_fo3my"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3y2to"]
-load_path = "res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2nyn6"]
 load_path = "res://.godot/imported/walls.png-2ed5512c462efc1c7833a4bb9877458f.ctex"
 
 [resource]
 script = ExtResource("1_euo3q")
-cover = ExtResource("1_ntva3")
-pages = Array[Texture]([SubResource("CompressedTexture2D_3y2to"), SubResource("CompressedTexture2D_2nyn6"), ExtResource("4_fo3my")])
+cover = ExtResource("2_2nyn6")
+pages = Array[Texture]([SubResource("CompressedTexture2D_2nyn6"), ExtResource("4_fo3my")])
 metadata/_custom_type_script = "uid://osr072diyjlr"

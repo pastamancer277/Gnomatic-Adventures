@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://mh8eepgm7v7g"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_8x0uf"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_htdfi"]
+[ext_resource type="Texture2D" uid="uid://6i5sul1bri8g" path="res://assets/sprites/characters/femalegnome1.png" id="3_gq4wr"]
+[ext_resource type="Script" uid="uid://dh7i437la2xar" path="res://scripts/NPCs/City2dialoge.gd" id="4_4noa4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_44qwe"]
+resource_local_to_scene = true
+shader = ExtResource("2_htdfi")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="CityNPC3" unique_id=1834193905 instance=ExtResource("1_8x0uf")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_44qwe")
+texture = ExtResource("3_gq4wr")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("4_4noa4")
