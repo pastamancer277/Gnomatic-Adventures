@@ -2,7 +2,12 @@ extends dialogue
 
 var slimeQuest
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
-
+@onready var slimeball_item: Item = preload("res://resources/items/Fur.tres")
+@onready var quest_menu = $"../../../../../../../UI/HelpMenusInterface"/VBoxContainer/HBoxContainer/QuestMenu
+@onready var quest_item_scene = load("res://scenes/quest_item.tscn")
+@onready var item_slot_scene = load("res://scenes/item_slot.tscn")
+var  item_slot = null
+var quest_item = null
 
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
@@ -50,6 +55,13 @@ func playerResponse(key: int):
 		if(key==0 or key==1):
 			run+=1
 			slimeQuest.activate()
+			quest_item = quest_item_scene.instantiate()
+			item_slot = item_slot_scene.instantiate()
+			item_slot.set_item(slimeball_item, 6)
+			var items = [item_slot]
+			quest_item.new_quest(items, "Furry Monsters", "Bring Fred the animals hides")
+			quest_menu = $"/root/Main/UI/QuestMenu"
+			quest_menu.get_child(0).add_child(quest_item)
 			interact()
 		if(key==2):
 			pass
@@ -59,6 +71,7 @@ func playerResponse(key: int):
 			if(slimeQuest.isComplete()):
 				run+=1
 				interact()
+				quest_item.queue_free()
 				var popup_scene = load("res://scenes/popups.tscn").instantiate()
 				$"/root/Main/UI/Popups".add_child(popup_scene)
 				popup_scene.set_text("You gained a key! There must be a chest somewhere...")

@@ -3,9 +3,14 @@ extends dialogue
 var catPieQuest
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
 @onready var Pie_item: Item = preload("res://resources/items/Pie.tres")
-
+@onready var quest_menu = $"../../../../../../../UI/HelpMenusInterface"/VBoxContainer/HBoxContainer/QuestMenu
+@onready var quest_item_scene = load("res://scenes/quest_item.tscn")
+@onready var item_slot_scene = load("res://scenes/item_slot.tscn")
+var  item_slot = null
+var quest_item = null
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
+	quest_menu = $"../../../../../../../UI/HelpMenusInterface"/VBoxContainer/HBoxContainer/QuestMenu
 	tex = PortableCompressedTexture2D.new()
 	person_name = "Friendly Cat"
 	var im = load("res://assets/sprites/characters/OrangeTabby.png").get_image()
@@ -53,6 +58,13 @@ func playerResponse(key: int):
 	else: if(run==3):
 		if(key==0):
 			catPieQuest.activate()
+			quest_item = quest_item_scene.instantiate()
+			item_slot = item_slot_scene.instantiate()
+			item_slot.set_item(Pie_item, 1)
+			var items = [item_slot]
+			quest_item.new_quest(items, "Sweet as Pie", "Give pie to cat for fun")
+			quest_menu = $"/root/Main/UI/QuestMenu"
+			quest_menu.get_child(0).add_child(quest_item)
 			run+=1
 			pass
 	else: if(run==4):
@@ -60,6 +72,7 @@ func playerResponse(key: int):
 			catPieQuest.tryComplete()
 			if(catPieQuest.isComplete()):
 				run+=2
+				quest_item.queue_free()
 				interact()
 			else:
 				run+=1

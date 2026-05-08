@@ -2,7 +2,12 @@ extends dialogue
 
 var meatQuest
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
-
+@onready var quest_menu = $"../../../../../../../UI/HelpMenusInterface"/VBoxContainer/HBoxContainer/QuestMenu
+@onready var meat_item: Item = preload("res://resources/items/Meat.tres")
+@onready var quest_item_scene = load("res://scenes/quest_item.tscn")
+@onready var item_slot_scene = load("res://scenes/item_slot.tscn")
+var  item_slot = null
+var quest_item = null
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
 	meatQuest=get_node("../Quests/MeatQuest")
@@ -46,12 +51,20 @@ func playerResponse(key: int):
 		if(key==0 or key==1):
 			run+=1
 			meatQuest.activate()
+			quest_item = quest_item_scene.instantiate()
+			item_slot = item_slot_scene.instantiate()
+			item_slot.set_item(meat_item, 3)
+			var items = [item_slot]
+			quest_item.new_quest(items, "Cooked", "Bring Timmy meat for dinner")
+			quest_menu = $"/root/Main/UI/QuestMenu"
+			quest_menu.get_child(0).add_child(quest_item)
 		if(key==2):
 			pass
 	else: if(run==3):
 		if(key==0):
 			meatQuest.tryComplete()
 			if(meatQuest.isComplete()):
+				quest_item.queue_free()
 				run+=1
 				interact()
 		if(key==1):

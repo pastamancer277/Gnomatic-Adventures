@@ -19,9 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://brnjlnygjkq78" path="res://scenes/screens/instruction_screen.tscn" id="13_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://rw8qinn1ehfw" path="res://scenes/areas/grandmahouse.tscn" id="13_jscy8"]
 [ext_resource type="PackedScene" uid="uid://bubu3be1x47tg" path="res://scenes/areas/basichouse.tscn" id="14_pm3ni"]
-[ext_resource type="PackedScene" uid="uid://ulwsvwwnbotm" path="res://scenes/areas/bossmap.tscn" id="15_y6deb"]
+[ext_resource type="PackedScene" uid="uid://4dofr8omxkfy" path="res://scenes/areas/bossmap.tscn" id="15_y6deb"]
 [ext_resource type="PackedScene" uid="uid://dr2tfqbn85xgn" path="res://scenes/ui_interface.tscn" id="16_0ld40"]
 [ext_resource type="PackedScene" uid="uid://dj5uvev70smpw" path="res://scenes/screens/cut_scene.tscn" id="19_gqmmt"]
+[ext_resource type="PackedScene" uid="uid://wr256rcla4m4" path="res://scenes/quest_menu.tscn" id="19_og1vs"]
 [ext_resource type="PackedScene" uid="uid://cvyi1p1nle8rs" path="res://scenes/screens/table_screen.tscn" id="19_yc10j"]
 [ext_resource type="PackedScene" uid="uid://bd04aqfrwamqb" path="res://scenes/help_meus_interface.tscn" id="20_gqmmt"]
 
@@ -76,6 +77,8 @@ motion_mode = 0
 [node name="UI" type="CanvasLayer" parent="." unique_id=648745836]
 
 [node name="UI Interface" parent="UI" unique_id=1464526898 instance=ExtResource("16_0ld40")]
+
+[node name="QuestMenu" parent="UI" unique_id=2131881977 instance=ExtResource("19_og1vs")]
 
 [node name="HelpMenusInterface" parent="UI" unique_id=637465045 instance=ExtResource("20_gqmmt")]
 

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="book" format=3 uid="uid://b3cdsrlfxf8jf"]
+
+[ext_resource type="Texture2D" uid="uid://cvw5q287t0pxx" path="res://assets/sprites/objects/Book of law cover.png" id="1_4bnys"]
+[ext_resource type="Script" path="res://scripts/bookResource.gd" id="3_agp00"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3tu6l"]
+load_path = "res://.godot/imported/walls.png-2ed5512c462efc1c7833a4bb9877458f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4bnys"]
+load_path = "res://.godot/imported/chest_02.png-c36076d515c87cecb82a5a31dca4ff5f.ctex"
+
+[resource]
+script = ExtResource("3_agp00")
+cover = ExtResource("1_4bnys")
+pages = Array[Texture]([SubResource("CompressedTexture2D_3tu6l"), SubResource("CompressedTexture2D_4bnys")])

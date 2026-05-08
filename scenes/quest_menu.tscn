@@ -1,11 +1,21 @@
 [gd_scene format=3 uid="uid://wr256rcla4m4"]
 
 [ext_resource type="Script" uid="uid://dq8ancm2alv44" path="res://scripts/quest_menu.gd" id="1_87l24"]
+[ext_resource type="Theme" uid="uid://8yntgav2cnsc" path="res://assets/themes/panel_container.tres" id="2_8qvfr"]
 
-[node name="QuestMenu" type="VBoxContainer" unique_id=2131881977]
+[node name="QuestMenu" type="MarginContainer" unique_id=1800903298]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 2
 script = ExtResource("1_87l24")
+
+[node name="PanelContainer" type="VBoxContainer" parent="." unique_id=127074069]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+theme = ExtResource("2_8qvfr")
+theme_type_variation = &"Menu"

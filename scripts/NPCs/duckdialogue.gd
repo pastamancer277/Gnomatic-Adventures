@@ -2,7 +2,13 @@ extends dialogue
 
 var pQuest
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
+@onready var polmegranate_item: Item = preload("res://resources/items/Polmegranate.tres")
+var  item_slot = null
+var quest_item = null
 
+@onready var quest_menu = $"../../../../../../../UI/HelpMenusInterface"/VBoxContainer/HBoxContainer/QuestMenu
+@onready var quest_item_scene = load("res://scenes/quest_item.tscn")
+@onready var item_slot_scene = load("res://scenes/item_slot.tscn")
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
 	pQuest=get_node("../Quests/PolmegranateQuest")
@@ -44,6 +50,13 @@ func playerResponse(key: int):
 		if(key==0 or key==1):
 			run+=1
 			pQuest.activate()
+			quest_item = quest_item_scene.instantiate()
+			item_slot = item_slot_scene.instantiate()
+			item_slot.set_item(polmegranate_item, 1)
+			var items = [item_slot]
+			quest_item.new_quest(items, "Seeds of Joy", "The Duck demands Pomegranates")
+			quest_menu = $"/root/Main/UI/QuestMenu"
+			quest_menu.get_child(0).add_child(quest_item)
 			interact()
 		if(key==2):
 			pass

@@ -10,12 +10,19 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func new_quest(list: Array, text: String):
-	$MarginContainer/Label.text = text + "     "
-	print(get_child(0).get_child_count())
+func new_quest(list: Array, text: String, quest_text: String):
+	$VBoxContainer/MarginContainer/QuestName.text = text + ""
+	$VBoxContainer/QuestLabel.text = quest_text
 	for item in list:
-		item.im.scale = Vector2(1.5, 1.5)
-		item.text.add_theme_font_size_override("font_size", 8) 
-		get_child(0).add_child(item)
-	print(get_child(0).get_child_count())
-	print(get_child_count())
+		item.im.scale = Vector2(1.0, 1.0) 
+		var new_label = Label.new()
+		new_label.text = item.text.text + ""
+		new_label.add_theme_font_size_override("font_size", 4)
+		new_label.add_theme_constant_override("outline_size", 2)
+		new_label.size_flags_horizontal = Control.SIZE_EXPAND | Control.SIZE_SHRINK_END
+		new_label.size_flags_vertical =  Control.SIZE_SHRINK_END
+		get_child(0).get_child(0).add_child(new_label)
+		get_child(0).get_child(0).add_child(item)
+		item.text.visible = false
+		#item.size_flags_horizontal = Control.SIZE_EXPAND | Control.SIZE_SHRINK_END
+		#item.size_flags_vertical =  Control.SIZE_SHRINK_END

@@ -7,12 +7,10 @@ extends Control
 @onready var level_button: Button = $VBoxContainer/HBoxContainer/VBoxContainer/HelpMenu/MarginContainer/VBoxContainer/LevelButton
 @onready var setting_button: Button = $VBoxContainer/HBoxContainer/VBoxContainer/HelpMenu/MarginContainer/VBoxContainer/SettingButton
 @onready var credit_button: Button = $VBoxContainer/HBoxContainer/VBoxContainer/HelpMenu/MarginContainer/VBoxContainer/CreditButton
-@onready var quest_button = $VBoxContainer/HBoxContainer/VBoxContainer/HelpMenu/MarginContainer/VBoxContainer/QuestButton
 
 @onready var help_screen = $VBoxContainer/HBoxContainer/HelpScreen
 @onready var credit_screen = $VBoxContainer/HBoxContainer/CreditScreen
 @onready var setting_screen = $VBoxContainer/HBoxContainer/SettingScreen
-@onready var quest_screen = $VBoxContainer/HBoxContainer/QuestMenu
 
 @onready var level_screen = $VBoxContainer/HBoxContainer/LevelScreen
 @onready var attack = $VBoxContainer/HBoxContainer/LevelScreen/MarginContainer/VBoxContainer/HBoxContainer/ButtonContainer/AttackButton
@@ -62,9 +60,6 @@ func _process(delta: float) -> void:
 			isFocus = credit_button
 			isFocus.grab_focus()
 		elif Input.is_action_just_pressed("MoveDown") and (isFocus == credit_button):
-			isFocus = quest_button
-			isFocus.grab_focus()
-		elif Input.is_action_just_pressed("MoveDown") and (isFocus == quest_button):
 			isFocus = help_button
 			isFocus.grab_focus()
 		elif Input.is_action_just_pressed("MoveUp") and (isFocus == credit_button):
@@ -140,28 +135,18 @@ func _process(delta: float) -> void:
 			level_screen.visible = false
 			credit_screen.visible = false
 			setting_screen.visible = false
-			quest_screen.visible = false
 		elif  isFocus == level_button :
 			level_screen.visible = true
 			help_screen.visible = false
 			credit_screen.visible = false
 			setting_screen.visible = false
-			quest_screen.visible = false
 		elif  isFocus == setting_button :
 			level_screen.visible = false
 			help_screen.visible = false
 			credit_screen.visible = false
 			setting_screen.visible = true
-			quest_screen.visible = false
 		elif  isFocus == credit_button :
 			level_screen.visible = false
 			help_screen.visible = false
 			credit_screen.visible = true
 			setting_screen.visible = false
-			quest_screen.visible = false
-		elif isFocus == quest_button:
-			level_screen.visible = false
-			help_screen.visible = false
-			credit_screen.visible = false
-			setting_screen.visible = false
-			quest_screen.visible = true

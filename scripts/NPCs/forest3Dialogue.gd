@@ -1,7 +1,12 @@
 extends dialogue
 
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
-
+@onready var wood_item: Item = preload("res://resources/items/Wood.tres")
+@onready var quest_menu = $"../../../../../../../UI/HelpMenusInterface"/VBoxContainer/HBoxContainer/QuestMenu
+@onready var quest_item_scene = load("res://scenes/quest_item.tscn")
+@onready var item_slot_scene = load("res://scenes/item_slot.tscn")
+var  item_slot = null
+var quest_item = null
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
 	person_name = "Jack"
@@ -13,6 +18,13 @@ func _ready() -> void:
 func interact():
 	if(run==1):
 		get_node("../Quests/WoodQuest").activate()
+		quest_item = quest_item_scene.instantiate()
+		item_slot = item_slot_scene.instantiate()
+		item_slot.set_item(wood_item, 1)
+		var items = [item_slot]
+		quest_item.new_quest(items, "House For-Rest", "Bring Jack wood for a house")
+		quest_menu = $"/root/Main/UI/QuestMenu"
+		quest_menu.get_child(0).add_child(quest_item)
 		dialogueBox.dialogue("I need wood. Would you go hunt for a wood sprite to get some for me?.", self,person_name, tex)
 		dialogueBox.setDialogueOption("Ok!", 0)
 		dialogueBox.setDialogueOption("I have your wood right here, sir.", 1)
@@ -33,6 +45,7 @@ func playerResponse(key: int):
 		else: if(key==1):
 			get_node("../Quests/WoodQuest").tryComplete()
 			if(get_node("../Quests/WoodQuest").isComplete()):
+				quest_item.queue_free()
 				run=3
 				interact()
 			else:

@@ -14,13 +14,6 @@ func _ready():
 
 func activate():
 	active=true
-	print("running")
-	quest_item = quest_item_scene.instantiate()
-	item_slot = item_slot_scene.instantiate()
-	item_slot.set_item(wood_item, 1)
-	var items = [item_slot]
-	quest_item.new_quest(items, "Wood Quest")
-	quest_menu.add_child(quest_item)
 
 
 func tryComplete():

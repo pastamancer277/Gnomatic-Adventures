@@ -1,11 +1,16 @@
 extends dialogue
 
-var meatQuest
+var furQuest
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
-
+@onready var quest_menu = $"../../../../../../../UI/HelpMenusInterface"/VBoxContainer/HBoxContainer/QuestMenu
+@onready var fur_item: Item = preload("res://resources/items/Fur.tres")
+@onready var quest_item_scene = load("res://scenes/quest_item.tscn")
+@onready var item_slot_scene = load("res://scenes/item_slot.tscn")
+var  item_slot = null
+var quest_item = null
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
-	meatQuest=get_node("../Quests/FurQuest")
+	furQuest=get_node("../Quests/FurQuest")
 	person_name = "Glory"
 	tex = PortableCompressedTexture2D.new()
 	var im = load("res://assets/sprites/characters/NPC1.png").get_image()
@@ -45,13 +50,21 @@ func playerResponse(key: int):
 	else: if(run==2):
 		if(key==0 or key==1):
 			run+=1
-			meatQuest.activate()
+			furQuest.activate()
+			quest_item = quest_item_scene.instantiate()
+			item_slot = item_slot_scene.instantiate()
+			item_slot.set_item(fur_item, 6)
+			var items = [item_slot]
+			quest_item.new_quest(items, "Bundled Up!", "Bring Glory fur for her blanket")
+			quest_menu = $"/root/Main/UI/QuestMenu"
+			quest_menu.get_child(0).add_child(quest_item)
 		if(key==2):
 			pass
 	else: if(run==3):
 		if(key==0):
-			meatQuest.tryComplete()
-			if(meatQuest.isComplete()):
+			furQuest.tryComplete()
+			if(furQuest.isComplete()):
+				quest_item.queue_free()
 				run+=1
 				interact()
 		if(key==1):

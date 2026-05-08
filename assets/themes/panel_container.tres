@@ -3,6 +3,8 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3i2ev"]
 bg_color = Color(0.1882353, 0.40784314, 0.3137255, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3i2ev"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eijpg"]
 bg_color = Color(0, 0, 0, 0.5294118)
 corner_radius_top_left = 1
@@ -16,5 +18,7 @@ bg_color = Color(0.79624295, 0.796243, 0.7962429, 0.8901961)
 [resource]
 Inventory/base_type = &"PanelContainer"
 Inventory/styles/panel = SubResource("StyleBoxFlat_3i2ev")
+Menu/base_type = &"PanelContainer"
+Menu/styles/panel = SubResource("StyleBoxTexture_3i2ev")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_eijpg")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_wghha")

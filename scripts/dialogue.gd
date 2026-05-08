@@ -7,6 +7,10 @@ var currentNPCDialogue: Node
 @onready var texture_rect = $PanelContainer/MarginContainer/HBoxContainer/MarginContainer/Control/TextureRect
 var full_text = ""
 var scroll_speed = 2
+@onready var quest_menu = $"../../../../../../../UI/HelpMenusInterface"/VBoxContainer/HBoxContainer/QuestMenu
+@onready var quest_item_scene = load("res://scenes/quest_item.tscn")
+@onready var item_slot_scene = load("res://scenes/item_slot.tscn")
+
 func _process(delta: float) -> void:
 	if(panel_container.visible):
 		$/root/Global.pause = true
