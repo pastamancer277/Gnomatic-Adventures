@@ -20,4 +20,8 @@ func _on_near_oven_body_entered(body: Node2D) -> void:
 	if body.name=="Player"&&Global.cur_area=="GrandmaHouse":
 		if pie:
 			$/root/Main/Systems/Inventory.add_item({key_item:1})
+			var popup_scene = load("res://scenes/popups.tscn").instantiate()
+			$"/root/Main/UI/Popups".add_child(popup_scene)
+			popup_scene.set_text("You got a pie!")
+			$/root/Global.multiple_popups()
 			pie=false

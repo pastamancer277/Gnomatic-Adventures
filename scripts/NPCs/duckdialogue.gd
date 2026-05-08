@@ -65,6 +65,7 @@ func playerResponse(key: int):
 			pQuest.tryComplete()
 			if(pQuest.isComplete()):
 				run+=1
+				quest_item.queue_free()
 				interact()
 				player.add_keyword("duck")
 		if(key==1):
