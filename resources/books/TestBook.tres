@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="book" format=3 uid="uid://dqidrl75ejrsd"]
 
-[ext_resource type="Script" uid="uid://osr072diyjlr" path="res://scripts/bookResource.gd" id="1_euo3q"]
+[ext_resource type="Script" path="res://scripts/bookResource.gd" id="1_euo3q"]
 [ext_resource type="Texture2D" uid="uid://cvw5q287t0pxx" path="res://assets/sprites/objects/Book of law cover.png" id="2_2nyn6"]
 [ext_resource type="Texture2D" uid="uid://bdcn8iwd1bvi8" path="res://assets/sprites/objects/chest_02.png" id="4_fo3my"]
 
@@ -11,4 +11,3 @@ load_path = "res://.godot/imported/walls.png-2ed5512c462efc1c7833a4bb9877458f.ct
 script = ExtResource("1_euo3q")
 cover = ExtResource("2_2nyn6")
 pages = Array[Texture]([SubResource("CompressedTexture2D_2nyn6"), ExtResource("4_fo3my")])
-metadata/_custom_type_script = "uid://osr072diyjlr"

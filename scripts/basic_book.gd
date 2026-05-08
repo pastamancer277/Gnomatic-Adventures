@@ -12,6 +12,7 @@ func _ready() -> void:
 	
 	for texture in bookResource.pages:
 		var p = Sprite2D.new()
+		p.scale = Vector2(.1, .1)
 		p.texture = texture
 		$BookPages.add_child(p)
 	pages = $BookPages.get_children()
