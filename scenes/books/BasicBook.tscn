@@ -6,7 +6,7 @@
 size = Vector2(16, 20)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ogyu"]
-radius = 20.0
+radius = 25.079872
 
 [node name="BasicBook" type="StaticBody2D" unique_id=1601775636]
 texture_filter = 2

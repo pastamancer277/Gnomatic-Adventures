@@ -24,11 +24,13 @@ func _process(delta: float) -> void:
 			close()
 		else:
 			open()
+	elif(Input.is_action_just_pressed("MeleeAttack") and player!=null):
+		if(isOpen):
+			close()
 	if(isOpen and Input.is_action_just_pressed("MoveRight") and page < pages.size()-1):
 		page+=1
 	if(isOpen and Input.is_action_just_pressed("MoveLeft") and page>0):
 		page-=1
-	
 	setPage()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -37,7 +39,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if(body == player):
-		body=null
+		player=null
+		close()
 
 func open():
 	page = 0

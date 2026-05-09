@@ -25,8 +25,8 @@ func interact():
 		dialogueBox.setDialogueOption("Kill everyone!!!", 1)
 	else: if(run==3):
 		dialogueBox.dialogue("Lastly what is the law about accessories?", self, person_name, tex)
-		dialogueBox.setDialogueOption("Always wear something on your head!", 0)
-		dialogueBox.setDialogueOption("Umm...", 1)
+		dialogueBox.setDialogueOption("Umm...", 0)
+		dialogueBox.setDialogueOption("Always wear something on your head!", 1)
 		dialogueBox.setDialogueOption("I hate hats! And gnome fashion!", 2)
 	else: if(run==4):
 		dialogueBox.dialogue("You know the law now. You are free to go, I guess.", self, person_name, tex)
@@ -47,10 +47,10 @@ func playerResponse(key: int):
 		elif (key == 1):
 			run=1
 	else: if(run==3):
-		if(key==0):
+		if(key==1):
 			run+=1
 			interact()
-		elif key == 1:
+		elif key == 0:
 			run = 1
 	else: if(run==4):
 		if(key==0 or key ==1):
