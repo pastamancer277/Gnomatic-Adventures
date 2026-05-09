@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cauckoo04h8wc"]
+
+[ext_resource type="Script" uid="uid://bq7i4313lbl86" path="res://scripts/spikes.gd" id="1_5pg7g"]
+[ext_resource type="Texture2D" uid="uid://da3nby8djgnhn" path="res://assets/sprites/objects/rock_in_water_02.png" id="2_kd5gq"]
+[ext_resource type="Texture2D" uid="uid://dxbr68ggai0mq" path="res://assets/icons/sprite/Coin.png" id="3_0vi4p"]
+[ext_resource type="Texture2D" uid="uid://ru7hhpv65keu" path="res://assets/icons/sprite/Fur.png" id="4_w4mxr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbcdo"]
+
+[sub_resource type="Animation" id="Animation_5pg7g"]
+resource_name = "attack"
+length = 1.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.01, 1.1, 1.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"lift"
+}, {
+"args": [],
+"method": &"hit"
+}, {
+"args": [],
+"method": &"down"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xbcdo"]
+_data = {
+&"attack": SubResource("Animation_5pg7g")
+}
+
+[node name="Spikes" type="Node2D" unique_id=598601639]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_5pg7g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=981868660]
+texture = ExtResource("2_kd5gq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=976548478]
+texture = ExtResource("3_0vi4p")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=467852026]
+texture = ExtResource("4_w4mxr")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1550826536]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1932185041]
+shape = SubResource("RectangleShape2D_xbcdo")
+
+[node name="Timer" type="Timer" parent="." unique_id=616786831]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=427783644]
+libraries/ = SubResource("AnimationLibrary_xbcdo")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

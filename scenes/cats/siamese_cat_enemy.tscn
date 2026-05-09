@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://dnd68rmvualkg"]
+
+[ext_resource type="PackedScene" uid="uid://6mmv4jq4gjd3" path="res://scenes/cats/basic_cat_enemy.tscn" id="1_g0i5d"]
+[ext_resource type="Script" uid="uid://b26pkyktcjsgq" path="res://scripts/cats/siamese_cat_enemy.gd" id="2_gfiir"]
+[ext_resource type="PackedScene" uid="uid://cauckoo04h8wc" path="res://scenes/spikes.tscn" id="3_ilwf8"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="3_l1s6l"]
+[ext_resource type="Texture2D" uid="uid://cou2cupvtop4q" path="res://assets/sprites/characters/SiameseCat-Free-Carysaurus/SiameseCat-Free-Carysaurus/Siamese-Idle.png" id="4_ilwf8"]
+[ext_resource type="Texture2D" uid="uid://147p7ii6tw68" path="res://assets/sprites/characters/SiameseCat-Free-Carysaurus/SiameseCat-Free-Carysaurus/Siamese-Run.png" id="5_41cov"]
+[ext_resource type="Script" uid="uid://nfpv6r83eux6" path="res://scripts/cats/siamese_dialogue.gd" id="7_41cov"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_op1w8"]
+resource_local_to_scene = true
+shader = ExtResource("3_l1s6l")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0i5d"]
+atlas = ExtResource("4_ilwf8")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng6ht"]
+atlas = ExtResource("4_ilwf8")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1s6l"]
+atlas = ExtResource("4_ilwf8")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbas1"]
+atlas = ExtResource("4_ilwf8")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5genu"]
+atlas = ExtResource("4_ilwf8")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmp2q"]
+atlas = ExtResource("4_ilwf8")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75iys"]
+atlas = ExtResource("4_ilwf8")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmq0o"]
+atlas = ExtResource("4_ilwf8")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdjey"]
+atlas = ExtResource("4_ilwf8")
+region = Rect2(384, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vd03s"]
+atlas = ExtResource("4_ilwf8")
+region = Rect2(432, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jwyo"]
+atlas = ExtResource("4_ilwf8")
+region = Rect2(480, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7a1xc"]
+atlas = ExtResource("4_ilwf8")
+region = Rect2(528, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejdou"]
+atlas = ExtResource("5_41cov")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wo75b"]
+atlas = ExtResource("5_41cov")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pacg"]
+atlas = ExtResource("5_41cov")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tikqb"]
+atlas = ExtResource("5_41cov")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmqkp"]
+atlas = ExtResource("5_41cov")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rmn5"]
+atlas = ExtResource("5_41cov")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u0spo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0i5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ng6ht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1s6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbas1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5genu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmp2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75iys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmq0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdjey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vd03s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jwyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7a1xc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejdou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wo75b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pacg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tikqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmqkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rmn5")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0blkw"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nj8ka"]
+radius = 122.80879
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mpvus"]
+radius = 15.0
+
+[node name="SiameseCatEnemy" unique_id=72348834 instance=ExtResource("1_g0i5d")]
+script = ExtResource("2_gfiir")
+spikeScene = ExtResource("3_ilwf8")
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=653963757]
+material = SubResource("ShaderMaterial_op1w8")
+position = Vector2(-1, -5)
+sprite_frames = SubResource("SpriteFrames_u0spo")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=733226745]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_0blkw")
+
+[node name="CollisionShape2D" parent="DetectionArea" parent_id_path=PackedInt32Array(770416748) index="0" unique_id=938400520]
+shape = SubResource("CircleShape2D_nj8ka")
+
+[node name="CollisionShape2D" parent="AttackBox" parent_id_path=PackedInt32Array(1213018617) index="0" unique_id=606064724]
+position = Vector2(0, 0)
+shape = SubResource("CircleShape2D_mpvus")
+
+[node name="HealthBar" parent="." index="5" unique_id=1053111102]
+max_value = 210.0
+
+[node name="Dialogue" parent="." index="7" unique_id=1381320995]
+script = ExtResource("7_41cov")
+
+[node name="Spike Timer" type="Timer" parent="." index="10" unique_id=1666866542]
+wait_time = 1.2999999999999998
+
+[connection signal="body_entered" from="DetectionArea" to="." method="playerEntered"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="playerExited"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="AttackBox" to="." method="_on_attackbox_body_entered"]
+[connection signal="body_exited" from="AttackBox" to="." method="_on_attackbox_body_exited"]
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="RegenTimer" to="." method="_on_regen_timer_timeout"]
+[connection signal="timeout" from="Spike Timer" to="." method="_on_spike_timer_timeout"]

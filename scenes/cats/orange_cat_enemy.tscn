@@ -8,9 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bcae61d5gxski" path="res://assets/sprites/characters/OrangeTabby_Free_Carysaurus/OrangeTabby_Free_Carysaurus/OrangeTabby-Idle.png" id="6_upww8"]
 [ext_resource type="Texture2D" uid="uid://ci075unerescc" path="res://assets/sprites/characters/OrangeTabby_Free_Carysaurus/OrangeTabby_Free_Carysaurus/OrangeTabby-Run.png" id="7_y4s5q"]
 [ext_resource type="Script" uid="uid://x35111dpcxg1" path="res://scripts/cats/brown_dialogue.gd" id="8_ad5c8"]
-[ext_resource type="Script" uid="uid://bisdwbbdqcc5y" path="res://scripts/cats/black_cat_quest.gd" id="9_cjos7"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_c1q0f"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_msc5d"]
 resource_local_to_scene = true
 shader = ExtResource("3_upww8")
 shader_parameter/active = false
@@ -189,14 +188,11 @@ radius = 122.80879
 radius = 15.0
 
 [node name="OrangeCatEnemy" unique_id=72348834 instance=ExtResource("1_c1q0f")]
-z_index = 1
-y_sort_enabled = true
 script = ExtResource("2_ihbkt")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=653963757]
-material = SubResource("ShaderMaterial_c1q0f")
+material = SubResource("ShaderMaterial_msc5d")
 position = Vector2(-1, -5)
-scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_u0spo")
 animation = &"walk"
 autoplay = "idle"
@@ -216,7 +212,6 @@ shape = SubResource("CircleShape2D_mpvus")
 script = ExtResource("8_ad5c8")
 
 [node name="TamingQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(1443803205) index="0" unique_id=1440822031]
-script = ExtResource("9_cjos7")
 
 [node name="Dash" type="Timer" parent="." index="10" unique_id=1729269178]
 wait_time = 1.4

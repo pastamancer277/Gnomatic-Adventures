@@ -16,7 +16,7 @@ func _ready():
 	regen_speed=1.0
 	regen_amount=20
 	respawn_time=null
-	xpValue=65
+	xpValue=85
 
 func move():
 	super.move()

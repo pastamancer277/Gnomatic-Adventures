@@ -14,7 +14,7 @@ func _ready():
 	regen_speed=1.3
 	regen_amount=15
 	respawn_time=null
-	xpValue=50
+	xpValue=30
 
 func questComplete():
 	super.questComplete()

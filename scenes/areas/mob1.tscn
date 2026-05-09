@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cpj7q304014b" path="res://assets/sprites/Biome/Roofs.png" id="3_fsw2t"]
 [ext_resource type="Texture2D" uid="uid://bhbttb2o42bxd" path="res://assets/sprites/Biome/DarkRoof.png" id="3_semcw"]
 [ext_resource type="PackedScene" uid="uid://2f8asco7m5y2" path="res://scenes/NPCs/old_lady_npc.tscn" id="6_upjcm"]
+[ext_resource type="PackedScene" uid="uid://dnd68rmvualkg" path="res://scenes/cats/siamese_cat_enemy.tscn" id="7_3b7in"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fsw2t"]
 texture = ExtResource("2_semcw")
@@ -1376,6 +1377,9 @@ tile_set = SubResource("TileSet_fsw2t")
 
 [node name="OldLadyNPC" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="0" unique_id=1834193905 instance=ExtResource("6_upjcm")]
 position = Vector2(241, 43)
+
+[node name="SiameseCatEnemy" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=72348834 instance=ExtResource("7_3b7in")]
+position = Vector2(-51, 43)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=2045232044]
 polygon = PackedVector2Array(10, -121, 563, -120, 563, 15, 543, 16, 544, 31, 563, 32, 608, 29, 610, 60, 544, 62, 544, 71, 563, 70, 562, 325, -131, 324, -131, -127, 8, -121, 21, -340, -276, -337, -266, 468, 686, 468, 681, -327, 23, -342)

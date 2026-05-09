@@ -139,6 +139,9 @@ func onDeath():
 	dead=true
 	$RespawnTimer.start(resource.respawnTime)
 
+func isDead():
+	return dead
+
 func _on_respawn_timer_timeout():
 	global_position=pos
 	visible=true
