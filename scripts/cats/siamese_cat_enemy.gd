@@ -12,7 +12,7 @@ func _ready():
 	
 	mHealth=200
 	health=mHealth
-	attack_value=25
+	attack_value=30
 	knockback = 180.0
 	speed=40
 	attack_speed=.8
@@ -40,6 +40,11 @@ func spikes():
 func setCombat(c: bool):
 	super.setCombat(c)
 	$"Spike Timer".start()
+	spikes()
+	spikes()
+	spikes()
+	spikes()
+	spikes()
 
 func onDeath():
 	if(phase==1):
