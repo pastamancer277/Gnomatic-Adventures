@@ -11,7 +11,8 @@ func setup(sp, d):
 	$Sprite2D.texture = sp
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	targets.append(body)
+	if(body.is_in_group("player")):
+		targets.append(body)
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body in targets:

@@ -83,7 +83,6 @@ func onDeath():
 	if(phase==3):
 		super.onDeath()
 	else:
-		summonMinion()
 		phase+=1
 		health=mHealth
 		fireball()

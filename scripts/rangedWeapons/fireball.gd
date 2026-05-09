@@ -35,6 +35,9 @@ func setup(x, y, rangeV, damageV, phaseV, player):
 	range=rangeV
 	damage=damageV
 	phase=phaseV
+	if(phase==3):
+		$Sprite2D.scale*=2
+		$CollisionShape2D.scale*=2
 
 func setPos(pos):
 	global_position=pos
