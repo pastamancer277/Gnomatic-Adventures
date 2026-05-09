@@ -62,7 +62,7 @@ func summonMinion():
 	s.global_position=global_position
 	s.setSummon(true)
 	add_sibling(s)
-	$SummonTimer.start()
+	$SummonTimer.start(4.5)
 
 func fireball():
 	var f = fireballScene.instantiate()

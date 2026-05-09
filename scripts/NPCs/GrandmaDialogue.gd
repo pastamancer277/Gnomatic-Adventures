@@ -1,5 +1,7 @@
 extends dialogue
 
+signal chase
+
 var catPieQuest
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
 
@@ -96,7 +98,7 @@ func playerResponse(key: int):
 		player.changeCredit(-2)
 		if(key==0):
 			run+=1
-			pass
+			chase.emit()
 	else: if(run==10):
 		if(key==0):
 			pass

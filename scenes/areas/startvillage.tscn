@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bmw1xq14alg87" path="res://scenes/enemies/basic_enemy.tscn" id="10_3i1a1"]
 [ext_resource type="Resource" uid="uid://bmswyvpe1fvqo" path="res://resources/enemies/fox.tres" id="11_enqqm"]
 [ext_resource type="Resource" uid="uid://bol020bxwbhj3" path="res://resources/enemies/boar.tres" id="12_5chbg"]
+[ext_resource type="PackedScene" uid="uid://dvaqyt6t7kjgo" path="res://scenes/NPCs/Moving NPC.tscn" id="12_mauqd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehnuc"]
 texture = ExtResource("2_moe3i")
@@ -1218,6 +1219,14 @@ enemyResource = ExtResource("12_5chbg")
 
 [node name="GrandmaNPC" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="3" unique_id=1834193905 instance=ExtResource("8_ms77a")]
 position = Vector2(81, -35)
+
+[node name="Targets" type="Node2D" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="4" unique_id=714577610]
+
+[node name="ExitTar" type="Node2D" parent="Entities/Targets" index="0" unique_id=2133656772]
+position = Vector2(688, 792)
+
+[node name="MovingNPC" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="5" unique_id=884642103 instance=ExtResource("12_mauqd")]
+position = Vector2(378, -119)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=557783940]
 polygon = PackedVector2Array(-67, 104, -62, 594, -73, 648, -72, 717, -64, 720, -69, 728, 627, 742, 621, 799, 738, 799, 738, 734, 884, 731, 897, -154, 771, -161, 673, -164, 182, -161, 136, -159, 80, -161, 50, -161, -60, -162, -60, -49, -175, -59, -182, 22, -187, 76, -77, 129, -330, 50, -323, -393, 1133, -383, 1140, 966, -325, 966, -327, 59)
