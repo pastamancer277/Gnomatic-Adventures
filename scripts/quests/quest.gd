@@ -21,8 +21,11 @@ func reset():
 
 func saveData():
 	$/root/SaveManager.addSaveData("Quests", name, {"active" = active, "complete" = complete})
+	print(name)
 
 func loadData():
 	var data = $/root/SaveManager.getData("Quests", name)
 	active = data.get("active", false)
 	complete = data.get("complete", false)
+	if(active and not complete):
+		get_node("../../Dialogue").setQuest(name)

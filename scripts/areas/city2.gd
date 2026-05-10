@@ -1,6 +1,5 @@
 extends area
 
-
 func _on__body_entered(body: Node2D) -> void:
 	if body.name=="Player"&&Global.cur_area=="City2":
 		locationChange="City1"

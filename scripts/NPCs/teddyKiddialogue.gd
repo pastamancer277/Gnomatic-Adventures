@@ -97,3 +97,12 @@ func playerResponse(key: int):
 		interact()
 	else: if(run==7):
 		run = 1
+
+func setQuest(name):
+			quest_item = quest_item_scene.instantiate()
+			item_slot = item_slot_scene.instantiate()
+			item_slot.set_item(blueberry_item, 5)
+			var items = [item_slot]
+			quest_item.new_quest(items, "Berry Teddy Bear", "Bring Sienna blueberries and gain her teddy")
+			quest_menu = $"/root/Main/UI/QuestMenu"
+			quest_menu.get_child(0).add_child(quest_item)

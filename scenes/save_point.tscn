@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://kby6wao6ru81"]
 
-[ext_resource type="Script" path="res://scripts/save_point.gd" id="1_xvfwu"]
+[ext_resource type="Script" uid="uid://fr8lotst8pvm" path="res://scripts/save_point.gd" id="1_xvfwu"]
 [ext_resource type="Texture2D" uid="uid://b5n6vnvftimfb" path="res://assets/sprites/objects/SaveCrystal.png" id="2_xvfwu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0rt3"]
+size = Vector2(10, 15)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q203c"]
-radius = 63.0
+radius = 25.70992
 
 [node name="SavePoint" type="StaticBody2D" unique_id=862322370]
 z_index = 1
@@ -16,6 +17,7 @@ collision_mask = 15
 script = ExtResource("1_xvfwu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2089742101]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_n0rt3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1175214366]

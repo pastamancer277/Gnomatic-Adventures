@@ -12,7 +12,7 @@ var  item_slot2 = null
 var quest_item = null
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
-	woodQuest=get_node("../Quests/WoodQuest")
+	woodQuest=get_node("../Quests/SpencerQuest")
 	person_name = "Spencer"
 	tex = PortableCompressedTexture2D.new()
 	var im = load("res://assets/sprites/characters/Spencer.png").get_image()
@@ -78,3 +78,14 @@ func playerResponse(key: int):
 				interact()
 	else: if run ==5:
 		pass
+
+func setQuest(name):
+			quest_item = quest_item_scene.instantiate()
+			item_slot1 = item_slot_scene.instantiate()
+			item_slot1.set_item(coin_item, 3)
+			item_slot2 = item_slot_scene.instantiate()
+			item_slot2.set_item(meat_item, 2)
+			var items = [item_slot1, item_slot2]
+			quest_item.new_quest(items, "Family Man", "Spencer needs money and meat for his family")
+			quest_menu = $"/root/Main/UI/QuestMenu"
+			quest_menu.get_child(0).add_child(quest_item)

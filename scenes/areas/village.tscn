@@ -13,7 +13,8 @@
 [ext_resource type="Resource" uid="uid://bmswyvpe1fvqo" path="res://resources/enemies/fox.tres" id="11_enqqm"]
 [ext_resource type="Resource" uid="uid://bol020bxwbhj3" path="res://resources/enemies/boar.tres" id="12_5chbg"]
 [ext_resource type="PackedScene" uid="uid://hes6l4tty6pi" path="res://scenes/NPCs/villagenpc2.tscn" id="13_enqqm"]
-[ext_resource type="PackedScene" uid="uid://ck8svjd56qdeb" path="res://scenes/NPCs/VillageNPCCatQuest.tscn" id="14_5chbg"]
+[ext_resource type="PackedScene" path="res://scenes/NPCs/VillageNPCCatQuest.tscn" id="14_5chbg"]
+[ext_resource type="PackedScene" uid="uid://kby6wao6ru81" path="res://scenes/save_point.tscn" id="15_d54wb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehnuc"]
 texture = ExtResource("2_moe3i")
@@ -1229,6 +1230,9 @@ position = Vector2(770, 406)
 
 [node name="BasicNPC" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="6" unique_id=326756778 instance=ExtResource("14_5chbg")]
 position = Vector2(844, -100)
+
+[node name="SavePoint" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="7" unique_id=862322370 instance=ExtResource("15_d54wb")]
+position = Vector2(454, 356)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=557783940]
 polygon = PackedVector2Array(-67, 104, -62, 594, -111, 589, -117, 655, -112, 718, -64, 720, 884, 731, 897, -154, 771, -161, 775, -253, 671, -253, 673, -164, -60, -162, -65, 100, -330, 50, -323, -393, 1133, -383, 1140, 966, -325, 966, -327, 59)

@@ -1,20 +1,20 @@
-[gd_scene format=3 uid="uid://cksenxod3g55d"]
+[gd_scene format=3 uid="uid://cy12wfem2no70"]
 
 [ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_fbhu5"]
 [ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_7ba8r"]
 [ext_resource type="Texture2D" uid="uid://b0pgq517u5t3p" path="res://assets/sprites/characters/IcecreamGuy.png" id="3_fbhu5"]
-[ext_resource type="Script" uid="uid://pbrbqqayrv2p" path="res://scripts/NPCs/icecreamguydialogue.gd" id="4_7ba8r"]
+[ext_resource type="Script" path="res://scripts/NPCs/icecreamguydialogue.gd" id="4_7ba8r"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_re1on"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fbhu5"]
 resource_local_to_scene = true
 shader = ExtResource("2_7ba8r")
 shader_parameter/active = false
 shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 
-[node name="JuceShop1NPC" unique_id=1834193905 instance=ExtResource("1_fbhu5")]
+[node name="IceCreamNPC" unique_id=1834193905 instance=ExtResource("1_fbhu5")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
-material = SubResource("ShaderMaterial_re1on")
+material = SubResource("ShaderMaterial_fbhu5")
 texture = ExtResource("3_fbhu5")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]

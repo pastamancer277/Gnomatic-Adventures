@@ -12,7 +12,8 @@ func _ready():
 		"Quests" = {},
 		"World" = {},
 		"Dialogue" = {},
-		"Chests" = {}
+		"Chests" = {},
+		"Quest Bar" = {}
 	}
 
 func setSaveData(access: String, data: Dictionary):
@@ -49,6 +50,7 @@ func loadGame():
 	if data is Dictionary:
 		savedData = data
 	
+	$"/root/Main/UI/QuestMenu".reset()
 	load_all_nodes(get_node("/root"))
 	loaded.emit()
 

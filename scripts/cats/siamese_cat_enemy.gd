@@ -19,7 +19,7 @@ func _ready():
 	regen_speed=1.5
 	regen_amount=20
 	respawn_time=null
-	xpValue=60
+	xpValue=160
 
 func _physics_process(delta: float) -> void:
 	super._physics_process(delta)

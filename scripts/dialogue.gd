@@ -66,9 +66,14 @@ func clearDialogue(npc: Node):
 	if(npc==currentNPCDialogue):
 		currentNPCDialogue=null
 		panel_container.visible=false
-	buttons.clearButtons()
+		buttons.clearButtons()
 
 func reset():
+	currentNPCDialogue=null
+	panel_container.visible=false
+	buttons.clearButtons()
+
+func loadData():
 	currentNPCDialogue=null
 	panel_container.visible=false
 	buttons.clearButtons()

@@ -7,6 +7,7 @@ func _on_to_forest_2_body_entered(body: Node2D) -> void:
 	if(body.name=="Player"&&Global.cur_area=="StartingVillage"):
 		Global.scene_transit=true
 		locationChange="Forest2"
+		$Entities/MovingNPC.moveBack()
 
 
 func _on_to_forest_2_body_exited(body: Node2D) -> void:

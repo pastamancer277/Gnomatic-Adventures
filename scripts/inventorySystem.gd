@@ -57,6 +57,9 @@ func removeItems(item: Item, amount: int = 1):
 func getInventory():
 	return items
 
+func reset():
+	items = {}
+
 func saveData():
 	var data: Dictionary
 	for item in items.keys():

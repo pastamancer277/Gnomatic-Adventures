@@ -11,7 +11,7 @@ var currnet_dir ="down"
 var secDir = "none"
 var mHealth=100
 var health=100
-var attack_value=50
+var attack_value=20
 var knockback = 120
 var shield=0
 var alive=true
@@ -269,7 +269,7 @@ func _on_attack_anim_timeout() -> void:
 
 func _on_regen_timer_timeout() -> void:
 	if(health<mHealth and health>0):
-		health=health+20
+		health=health+25
 		if(health>mHealth):
 			health=mHealth
 
@@ -334,7 +334,7 @@ func hasKeyword(key: String):
 
 func changeRating(val: int):
 	killRating+=val
-	if(killRating>0):
+	if(killRating>10):
 		$/root/Global.change_area("Jail")
 		jailed.emit()
 

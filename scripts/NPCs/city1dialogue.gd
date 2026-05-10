@@ -10,7 +10,7 @@ var  item_slot = null
 var quest_item = null
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
-	woodQuest=get_node("../Quests/WoodQuest")
+	woodQuest=get_node("../Quests/WoodQuest2")
 	person_name = "Juliet"
 	tex = PortableCompressedTexture2D.new()
 	var im = load("res://assets/sprites/characters/gnome2.png").get_image()
@@ -70,3 +70,13 @@ func playerResponse(key: int):
 	else: if(run==4):
 		if(key==0):
 			pass
+
+
+func setQuest(name):
+			quest_item = quest_item_scene.instantiate()
+			item_slot = item_slot_scene.instantiate()
+			item_slot.set_item(wood_item, 1)
+			var items = [item_slot]
+			quest_item.new_quest(items, "Wood's up?", "Bring Juliet wood for her shelf")
+			quest_menu = $"/root/Main/UI/QuestMenu"
+			quest_menu.get_child(0).add_child(quest_item)

@@ -15,3 +15,4 @@ func tryComplete():
 		complete=true
 		$/root/Global.quests_complete +=1
 		player.changeCredit(3)
+		player.gainXP(15)

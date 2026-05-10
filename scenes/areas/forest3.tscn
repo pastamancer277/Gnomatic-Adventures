@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c62sjsk3jb12q" path="res://assets/sprites/Biome/Wall_Tiles.png" id="7_t4iyb"]
 [ext_resource type="PackedScene" uid="uid://dcyfc44wj5kh6" path="res://scenes/cats/black_cat_enemy.tscn" id="8_t4iyb"]
 [ext_resource type="PackedScene" uid="uid://drokegchqxh82" path="res://scenes/NPCs/forest_npc_4.tscn" id="8_xvpau"]
-[ext_resource type="PackedScene" uid="uid://bolrcemkd2pmk" path="res://scenes/NPCs/ForestNPCCat.tscn" id="9_gkvtl"]
+[ext_resource type="PackedScene" uid="uid://h65lchykqf6q" path="res://scenes/NPCs/ForestNPC5.tscn" id="9_gkvtl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tgivl"]
 texture = ExtResource("5_xvpau")
@@ -1985,7 +1985,7 @@ position = Vector2(658, 311)
 [node name="ForestNPC4" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="1" unique_id=1834193905 instance=ExtResource("8_xvpau")]
 position = Vector2(958, 388)
 
-[node name="BasicNPC" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=2091538769 instance=ExtResource("9_gkvtl")]
+[node name="ForestNPC5" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=2091538769 instance=ExtResource("9_gkvtl")]
 position = Vector2(303, 468)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=1180989924]

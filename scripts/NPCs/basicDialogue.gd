@@ -24,3 +24,6 @@ func saveData():
 func loadData():
 	var data = $/root/SaveManager.getData("Dialogue", get_parent().name)
 	run = data.get("run", 1)
+
+func setQuest(name):
+	pass
