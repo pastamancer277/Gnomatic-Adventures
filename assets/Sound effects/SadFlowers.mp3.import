@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://72rf2a3v1g3f"
+path="res://.godot/imported/SadFlowers.mp3-7de27fc6f914d5209e00a50070b838a5.mp3str"
+
+[deps]
+
+source_file="res://assets/Sound effects/SadFlowers.mp3"
+dest_files=["res://.godot/imported/SadFlowers.mp3-7de27fc6f914d5209e00a50070b838a5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

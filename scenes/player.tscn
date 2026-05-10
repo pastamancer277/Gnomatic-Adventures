@@ -657,6 +657,9 @@ autostart = true
 [node name="Camera2D" type="Camera2D" parent="." unique_id=156447036]
 limit_enabled = false
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=153251654]
+max_polyphony = 4
+
 [connection signal="body_entered" from="AttackLeft" to="AttackLeft" method="_on_body_entered"]
 [connection signal="body_exited" from="AttackLeft" to="AttackLeft" method="_on_body_exited"]
 [connection signal="body_entered" from="AttackUp" to="AttackUp" method="_on_body_entered"]

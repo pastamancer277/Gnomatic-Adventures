@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyheg4dl1b8ta"
+path="res://.godot/imported/Slots.mp3-a8f3c321b55cdc4e7e61e5f16e6c1fd1.mp3str"
+
+[deps]
+
+source_file="res://assets/Sound effects/Slots.mp3"
+dest_files=["res://.godot/imported/Slots.mp3-a8f3c321b55cdc4e7e61e5f16e6c1fd1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

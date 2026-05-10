@@ -15,7 +15,8 @@ func _ready():
 func reset():
 	run=1
 	for quest in get_node("../Quests").get_children():
-		quest.reset()
+		if(quest.has_method("reset")):
+			quest.reset()
 
 func saveData():
 	$/root/SaveManager.addSaveData("Dialogue", get_parent().name, {"run" = run})

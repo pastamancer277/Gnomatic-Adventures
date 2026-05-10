@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bkrl2ok6uqfju"
+path="res://.godot/imported/Guy&Girl.mp3-63d63ec31f742e6d912350fbefd42733.mp3str"
+
+[deps]
+
+source_file="res://assets/Sound effects/Guy&Girl.mp3"
+dest_files=["res://.godot/imported/Guy&Girl.mp3-63d63ec31f742e6d912350fbefd42733.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
