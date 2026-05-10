@@ -42,6 +42,5 @@ func playerResponse(key: int):
 	else: if(run==3):
 		run=4
 		player.addKeyword("black_cat_path_open")
-		interact()
 	else: if(run==4):
 		pass

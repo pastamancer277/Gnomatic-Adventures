@@ -37,7 +37,6 @@ func interact():
 	else: if(run==7):
 		dialogueBox.dialogue("Now now, there's a pomegranate pie in the oven for you.",self,person_name, tex)
 		dialogueBox.setDialogueOption("Ohhh boy, thank you!!", 0)
-		
 	else: if(run==8):
 		dialogueBox.dialogue("Did you give the pie to the CAT?!",self,person_name, tex)
 		dialogueBox.setDialogueOption("How'd you know! And so what, it's my friend!", 0)
@@ -75,10 +74,8 @@ func playerResponse(key: int):
 			run+=1
 			interact()
 	else: if(run==7):
-		if(player.hasKeyword("catHasPie")):
-			run+=1
 		if(key==0):
-			pass
+			run+=1
 	#other dialogue string starts here.
 	else: if(run==8):
 		if(player.hasKeyword("catHasPie")):
@@ -86,19 +83,15 @@ func playerResponse(key: int):
 			interact()
 		else:
 			pass
-	else: if(run==7):
-		if(key==0):
-			run+=1
-			interact()
-	else: if(run==8):
-		if(key==0):
-			run+=1
-			interact()
 	else: if(run==9):
 		player.changeCredit(-2)
 		if(key==0):
 			run+=1
 			chase.emit()
+			var popup_scene = load("res://scenes/popups.tscn").instantiate()
+			$"/root/Main/UI/Popups".add_child(popup_scene)
+			popup_scene.set_text("You're getting chased out of the village. RUN!")
+			$/root/Global.multiple_popups()
 	else: if(run==10):
 		if(key==0):
 			pass

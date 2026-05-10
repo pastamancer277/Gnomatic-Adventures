@@ -82,6 +82,10 @@ func hairDrop():
 func onDeath():
 	if(phase==3):
 		super.onDeath()
+		var popup_scene = load("res://scenes/popups.tscn").instantiate()
+		$"/root/Main/UI/Popups".add_child(popup_scene)
+		popup_scene.set_text("You defeated the evil wizard cat! Gnomes and cats can live in peace again!")
+		$/root/Global.multiple_popups()
 	else:
 		phase+=1
 		health=mHealth

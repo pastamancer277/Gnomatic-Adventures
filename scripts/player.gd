@@ -31,9 +31,14 @@ var keywords=[]
 var knockback_velocity = Vector2.ZERO
 
 @onready var slimeball_item: Item = preload("res://resources/items/Fur.tres")
+@onready var meat: Item = preload("res://resources/items/Meat.tres")
+@onready var coin: Item = preload("res://resources/items/Gold.tres")
+
 func _ready() -> void:
 	$AnimatedSprite2D.play("front_idle")
 	$HealthBar.max_value=mHealth
+	$/root/Main/Systems/Inventory.add_item({meat:3})
+	$/root/Main/Systems/Inventory.add_item({coin:3})
 
 func _physics_process(delta: float) -> void:
 	if(Input.is_action_just_pressed("Reset")):

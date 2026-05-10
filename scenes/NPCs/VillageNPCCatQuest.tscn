@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ck8svjd56qdeb"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_rbgf5"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_1ns6v"]
+[ext_resource type="Texture2D" uid="uid://cmn3sg1b86cus" path="res://assets/sprites/characters/GrandmaGrandmaa.png" id="3_rbgf5"]
+[ext_resource type="Script" uid="uid://c1d35u3mt5ng3" path="res://scripts/NPCs/villageNPCCatQuest.gd" id="4_1ns6v"]
+[ext_resource type="Script" uid="uid://fp3eao17ufcr" path="res://scripts/quests/WoodQuest.gd" id="5_xvfeb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_knly4"]
+resource_local_to_scene = true
+shader = ExtResource("2_1ns6v")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="VillageNPCCat" unique_id=1834193905 instance=ExtResource("1_rbgf5")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_knly4")
+texture = ExtResource("3_rbgf5")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("4_1ns6v")
+
+[node name="WoodQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(879326239) index="0" unique_id=1768012253]
+script = ExtResource("5_xvfeb")
