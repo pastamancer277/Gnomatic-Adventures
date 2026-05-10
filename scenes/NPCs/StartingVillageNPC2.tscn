@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_mh6k8"]
 [ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_argi2"]
 [ext_resource type="Texture2D" uid="uid://c7nqynve26h83" path="res://assets/sprites/characters/RedGnome.png" id="3_im1cp"]
-[ext_resource type="Script" uid="uid://b0mranmttj8qk" path="res://scripts/NPCs/StartingVillageNPC2dialogue.gd" id="3_nyomu"]
+[ext_resource type="Script" path="res://scripts/NPCs/StartingVillageNPC2dialogue.gd" id="3_nyomu"]
 [ext_resource type="Script" uid="uid://cj3g3j1afr0ed" path="res://scripts/quests/furquest.gd" id="4_im1cp"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_jlec5"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_im1cp"]
 resource_local_to_scene = true
 shader = ExtResource("2_argi2")
 shader_parameter/active = false
@@ -15,7 +15,7 @@ shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 [node name="StartingVillageNPC2" unique_id=1704687357 instance=ExtResource("1_mh6k8")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
-material = SubResource("ShaderMaterial_jlec5")
+material = SubResource("ShaderMaterial_im1cp")
 texture = ExtResource("3_im1cp")
 
 [node name="Dialogue" parent="." index="3" unique_id=517973683]

@@ -4,7 +4,7 @@ var tamingQuest
 
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
-	tamingQuest=get_node("../Quests/TamingQuest")
+	tamingQuest=get_node("../Quests/TamingQuestOrange")
 	person_name = "Orange Cat"
 	tex = PortableCompressedTexture2D.new()
 	var im = load("res://assets/sprites/characters/OrangeTabby.png").get_image()

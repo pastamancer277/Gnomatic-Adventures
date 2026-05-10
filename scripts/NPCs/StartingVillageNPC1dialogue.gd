@@ -73,3 +73,12 @@ func playerResponse(key: int):
 		run=5
 	else: if(run==5):
 		pass
+
+func setQuest(name):
+			quest_item = quest_item_scene.instantiate()
+			item_slot = item_slot_scene.instantiate()
+			item_slot.set_item(wood_item, 1)
+			var items = [item_slot]
+			quest_item.new_quest(items, "Meat for sale", "Bring Lola Meat")
+			quest_menu = $"/root/Main/UI/QuestMenu"
+			quest_menu.get_child(0).add_child(quest_item)
