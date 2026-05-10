@@ -48,6 +48,7 @@ func interact():
 
 func playerResponse(key: int):
 	if(run == 1):
+		player.addKeyword("talked to cat")
 		if(key==0):
 			run+=1
 			interact()
@@ -89,3 +90,12 @@ func playerResponse(key: int):
 		interact()
 	else: if(run==8):
 		pass
+
+func setQuest(name):
+	quest_item = quest_item_scene.instantiate()
+	item_slot = item_slot_scene.instantiate()
+	item_slot.set_item(Pie_item, 1)
+	var items = [item_slot]
+	quest_item.new_quest(items, "Sweet as Pie", "Give pie to cat for fun")
+	quest_menu = $"/root/Main/UI/QuestMenu"
+	quest_menu.get_child(0).add_child(quest_item)

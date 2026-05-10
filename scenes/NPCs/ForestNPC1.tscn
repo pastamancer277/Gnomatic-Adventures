@@ -13,6 +13,7 @@ shader_parameter/active = false
 shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
 
 [node name="ForestNPC1" unique_id=1704687357 instance=ExtResource("1_mh6k8")]
+killValue = 2
 
 [node name="Sprite2D" parent="." index="1" unique_id=1430291876]
 material = SubResource("ShaderMaterial_argi2")

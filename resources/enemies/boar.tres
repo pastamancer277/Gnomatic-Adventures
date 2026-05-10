@@ -141,16 +141,16 @@ metadata/_custom_type_script = "uid://bivhtsi4pg5j2"
 
 [resource]
 script = ExtResource("4_uqxul")
-maxHealth = 140
-speed = 45
-attackValue = 30
-knockback = 120.0
-xpValue = 35
+maxHealth = 190
+speed = 40
+attackValue = 35
+knockback = 130.0
+xpValue = 40
 sightRadius = 65
-attackRadius = 24.0
-regenSpeed = 1.6
+attackRadius = 26.0
+regenSpeed = 1.3
 regenAmount = 20
-attackCooldown = 1.2
+attackCooldown = 0.9
 respawnTime = 80.0
 collisionRadius = 15.0
 animations = SubResource("SpriteFrames_l0bbc")

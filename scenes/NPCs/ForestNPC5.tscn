@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://h65lchykqf6q"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_ryopo"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_107d3"]
+[ext_resource type="Texture2D" uid="uid://cjbq0j0pt0lhg" path="res://assets/sprites/characters/Spencer.png" id="3_vw4nx"]
+[ext_resource type="Script" uid="uid://dddjat55wv4x0" path="res://scripts/NPCs/forestnpccatdialogue.gd" id="4_vlyir"]
+[ext_resource type="Script" uid="uid://cekcvas56lw4w" path="res://scripts/quests/SpencerQuest.gd" id="5_cpkx1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8gtj2"]
+resource_local_to_scene = true
+shader = ExtResource("2_107d3")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="ForestNPC5" unique_id=1834193905 instance=ExtResource("1_ryopo")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_8gtj2")
+texture = ExtResource("3_vw4nx")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("4_vlyir")
+
+[node name="SpencerQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(879326239) index="0" unique_id=1768012253]
+script = ExtResource("5_cpkx1")

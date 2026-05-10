@@ -7,7 +7,7 @@ var loc
 var health = 100
 var mHealth = 100
 var dead = false
-var killValue = 1
+@export var killValue = 1
 
 @onready var player = $/root/Main/Sort/PlayerEntities/Player
 
@@ -82,7 +82,6 @@ func _on_area_2d_body_exited(body):
 func interact():
 	if(loc==$/root/Global.getCurArea()):
 		$Dialogue.interact()
-	saveData()
 
 func reset():
 	$Dialogue.reset()

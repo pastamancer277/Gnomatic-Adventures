@@ -16,3 +16,4 @@ func tryComplete():
 		$/root/Main/Systems/Inventory.add_item({teddy_bear_item:1})
 		$/root/Global.quests_complete +=1
 		player.changeCredit(1)
+		player.gainXP(35)
