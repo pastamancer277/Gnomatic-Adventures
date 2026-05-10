@@ -48,8 +48,11 @@ func clearButtons():
 	if($/root/Global != null):
 		$/root/Global.pause = false
 	inventory.visible = true
+	count = 0
 	for child in get_children():
 		child.queue_free()
+
+
 func _check_length():
 	if get_parent().size.x >260:
 		var length = 0

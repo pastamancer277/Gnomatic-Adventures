@@ -37,8 +37,6 @@ var knockback_velocity = Vector2.ZERO
 func _ready() -> void:
 	$AnimatedSprite2D.play("front_idle")
 	$HealthBar.max_value=mHealth
-	$/root/Main/Systems/Inventory.add_item({meat:3})
-	$/root/Main/Systems/Inventory.add_item({coin:3})
 
 func _physics_process(delta: float) -> void:
 	if(Input.is_action_just_pressed("Reset")):

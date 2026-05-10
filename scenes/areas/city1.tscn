@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://baq68npof1p7n" path="res://scenes/NPCs/city_lore_npc.tscn" id="14_imk6h"]
 [ext_resource type="PackedScene" uid="uid://kby6wao6ru81" path="res://scenes/save_point.tscn" id="15_2iml0"]
 [ext_resource type="PackedScene" uid="uid://mh8eepgm7v7g" path="res://scenes/NPCs/CityNPC3.tscn" id="16_bo3lc"]
+[ext_resource type="PackedScene" uid="uid://cksenxod3g55d" path="res://scenes/NPCs/icecreamguy.tscn" id="17_u8utv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sfdmy"]
 texture = ExtResource("3_asbs4")
@@ -2080,6 +2081,9 @@ position = Vector2(3, 299)
 
 [node name="CityNPC3" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="6" unique_id=1458288658 instance=ExtResource("16_bo3lc")]
 position = Vector2(96, 282)
+
+[node name="JuceShop1NPC" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="7" unique_id=944615787 instance=ExtResource("17_u8utv")]
+position = Vector2(2, -107)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=1090135025]
 polygon = PackedVector2Array(-274, -224, -278, 45, -258, 46, -257, 61, -275, 61, -317, 59, -317, 85, -257, 87, -257, 111, -275, 110, -278, 366, 33, 367, 35.03363, 353.55524, 49, 353, 46, 368, 44, 438, 80, 438, 79, 369, 80, 355, 93, 354, 94.37413, 368.66785, 402, 370, 403, 109, 385, 108, 386, 92, 457, 93, 459, 42, 382, 43, 403, 42, 401, -225, 96, -224, 97, -162, 80, -162, 78, -269, 47, -269, 49, -161, 33, -163, 32, -224, -260, -230, -260, -433, 689, -435, 690, 592, -544, 592, -546, -209, -545, -435, -260, -434, -274, -225)
