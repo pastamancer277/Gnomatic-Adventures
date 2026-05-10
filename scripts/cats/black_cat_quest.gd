@@ -9,4 +9,5 @@ func activate():
 func tryComplete():
 	if($/root/Main/Systems/Inventory.tryRemove({fish: 3, meat: 5})):
 		complete=true
+		$/root/Global.quests_complete +=1
 		get_parent().get_parent().questComplete()

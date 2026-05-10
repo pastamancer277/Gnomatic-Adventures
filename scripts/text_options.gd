@@ -11,7 +11,6 @@ func _process(delta: float) -> void:
 	if isFocus == null && get_children().size()>count and !text:
 		isFocus = get_children().get(count)
 		if isFocus != null:
-			isFocus.grab_focus()
 			$/root/Global.dialogue = true
 	if(get_child_count() >0 and Input.is_action_just_pressed("MeleeAttack")):
 		for child in get_children() :
@@ -31,8 +30,9 @@ func _process(delta: float) -> void:
 	if count <0:
 		count = 0
 	if get_children().size()>count and !text:
+		isFocus.add_theme_constant_override("outline_size", 0)
 		isFocus = get_children().get(count)
-		isFocus.grab_focus()
+		isFocus.add_theme_constant_override("outline_size", 2)
 
 
 func setDialogueOption(text: String, key: int):

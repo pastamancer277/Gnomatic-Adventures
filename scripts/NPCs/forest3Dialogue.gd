@@ -21,9 +21,9 @@ func interact():
 		dialogueBox.setDialogueOption("Ok!", 0)
 		dialogueBox.setDialogueOption("I have your wood right here, sir.", 1)
 	else: if (run == 2):
-		dialogueBox.dialogue("I need wood. Would you go hunt for a wood sprite to get some for me?.", self,person_name, tex)
-		dialogueBox.setDialogueOption("Ok!", 0)
-		dialogueBox.setDialogueOption("I have your wood right here, sir.", 1)
+		dialogueBox.dialogue("Well, may I have it?", self,person_name, tex)
+		dialogueBox.setDialogueOption("Here you go!", 0)
+		dialogueBox.setDialogueOption("Eh, I don't think so.", 1)
 	else: if(run==3):
 		dialogueBox.dialogue("I think I'll need more.",self,person_name, tex)
 		dialogueBox.setDialogueOption("Ah, okay.", 0)
@@ -38,8 +38,7 @@ func interact():
 
 func playerResponse(key: int):
 	if(run==1):
-		if(key==0):
-			run+=1
+		if(key==0 or key == 1):
 			get_node("../Quests/WoodQuest").activate()
 			quest_item = quest_item_scene.instantiate()
 			item_slot = item_slot_scene.instantiate()
@@ -48,19 +47,11 @@ func playerResponse(key: int):
 			quest_item.new_quest(items, "House For-Rest", "Bring Jack wood for a house")
 			quest_menu = $"/root/Main/UI/QuestMenu"
 			quest_menu.get_child(0).add_child(quest_item)
-		else: if(key==1):
-			get_node("../Quests/WoodQuest").tryComplete()
-			if(get_node("../Quests/WoodQuest").isComplete()):
-				quest_item.queue_free()
-				run=4
-				interact()
-			else:
-				run=3
+			run+=1
+			if key == 1:
 				interact()
 	else: if(run==2):
 		if(key==0):
-			run+=1
-		else: if(key==1):
 			get_node("../Quests/WoodQuest").tryComplete()
 			if(get_node("../Quests/WoodQuest").isComplete()):
 				quest_item.queue_free()
@@ -69,6 +60,8 @@ func playerResponse(key: int):
 			else:
 				run=3
 				interact()
+		else: if(key==1):
+			pass
 	else: if run == 3:
 		run+=1
 		interact()

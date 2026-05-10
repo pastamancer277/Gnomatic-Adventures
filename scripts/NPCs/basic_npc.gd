@@ -64,6 +64,7 @@ func onDeath():
 	player.changeRating(killValue)
 	player.changeCredit(-killValue*2)
 	saveData()
+	$/root/Global.npcsKilled +=1
 
 func deathCollisions():
 	visible=false

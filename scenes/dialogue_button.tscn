@@ -10,4 +10,5 @@ offset_bottom = 8.0
 mouse_filter = 2
 theme = ExtResource("1_dolk3")
 button_mask = 0
+flat = true
 script = ExtResource("1_irtb7")

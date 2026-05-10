@@ -21,7 +21,7 @@ func _ready() -> void:
 func interact():
 	if(run==1):
 			dialogueBox.dialogue("Hello, Gnome!", self, person_name, tex)
-			dialogueBox.setDialogueOption("OH MY GNOMENESS A CAT! GET AWAY!.", 0)
+			dialogueBox.setDialogueOption("OH MY GNOMENESS A CAT! GET AWAY!", 0)
 			dialogueBox.setDialogueOption("Please don't eat me!", 0)
 	else: if(run==2):
 		dialogueBox.dialogue("Woah, relax! I just want some pie!",self, person_name, tex)
@@ -31,11 +31,11 @@ func interact():
 		dialogueBox.setDialogueOption("Okay! I'll find you a pie, just don't eat me!", 0)
 	else: if (run==4):
 		dialogueBox.dialogue("Do you have the pie?",self,person_name, tex)
-		dialogueBox.setDialogueOption("yes, right here!", 0)
+		dialogueBox.setDialogueOption("Yes, right here!", 0)
 		dialogueBox.setDialogueOption("No, not yet", 1)
 	else: if(run==5):
 		dialogueBox.dialogue("I'm sorry but it doesn't look like you do.", self,person_name, tex)
-		dialogueBox.setDialogueOption("sorry, I'll get on that.", 0)
+		dialogueBox.setDialogueOption("Sorry, I'll get on that.", 0)
 	else: if(run==6):
 		dialogueBox.dialogue("Thank you so much! We're friends now, whether you like it or not.",self,person_name, tex)
 		dialogueBox.setDialogueOption("Wow, you really didn't eat me. Thank you!", 0)

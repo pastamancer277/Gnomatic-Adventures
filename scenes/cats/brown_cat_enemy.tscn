@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://ci075unerescc" path="res://assets/sprites/characters/OrangeTabby_Free_Carysaurus/OrangeTabby_Free_Carysaurus/OrangeTabby-Run.png" id="7_q3wwu"]
 [ext_resource type="Script" uid="uid://x35111dpcxg1" path="res://scripts/cats/orange_cat_dialogue.gd" id="8_k7dix"]
 [ext_resource type="Script" uid="uid://da2jx2y665i80" path="res://scripts/cats/orange_cat_quest.gd" id="9_dyufw"]
-[ext_resource type="PackedScene" uid="uid://bolrcemkd2pmk" path="res://scenes/NPCs/ForestNPCCat.tscn" id="9_s2jvi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dyufw"]
 resource_local_to_scene = true
@@ -218,9 +217,6 @@ script = ExtResource("9_dyufw")
 
 [node name="Dash" type="Timer" parent="." index="10" unique_id=1729269178]
 wait_time = 1.4
-
-[node name="BasicNPC" parent="." index="11" unique_id=1834193905 instance=ExtResource("9_s2jvi")]
-position = Vector2(303, 468)
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_entered" from="DetectionArea" to="." method="playerEntered"]

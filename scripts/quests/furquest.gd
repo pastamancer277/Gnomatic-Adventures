@@ -13,4 +13,5 @@ func activate():
 func tryComplete():
 	if($/root/Main/Systems/Inventory.tryRemove({fur_item: 6})):
 		complete=true
+		$/root/Global.quests_complete +=1
 		player.changeCredit(3)

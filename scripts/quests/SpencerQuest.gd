@@ -15,5 +15,6 @@ func activate():
 func tryComplete():
 	if($/root/Main/Systems/Inventory.tryRemove({coin_item: 3}) and$/root/Main/Systems/Inventory.tryRemove({meat_item: 2}) ):
 		complete=true
+		$/root/Global.quests_complete +=1
 		player.gainXP(75)
 		player.changeCredit(4)

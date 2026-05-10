@@ -16,4 +16,5 @@ func tryComplete():
 	if($/root/Main/Systems/Inventory.tryRemove({wood_item: 1})):
 		complete=true
 		player.gainXP(100)
+		$/root/Global.quests_complete +=1
 		player.changeCredit(1)

@@ -12,4 +12,5 @@ func activate():
 func tryComplete():
 	if($/root/Main/Systems/Inventory.tryRemove({polmegranate_item: 1})):
 		complete=true
+		$/root/Global.quests_complete +=1
 		player.changeCredit(1)

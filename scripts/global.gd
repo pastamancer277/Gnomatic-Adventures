@@ -4,6 +4,8 @@ var player_alive=true
 var pause = true
 var dialogue = false
 @onready var player = get_node("/root/Main/Sort/PlayerEntities/Player")
+var npcsKilled = 0
+var quests_complete = 0
 
 var cur_area := ""
 var scene_transit=false
@@ -53,6 +55,8 @@ func resetGame():
 	player.global_position.x=player_start_x
 	player.global_position.y=player_start_y
 	reset_all_nodes(get_node("/root"))
+	npcsKilled = 0
+	quests_complete = 0
 
 func reset_all_nodes(root_node):
 	if root_node.has_method("reset"):
