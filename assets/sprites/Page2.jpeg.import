@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkoyk8rv1m2o4"
-path="res://.godot/imported/Page2Jail.jpeg-e795c7d43264ca2533da31bee5976dd1.ctex"
+uid="uid://co607yujjs772"
+path="res://.godot/imported/Page2.jpeg-179bfd32516628bcb6b2740a17e3b623.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Page2Jail.jpeg"
-dest_files=["res://.godot/imported/Page2Jail.jpeg-e795c7d43264ca2533da31bee5976dd1.ctex"]
+source_file="res://assets/sprites/Page2.jpeg"
+dest_files=["res://.godot/imported/Page2.jpeg-179bfd32516628bcb6b2740a17e3b623.ctex"]
 
 [params]
 

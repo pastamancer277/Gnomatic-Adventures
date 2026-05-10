@@ -5,10 +5,10 @@ var tamingQuest
 func _ready() -> void:
 	dialogueBox=$/root/Main/UI/Dialogue
 	tamingQuest=get_node("../Quests/TamingQuest")
-	person_name = "Brown Cat"
+	person_name = "Orange Cat"
 	tex = PortableCompressedTexture2D.new()
-	var im = load("res://assets/sprites/characters/BrownCat_Free_Carysaurus/BrownCat_Free_Carysaurus/Brown-Idle.png").get_image().get_region(Rect2(0,0,48, 48))
-	im = im.get_region(Rect2(im.get_width()/5,im.get_height()/4, im.get_width(), im.get_height()))
+	var im = load("res://assets/sprites/characters/OrangeTabby.png").get_image()
+	im = im.get_region(Rect2(im.get_width()/3,im.get_height()/3, im.get_width()/2, im.get_height()/1.5))
 	tex.create_from_image(im, PortableCompressedTexture2D.COMPRESSION_MODE_LOSSLESS)
 
 func interact():

@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://cvw5q287t0pxx" path="res://assets/sprites/objects/Book of law cover.png" id="1_4bnys"]
 [ext_resource type="Texture2D" uid="uid://defs6fmttpx08" path="res://assets/sprites/Page1Jail.jpeg" id="2_nxpkm"]
 [ext_resource type="Script" path="res://scripts/bookResource.gd" id="3_agp00"]
-[ext_resource type="Texture2D" uid="uid://dkoyk8rv1m2o4" path="res://assets/sprites/Page2Jail.jpeg" id="3_yyg24"]
+[ext_resource type="Texture2D" uid="uid://co607yujjs772" path="res://assets/sprites/Page2.jpeg" id="3_nxpkm"]
 
 [resource]
 script = ExtResource("3_agp00")
 cover = ExtResource("1_4bnys")
-pages = Array[Texture]([ExtResource("2_nxpkm"), ExtResource("3_yyg24")])
+pages = Array[Texture]([ExtResource("2_nxpkm"), ExtResource("3_nxpkm")])
