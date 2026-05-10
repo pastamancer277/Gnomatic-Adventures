@@ -74,7 +74,7 @@ func playerResponse(key: int):
 				quest_item.queue_free()
 				var popup_scene = load("res://scenes/popups.tscn").instantiate()
 				$"/root/Main/UI/Popups".add_child(popup_scene)
-				popup_scene.set_text("You gained a key! There must be a chest somewhere...")
+				popup_scene.set_text("You gained 5 Gold!")
 				$/root/Global.multiple_popups()
 		if(key==1):
 			pass

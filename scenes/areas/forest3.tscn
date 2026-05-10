@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cmgrrfm3q2fbv" path="res://assets/sprites/Biome/Bright Grass.png" id="5_xvpau"]
 [ext_resource type="Texture2D" uid="uid://dalqseggymmn0" path="res://assets/sprites/Biome/TX Plant.png" id="6_gkvtl"]
 [ext_resource type="Texture2D" uid="uid://bqg8ow8e4uyn0" path="res://assets/sprites/Biome/TX Plant Resized.png" id="7_gkvtl"]
+[ext_resource type="TileSet" uid="uid://bmvo5p0av7lkl" path="res://assets/sprites/characters/new_tile_set.tres" id="7_sm7nd"]
 [ext_resource type="Texture2D" uid="uid://c62sjsk3jb12q" path="res://assets/sprites/Biome/Wall_Tiles.png" id="7_t4iyb"]
 [ext_resource type="PackedScene" uid="uid://dcyfc44wj5kh6" path="res://scenes/cats/black_cat_enemy.tscn" id="8_t4iyb"]
 [ext_resource type="PackedScene" uid="uid://drokegchqxh82" path="res://scenes/NPCs/forest_npc_4.tscn" id="8_xvpau"]
@@ -1970,6 +1971,8 @@ tile_set = SubResource("TileSet_8ea5b")
 [node name="YSort" type="TileMapLayer" parent="TileMap" parent_id_path=PackedInt32Array(41032152) index="2" unique_id=523262453]
 z_index = 1
 y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAZACAACgAUAAYAAAAeACAACgAUAAYAAAAnACAACgAUAAYAAAAcAB4ACgAUAAYAAAAdAB4ACgAUAAYAAAAZABwACgAUAAYAAAAZAB0ACgAUAAYAAAAbAB8ACgAUAAYAAAAaAB8ACgAUAAYAAAAiAB8ACgAUAAYAAAAhAB8ACgAUAAYAAAAkAB0ACgAUAAYAAAAqAB4ACgAUAAYAAAAuACEACgAUAAYAAAAtACAACgAUAAYAAAAuACAACgAUAAYAAAAxAB4ACgAUAAYAAAA4AB8ACgAUAAYAAAA3AB8ACgAUAAYAAAA4ACAACgAUAAYAAAA4ABAACgAUAAYAAAA4AA8ACgAUAAYAAAAZAA4ACgAUAAYAAAAZABIACgAUAAYAAAAYABEACgAUAAYAAAAeABAACgAUAAYAAAAfABAACgAUAAYAAAAiAA0ACgAUAAYAAAA0ABMACgAUAAYAAAAzABMACgAUAAYAAAAxAA4ACgAUAAYAAAAQABAACgAUAAYAAAAQAA8ACgAUAAYAAAA=")
+tile_set = ExtResource("7_sm7nd")
 
 [node name="Top" type="TileMapLayer" parent="TileMap" parent_id_path=PackedInt32Array(41032152) index="3" unique_id=1101351243]
 z_index = 2

@@ -67,7 +67,7 @@ func playerResponse(key: int):
 				run+=1
 				quest_item.queue_free()
 				interact()
-				player.add_keyword("duck")
+				pass
 		if(key==1):
 			pass
 	else: if(run==4):

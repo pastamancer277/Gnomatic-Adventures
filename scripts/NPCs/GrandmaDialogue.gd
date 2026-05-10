@@ -40,7 +40,7 @@ func interact():
 		dialogueBox.setDialogueOption("Okay, Grandma.", 0)
 		dialogueBox.setDialogueOption("But they seemed so nice...", 0)
 	else: if(run==7):
-		dialogueBox.dialogue("Now now, there's a pomegranate pie in the oven for you.",self,person_name, tex)
+		dialogueBox.dialogue("Now now, there's a Blueberry pie in the oven for you.",self,person_name, tex)
 		dialogueBox.setDialogueOption("Ohhh boy, thank you!!", 0)
 	else: if(run==8):
 		if(player.hasKeyword("catHasPie")):
@@ -110,4 +110,4 @@ func playerResponse(key: int):
 	else:if run ==11:
 		if key ==0 or key ==1:
 			run = 2
-			interact()
+			pass

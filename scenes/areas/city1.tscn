@@ -2071,10 +2071,10 @@ position = Vector2(369, 251)
 enemyResource = ExtResource("12_imk6h")
 
 [node name="City2NPC" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="3" unique_id=1834193905 instance=ExtResource("13_gbtq8")]
-position = Vector2(349, -82)
+position = Vector2(22, -92)
 
 [node name="CityLoreNPC" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="4" unique_id=829452357 instance=ExtResource("14_imk6h")]
-position = Vector2(-238, 74)
+position = Vector2(-235, 53)
 
 [node name="SavePoint" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="5" unique_id=862322370 instance=ExtResource("15_2iml0")]
 position = Vector2(3, 299)

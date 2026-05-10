@@ -1284,3 +1284,5 @@ shape = SubResource("RectangleShape2D_0y6yd")
 [connection signal="body_exited" from="ToForest3" to="." method="_on_to_forest_3_body_exited"]
 [connection signal="body_entered" from="ToFarm" to="." method="_on_to_farm_body_entered"]
 [connection signal="body_exited" from="ToFarm" to="." method="_on_to_farm_body_exited"]
+[connection signal="body_entered" from="toBasicHouse" to="." method="_on_to_basic_house_body_entered"]
+[connection signal="body_exited" from="toBasicHouse" to="." method="_on_to_basic_house_body_exited"]

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dj4u1sni026hc"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_mh6k8"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_argi2"]
+[ext_resource type="Script" uid="uid://ct8m4x2eseqk2" path="res://scripts/NPCs/StartingVillageNPC1dialogue.gd" id="4_045of"]
+[ext_resource type="Script" uid="uid://cgroiksamgu5b" path="res://scripts/NPCs/pie_quest.gd" id="4_oybnf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oybnf"]
+resource_local_to_scene = true
+shader = ExtResource("2_argi2")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7gmrk"]
+load_path = "res://.godot/imported/femalegnome3.png-3032cd3ff6ca988afd32bba56284735a.ctex"
+
+[node name="StartingVillageNPC1" unique_id=1704687357 instance=ExtResource("1_mh6k8")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_oybnf")
+texture = SubResource("CompressedTexture2D_7gmrk")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("4_045of")
+
+[node name="VillageMeatQuest" type="Node" parent="Quests" parent_id_path=PackedInt32Array(879326239) index="0" unique_id=161604735]
+script = ExtResource("4_oybnf")
