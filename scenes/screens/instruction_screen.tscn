@@ -1,38 +1,112 @@
 [gd_scene format=3 uid="uid://brnjlnygjkq78"]
 
+[ext_resource type="Theme" uid="uid://8yntgav2cnsc" path="res://assets/themes/panel_container.tres" id="1_e7nqa"]
 [ext_resource type="Script" uid="uid://febghqijhft2" path="res://scripts/screens/instruction_screen.gd" id="1_ps0wq"]
-[ext_resource type="Texture2D" uid="uid://cx6fsceayqi8g" path="res://assets/icons/Up Arrow.png" id="2_ryu3h"]
 [ext_resource type="Theme" uid="uid://dgi7kajo0do8d" path="res://assets/themes/label.tres" id="3_6nv6t"]
+[ext_resource type="Theme" uid="uid://c6tvwmr0ivjut" path="res://assets/themes/help_menu_button.tres" id="3_ryu3h"]
 [ext_resource type="Theme" uid="uid://cupigso84clu8" path="res://assets/themes/screen_button.tres" id="4_e7nqa"]
 
-[node name="InstructionScreen" type="Control" unique_id=1231221103]
-layout_mode = 3
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ps0wq"]
+load_path = "res://.godot/imported/Up Arrow.png-52f9cc4b554324a142a9e39cf0546cce.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ryu3h"]
+load_path = "res://.godot/imported/Left Arrow.png-2656c23bf7b7fbdf4c0c501b220eeda5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6nv6t"]
+load_path = "res://.godot/imported/Down Arrow.png-2cdd0355648ea36eff331414101d65af.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_e7nqa"]
+load_path = "res://.godot/imported/Right Arrow.png-a54ca83d044bdd492e29b9f585691485.ctex"
+
+[node name="InstructionScreen" type="PanelContainer" unique_id=1895697371]
+texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_e7nqa")
+theme_type_variation = &"Instruction"
 script = ExtResource("1_ps0wq")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1700984283]
-position = Vector2(563.0001, 497)
-scale = Vector2(202.74611, 66.706245)
-texture = ExtResource("2_ryu3h")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2098069223]
 texture_filter = 2
-layout_mode = 0
-offset_right = 202.0
-offset_bottom = 119.0
+layout_mode = 2
+alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=789455178]
+[node name="Up" type="TextureButton" parent="VBoxContainer" unique_id=1376485959]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_ryu3h")
+texture_normal = SubResource("CompressedTexture2D_ps0wq")
+stretch_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1479967388]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Left" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=1154339860]
+layout_mode = 2
+texture_normal = SubResource("CompressedTexture2D_ryu3h")
+
+[node name="Down" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=372983730]
+layout_mode = 2
+texture_normal = SubResource("CompressedTexture2D_6nv6t")
+
+[node name="Right" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=1631194250]
+layout_mode = 2
+texture_normal = SubResource("CompressedTexture2D_e7nqa")
+
+[node name="MoveLabel" type="Label" parent="VBoxContainer" unique_id=789455178]
 layout_mode = 2
 size_flags_vertical = 6
 theme = ExtResource("3_6nv6t")
-theme_override_font_sizes/font_size = 20
-text = "WASD to move
-E to interact with NPCs
-Spacebar to attack/select"
+theme_override_font_sizes/font_size = 16
+text = "WASD to move and select dialogue options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EButton" type="Button" parent="VBoxContainer" unique_id=1287603300]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme = ExtResource("4_e7nqa")
+theme_type_variation = &"Instructions"
+theme_override_font_sizes/font_size = 14
+button_mask = 0
+text = "E"
+
+[node name="ELabel" type="Label" parent="VBoxContainer" unique_id=17632142]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("3_6nv6t")
+theme_override_font_sizes/font_size = 16
+text = "E to interact with NPCs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpaceButton" type="Button" parent="VBoxContainer" unique_id=1166989550]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme = ExtResource("4_e7nqa")
+theme_type_variation = &"Instructions"
+theme_override_font_sizes/font_size = 14
+button_mask = 0
+text = "Space"
+
+[node name="AttackLabel" type="Label" parent="VBoxContainer" unique_id=349245790]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("3_6nv6t")
+theme_override_font_sizes/font_size = 16
+text = "Spacebar to attack and choose dialogue"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=746386268]
 layout_mode = 2
@@ -42,5 +116,3 @@ theme_type_variation = &"ScreenButton"
 theme_override_font_sizes/font_size = 23
 button_mask = 0
 text = "Space to Start"
-
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

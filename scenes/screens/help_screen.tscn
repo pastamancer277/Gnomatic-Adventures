@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cl8qhbjfnu4t6"]
 
+[ext_resource type="Script" uid="uid://pj0rhadqgxe8" path="res://scenes/screens/label_screens.gd" id="1_8l0br"]
 [ext_resource type="Theme" uid="uid://b15a07rd88w1m" path="res://assets/themes/margin_container_theme.tres" id="2_tqtlj"]
 [ext_resource type="Theme" uid="uid://dgi7kajo0do8d" path="res://assets/themes/label.tres" id="3_tqtlj"]
 
-[node name="HelpScreen" type="Control" unique_id=1231221103]
-layout_mode = 3
+[node name="HelpScreen" type="PanelContainer" unique_id=96492077]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -12,11 +12,10 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_8l0br")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=876202913]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 2
 theme = ExtResource("2_tqtlj")
 
 [node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1001461454]
@@ -26,8 +25,8 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 6
 theme = ExtResource("3_tqtlj")
-theme_override_font_sizes/font_size = 15
-text = "WASD to move
+theme_override_font_sizes/font_size = 14
+text = "WASD to move and select dialogue options
 E to interact with NPCs
-Spacebar to attack/select
+Spacebar to attack and choose dialogue
 "

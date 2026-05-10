@@ -75,6 +75,8 @@ func _physics_process(delta: float) -> void:
 		update_health()
 		attack()
 		move()
+	elif $"/root/Global".pause:
+		visible = true
 	else:
 		$CollisionShape2D.disabled=true
 		visible=false

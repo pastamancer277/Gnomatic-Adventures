@@ -1,5 +1,8 @@
 [gd_resource type="Theme" format=3 uid="uid://8yntgav2cnsc"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvg02"]
+bg_color = Color(0.11764706, 0.42352942, 0.09019608, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3i2ev"]
 bg_color = Color(0.1882353, 0.40784314, 0.3137255, 1)
 
@@ -16,6 +19,8 @@ corner_radius_bottom_left = 1
 bg_color = Color(0.79624295, 0.796243, 0.7962429, 0.8901961)
 
 [resource]
+Instruction/base_type = &"PanelContainer"
+Instruction/styles/panel = SubResource("StyleBoxFlat_xvg02")
 Inventory/base_type = &"PanelContainer"
 Inventory/styles/panel = SubResource("StyleBoxFlat_3i2ev")
 Menu/base_type = &"PanelContainer"

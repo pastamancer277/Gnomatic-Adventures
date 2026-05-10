@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4b53ek27bfgs"
-path="res://.godot/imported/grid_icon.png-4ab69f2be76e987df5b36c3cc4e4c177.ctex"
+uid="uid://r0ccdnuqylxn"
+path="res://.godot/imported/Down Arrow.png-e0bce963233290a23682ec74fae75aef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/grid_icon.png"
-dest_files=["res://.godot/imported/grid_icon.png-4ab69f2be76e987df5b36c3cc4e4c177.ctex"]
+source_file="res://assets/icons/sprite/Down Arrow.png"
+dest_files=["res://.godot/imported/Down Arrow.png-e0bce963233290a23682ec74fae75aef.ctex"]
 
 [params]
 

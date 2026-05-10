@@ -4,8 +4,7 @@
 [ext_resource type="Theme" uid="uid://dgi7kajo0do8d" path="res://assets/themes/label.tres" id="3_6c100"]
 [ext_resource type="Theme" uid="uid://c6tvwmr0ivjut" path="res://assets/themes/help_menu_button.tres" id="3_drx2c"]
 
-[node name="LevelScreen" type="Control" unique_id=1231221103]
-layout_mode = 3
+[node name="LevelScreen" type="PanelContainer" unique_id=572791248]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -13,9 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=285185425]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 2
 theme = ExtResource("2_whuc5")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1441377509]

@@ -20,6 +20,7 @@ func _ready():
 
 func _process(delta: float) -> void:
 	xp.value = player.getXP()
+	xp.max_value = player.xpToLevel
 	xp_label.text = "Level: " + str(player.level)
 	social_credit.text = str(player.getSocialCredit())
 
@@ -34,10 +35,6 @@ func update_ui():
 			slots[i].set_item(item, amount)
 		else:
 			slots[i].clear_item()
-
-func _input(event: InputEvent) -> void:
-	if(event.is_action_pressed("Inventory")):
-		visible=!visible
 
 func create_slots():
 	for i in range(slot_count):

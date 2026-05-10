@@ -14,7 +14,7 @@ func interact():
 	if(run==1):
 		dialogueBox.dialogue("Hey youngin enyoy your life outa jail, turn your life around or something ", self,person_name, tex)
 		dialogueBox.setDialogueOption("I will thank you", 0)
-		dialogueBox.setDialogueOption("Nah I'm gana keep living the same", 1)
+		dialogueBox.setDialogueOption("Nah I'm gonna keep living the same", 1)
 
 func playerResponse(key: int):
 	if(run == 1):

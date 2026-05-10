@@ -17,23 +17,21 @@ func _ready() -> void:
 
 func interact():
 	if(run==1):
-		get_node("../Quests/WoodQuest").activate()
-		quest_item = quest_item_scene.instantiate()
-		item_slot = item_slot_scene.instantiate()
-		item_slot.set_item(wood_item, 1)
-		var items = [item_slot]
-		quest_item.new_quest(items, "House For-Rest", "Bring Jack wood for a house")
-		quest_menu = $"/root/Main/UI/QuestMenu"
-		quest_menu.get_child(0).add_child(quest_item)
 		dialogueBox.dialogue("I need wood. Would you go hunt for a wood sprite to get some for me?.", self,person_name, tex)
 		dialogueBox.setDialogueOption("Ok!", 0)
 		dialogueBox.setDialogueOption("I have your wood right here, sir.", 1)
-	else: if(run==2):
+	else: if (run == 2):
+		dialogueBox.dialogue("I need wood. Would you go hunt for a wood sprite to get some for me?.", self,person_name, tex)
+		dialogueBox.setDialogueOption("Ok!", 0)
+		dialogueBox.setDialogueOption("I have your wood right here, sir.", 1)
+	else: if(run==3):
 		dialogueBox.dialogue("I think I'll need more.",self,person_name, tex)
 		dialogueBox.setDialogueOption("Ah, okay.", 0)
-	else: if(run==3):
-		run=4
 	else: if(run==4):
+		dialogueBox.dialogue("Thank you! I'm going to go build a house!",self,person_name, tex)
+		dialogueBox.setDialogueOption("Can't wait to see it!", 0)
+		dialogueBox.setDialogueOption("Bye", 0)
+	else: if(run==5):
 		dialogueBox.dialogue("Thanks again.",self,person_name, tex)
 		dialogueBox.setDialogueOption("You're welcome!", 0)
 		dialogueBox.setDialogueOption("Bye!", 0)
@@ -41,21 +39,41 @@ func interact():
 func playerResponse(key: int):
 	if(run==1):
 		if(key==0):
-			pass
+			run+=1
+			get_node("../Quests/WoodQuest").activate()
+			quest_item = quest_item_scene.instantiate()
+			item_slot = item_slot_scene.instantiate()
+			item_slot.set_item(wood_item, 1)
+			var items = [item_slot]
+			quest_item.new_quest(items, "House For-Rest", "Bring Jack wood for a house")
+			quest_menu = $"/root/Main/UI/QuestMenu"
+			quest_menu.get_child(0).add_child(quest_item)
 		else: if(key==1):
 			get_node("../Quests/WoodQuest").tryComplete()
 			if(get_node("../Quests/WoodQuest").isComplete()):
 				quest_item.queue_free()
-				run=3
+				run=4
 				interact()
 			else:
-				run=2
+				run=3
 				interact()
 	else: if(run==2):
-		run=1
-		interact()
-	else: if(run==3):
-		run=4
+		if(key==0):
+			run+=1
+		else: if(key==1):
+			get_node("../Quests/WoodQuest").tryComplete()
+			if(get_node("../Quests/WoodQuest").isComplete()):
+				quest_item.queue_free()
+				run=4
+				interact()
+			else:
+				run=3
+				interact()
+	else: if run == 3:
+		run+=1
 		interact()
 	else: if(run==4):
+		run=5
+		interact()
+	else: if(run==5):
 		pass
