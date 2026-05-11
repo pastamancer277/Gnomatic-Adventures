@@ -185,6 +185,7 @@ func damage(damage:int, pos, knock):
 	
 	damage-=shield
 	if(damage>0):
+		SoundManager.play_sfx("hurt")
 		health-=damage
 		$RegenTimer.start()
 

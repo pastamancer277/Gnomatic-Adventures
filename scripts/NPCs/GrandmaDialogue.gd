@@ -111,3 +111,6 @@ func playerResponse(key: int):
 		if key ==0 or key ==1:
 			run = 2
 			pass
+
+func startChase():
+	chase.emit()

@@ -73,3 +73,12 @@ func playerResponse(key: int):
 	else: if(run==4):
 		if(key==0):
 			pass
+
+func setQuest(name):
+			quest_item = quest_item_scene.instantiate()
+			item_slot = item_slot_scene.instantiate()
+			item_slot.set_item(polmegranate_item, 1)
+			var items = [item_slot]
+			quest_item.new_quest(items, "Seeds of Joy", "The Duck demands Pomegranates")
+			quest_menu = $"/root/Main/UI/QuestMenu"
+			quest_menu.get_child(0).add_child(quest_item)
