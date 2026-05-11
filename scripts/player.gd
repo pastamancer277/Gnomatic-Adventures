@@ -5,6 +5,7 @@ signal respawn
 signal jailed
 
 @export var basicRanged: PackedScene
+@export var music: AudioStream
 
 const SPEED = 100
 var currnet_dir ="down"
@@ -37,6 +38,7 @@ var knockback_velocity = Vector2.ZERO
 func _ready() -> void:
 	$AnimatedSprite2D.play("front_idle")
 	$HealthBar.max_value=mHealth
+	SoundManager.play_music(music)
 
 func _physics_process(delta: float) -> void:
 	if(Input.is_action_just_pressed("Reset")):

@@ -54,5 +54,9 @@ theme_override_constants/outline_size = 0
 text = "Restart Game"
 flat = true
 
+[node name="Timer" type="Timer" parent="." unique_id=948605821]
+wait_time = 0.4
+
 [connection signal="pressed" from="VBoxContainer/Reload" to="." method="_on_reload_pressed"]
 [connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

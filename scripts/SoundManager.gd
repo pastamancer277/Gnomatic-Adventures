@@ -2,7 +2,7 @@ extends Node
 
 # Dictionary to hold your sounds for easy access
 var sounds = {
-	"click": preload("res://assets/Sound effects/UI/synth_confirmation.wav"),
+	"click": preload("res://assets/Sound effects/UI/synth_error.wav"),
 	"hit": preload("res://assets/Sound effects/Combat and Gore/slap.wav"),
 	"miss": preload("res://assets/Sound effects/Combat and Gore/swipe.wav"),
 	"hurt": preload("res://assets/Sound effects/Combat and Gore/punch.wav"),
