@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://o84ta057a1d5"
+path="res://.godot/imported/industrial_door_open.wav-414ce726d4fac848bc977ff0c9e915a0.sample"
+
+[deps]
+
+source_file="res://assets/Sound effects/Machines/industrial_door_open.wav"
+dest_files=["res://.godot/imported/industrial_door_open.wav-414ce726d4fac848bc977ff0c9e915a0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

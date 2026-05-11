@@ -58,6 +58,7 @@ func setDialogueOption(text: String, key: int):
 	buttons.setDialogueOption(text,key)
 
 func playerResponse(key: int):
+	SoundManager.play_sfx("click")
 	panel_container.visible=false
 	$/root/Main/Sort/PlayerEntities/Player.pauseAttack()
 	currentNPCDialogue.playerResponse(key)

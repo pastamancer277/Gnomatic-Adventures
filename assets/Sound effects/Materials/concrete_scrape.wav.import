@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://nd5rhi0sx2rx"
+path="res://.godot/imported/concrete_scrape.wav-f86fb280a5dd16c7375fa924d6f7c876.sample"
+
+[deps]
+
+source_file="res://assets/Sound effects/Materials/concrete_scrape.wav"
+dest_files=["res://.godot/imported/concrete_scrape.wav-f86fb280a5dd16c7375fa924d6f7c876.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

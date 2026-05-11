@@ -23,6 +23,7 @@ config/icon="res://assets/icon.svg"
 
 Global="*res://scripts/global.gd"
 SaveManager="*uid://bvwgvulhg53ps"
+SoundManager="*uid://bea8nrleifc5l"
 
 [display]
 

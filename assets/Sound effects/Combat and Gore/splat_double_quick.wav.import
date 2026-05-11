@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://m6r213isp60i"
+path="res://.godot/imported/splat_double_quick.wav-0b83ccd3742a61cde0ec4252a8f2f076.sample"
+
+[deps]
+
+source_file="res://assets/Sound effects/Combat and Gore/splat_double_quick.wav"
+dest_files=["res://.godot/imported/splat_double_quick.wav-0b83ccd3742a61cde0ec4252a8f2f076.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

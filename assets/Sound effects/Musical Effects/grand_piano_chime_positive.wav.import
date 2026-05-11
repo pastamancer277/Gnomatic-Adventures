@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cscx8th2i2f6l"
+path="res://.godot/imported/grand_piano_chime_positive.wav-899eba8f0535b4d93078431e6c2d125b.sample"
+
+[deps]
+
+source_file="res://assets/Sound effects/Musical Effects/grand_piano_chime_positive.wav"
+dest_files=["res://.godot/imported/grand_piano_chime_positive.wav-899eba8f0535b4d93078431e6c2d125b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dxq2s7gu27w0y"
+path="res://.godot/imported/click_double_off.wav-3d973d2c8a6103468f3db7e75fb478d1.sample"
+
+[deps]
+
+source_file="res://assets/Sound effects/UI/click_double_off.wav"
+dest_files=["res://.godot/imported/click_double_off.wav-3d973d2c8a6103468f3db7e75fb478d1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

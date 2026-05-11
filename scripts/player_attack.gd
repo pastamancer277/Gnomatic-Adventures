@@ -6,6 +6,9 @@ func attack(val: int, pos, knockback):
 	if(targets.size()>0):
 		for enemy in targets:
 			enemy.damage(val, pos, knockback)
+		SoundManager.play_sfx("hit")
+	else:
+		SoundManager.play_sfx("miss")
 
 func _on_body_entered(body: Node2D) -> void:
 	if(body.is_in_group("damagable")):

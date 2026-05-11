@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cf28b6d5trnrl"
+path="res://.godot/imported/shovel_dig.wav-d2a43b7b8dab68e1a082419e5400541b.sample"
+
+[deps]
+
+source_file="res://assets/Sound effects/Items/shovel_dig.wav"
+dest_files=["res://.godot/imported/shovel_dig.wav-d2a43b7b8dab68e1a082419e5400541b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
