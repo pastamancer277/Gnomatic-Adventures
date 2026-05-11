@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://mj75forr1df6"
+path="res://.godot/imported/jingle_bells_2.wav-58f9e87ef79b2d9cb993af3f540ec9ab.sample"
+
+[deps]
+
+source_file="res://assets/Sound effects/Items/jingle_bells_2.wav"
+dest_files=["res://.godot/imported/jingle_bells_2.wav-58f9e87ef79b2d9cb993af3f540ec9ab.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

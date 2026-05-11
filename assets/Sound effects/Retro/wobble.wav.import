@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://o2i1gomocmwj"
+path="res://.godot/imported/wobble.wav-2a2d2a4afe8e04ae1c75cd29c4ec12f9.sample"
+
+[deps]
+
+source_file="res://assets/Sound effects/Retro/wobble.wav"
+dest_files=["res://.godot/imported/wobble.wav-2a2d2a4afe8e04ae1c75cd29c4ec12f9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

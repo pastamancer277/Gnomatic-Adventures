@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://by2a4qecriuc1"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_wstkb"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_e2xph"]
+[ext_resource type="Texture2D" uid="uid://dv6v5jjns2ujt" path="res://assets/sprites/characters/redPrisoner.png" id="3_e2xph"]
+[ext_resource type="Script" path="res://scripts/NPCs/red_prisoner_dialogue.gd" id="4_wnwe6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_md5y0"]
+resource_local_to_scene = true
+shader = ExtResource("2_e2xph")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="RedPrisoner" unique_id=1834193905 instance=ExtResource("1_wstkb")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_md5y0")
+texture = ExtResource("3_e2xph")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("4_wnwe6")

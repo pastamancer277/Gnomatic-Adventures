@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cwit83qfnih8d"]
+[gd_scene format=4 uid="uid://ewa2qntpgu1a"]
 
 [ext_resource type="PackedScene" uid="uid://544q7gcm2ury" path="res://scenes/areas/area.tscn" id="1_qki3t"]
 [ext_resource type="Texture2D" uid="uid://cmgrrfm3q2fbv" path="res://assets/sprites/Biome/Bright Grass.png" id="2_moe3i"]
@@ -13,7 +13,7 @@
 [ext_resource type="Resource" uid="uid://bmswyvpe1fvqo" path="res://resources/enemies/fox.tres" id="11_enqqm"]
 [ext_resource type="Resource" uid="uid://bol020bxwbhj3" path="res://resources/enemies/boar.tres" id="12_5chbg"]
 [ext_resource type="PackedScene" uid="uid://hes6l4tty6pi" path="res://scenes/NPCs/villagenpc2.tscn" id="13_enqqm"]
-[ext_resource type="PackedScene" path="res://scenes/NPCs/VillageNPCCatQuest.tscn" id="14_5chbg"]
+[ext_resource type="PackedScene" uid="uid://ck8svjd56qdeb" path="res://scenes/NPCs/VillageNPCCatQuest.tscn" id="14_5chbg"]
 [ext_resource type="PackedScene" uid="uid://kby6wao6ru81" path="res://scenes/save_point.tscn" id="15_d54wb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehnuc"]
@@ -1228,7 +1228,7 @@ enemyResource = ExtResource("12_5chbg")
 [node name="VillageNPC2" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="5" unique_id=942147021 instance=ExtResource("13_enqqm")]
 position = Vector2(770, 406)
 
-[node name="BasicNPC" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="6" unique_id=326756778 instance=ExtResource("14_5chbg")]
+[node name="VillageCatNPC" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="6" unique_id=326756778 instance=ExtResource("14_5chbg")]
 position = Vector2(844, -100)
 
 [node name="SavePoint" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="7" unique_id=862322370 instance=ExtResource("15_d54wb")]

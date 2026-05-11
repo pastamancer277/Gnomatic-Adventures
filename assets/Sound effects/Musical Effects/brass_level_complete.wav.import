@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c683nb818hiwk"
+path="res://.godot/imported/brass_level_complete.wav-2fae1621e77a445270c630dc53394c37.sample"
+
+[deps]
+
+source_file="res://assets/Sound effects/Musical Effects/brass_level_complete.wav"
+dest_files=["res://.godot/imported/brass_level_complete.wav-2fae1621e77a445270c630dc53394c37.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

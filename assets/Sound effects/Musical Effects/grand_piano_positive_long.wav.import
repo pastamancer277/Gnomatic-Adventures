@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://btp4uweb0v724"
+path="res://.godot/imported/grand_piano_positive_long.wav-376c2dc8fbea4de40631fe40e5266bde.sample"
+
+[deps]
+
+source_file="res://assets/Sound effects/Musical Effects/grand_piano_positive_long.wav"
+dest_files=["res://.godot/imported/grand_piano_positive_long.wav-376c2dc8fbea4de40631fe40e5266bde.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

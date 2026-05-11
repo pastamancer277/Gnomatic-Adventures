@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dk0t47iiagsea"
+path="res://.godot/imported/harpsichord_defeated.wav-cf1a15854a56bbcfb4df077343b73214.sample"
+
+[deps]
+
+source_file="res://assets/Sound effects/Musical Effects/harpsichord_defeated.wav"
+dest_files=["res://.godot/imported/harpsichord_defeated.wav-cf1a15854a56bbcfb4df077343b73214.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

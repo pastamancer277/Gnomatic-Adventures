@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://bwvnlnm3ptxex" path="res://resources/enemies/bear.tres" id="10_syi5y"]
 [ext_resource type="Resource" uid="uid://cagdfvhselp0l" path="res://resources/enemies/bird.tres" id="11_jsssp"]
 [ext_resource type="PackedScene" uid="uid://8vol0sip0u3e" path="res://scenes/NPCs/CityNPC1.tscn" id="12_syi5y"]
+[ext_resource type="PackedScene" uid="uid://c4qfei1hw6f04" path="res://scenes/NPCs/prisoner4.tscn" id="13_jsssp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_puqa6"]
 texture = ExtResource("2_3nhoh")
@@ -2864,6 +2865,9 @@ enemyResource = ExtResource("10_syi5y")
 
 [node name="CityNPC1" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=1834193905 instance=ExtResource("12_syi5y")]
 position = Vector2(334, -36)
+
+[node name="Prisoner3" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="3" unique_id=1705880021 instance=ExtResource("13_jsssp")]
+position = Vector2(475, 131)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=1504294446]
 polygon = PackedVector2Array(-277, 312, -273, 15, -255, 15, -256, -2, -335, -2, -334, -38, -273, -35, -256, -33, -259, -49, -275, -48, -276, -212, 545, -210, 546, 320, -265, 321, -265, 545, 768, 545, 769, -384, -463, -385, -463, 543, -266, 547, -263, 320)

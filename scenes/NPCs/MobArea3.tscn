@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://do31ueb3p35mu"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_jgfy4"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_tul0u"]
+[ext_resource type="Texture2D" uid="uid://buklievg7elix" path="res://assets/sprites/characters/MobGnome4.png" id="3_jgfy4"]
+[ext_resource type="Script" uid="uid://cq5fx6u14outp" path="res://scenes/NPCs/mobarea3_dialogue.gd" id="4_jgfy4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tul0u"]
+resource_local_to_scene = true
+shader = ExtResource("2_tul0u")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="MobArea3" unique_id=1834193905 instance=ExtResource("1_jgfy4")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_tul0u")
+texture = ExtResource("3_jgfy4")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("4_jgfy4")

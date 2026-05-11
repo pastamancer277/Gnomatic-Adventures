@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ba3b2jopd7xaf" path="res://scenes/areas/jail.tscn" id="7_trceg"]
 [ext_resource type="PackedScene" uid="uid://ymwd2tog7ob6" path="res://scenes/areas/mob1.tscn" id="8_trceg"]
 [ext_resource type="PackedScene" uid="uid://cprvocsaem7dq" path="res://scenes/screens/screen.tscn" id="9_85g3d"]
-[ext_resource type="PackedScene" uid="uid://cwit83qfnih8d" path="res://scenes/areas/village.tscn" id="9_jkv2x"]
+[ext_resource type="PackedScene" path="res://scenes/areas/village.tscn" id="9_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://d2aqs3xcygtik" path="res://scenes/areas/farm.tscn" id="10_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://cci2hhens7k0q" path="res://scenes/areas/startingforest.tscn" id="11_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://0f3tc54xlsk" path="res://scenes/areas/startvillage.tscn" id="11_muem4"]
@@ -52,8 +52,6 @@ y_sort_enabled = true
 
 [node name="Mob2" parent="Sort/Areas" unique_id=1067824948 instance=ExtResource("8_trceg")]
 
-[node name="Village1" parent="Sort/Areas" unique_id=701979369 instance=ExtResource("9_jkv2x")]
-
 [node name="Farm" parent="Sort/Areas" unique_id=714462220 instance=ExtResource("10_jbj1t")]
 
 [node name="StartingForest" parent="Sort/Areas" unique_id=594030835 instance=ExtResource("11_dp3eg")]
@@ -65,6 +63,8 @@ y_sort_enabled = true
 [node name="BasicHouse" parent="Sort/Areas" unique_id=332112447 instance=ExtResource("14_pm3ni")]
 
 [node name="BossMap" parent="Sort/Areas" unique_id=1535019121 instance=ExtResource("15_y6deb")]
+
+[node name="Village1" parent="Sort/Areas" unique_id=1763339100 instance=ExtResource("9_jkv2x")]
 
 [node name="PlayerEntities" type="Node2D" parent="Sort" unique_id=488688547]
 y_sort_enabled = true

@@ -11,9 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://bmw1xq14alg87" path="res://scenes/enemies/basic_enemy.tscn" id="10_3i1a1"]
 [ext_resource type="Resource" uid="uid://bmswyvpe1fvqo" path="res://resources/enemies/fox.tres" id="11_enqqm"]
 [ext_resource type="Resource" uid="uid://bol020bxwbhj3" path="res://resources/enemies/boar.tres" id="12_5chbg"]
-[ext_resource type="PackedScene" uid="uid://bwex2l3cdm7nt" path="res://scenes/NPCs/Moving NPC.tscn" id="12_mauqd"]
-[ext_resource type="PackedScene" uid="uid://dj4u1sni026hc" path="res://scenes/NPCs/StartingVillageNPC1.tscn" id="13_osmty"]
-[ext_resource type="PackedScene" uid="uid://cecystg2by68v" path="res://scenes/NPCs/StartingVillageNPC2.tscn" id="14_ms77a"]
+[ext_resource type="PackedScene" uid="uid://dvaqyt6t7kjgo" path="res://scenes/NPCs/Moving NPC.tscn" id="12_mauqd"]
+[ext_resource type="PackedScene" path="res://scenes/NPCs/StartingVillageNPC1.tscn" id="13_osmty"]
+[ext_resource type="PackedScene" path="res://scenes/NPCs/StartingVillageNPC2.tscn" id="14_ms77a"]
+[ext_resource type="PackedScene" uid="uid://cpx6xc0pyh44k" path="res://scenes/NPCs/TeddyKid.tscn" id="15_kuduy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehnuc"]
 texture = ExtResource("2_moe3i")
@@ -1235,6 +1236,9 @@ position = Vector2(224, 366)
 
 [node name="StartingVillageNPC2" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="7" unique_id=1689147352 instance=ExtResource("14_ms77a")]
 position = Vector2(721, 506)
+
+[node name="TeddyKid" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="8" unique_id=1831853066 instance=ExtResource("15_kuduy")]
+position = Vector2(797, 57)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=557783940]
 polygon = PackedVector2Array(-67, 104, -62, 594, -73, 648, -72, 717, -64, 720, -69, 728, 627, 742, 621, 799, 738, 799, 738, 734, 884, 731, 897, -154, 771, -161, 673, -164, 182, -161, 136, -159, 80, -161, 50, -161, -60, -162, -60, -49, -175, -59, -182, 22, -187, 76, -77, 129, -330, 50, -323, -393, 1133, -383, 1140, 966, -325, 966, -327, 59)
