@@ -12,7 +12,7 @@ func _ready() -> void:
 
 func interact():
 	if(run==1):
-		if(player.socialCredit >55):
+		if(player.socialCredit >=55):
 			dialogueBox.dialogue("Hello! Would you like to buy some jewelry? I have a very large selection", self,person_name, tex)
 			dialogueBox.setDialogueOption("Oh, they all look soooo pretty.", 0)
 			dialogueBox.setDialogueOption("I don't think I can choose.", 1)

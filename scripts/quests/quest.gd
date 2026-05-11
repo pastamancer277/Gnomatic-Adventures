@@ -21,7 +21,6 @@ func reset():
 
 func saveData():
 	$/root/SaveManager.addSaveData("Quests", name, {"active" = active, "complete" = complete})
-	print(name)
 
 func loadData():
 	var data = $/root/SaveManager.getData("Quests", name)
