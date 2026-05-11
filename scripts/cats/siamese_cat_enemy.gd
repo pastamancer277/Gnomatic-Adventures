@@ -31,17 +31,16 @@ func _physics_process(delta: float) -> void:
 func spikes():
 	spike=false
 	$"Spike Timer".start()
-	var s = spikeScene.instantiate()
-	s.global_position.x = global_position.x+((randf()-.5)*300)
-	s.global_position.y = global_position.y+((randf()-.5)*300)
-	add_sibling(s)
-	spikeList.append(s)
+	for i in range(3):
+		var s = spikeScene.instantiate()
+		s.global_position.x = global_position.x+((randf()-.5)*300)
+		s.global_position.y = global_position.y+((randf()-.5)*300)
+		add_sibling(s)
+		spikeList.append(s)
 
 func setCombat(c: bool):
 	super.setCombat(c)
 	$"Spike Timer".start()
-	spikes()
-	spikes()
 	spikes()
 	spikes()
 	spikes()

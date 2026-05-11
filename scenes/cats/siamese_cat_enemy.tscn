@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://147p7ii6tw68" path="res://assets/sprites/characters/SiameseCat-Free-Carysaurus/SiameseCat-Free-Carysaurus/Siamese-Run.png" id="5_41cov"]
 [ext_resource type="Script" uid="uid://nfpv6r83eux6" path="res://scripts/cats/siamese_dialogue.gd" id="7_41cov"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_op1w8"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_41cov"]
 resource_local_to_scene = true
 shader = ExtResource("3_l1s6l")
 shader_parameter/active = false
@@ -167,7 +167,7 @@ script = ExtResource("2_gfiir")
 spikeScene = ExtResource("3_ilwf8")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=653963757]
-material = SubResource("ShaderMaterial_op1w8")
+material = SubResource("ShaderMaterial_41cov")
 position = Vector2(-1, -5)
 sprite_frames = SubResource("SpriteFrames_u0spo")
 animation = &"walk"

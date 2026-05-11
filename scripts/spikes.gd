@@ -9,14 +9,20 @@ func _ready() -> void:
 	$Timer.start(randf()*2)
 
 func lift():
-	$Sprite2D.visible=false
-	$Sprite2D2.visible=true
+	if(not $"/root/Global".getPaused()):
+		$Sprite2D.visible=false
+		$Sprite2D2.visible=true
+	else:
+		$Timer.start(0.1)
 
 func hit():
-	$Sprite2D2.visible=false
-	$Sprite2D3.visible=true
-	for tar in targets:
-		tar.damage(damage, global_position, 0)
+	if(not $"/root/Global".getPaused()):
+		$Sprite2D2.visible=false
+		$Sprite2D3.visible=true
+		for tar in targets:
+			tar.damage(damage, global_position, 0)
+	else:
+		$AnimationPlayer.play("attack")
 
 func down():
 	$Sprite2D3.visible=false
@@ -29,7 +35,6 @@ func _on_timer_timeout() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		targets.append(body)
-
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if targets.has(body):
