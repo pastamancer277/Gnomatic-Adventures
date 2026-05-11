@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dayvrfnul8ep5" path="res://scenes/NPCs/first_cat.tscn" id="6_chjrc"]
 [ext_resource type="PackedScene" uid="uid://bm6wgggxoplqg" path="res://scenes/enemies/basic_sprite.tscn" id="7_d0kil"]
 [ext_resource type="Resource" uid="uid://dn7yta0xno8ng" path="res://resources/sprites/bluebearySprite.tres" id="8_8tocs"]
+[ext_resource type="PackedScene" uid="uid://do31ueb3p35mu" path="res://scenes/NPCs/MobArea3.tscn" id="9_8tocs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_chjrc"]
 texture = ExtResource("2_hyvkx")
@@ -1141,6 +1142,9 @@ resource = ExtResource("8_8tocs")
 
 [node name="BasicSprite2" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="2" unique_id=798098069 instance=ExtResource("7_d0kil")]
 resource = ExtResource("8_8tocs")
+
+[node name="MobArea3" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="3" unique_id=403572767 instance=ExtResource("9_8tocs")]
+position = Vector2(0, 50)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=396103356]
 polygon = PackedVector2Array(-219, -216, -215, 159, 348, 161, 347, 22, 469, 20, 467, -58, 347, -44, 347, -210, -209, -216, -199, -354, 623, -316, 591, 325, -315, 290, -334, -369, -215, -359)

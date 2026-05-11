@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://booaflbx5tdsi"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_r0tqj"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_20ui5"]
+[ext_resource type="Texture2D" uid="uid://cyp82rtol5spm" path="res://assets/sprites/characters/prisoner2.png" id="3_r0tqj"]
+[ext_resource type="Script" uid="uid://cxycesx6w87ur" path="res://scripts/NPCs/prisoner2_dialogue.gd" id="4_20ui5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_28gwx"]
+resource_local_to_scene = true
+shader = ExtResource("2_20ui5")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="Prisoner2" unique_id=1834193905 instance=ExtResource("1_r0tqj")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_28gwx")
+texture = ExtResource("3_r0tqj")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("4_20ui5")

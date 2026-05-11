@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://bh1fuagw16ymr" path="res://scenes/books/BasicBook.tscn" id="7_2pgva"]
 [ext_resource type="Resource" uid="uid://b3cdsrlfxf8jf" path="res://resources/books/JailBook.tres" id="8_2pgva"]
 [ext_resource type="PackedScene" uid="uid://c5ucs1dddw6do" path="res://scenes/NPCs/prisoner_1.tscn" id="9_bmh0b"]
+[ext_resource type="PackedScene" path="res://scenes/NPCs/green_prisoner.tscn" id="10_5m84d"]
+[ext_resource type="PackedScene" uid="uid://booaflbx5tdsi" path="res://scenes/NPCs/prisoner2.tscn" id="11_5m84d"]
+[ext_resource type="PackedScene" uid="uid://dwjqbsn4b1aka" path="res://scenes/NPCs/prisoner3.tscn" id="12_o7xjv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2845w"]
 texture = ExtResource("2_wca3l")
@@ -5204,6 +5207,15 @@ bookResource = ExtResource("8_2pgva")
 
 [node name="Prisoner1" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="3" unique_id=1171433434 instance=ExtResource("9_bmh0b")]
 position = Vector2(-122, 69)
+
+[node name="Prisoner2" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="4" unique_id=385635380 instance=ExtResource("10_5m84d")]
+position = Vector2(-450, 233)
+
+[node name="RedPrisoner" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="5" unique_id=124978102 instance=ExtResource("11_5m84d")]
+position = Vector2(-431, 4)
+
+[node name="Prisoner3" parent="Entities" parent_id_path=PackedInt32Array(1929926728) index="6" unique_id=869990069 instance=ExtResource("12_o7xjv")]
+position = Vector2(182, 43)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" parent_id_path=PackedInt32Array(1033313260) index="0" unique_id=499348716]
 polygon = PackedVector2Array(-35, 40, -42, 118, -224, 115, -227, 64, -39, 64, -46, 32, -219, 32, -238, 36, -238, 132, -335, 131, -335, 272, -321, 272, -321, 146, -238, 149, -233, 338, -321, 336, -321, 305, -333, 304, -335, 337, -417, 335, -419, 129, -498, 128, -498, 145, -431, 145, -434, 338, -498, 341, -502, -63, -499, -72, -371, -71, -369, 33, -498, 35, -495, 49, -354, 48, -357, -77, -239, -75, -237, -17, -50, -16, -18, -16, -15, -30, -15, -67, 223, -66, 225, -19, 203.4079, -19.830475, 199, -41, 187, -43, 185.44037, -20.52153, 173, -21, 171, -40, 146, -41, 150, -1, 225, 2, 227, 112, 170, 117, 163, 133, 125, 134, 118, 117, 89, 112, 89, 71, 73, 70, 71.35431, 94.68544, 44, 86, 49.773987, 114.53502, -17, 113, -21, 42, -31, 39, -35, 446, 430, 446, 431, 132, 430, -319, -488, -321, -689, -322, -689, 447, -35, 447, -34, 121)

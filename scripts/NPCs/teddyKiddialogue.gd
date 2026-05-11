@@ -18,6 +18,8 @@ func _ready() -> void:
 	tex.create_from_image(im, PortableCompressedTexture2D.COMPRESSION_MODE_LOSSLESS)
 
 func interact():
+	if(player.hasKeyword("orange_cat")):
+		pass
 	if(run==1):
 		dialogueBox.dialogue("Hi, can you help me?!", self,person_name, tex)
 		dialogueBox.setDialogueOption("Hi, of course I can help.", 0)
