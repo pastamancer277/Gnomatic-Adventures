@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b3jk7oq15w2uy"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_odlpw"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_kx11m"]
+[ext_resource type="Texture2D" uid="uid://bmubc0w46sd2e" path="res://assets/sprites/characters/MaleGnome2.png" id="3_odlpw"]
+[ext_resource type="Texture2D" uid="uid://cky80hb8gxxog" path="res://assets/sprites/characters/femalegnome4.png" id="4_kx11m"]
+[ext_resource type="Script" uid="uid://cr6wdlte8s8t6" path="res://scripts/NPCs/dating_dialogue.gd" id="5_nthws"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ewayf"]
+resource_local_to_scene = true
+shader = ExtResource("2_kx11m")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="DatingNPCs" unique_id=1834193905 instance=ExtResource("1_odlpw")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_ewayf")
+position = Vector2(-8, 0)
+texture = ExtResource("3_odlpw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="2" unique_id=1416915406]
+material = SubResource("ShaderMaterial_ewayf")
+position = Vector2(8, 0)
+texture = ExtResource("4_kx11m")
+
+[node name="Dialogue" parent="." index="4" unique_id=517973683]
+script = ExtResource("5_nthws")
+
+[node name="HealthBar" parent="." index="6" unique_id=1584498457]
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bjoxpr0jl6rwl"]
+
+[ext_resource type="PackedScene" uid="uid://e8xg4uf6sjd1" path="res://scenes/NPCs/basic_npc.tscn" id="1_e1eki"]
+[ext_resource type="Shader" uid="uid://twtbvdpw077a" path="res://other/hit_flash.gdshader" id="2_rgj1r"]
+[ext_resource type="Texture2D" uid="uid://cvivy6prhihp6" path="res://assets/sprites/characters/GoldGnome.png" id="3_e1eki"]
+[ext_resource type="Script" uid="uid://bovgmogbpocu1" path="res://scripts/NPCs/rich_dialogue.gd" id="4_e1eki"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rgj1r"]
+resource_local_to_scene = true
+shader = ExtResource("2_rgj1r")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 0.2, 0.2, 0.4)
+
+[node name="RichGnome" unique_id=1834193905 instance=ExtResource("1_e1eki")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1430291876]
+material = SubResource("ShaderMaterial_rgj1r")
+texture = ExtResource("3_e1eki")
+
+[node name="Dialogue" parent="." index="3" unique_id=517973683]
+script = ExtResource("4_e1eki")

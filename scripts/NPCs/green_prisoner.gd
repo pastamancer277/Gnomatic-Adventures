@@ -15,7 +15,7 @@ func interact():
 		dialogueBox.dialogue("Yo bro, ain't it so cool in here? I love being here, it's probably my 6 or 7th time.", self,person_name, tex)
 		dialogueBox.setDialogueOption("Umm, I don't really like it...", 0)
 		dialogueBox.setDialogueOption("Oh My Gosh, YES. You're my person!", 1)
-		dialogueBox.setDialogueOption("Haha, 67 67", 1)
+		dialogueBox.setDialogueOption("Haha, 67 67", 2)
 
 func playerResponse(key: int):
 	if(run == 1):

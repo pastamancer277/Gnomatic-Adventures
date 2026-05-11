@@ -19,38 +19,42 @@ func _ready() -> void:
 
 func interact():
 	if(player.hasKeyword("orange_cat")):
-		pass
-	if(run==1):
-		dialogueBox.dialogue("Hi, can you help me?!", self,person_name, tex)
-		dialogueBox.setDialogueOption("Hi, of course I can help.", 0)
-		dialogueBox.setDialogueOption("No kid, I have better things to do.", 1)
-	else: if(run==2):
-		dialogueBox.dialogue("I realllllly want some blueberry pie, but I don't know where the bushes are *cries*",self,person_name, tex)
-		dialogueBox.setDialogueOption("Oh no", 0)
-		dialogueBox.setDialogueOption("Are you okay?", 1)
-		dialogueBox.setDialogueOption("Skill issue?", 2)
-	else: if(run==3):
-		dialogueBox.dialogue("Can you find some blueberries for me? I'll even give you my teddy bear!",self,person_name, tex)
-		dialogueBox.setDialogueOption("Yes of course!", 0)
-		dialogueBox.setDialogueOption("Oh, could you just give me the bear?", 1)
-		dialogueBox.setDialogueOption("I don't know where they are either", 2)
-	else: if(run==4):
-		dialogueBox.dialogue("Have you found them yet!",self,person_name, tex)
-		dialogueBox.setDialogueOption("Yes! Here they are.", 0)
-		dialogueBox.setDialogueOption("I'm sorry, not yet.", 1)
-	else: if run == 5:
-		dialogueBox.dialogue("Thank you so much! Enjoy my teddy!",self,person_name, tex)
-		dialogueBox.setDialogueOption("I will! Thank you!", 0)
-		dialogueBox.setDialogueOption("You're welcome.", 1)
-	else: if(run ==6):
-		dialogueBox.dialogue("Umm... no?",self,person_name, tex)
-		dialogueBox.setDialogueOption("...", 0)
-		dialogueBox.setDialogueOption("Rude", 1)
-	else: if run == 7:
-		dialogueBox.dialogue("Oh well actually my teddy says she really wants to go with you! That never happens! She's normally sooooo shy, but since she likes you, you must be who she wants, so here you go! I'll find someone else to get me blueberries, I guess, and I have other teddies so I won't be lonely either! Thank you stranger, take care of my teddy.",self,person_name, tex)
-		dialogueBox.setDialogueOption("I will! Thank you!", 0)
-		dialogueBox.setDialogueOption("Thank you so much", 1)
-		dialogueBox.setDialogueOption("Obviously she likes me, I'm great", 1)
+		if(run==1):
+			dialogueBox.dialogue("Hi, can you help me?!", self,person_name, tex)
+			dialogueBox.setDialogueOption("Hi, of course I can help.", 0)
+			dialogueBox.setDialogueOption("No kid, I have better things to do.", 1)
+		else: if(run==2):
+			dialogueBox.dialogue("I realllllly want some blueberry pie, but I don't know where the bushes are *cries*",self,person_name, tex)
+			dialogueBox.setDialogueOption("Oh no", 0)
+			dialogueBox.setDialogueOption("Are you okay?", 1)
+			dialogueBox.setDialogueOption("Skill issue?", 2)
+		else: if(run==3):
+			dialogueBox.dialogue("Can you find some blueberries for me? I'll even give you my teddy bear!",self,person_name, tex)
+			dialogueBox.setDialogueOption("Yes of course!", 0)
+			dialogueBox.setDialogueOption("Oh, could you just give me the bear?", 1)
+			dialogueBox.setDialogueOption("I don't know where they are either", 2)
+		else: if(run==4):
+			dialogueBox.dialogue("Have you found them yet!",self,person_name, tex)
+			dialogueBox.setDialogueOption("Yes! Here they are.", 0)
+			dialogueBox.setDialogueOption("I'm sorry, not yet.", 1)
+		else: if run == 5:
+			dialogueBox.dialogue("Thank you so much! Enjoy my teddy!",self,person_name, tex)
+			dialogueBox.setDialogueOption("I will! Thank you!", 0)
+			dialogueBox.setDialogueOption("You're welcome.", 1)
+		else: if(run ==6):
+			dialogueBox.dialogue("Umm... no?",self,person_name, tex)
+			dialogueBox.setDialogueOption("...", 0)
+			dialogueBox.setDialogueOption("Rude", 1)
+		else: if run == 7:
+			dialogueBox.dialogue("Oh well actually my teddy says she really wants to go with you! That never happens! She's normally sooooo shy, but since she likes you, you must be who she wants, so here you go! I'll find someone else to get me blueberries, I guess, and I have other teddies so I won't be lonely either! Thank you stranger, take care of my teddy.",self,person_name, tex)
+			dialogueBox.setDialogueOption("I will! Thank you!", 0)
+			dialogueBox.setDialogueOption("Thank you so much", 1)
+			dialogueBox.setDialogueOption("Obviously she likes me, I'm great", 1)
+	else:
+		
+		dialogueBox.dialogue("Who are you! Get away from me! *cries*", self,person_name, tex)
+		dialogueBox.setDialogueOption("I'm sorry, I'll leave.", 2)
+		dialogueBox.setDialogueOption("Rude.", 3)
 
 func playerResponse(key: int):
 	if(run == 1):
