@@ -37,3 +37,5 @@ func playerResponse(key: int):
 		if(key == 3):
 			run = 3
 			interact()
+	if(run==3):
+		run=1
